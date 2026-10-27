@@ -20,6 +20,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE_DIR / "output"
 DOCS_DIR = BASE_DIR / "docs"
+SITE_DIR = BASE_DIR / "site"  # 图标、manifest 等静态资源，整份复制到 docs/
 
 INDEX_HTML = """<!DOCTYPE html>
 <html lang="zh-CN">
@@ -28,6 +29,13 @@ INDEX_HTML = """<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light">
 <title>经济学人精读</title>
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32">
+<link rel="icon" href="icons/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#e3120b">
+<meta name="apple-mobile-web-app-title" content="精读">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
   :root{--accent:#e3120b;--ink:#12263a;--muted:#6b7280;--bg:#f4f1ec;--line:#e6e0d8;--card:#fffdf8}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -148,6 +156,16 @@ def main() -> int:
     if DOCS_DIR.exists():
         shutil.rmtree(DOCS_DIR)
     DOCS_DIR.mkdir(parents=True)
+
+    # 先铺静态资源（图标、manifest），再生成页面
+    if SITE_DIR.exists():
+        for src in SITE_DIR.iterdir():
+            dest = DOCS_DIR / src.name
+            if src.is_dir():
+                shutil.copytree(src, dest)
+            else:
+                shutil.copyfile(src, dest)
+
     # 关掉 Jekyll，避免下划线开头或含特殊字符的路径被处理
     (DOCS_DIR / ".nojekyll").write_text("", encoding="utf-8")
 

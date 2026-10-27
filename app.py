@@ -27,6 +27,7 @@ from economist_read.utils import make_output_id, now_iso
 BASE_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = BASE_DIR / "output"
 OUTPUT_DIR.mkdir(exist_ok=True)
+SITE_DIR = BASE_DIR / "site"  # 图标与 manifest，和 GitHub Pages 共用一份
 
 SOURCE_LABELS = {"paste": "粘贴文本", "url": "网页链接"}
 MIN_WORDS = 80
@@ -109,6 +110,10 @@ HOME_HTML = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>经济学人精读</title>
+<link rel="icon" href="/icons/favicon-32.png" sizes="32x32">
+<link rel="icon" href="/icons/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="精读">
 <style>
   :root{--accent:#e3120b;--ink:#12263a;--muted:#6b7280;--bg:#f4f1ec;--line:#e6e0d8}
   *{margin:0;padding:0;box-sizing:border-box}
@@ -213,6 +218,27 @@ def _home_context(**extra) -> dict:
 @app.get("/")
 def index():
     return render_template_string(HOME_HTML, **_home_context())
+
+
+# ── 静态资源（图标 / manifest）────────────────────
+# 看板模板里写的是 ../icons/...，本地 /result/<id> 正好解析到 /icons/...
+
+
+@app.get("/icons/<filename>")
+def icon_file(filename: str):
+    icons = (SITE_DIR / "icons").resolve()
+    path = (icons / filename).resolve()
+    if not path.is_file() or icons not in path.parents:
+        return "not found", 404
+    return send_file(path, max_age=86400)
+
+
+@app.get("/manifest.webmanifest")
+def manifest_file():
+    path = SITE_DIR / "manifest.webmanifest"
+    if not path.is_file():
+        return "not found", 404
+    return send_file(path, mimetype="application/manifest+json", max_age=86400)
 
 
 # ── 处理 ──────────────────────────────────────
