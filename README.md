@@ -11,7 +11,21 @@ copy .env.example .env        # 填入 DEEPSEEK_API_KEY
 python app.py
 ```
 
-打开 <http://127.0.0.1:5001>。端口 5001 是为了避开本机 5000 上常驻的旧服务；需要手机访问时设置 `HOST=0.0.0.0`。
+打开 <http://127.0.0.1:5001>。端口 5001 是为了避开本机 5000 上常驻的旧服务。
+
+### 手机访问
+
+在 `.env` 里把 `HOST` 改成 `0.0.0.0`（启动时会自动读取 `.env`），重启后手机用电脑的局域网 IP 访问：
+
+```bash
+ipconfig | findstr IPv4          # 查到形如 192.168.1.23 的地址
+netsh advfirewall firewall add rule name="Economist Read 5001" ^
+  dir=in action=allow protocol=TCP localport=5001 remoteip=192.168.1.0/24
+```
+
+上面第二条是放行入站端口，需要**管理员权限**运行一次；`remoteip` 改成你所在网段，只放行同一局域网，不要留成 `any`。Windows 把当前 WiFi 判为「公用网络」时，不加这条规则会直接丢包，且不会有任何提示。
+
+应用没有登录验证，能连上这个端口的人都能调用你的 API Key。只在可信网络下开启，用完把 `HOST` 改回 `127.0.0.1`。
 
 ## 输入方式
 

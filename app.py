@@ -352,6 +352,7 @@ def result(output_id: str):
 
 
 if __name__ == "__main__":
+    _load_env_file(BASE_DIR / ".env")
     host = os.environ.get("HOST", "127.0.0.1")
     port = int(os.environ.get("PORT", "5001"))
     print(f"经济学人精读 http://{host}:{port}")
