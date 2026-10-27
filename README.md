@@ -13,7 +13,20 @@ python app.py
 
 打开 <http://127.0.0.1:5001>。端口 5001 是为了避开本机 5000 上常驻的旧服务。
 
-### 手机访问
+## 发布到 GitHub Pages（手机阅读）
+
+分析只在电脑上跑，但生成好的看板是单文件 HTML，可以直接发布成静态站点，手机上打开就能读——翻译、点词、背诵、打卡都正常。
+
+```bash
+python tools/publish_site.py     # 扫描 output/，重建 docs/ 索引与各篇页面
+git add docs && git commit -m "publish" && git push
+```
+
+Pages 源设为 `main` 分支的 `/docs` 目录，站点地址是 `https://<用户名>.github.io/<仓库名>/`。以后每生成一篇新分析，重跑 `publish_site.py` 并提交 `docs/` 即可。
+
+Pages 只能托管静态文件，跑不了 Flask，所以**新建分析仍然要用本机的 `python app.py`**。
+
+### 局域网访问（可选，仅本机调试用）
 
 在 `.env` 里把 `HOST` 改成 `0.0.0.0`（启动时会自动读取 `.env`），重启后手机用电脑的局域网 IP 访问：
 
