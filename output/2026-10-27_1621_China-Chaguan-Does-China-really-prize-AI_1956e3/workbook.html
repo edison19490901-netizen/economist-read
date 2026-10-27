@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#12263a">
+<title>China | Chaguan Does China really prize AI speed over safety? — 经济学人精读</title>
+<style>
+  :root{
+    --accent:#e3120b; --accent-soft:#fdecea; --ink:#12263a; --muted:#6b7280;
+    --bg:#f4f1ec; --card:#ffffff; --line:#e6e0d8; --soft:#fbf8f3;
+    --gold:#b8860b; --green:#0f766e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 14px 64px}
+  .muted{color:var(--muted)}
+  .small{font-size:12px}
+  .spacer{flex:1}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#12263a 0%,#1d3a52 60%,#2a4a63 100%);
+    color:#fff;border-radius:0 0 20px 20px;padding:30px 24px 24px;margin:0 -14px 14px;
+    box-shadow:0 8px 30px rgba(18,38,58,.18);
+  }
+  .kicker{font-size:10px;letter-spacing:.22em;color:#f2b8b5;font-weight:700}
+  .hero h1{font-size:25px;line-height:1.32;margin:8px 0 14px;font-weight:800;letter-spacing:-.01em}
+  .meta-chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:3px 9px;border-radius:999px;font-size:11px;color:#e8eef5}
+  .meta-chips.light .chip{background:var(--soft);border-color:var(--line);color:var(--ink)}
+
+  .notice{background:#fff8e6;border:1px solid #f0d9a8;color:#7a4a00;border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+  .notice.warn{background:#fdf2f2;border-color:#f3c2c0;color:#8a1f1a}
+
+  /* Tabs */
+  .tab-bar{
+    position:sticky;top:0;z-index:30;display:flex;gap:4px;overflow-x:auto;
+    background:rgba(244,241,236,.96);backdrop-filter:blur(10px);
+    padding:8px 2px;margin-bottom:4px;border-bottom:1px solid var(--line);scrollbar-width:none;
+  }
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{
+    white-space:nowrap;border:0;background:transparent;color:var(--muted);
+    padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;
+    transition:background .15s,color .15s;font-family:inherit;
+  }
+  .tab-btn:hover{background:#e9e4dc;color:var(--ink)}
+  .tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(227,18,11,.25)}
+
+  .tab-panel{display:none;padding-top:14px}
+  .tab-panel.active{display:block}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(18,38,58,.04)}
+  h2.section{font-size:16px;margin-bottom:12px;color:var(--ink);display:flex;align-items:baseline;gap:8px}
+  h2.section .count{font-size:12px;font-weight:500;color:var(--muted)}
+  .prose{font-size:14.5px;line-height:1.85;color:#374151}
+
+  /* Summary */
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .point-list{list-style:none}
+  .point-list li{position:relative;padding:9px 0 9px 20px;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.7}
+  .point-list li:last-child{border-bottom:0}
+  .point-list li:before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+  /* Translation */
+  .translation-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .btn{
+    border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;
+    padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-ghost{padding:3px 8px;font-size:11px;color:var(--muted)}
+  .para-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .2s,border-color .2s}
+  .para-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .para-no{font-size:11px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+  .para-en{font-family:Georgia,"Times New Roman",serif;font-size:16.5px;line-height:1.88;color:#1a2b3c}
+  .para-zh{font-size:14px;line-height:1.9;color:#4b5563;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+  .para-card.zh-off .para-zh{display:none}
+  .para-card.flash{animation:flash 1.8s ease}
+  @keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(227,18,11,0)}25%{box-shadow:0 0 0 4px rgba(227,18,11,.22)}}
+  .w{cursor:pointer;border-bottom:1px dotted rgba(227,18,11,.45);border-radius:2px}
+  .w:hover{background:var(--accent-soft)}
+  .w.hit{background:#ffe08a;box-shadow:0 0 0 2px #ffe08a}
+
+  /* Tables */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .vocab-table{width:100%;border-collapse:collapse;font-size:13px}
+  .vocab-table th{background:var(--ink);color:#fff;text-align:left;padding:8px 10px;font-size:11px;font-weight:600;white-space:nowrap}
+  .vocab-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .vocab-table tbody tr:last-child td{border-bottom:0}
+  .vocab-row[data-para]{cursor:pointer;transition:background .12s}
+  .vocab-row[data-para]:hover{background:var(--soft)}
+  .word-col{font-weight:800;color:var(--accent);white-space:nowrap}
+  .stars{color:var(--gold);white-space:nowrap}
+  .context-col{color:#6b7280;font-size:12px;min-width:220px}
+  .rc-table td{font-size:12px;white-space:nowrap}
+
+  /* Long sentences */
+  .ls-card{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff;cursor:pointer;transition:border-color .15s}
+  .ls-card:hover{border-color:#cfc7bb}
+  .ls-card[data-para].flash{animation:flash 1.8s ease}
+  .ls-sentence{font-family:Georgia,serif;font-size:15.5px;line-height:1.8;color:#1a2b3c}
+  .ls-zh{font-size:13.5px;color:#6b7280;margin-top:8px}
+  .struct{background:var(--soft);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px}
+  .struct dt{font-weight:800;color:var(--accent);font-size:11px;margin-top:7px}
+  .struct dt:first-child{margin-top:0}
+  .struct dd{color:#4b5563;margin-bottom:2px;line-height:1.7}
+
+  .mini-card{border:1px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:10px;background:#fff}
+  .mini-card:last-child{margin-bottom:0}
+  .mini-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .mini-card p{font-size:13.5px;color:#4b5563;line-height:1.75;margin-bottom:4px}
+  .mini-card blockquote{border-left:3px solid var(--accent);background:var(--soft);padding:8px 12px;margin:8px 0;font-family:Georgia,serif;font-size:13.5px;color:#374151;border-radius:0 6px 6px 0}
+  .role-badge{font-size:10px;font-weight:800;color:#fff;background:var(--green);padding:2px 7px;border-radius:999px}
+  .fact-row{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .fact-row:last-child{border-bottom:0}
+  .fact-row[data-para]{cursor:pointer}
+  .fact-row[data-para]:hover{background:var(--soft)}
+  .fact-data{white-space:nowrap;font-weight:800;color:var(--accent);font-size:12px;background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+
+  /* Recitation */
+  .rc-chunk{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .rc-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .rc-no{font-weight:800;color:var(--accent);font-size:12px}
+  .rc-size{font-size:11px;color:var(--muted)}
+  .rc-btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;color:#4b5563}
+  .rc-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .rc-text{padding:12px 14px;font-family:Georgia,"Times New Roman",serif;font-size:15.5px;line-height:1.9}
+  .rc-hint{padding:0 14px 11px;font-size:12px;color:var(--muted)}
+  .rc-hint b{color:var(--gold)}
+  .rc-zh{display:none;padding:10px 14px 13px;background:#fbf8f3;border-top:1px dashed var(--line);font-size:14px;color:#4b5563;line-height:1.8}
+  .rc-chunk.zh-on .rc-zh{display:block}
+  .rc-chunk.blanked .rc-text{display:none}
+  .rc-cover{display:none;padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
+  .rc-chunk.blanked .rc-cover{display:block}
+
+  .checkin-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .progress{display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+  .progress-bar{flex:1;height:8px;background:#eee;border-radius:999px;overflow:hidden}
+  .progress-bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+  .progress-text{font-size:12px;color:var(--muted);white-space:nowrap}
+  .day-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
+  .day-row:last-child{border-bottom:0}
+  .day-label{font-size:12.5px;font-weight:700;min-width:150px}
+  .day-tags{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+  .tag{font-size:11px;padding:2px 7px;border-radius:999px}
+  .tag.learn{background:#e8f5f2;color:var(--green)}
+  .tag.review{background:var(--accent-soft);color:var(--accent)}
+  .js-day-check.done{background:var(--green);border-color:var(--green);color:#fff}
+
+  /* Stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 10px;text-align:center}
+  .stat b{display:block;font-size:22px;color:var(--accent);line-height:1.2}
+  .stat span{font-size:11px;color:var(--muted)}
+
+  /* Tooltip */
+  #tip{position:fixed;z-index:100;max-width:300px;background:var(--ink);color:#fff;border-radius:9px;padding:10px 12px;font-size:12.5px;line-height:1.55;box-shadow:0 10px 30px rgba(0,0,0,.25);display:none}
+  #tip .tip-word{font-weight:800;font-size:14px;margin-bottom:1px}
+  #tip .tip-stars{color:#ffd166;font-size:11px;margin-bottom:4px}
+  #tip .tip-note{color:#dbe4ec}
+
+  @media (max-width:700px){
+    .summary-grid{grid-template-columns:1fr}
+    .hero h1{font-size:21px}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .vocab-table thead{display:none}
+    .vocab-table, .vocab-table tbody, .vocab-table tr, .vocab-table td{display:block;width:100%}
+    .vocab-table tr{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:8px 10px;background:#fff}
+    .vocab-table td{border:0;padding:4px 0}
+    .vocab-table td:before{content:attr(data-label);display:inline-block;min-width:64px;color:var(--muted);font-size:11px}
+    .context-col{min-width:0}
+  }
+  @media print{
+    body{background:#fff}
+    .tab-bar,.translation-toolbar,.rc-btn,.checkin-controls{display:none!important}
+    .hero{background:#fff!important;color:#000;box-shadow:none;padding:0 0 12px;margin:0 0 8px;border-bottom:2px solid #000}
+    .hero .kicker{color:#000}
+    .hero .chip{background:#fff;border-color:#999;color:#000}
+    .tab-panel{display:block!important;page-break-inside:avoid}
+    .tab-panel:before{content:attr(data-label);display:block;font-size:18px;font-weight:800;margin:20px 0 8px;padding-bottom:4px;border-bottom:2px solid #000;color:#000}
+    .para-card,.rc-chunk,.card{box-shadow:none;break-inside:avoid}
+    .para-zh,.rc-zh{display:block!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">THE ECONOMIST · 精读</div>
+    <h1>China | Chaguan Does China really prize AI speed over safety?</h1>
+    <div class="meta-chips">
+      <span class="chip">粘贴文本</span>
+      <span class="chip">1032 词</span>
+      <span class="chip">12 段</span>
+      <span class="chip">2026-10-27</span>
+      <span class="chip">分析 34s</span>
+      <span class="chip">¥0.0286</span>
+    </div>
+  </header>
+
+  
+  
+
+  <nav class="tab-bar" id="tabBar">
+    <button class="tab-btn active" data-tab="tab-summary">总结</button>
+    <button class="tab-btn" data-tab="tab-translation">对照翻译</button>
+    <button class="tab-btn" data-tab="tab-language">词汇长句</button>
+    <button class="tab-btn" data-tab="tab-decon">写作拆解</button>
+    <button class="tab-btn" data-tab="tab-background">背景观点</button>
+    <button class="tab-btn" data-tab="tab-apply">实际应用</button>
+    <button class="tab-btn" data-tab="tab-recite">背诵</button>
+    <button class="tab-btn" data-tab="tab-stats">统计</button>
+  </nav>
+
+  <!-- 总结 -->
+  <div class="tab-panel active" id="tab-summary" data-label="总结">
+    <div class="summary-grid">
+      <section class="card">
+        <h2 class="section">中文要点</h2>
+        <ul class="point-list">
+          <li>许多观察者（包括特朗普）认为中国不关心AI安全，但文章指出中国实际上在AI安全治理上投入了大量精力。</li><li>中国已出台全球最严格的AI规则框架，2026年9月更新版列出54项风险并提议设置人工检查点等措施。</li><li>随着AI能力增强，中国对失控风险的关注显著上升，新版框架中失控话题出现十余次。</li><li>中国将AI视为可引导的变革性技术，而非会脱离人类控制的威胁，这与美国部分观点存在哲学差异。</li><li>中国在规则制定上积极，但企业主动安全评估不足，十家发布新模型的公司中仅五家公布了安全评估。</li><li>中国在AI性能上落后美国数月，但在风险管理上并不落后，甚至可能更严格。</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2 class="section">English Key Points</h2>
+        <ul class="point-list">
+          <li>Contrary to claims that China disregards AI safety, it has developed one of the world&#39;s most stringent AI governance frameworks.</li><li>China&#39;s updated AI safety framework lists 54 risks and proposes human checkpoints and immediate shutdowns for problematic features.</li><li>China&#39;s concern about loss of control has grown, with the topic appearing over a dozen times in the latest framework versus once in 2024.</li><li>China views AI as a controllable transformative technology, not an existential threat that requires a coordinated slowdown.</li><li>Chinese firms are often passive on safety, with only five of ten recently reviewed companies publishing safety evaluations.</li><li>China lags the US in AI performance by months but is not lagging in risk management.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- 对照翻译 -->
+  <div class="tab-panel" id="tab-translation" data-label="对照翻译">
+    <div class="translation-toolbar">
+      <div class="muted small">英文在上、中文在下；点生词表任意一行可跳转到对应段落。</div>
+      <button class="btn" id="toggleAllZh" type="button">隐藏译文</button>
+    </div>
+    <div id="translationList">
+      
+      <article class="para-card" id="para-1" data-para="1">
+        <div class="para-head">
+          <span class="para-no">§1</span>
+          <span class="muted small">119 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">China | Chaguan Does China really prize AI speed over safety? <span class="w" data-vid="v1" data-w="In full command of">In full command of</span> its own cyberspace, China wants the same for AI Oct 22nd 2026 “Guard the golden three seconds, guard your wallet.” In recent weeks a video of an avuncular policeman, Guo Tao, delivering this message—a warning about how to handle fraudsters on the phone—has spread widely in China. All it takes is a simple greeting for criminals to capture one’s voice and then use artificial intelligence to synthesise it for duping friends and relatives. So, as Mr Guo says, it is best to stay silent for three seconds when called from unknown numbers, to see if a real person speaks. Not bad advice.</p>
+        <p class="para-zh">中国 | 茶馆 中国真的重视AI速度胜过安全吗？中国完全掌控着自己的网络空间，也希望在AI领域如此 2026年10月22日 “守住黄金三秒，守住你的钱包。”最近几周，一段视频在中国广泛传播，视频中一位慈祥的警察郭涛传递了这一信息——警告人们如何应对电话诈骗者。犯罪分子只需一句简单的问候就能获取一个人的声音，然后利用人工智能合成声音来欺骗亲友。因此，正如郭警官所说，接到陌生号码来电时最好保持沉默三秒钟，看看是否真人在说话。这建议不错。</p>
+      </article>
+      
+      <article class="para-card" id="para-2" data-para="2">
+        <div class="para-head">
+          <span class="para-no">§2</span>
+          <span class="muted small">69 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">It also relates to one of the tech world’s most pressing questions: what does China think about the risks posed by AI? Many observers believe China does not care much about the dangers. Donald Trump is one. “China will be doing absolutely nothing to <span class="w" data-vid="v2" data-w="stand in the way of">stand in the way of</span> AI,” he claimed last month, explaining his own disdain forregulation. Indeed, surveys point to overwhelming Chinese optimism about AI.</p>
+        <p class="para-zh">这也关系到科技界最紧迫的问题之一：中国如何看待AI带来的风险？许多观察人士认为中国不太关心这些危险。唐纳德·特朗普就是其中之一。上个月，他声称“中国绝对不会采取任何行动阻碍AI”，以此解释他自己对监管的蔑视。确实，调查显示中国对AI的乐观情绪压倒性高涨。</p>
+      </article>
+      
+      <article class="para-card" id="para-3" data-para="3">
+        <div class="para-head">
+          <span class="para-no">§3</span>
+          <span class="muted small">73 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">In a poll by Gallup, 93% of respondents in China said it would mostly help their country, versus just 36% in America. Calls for China to work with America to slow down frontier models have been <span class="w" data-vid="v3" data-w="brushed aside">brushed aside</span> in Beijing. “<span class="w" data-vid="v4" data-w="Fearmongering">Fearmongering</span>” serves no one, says China’s foreign ministry. In fact, China spends an awful lot of time thinking about AI safety. Telephone fraud is just the <span class="w" data-vid="v5" data-w="tip of an iceberg">tip of an iceberg</span> of anxieties.</p>
+        <p class="para-zh">在盖洛普的一项民意调查中，93%的中国受访者表示AI总体上会帮助他们的国家，而美国只有36%。要求中国与美国合作放缓前沿模型的呼吁在北京被置若罔闻。中国外交部表示，“散布恐慌”对谁都没有好处。事实上，中国花费大量时间思考AI安全问题。电话诈骗只是焦虑冰山的一角。</p>
+      </article>
+      
+      <article class="para-card" id="para-4" data-para="4">
+        <div class="para-head">
+          <span class="para-no">§4</span>
+          <span class="muted small">97 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">China’s concerns run from criminal activity, labour displacement and national security to, yes, the <span class="w" data-vid="v6" data-w="loss-of-control scenarios">loss-of-control scenarios</span> causing sleepless nights in Silicon Valley. This should not be surprising. The Communist Party, which obsesses about danger in almost every domain of life, has fought for years to bring cyberspace under control. Is a regime that views the internet as an existential challenge suddenly about to <span class="w" data-vid="v7" data-w="let AI rip">let AI rip</span>? If, as in the Trump administration, one defines regulation as intrinsically a form of slowdown, then China is, in effect, slowing AI—though it would never say so.</p>
+        <p class="para-zh">中国的担忧涵盖犯罪活动、劳动力替代和国家安全，乃至——没错——让硅谷夜不能寐的失控场景。这并不令人意外。中国共产党几乎对生活各个领域的危险都痴迷不已，多年来一直努力将网络空间置于控制之下。一个将互联网视为生存挑战的政权，会突然放任AI肆意发展吗？如果像特朗普政府那样，将监管定义为本质上的减速形式，那么中国实际上就是在减缓AI——尽管它永远不会这么说。</p>
+      </article>
+      
+      <article class="para-card" id="para-5" data-para="5">
+        <div class="para-head">
+          <span class="para-no">§5</span>
+          <span class="muted small">75 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">“China already has the most <span class="w" data-vid="v8" data-w="stringent">stringent</span> AI rules anywhere in the world,” says Kendra Schaefer of Trivium, a consultancy based in Beijing. The foundational document is China’s framework for the governance of AI safety. A second update came out in September. It lists 54 risks under three categories: “inherent” (models behaving in unintended ways), “application” (use by criminals) and “secondary” (social alienation). It also proposes ways to eliminate or, at least, mitigate these threats.</p>
+        <p class="para-zh">“中国已经拥有世界上最严格的AI规则，”驻北京的咨询公司Trivium的Kendra Schaefer说。基础文件是中国的人工智能安全治理框架。第二次更新于9月发布。它列出了三大类54项风险：“固有”风险（模型以非预期方式行事）、“应用”风险（被犯罪分子利用）和“次生”风险（社会疏离）。它还提出了消除或至少缓解这些威胁的方法。</p>
+      </article>
+      
+      <article class="para-card" id="para-6" data-para="6">
+        <div class="para-head">
+          <span class="para-no">§6</span>
+          <span class="muted small">88 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">One is to require checkpoints at which humans (remember those?) must review and, if necessary, halt AI agents before they roam too widely. Some of the framework’s earlier ideas are already <span class="w" data-vid="v9" data-w="in force">in force</span>—for instance, AI-generated content such as audio and video must be clearly labelled. Others are likely to form the basis of new rules. Draft measures call for service providers to shut down any feature with serious problems immediately. On October 16th China also proposed <span class="w" data-vid="v10" data-w="curbs">curbs</span> on exports of its most advanced AI technologies.</p>
+        <p class="para-zh">其中之一是要求设置检查点，人类（还记得人类吗？）必须在AI代理广泛活动之前进行审查，必要时予以制止。该框架的一些早期想法已经生效——例如，AI生成的音频和视频等内容必须明确标注。其他想法可能成为新规则的基础。措施草案要求服务提供商立即关闭任何存在严重问题的功能。10月16日，中国还提议限制其最先进AI技术的出口。</p>
+      </article>
+      
+      <article class="para-card" id="para-7" data-para="7">
+        <div class="para-head">
+          <span class="para-no">§7</span>
+          <span class="muted small">101 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">As AI has grown more powerful, China has paid more attention to doomsday possibilities. The original version of its safety framework, issued in 2024, made just one <span class="w" data-vid="v11" data-w="glancing reference">glancing reference</span> to loss of control. In the newestversion, that topic comes up more than a dozen times. Even so, it is possible to <span class="w" data-vid="v12" data-w="discern">discern</span> a philosophical gap. Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution, the more common view in China is that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp.</p>
+        <p class="para-zh">随着AI变得更加强大，中国更加关注末日可能性。其安全框架的原始版本于2024年发布，仅顺带提及失控问题。在最新版本中，该话题被提及十几次以上。即便如此，仍能看出一种理念上的差距。美国一些人担心AI模型最终会超越人类智能并控制自身的进化，而中国更普遍的观点是，AI是一种变革性技术，可以被驾驭和引导，而不是会脱离人类掌控的东西。</p>
+      </article>
+      
+      <article class="para-card" id="para-8" data-para="8">
+        <div class="para-head">
+          <span class="para-no">§8</span>
+          <span class="muted small">97 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Xi Jinping compares AI to the steam engine, electricity and the internet— technologies that were <span class="w" data-vid="v13" data-w="epoch-shaping">epoch-shaping</span> but did not pose dangers that required a co-ordinated slowdown. With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to <span class="w" data-vid="v14" data-w="apply the brakes">apply the brakes</span>. As China sees it, such an agreement looks both unnecessary and self-serving for Americans. Unsurprisingly, Chinese officials devote much <span class="w" data-vid="v15" data-w="bandwidth">bandwidth</span> to ideology. They want to ensure that models do not contradict the party on important matters, and that new tools do not undermine its control.</p>
+        <p class="para-zh">习近平将AI比作蒸汽机、电力和互联网——这些技术塑造了时代，但并未构成需要协调减速的危险。由于中国在AI前沿仍落后于美国，习近平更不愿意同意踩刹车。在中国看来，这样的协议既无必要，也是美国人的自私自利。毫不奇怪，中国官员将大量精力投入意识形态。他们希望确保模型在重要问题上不与党相矛盾，并确保新工具不会削弱其控制。</p>
+      </article>
+      
+      <article class="para-card" id="para-9" data-para="9">
+        <div class="para-head">
+          <span class="para-no">§9</span>
+          <span class="muted small">93 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Yet there are more banal concerns, too, reflecting the <span class="w" data-vid="v16" data-w="soft paternalism">soft paternalism</span> of the Chinese state. Hence Mr Guo’s three golden seconds on the phone and a ban on offering virtual lovers or, for that matter, virtual relatives to minors. China’s <span class="w" data-vid="v17" data-w="yen for">yen for</span> rules may have an unintended effect. In America, where the government has a much lighter touch, companies have <span class="w" data-vid="v18" data-w="stepped into the breach">stepped into the breach</span>, evaluating their own models and asking for more <span class="w" data-vid="v19" data-w="guardrails">guardrails</span>. In China firms are often more passive, waiting for directions from the party and government before applying controls.</p>
+        <p class="para-zh">然而，也存在一些更为寻常的担忧，反映了中国国家软性家长式作风。因此，郭先生设置了手机上的三秒黄金时间，并禁止向未成年人提供虚拟恋人，或就此而言，虚拟亲属。中国对规则的热衷可能产生意想不到的效果。在美国，政府干预要轻得多，公司已挺身填补空白，评估自己的模型并要求更多护栏。在中国，企业往往更被动，等待党和政府的指示后再实施控制。</p>
+      </article>
+      
+      <article class="para-card" id="para-10" data-para="10">
+        <div class="para-head">
+          <span class="para-no">§10</span>
+          <span class="muted small">112 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">A review by Concordia AI, a consultancy in Beijing, of ten Chinese firms with recently released models found that just five had published safety evaluations. That suggests possible perils if models develop faster than regulators expect. China’s rules will also fail to impress those who view its <span class="w" data-vid="v20" data-w="open-weight models">open-weight models</span> as unavoidably dangerous. Critics fret that such models, unlike the closed ones dominant in America, can be abused more readily. Yet many in Chinese AI argue the benefits outweigh that hazard: they note that China’s open models have helped defend computer systems from rogue attacks launched by American closed models, as when OpenAI tools breached Hugging Face, an AI platform.</p>
+        <p class="para-zh">北京咨询公司Concordia AI对十家近期发布模型的中国公司进行审查发现，仅五家发布了安全评估。这表明如果模型发展速度超过监管机构预期，可能存在危险。中国的规则也无法打动那些认为其开放权重模型必然危险的人。批评者担心，此类模型与在美国占主导地位的封闭模型不同，更容易被滥用。然而，中国人工智能领域的许多人认为好处大于风险：他们指出，中国的开放模型帮助保护计算机系统免受美国封闭模型发起的恶意攻击，例如OpenAI工具入侵人工智能平台Hugging Face时。</p>
+      </article>
+      
+      <article class="para-card" id="para-11" data-para="11">
+        <div class="para-head">
+          <span class="para-no">§11</span>
+          <span class="muted small">72 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">In any case, China is already working ontougher rules to govern open models. Insiders say that new releases face exacting safety reviews before being offered to the public. By most measures China’s AI models are a few months, or more, behind America’s in their performance. That is a big gap for such a fast-evolving technology. But do not accuse China of lagging behind America in its management of risks.</p>
+        <p class="para-zh">无论如何，中国已经在制定更严格的规则来管理开放模型。内部人士表示，新发布的模型在向公众提供之前要经过严格的安全审查。从大多数指标来看，中国的人工智能模型在性能上落后美国几个月或更多。对于如此快速发展的技术来说，这是一个巨大的差距。但不要指责中国在风险管理方面落后于美国。</p>
+      </article>
+      
+      <article class="para-card" id="para-12" data-para="12">
+        <div class="para-head">
+          <span class="para-no">§12</span>
+          <span class="muted small">36 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">When it comes to rules, controls, limits and warnings, China is in its element.■ This article was downloaded by zlibrary from https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-</p>
+        <p class="para-zh">在规则、控制、限制和警告方面，中国得心应手。■ 本文由zlibrary从https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-下载</p>
+      </article>
+      
+    </div>
+  </div>
+
+  <!-- 词汇长句 -->
+  <div class="tab-panel" id="tab-language" data-label="词汇长句">
+    <section class="card">
+      <h2 class="section">重点词汇 <span class="count">20 条</span></h2>
+      <p class="muted small" style="margin-bottom:10px">点击任意一行跳到原文段落并高亮；点原文中的虚线下划线词可查看释义。</p>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>单词 / 短语</th><th>难度</th><th>原文语境</th><th>中文注释</th></tr></thead>
+          <tbody>
+          
+            <tr class="vocab-row" data-para="1" data-vid="v1" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">in full command of</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In full command of its own cyberspace, China wants the same for AI</td>
+              <td data-label="注释">完全掌控；in full command of 表示对某事物有完全的控制权，常用于政治或军事语境。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="2" data-vid="v2" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">stand in the way of</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">“China will be doing absolutely nothing to stand in the way of AI,” he claimed last month, explaining his own disdain for regulation.</td>
+              <td data-label="注释">阻碍，妨碍；stand in the way of 是习语，表示阻止某事发生或发展。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="3" data-vid="v3" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">brushed aside</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Calls for China to work with America to slow down frontier models have been brushed aside in Beijing.</td>
+              <td data-label="注释">被忽视，被搁置；brush aside 表示对某建议或请求不予理会。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="3" data-vid="v4" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">fearmongering</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">“Fearmongering” serves no one, says China’s foreign ministry.</td>
+              <td data-label="注释">散布恐惧，危言耸听；fearmongering 指故意制造恐慌的行为，常含贬义。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="3" data-vid="v5" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">tip of an iceberg</td>
+              <td class="stars" data-label="难度">★☆☆</td>
+              <td class="context-col" data-label="语境">Telephone fraud is just the tip of an iceberg of anxieties.</td>
+              <td data-label="注释">冰山一角；习语，表示某事物只是更大问题的一小部分。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="4" data-vid="v6" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">loss-of-control scenarios</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley.</td>
+              <td data-label="注释">失控情景；指人工智能可能脱离人类控制的情形，是AI安全讨论中的术语。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="4" data-vid="v7" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">let AI rip</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Is a regime that views the internet as an existential challenge suddenly about to let AI rip?</td>
+              <td data-label="注释">放任AI发展；let something rip 是习语，意为任其自由发展、不加约束。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v8" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">stringent</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">“China already has the most stringent AI rules anywhere in the world,” says Kendra Schaefer of Trivium, a consultancy based in Beijing.</td>
+              <td data-label="注释">严格的，严厉的；stringent 常用来形容规则、法律或标准非常严格。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="6" data-vid="v9" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">in force</td>
+              <td class="stars" data-label="难度">★☆☆</td>
+              <td class="context-col" data-label="语境">Some of the framework’s earlier ideas are already in force—for instance, AI-generated content such as audio and video must be clearly labelled.</td>
+              <td data-label="注释">生效，在实施中；in force 是法律或规则生效的固定表达。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="6" data-vid="v10" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">curbs</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">On October 16th China also proposed curbs on exports of its most advanced AI technologies.</td>
+              <td data-label="注释">限制，约束；curb 作名词时常指对某事物的控制或限制，如出口限制。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="7" data-vid="v11" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">glancing reference</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">The original version of its safety framework, issued in 2024, made just one glancing reference to loss of control.</td>
+              <td data-label="注释">一笔带过，轻描淡写地提及；glancing 在此表示间接的、简略的。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="7" data-vid="v12" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">discern</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Even so, it is possible to discern a philosophical gap.</td>
+              <td data-label="注释">察觉，辨别；discern 指通过观察看出或理解某事物，常用于抽象概念。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="8" data-vid="v13" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">epoch-shaping</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Xi Jinping compares AI to the steam engine, electricity and the internet—technologies that were epoch-shaping but did not pose dangers that required a co-ordinated slowdown.</td>
+              <td data-label="注释">划时代的，开创性的；epoch-shaping 是复合形容词，表示塑造一个时代的。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="8" data-vid="v14" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">apply the brakes</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes.</td>
+              <td data-label="注释">踩刹车，放缓；比喻采取措施减缓发展速度。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="8" data-vid="v15" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">bandwidth</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Unsurprisingly, Chinese officials devote much bandwidth to ideology.</td>
+              <td data-label="注释">精力，注意力；bandwidth 原指带宽，此处比喻为投入的时间和精力。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="9" data-vid="v16" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">soft paternalism</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Yet there are more banal concerns, too, reflecting the soft paternalism of the Chinese state.</td>
+              <td data-label="注释">温和家长主义；指政府以保护民众为由进行温和干预的理念。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="9" data-vid="v17" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">yen for</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">China’s yen for rules may have an unintended effect.</td>
+              <td data-label="注释">渴望，热望；yen 作名词表示强烈的欲望或倾向，常与 for 连用。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="9" data-vid="v18" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">stepped into the breach</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails.</td>
+              <td data-label="注释">填补空缺，挺身而出；step into the breach 是习语，表示在困难时接手或填补空缺。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="9" data-vid="v19" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">guardrails</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails.</td>
+              <td data-label="注释">防护措施，护栏；guardrails 在AI语境中指安全保护措施或监管框架。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="10" data-vid="v20" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">open-weight models</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">China’s rules will also fail to impress those who view its open-weight models as unavoidably dangerous.</td>
+              <td data-label="注释">开放权重模型；指模型参数公开可用的AI模型，与闭源模型相对。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">长难句拆解 <span class="count">7 句</span></h2>
+      
+      <div class="ls-card" data-para="4" data-sid="s1" tabindex="0" role="button">
+        <p class="ls-sentence">China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley.</p>
+        <p class="ls-zh">中国的担忧从犯罪活动、劳动力替代和国家安全，到——没错——让硅谷夜不能寐的失控情景。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>China’s concerns run from A to B</dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>分词短语</b> — causing sleepless nights in Silicon Valley<span class="muted">（修饰 the loss-of-control scenarios）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>难点在于插入语“yes”和分词短语修饰；主干是run from...to...结构，表示范围。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="4" data-sid="s2" tabindex="0" role="button">
+        <p class="ls-sentence">Is a regime that views the internet as an existential challenge suddenly about to let AI rip?</p>
+        <p class="ls-zh">一个将互联网视为生存挑战的政权，会突然放任AI发展吗？</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Is a regime about to let AI rip?</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>定语从句</b> — that views the internet as an existential challenge<span class="muted">（修饰regime）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>副词</b> — suddenly<span class="muted">（修饰 about to let AI rip）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>疑问句主干是Is a regime about to...，定语从句和副词插入造成理解困难。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="7" data-sid="s3" tabindex="0" role="button">
+        <p class="ls-sentence">Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution, the more common view in China is that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp.</p>
+        <p class="ls-zh">尽管美国一些人担心AI模型最终会超越人类智能并控制自身的进化，但在中国更普遍的观点是，AI是一种可以驾驭和引导的变革性技术，而不是会脱离人类掌控的东西。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>the more common view in China is that...</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>状语从句</b> — Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution<span class="muted">（表示对比）</span></div><div><b>名词性从句</b> — that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp<span class="muted">（作表语）</span></div><div><b>定语从句</b> — that can be harnessed and directed<span class="muted">（修饰technology）</span></div><div><b>定语从句</b> — that will slip human grasp<span class="muted">（修饰something）</span></div></dd>
+          
+          
+          <dt>理解要点</dt><dd>长句包含对比状语从句、表语从句和两个定语从句，需逐层拆分。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="8" data-sid="s4" tabindex="0" role="button">
+        <p class="ls-sentence">With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes.</p>
+        <p class="ls-zh">由于中国在AI前沿领域仍落后于美国，习近平就更不愿意同意踩刹车了。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Mr Xi is all the less inclined to agree to apply the brakes</dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — With China still trailing America at the frontier of AI<span class="muted">（修饰 整个主句）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>with复合结构作原因状语，all the less inclined表示“更加不倾向于”。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="9" data-sid="s5" tabindex="0" role="button">
+        <p class="ls-sentence">In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails.</p>
+        <p class="ls-zh">在美国，政府干预要轻得多，公司已挺身而出填补空缺，评估自己的模型并要求更多防护措施。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>companies have stepped into the breach</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>定语从句</b> — where the government has a much lighter touch<span class="muted">（修饰America）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>分词短语</b> — evaluating their own models and asking for more guardrails<span class="muted">（修饰 companies）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>where引导的定语从句和现在分词短语作伴随状语，需注意逻辑主语。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="10" data-sid="s6" tabindex="0" role="button">
+        <p class="ls-sentence">A review by Concordia AI, a consultancy in Beijing, of ten Chinese firms with recently released models found that just five had published safety evaluations.</p>
+        <p class="ls-zh">北京咨询公司Concordia AI对十家近期发布模型的中国公司进行审查后发现，只有五家发布了安全评估。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>A review found that...</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>名词性从句</b> — that just five had published safety evaluations<span class="muted">（作found的宾语）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — by Concordia AI, a consultancy in Beijing<span class="muted">（修饰 A review）</span></div><div><b>介词短语</b> — of ten Chinese firms with recently released models<span class="muted">（修饰 A review）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>主语A review后有两个介词短语修饰，且插入同位语，造成主谓分离。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="10" data-sid="s7" tabindex="0" role="button">
+        <p class="ls-sentence">Critics fret that such models, unlike the closed ones dominant in America, can be abused more readily.</p>
+        <p class="ls-zh">批评者担心，这类模型不同于美国主导的封闭模型，更容易被滥用。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Critics fret that...</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>名词性从句</b> — that such models can be abused more readily<span class="muted">（作fret的宾语）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — unlike the closed ones dominant in America<span class="muted">（修饰 such models）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>插入语unlike...造成主谓分离，dominant in America是后置定语。</dd>
+        </dl>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 写作拆解 -->
+  <div class="tab-panel" id="tab-decon" data-label="写作拆解">
+    <section class="card">
+      <h2 class="section">写法总览</h2>
+      <p class="prose">文章以警察反诈视频引入，先驳斥中国不重视AI安全的流行观点，再系统展示中国在AI安全治理上的密集动作与哲学逻辑，最后指出中国规则严格但企业主动性不足。结构上先破后立，用数据、引语和对比层层推进，风格冷静、带点讽刺。</p>
+    </section>
+    <section class="card">
+      <h2 class="section">结构拆解 <span class="count">8 部分</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">引入</span>
+          <b>反诈视频引出AI风险</b>
+          <span class="muted small">§1</span>
+        </div>
+        <p><b>论点</b>　AI语音合成诈骗已在中国出现，警方建议陌生电话沉默三秒。</p>
+        <p><b>论据</b>　郭涛警官的视频广泛传播，提醒人们犯罪分子可用AI合成声音诈骗亲友。</p>
+        <p><b>写法</b>　以具体生活场景开篇，制造亲切感和悬念。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">提出论点</span>
+          <b>驳斥中国不关心AI安全的观点</b>
+          <span class="muted small">§2 · §3</span>
+        </div>
+        <p><b>论点</b>　许多观察者（包括特朗普）认为中国不关心AI风险，但事实并非如此。</p>
+        <p><b>论据</b>　特朗普称中国不会阻碍AI；盖洛普调查显示93%中国受访者认为AI主要有利，而美国仅36%。</p>
+        <p><b>写法</b>　引用名人言论和民调数据，先立靶再打靶。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>中国对AI安全的广泛担忧</b>
+          <span class="muted small">§4</span>
+        </div>
+        <p><b>论点</b>　中国的担忧涵盖犯罪、就业、国家安全乃至失控场景，且与中共对网络空间的管控逻辑一致。</p>
+        <p><b>论据</b>　中共多年来致力于控制网络空间；若视互联网为生存挑战，不会放任AI。</p>
+        <p><b>写法</b>　用类比和反问强化逻辑。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">例证</span>
+          <b>中国AI安全框架的具体内容</b>
+          <span class="muted small">§5 · §6</span>
+        </div>
+        <p><b>论点</b>　中国已出台全球最严格的AI规则，2026年9月更新版列出54项风险并提议人工检查点等措施。</p>
+        <p><b>论据</b>　框架将风险分为固有、应用和次生三类；要求AI生成内容标注；草案要求立即关闭有严重问题的功能；10月16日提议限制先进AI技术出口。</p>
+        <p><b>写法</b>　列举具体规则和日期，增强可信度。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">转折</span>
+          <b>对失控风险的关注上升与哲学差异</b>
+          <span class="muted small">§7 · §8</span>
+        </div>
+        <p><b>论点</b>　中国对失控风险的关注显著增加，但仍视AI为可引导的技术，而非会脱离人类控制。</p>
+        <p><b>论据</b>　2024版框架仅一次提及失控，新版出现十余次；习近平将AI比作蒸汽机、电力和互联网。</p>
+        <p><b>写法</b>　对比不同版本框架和领导人比喻，揭示深层逻辑。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">例证</span>
+          <b>家长式规则与企业被动</b>
+          <span class="muted small">§9 · §10</span>
+        </div>
+        <p><b>论点</b>　中国规则体现软家长主义，但企业往往被动等待政府指令，安全评估不足。</p>
+        <p><b>论据</b>　郭涛的三秒建议；禁止向未成年人提供虚拟恋人或亲属；Concordia AI审查十家公司仅五家公布安全评估。</p>
+        <p><b>写法</b>　用具体案例和数据说明规则与执行的落差。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>开放模型的风险与中国的应对</b>
+          <span class="muted small">§10 · §11</span>
+        </div>
+        <p><b>论点</b>　中国开放权重模型被批评易滥用，但中国认为利大于弊，并正在制定更严格规则。</p>
+        <p><b>论据</b>　中国开放模型曾帮助防御美国封闭模型的攻击；内部人士称新模型发布前需严格安全审查。</p>
+        <p><b>写法</b>　引入反方观点再反驳，平衡论述。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">结论</span>
+          <b>结论：中国在风险管理上不落后</b>
+          <span class="muted small">§12</span>
+        </div>
+        <p><b>论点</b>　中国在AI性能上落后美国，但在规则、控制、限制和警告方面得心应手。</p>
+        <p><b>论据</b>　中国AI模型性能落后数月；但管理风险方面并不滞后。</p>
+        <p><b>写法</b>　首尾呼应，用短句收束，强化印象。</p>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">可借鉴的写作技巧 <span class="count">6 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>以具体场景开篇</b>
+          <span class="muted small">§1</span>
+        </div>
+        <blockquote>“Guard the golden three seconds, guard your wallet.”</blockquote>
+        <p class="muted">用生活化场景吸引读者，引出AI风险主题。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>先立靶后打靶</b>
+          <span class="muted small">§2</span>
+        </div>
+        <blockquote>“China will be doing absolutely nothing to stand in the way of AI,”</blockquote>
+        <p class="muted">先呈现流行误解，再逐步驳斥，增强说服力。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>数据对比</b>
+          <span class="muted small">§3</span>
+        </div>
+        <blockquote>93% of respondents in China said it would mostly help their country, versus just 36% in America.</blockquote>
+        <p class="muted">用悬殊数据凸显中美态度差异，引发思考。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>反问句强化逻辑</b>
+          <span class="muted small">§4</span>
+        </div>
+        <blockquote>Is a regime that views the internet as an existential challenge suddenly about to let AI rip?</blockquote>
+        <p class="muted">以反问迫使读者认同中国不会放任AI风险。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>列举具体规则</b>
+          <span class="muted small">§5</span>
+        </div>
+        <blockquote>It lists 54 risks under three categories: “inherent” (models behaving in unintended ways), “application” (use by criminals) and “secondary” (social alienation).</blockquote>
+        <p class="muted">用精确数字和分类展示中国规则的细致，增强可信度。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>首尾呼应</b>
+          <span class="muted small">§12</span>
+        </div>
+        <blockquote>When it comes to rules, controls, limits and warnings, China is in its element.</blockquote>
+        <p class="muted">结尾短句总结全文，强化中国擅长规则管理的印象。</p>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 背景观点 -->
+  <div class="tab-panel" id="tab-background" data-label="背景观点">
+    <section class="card">
+      <h2 class="section">事件背景</h2>
+      <p class="prose">全球AI治理竞争加剧，美国与中国在AI安全理念上存在分歧。中国自2024年起逐步构建AI安全框架，2026年更新并提议出口管制。特朗普政府时期美国放松监管，中国则强调可控。</p>
+    </section>
+    <section class="card">
+      <h2 class="section">关键事实与数据</h2>
+      
+      <div class="fact-row" data-para="3" tabindex="0" role="button">
+        <div>盖洛普调查显示中国受访者对AI的乐观比例远高于美国。</div>
+        <span class="fact-data">93% vs 36%</span>
+      </div>
+      
+      <div class="fact-row" data-para="5" tabindex="0" role="button">
+        <div>中国AI安全框架更新版列出风险数量。</div>
+        <span class="fact-data">54项风险</span>
+      </div>
+      
+      <div class="fact-row" data-para="6" tabindex="0" role="button">
+        <div>中国提议限制先进AI技术出口的日期。</div>
+        <span class="fact-data">10月16日</span>
+      </div>
+      
+      <div class="fact-row" data-para="7" tabindex="0" role="button">
+        <div>中国2024版框架提及失控风险的次数。</div>
+        <span class="fact-data">1次</span>
+      </div>
+      
+      <div class="fact-row" data-para="10" tabindex="0" role="button">
+        <div>Concordia AI审查的中国公司中公布安全评估的比例。</div>
+        <span class="fact-data">十家中五家</span>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">作者立场</h2>
+      <p class="prose">作者认为中国实际上高度重视AI安全，规则严格，但企业主动性不足；中国视AI为可控技术，与美国存在哲学差异。文章带有一定讽刺，但总体客观。</p>
+      <h2 class="section" style="margin-top:16px">启示</h2>
+      <p class="prose">对中国AI企业而言，合规成本上升但方向明确；对国际社会，中国在AI安全治理上可能比预期更积极，但开放模型监管仍是争议点；对政策制定者，需关注规则执行与企业自律的平衡。</p>
+    </section>
+  </div>
+
+  <!-- 实际应用 -->
+  <div class="tab-panel" id="tab-apply" data-label="实际应用">
+    <section class="card">
+      <h2 class="section">可操作技能 <span class="count">5 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>用具体案例开篇</b></div>
+        <p>写作或演讲时，先讲一个生动的小故事或场景，再引出大主题。</p>
+        <blockquote>写AI安全文章时，先描述一个AI诈骗电话的案例。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>先立靶后打靶</b></div>
+        <p>先陈述一个流行但错误的观点，再用证据反驳。</p>
+        <blockquote>先写“很多人认为中国不关心AI安全”，再列举中国规则。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>数据对比</b></div>
+        <p>用两个反差大的数据并列，突出差异。</p>
+        <blockquote>对比中美受访者对AI的乐观比例。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>列举具体规则和日期</b></div>
+        <p>在论述政策时，引用具体条款、数字和日期，增强可信度。</p>
+        <blockquote>写“中国框架列出54项风险，10月16日提议出口管制”。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>首尾呼应</b></div>
+        <p>结尾用短句总结核心观点，呼应开头。</p>
+        <blockquote>结尾写“在规则、控制、限制和警告方面，中国得心应手”。</blockquote>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">思维模型 <span class="count">5 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>破立结合</b></div>
+        <p>先打破常见误解，再建立自己的论点。</p>
+        <p class="muted"><b>怎么用：</b>当你要说服读者接受一个反直觉观点时，先指出流行观点的错误。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>对比分析</b></div>
+        <p>通过对比不同国家、版本或数据，揭示差异和本质。</p>
+        <p class="muted"><b>怎么用：</b>分析政策或现象时，选取两个可比对象进行对照。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>具体化思维</b></div>
+        <p>用具体案例、数字和细节代替抽象概括。</p>
+        <p class="muted"><b>怎么用：</b>写作时多问“有没有例子？”“数据是多少？”</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>系统思维</b></div>
+        <p>将问题放在更大的政治、社会背景中理解。</p>
+        <p class="muted"><b>怎么用：</b>分析AI安全时，联系中国的网络管控传统和治理哲学。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>批判性思维</b></div>
+        <p>不轻信流行观点，寻找反证。</p>
+        <p class="muted"><b>怎么用：</b>看到“中国不关心AI安全”的说法时，主动查找中国政策文件。</p>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 背诵 -->
+  <div class="tab-panel" id="tab-recite" data-label="背诵">
+    <section class="card">
+      <h2 class="section">背诵建议</h2>
+      <p class="prose">长句多在破折号和分号处换气，注意列举结构（如 criminal activity, labour displacement...）。用关键词串起全文：fraud warning → global perception → China’s framework → risk categories → human checkpoints → doomsday shift → Xi’s analogy → paternalism → open models → conclusion.</p>
+      <div class="meta-chips light" style="margin-top:12px">
+        <span class="chip">19 块</span>
+        <span class="chip">每块 25-70 词</span>
+        <span class="chip">预计 12 分钟背一遍</span>
+        <span class="chip">复习 D+1/2/4/7/15</span>
+        <span class="chip">每天新背 3 块</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">原文分块 <span class="count">19 块</span></h2>
+      <p class="muted small" style="margin-bottom:10px">先通读英文；需要时点「显示翻译」；点「遮住自测」检查记忆。</p>
+      
+      <article class="rc-chunk" id="chunk-1">
+        <div class="rc-head">
+          <span class="rc-no">块 1</span>
+          <span class="rc-size">34 words · §1</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">China | Chaguan Does China really prize AI speed over safety? In full command of its own cyberspace, China wants the same for AI Oct 22nd 2026 “Guard the golden three seconds, guard your wallet.”</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> title, golden three seconds</div>
+        <div class="rc-zh">中国 | 茶馆 中国真的重视AI速度胜过安全吗？中国完全掌控着自己的网络空间，也希望以同样方式掌控AI。2026年10月22日 “守住黄金三秒，守住你的钱包。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-2">
+        <div class="rc-head">
+          <span class="rc-no">块 2</span>
+          <span class="rc-size">29 words · §1</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">In recent weeks a video of an avuncular policeman, Guo Tao, delivering this message—a warning about how to handle fraudsters on the phone—has spread widely in China.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> Guo Tao video</div>
+        <div class="rc-zh">最近几周，一段视频在中国广泛传播，视频中一位慈祥的警察郭涛传递了这一信息——警告人们如何应对电话诈骗者。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-3">
+        <div class="rc-head">
+          <span class="rc-no">块 3</span>
+          <span class="rc-size">56 words · §1</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">All it takes is a simple greeting for criminals to capture one’s voice and then use artificial intelligence to synthesise it for duping friends and relatives. So, as Mr Guo says, it is best to stay silent for three seconds when called from unknown numbers, to see if a real person speaks. Not bad advice.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> voice capture, stay silent</div>
+        <div class="rc-zh">罪犯只需一句简单的问候就能捕获某人的声音，然后利用人工智能合成声音来欺骗亲友。所以，正如郭先生所说，接到未知号码来电时最好保持沉默三秒，看看是否是真人说话。这建议不错。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-4">
+        <div class="rc-head">
+          <span class="rc-no">块 4</span>
+          <span class="rc-size">60 words · §2</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">It also relates to one of the tech world’s most pressing questions: what does China think about the risks posed by AI? Many observers believe China does not care much about the dangers. Donald Trump is one. “China will be doing absolutely nothing to stand in the way of AI,” he claimed last month, explaining his own disdain forregulation.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> Trump claim, observers</div>
+        <div class="rc-zh">这也关系到科技界最紧迫的问题之一：中国如何看待AI带来的风险？许多观察人士认为中国不太关心这些危险。唐纳德·特朗普就是其中之一。他上月声称：“中国绝对不会做任何事来阻碍AI”，以此解释他自己对监管的蔑视。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-5">
+        <div class="rc-head">
+          <span class="rc-no">块 5</span>
+          <span class="rc-size">82 words · §2–§3</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Indeed, surveys point to overwhelming Chinese optimism about AI. In a poll by Gallup, 93% of respondents in China said it would mostly help their country, versus just 36% in America. Calls for China to work with America to slow down frontier models have been brushed aside in Beijing. “Fearmongering” serves no one, says China’s foreign ministry. In fact, China spends an awful lot of time thinking about AI safety. Telephone fraud is just the tip of an iceberg of anxieties.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> Gallup poll, fearmongering</div>
+        <div class="rc-zh">事实上，调查显示中国人对AI普遍持乐观态度。盖洛普的一项民调中，93%的中国受访者表示AI主要会帮助他们的国家，而美国只有36%。要求中国与美国合作放缓前沿模型的呼吁在北京被置之不理。中国外交部表示，“散布恐慌”对谁都没有好处。事实上，中国花大量时间思考AI安全问题。电话诈骗只是焦虑冰山的一角。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-6">
+        <div class="rc-head">
+          <span class="rc-no">块 6</span>
+          <span class="rc-size">52 words · §4</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley. This should not be surprising. The Communist Party, which obsesses about danger in almost every domain of life, has fought for years to bring cyberspace under control.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> concerns list, Communist Party</div>
+        <div class="rc-zh">中国的担忧从犯罪活动、劳动力替代和国家安全，到——没错——让硅谷夜不能寐的失控场景。这并不奇怪。中国共产党几乎对生活各个领域的危险都痴迷，多年来一直努力将网络空间置于控制之下。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-7">
+        <div class="rc-head">
+          <span class="rc-no">块 7</span>
+          <span class="rc-size">45 words · §4</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Is a regime that views the internet as an existential challenge suddenly about to let AI rip? If, as in the Trump administration, one defines regulation as intrinsically a form of slowdown, then China is, in effect, slowing AI—though it would never say so.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> let AI rip, slowing AI</div>
+        <div class="rc-zh">一个将互联网视为生存挑战的政权，会突然放任AI吗？如果像特朗普政府那样，将监管本质上定义为一种放缓，那么中国实际上正在放缓AI——尽管它永远不会这么说。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-8">
+        <div class="rc-head">
+          <span class="rc-no">块 8</span>
+          <span class="rc-size">75 words · §5</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">“China already has the most stringent AI rules anywhere in the world,” says Kendra Schaefer of Trivium, a consultancy based in Beijing. The foundational document is China’s framework for the governance of AI safety. A second update came out in September. It lists 54 risks under three categories: “inherent” (models behaving in unintended ways), “application” (use by criminals) and “secondary” (social alienation). It also proposes ways to eliminate or, at least, mitigate these threats.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> Kendra Schaefer, 54 risks</div>
+        <div class="rc-zh">“中国已经拥有世界上最严格的AI规则，”总部位于北京的咨询公司Trivium的Kendra Schaefer说。基础文件是中国AI安全治理框架。第二次更新于9月发布。它列出了三大类54项风险：“固有”（模型以非预期方式行为）、“应用”（被罪犯使用）和“次要”（社会疏离）。它还提出了消除或至少减轻这些威胁的方法。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-9">
+        <div class="rc-head">
+          <span class="rc-no">块 9</span>
+          <span class="rc-size">88 words · §6</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">One is to require checkpoints at which humans (remember those?) must review and, if necessary, halt AI agents before they roam too widely. Some of the framework’s earlier ideas are already in force—for instance, AI-generated content such as audio and video must be clearly labelled. Others are likely to form the basis of new rules. Draft measures call for service providers to shut down any feature with serious problems immediately. On October 16th China also proposed curbs on exports of its most advanced AI technologies.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> human checkpoints, labelling</div>
+        <div class="rc-zh">其中之一是要求设置检查点，人类（还记得人类吗？）必须在AI代理广泛活动之前进行审查，必要时予以停止。该框架的一些早期想法已经生效——例如，AI生成的音频和视频等内容必须明确标注。其他想法可能成为新规则的基础。草案措施要求服务提供商立即关闭任何存在严重问题的功能。10月16日，中国还提议限制其最先进AI技术的出口。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-10">
+        <div class="rc-head">
+          <span class="rc-no">块 10</span>
+          <span class="rc-size">45 words · §7</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">As AI has grown more powerful, China has paid more attention to doomsday possibilities. The original version of its safety framework, issued in 2024, made just one glancing reference to loss of control. In the newestversion, that topic comes up more than a dozen times.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> doomsday, loss of control</div>
+        <div class="rc-zh">随着AI日益强大，中国更加关注末日可能性。其安全框架的原始版本于2024年发布，仅顺带提及了一次失控。在最新版本中，该话题出现了十几次。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-11">
+        <div class="rc-head">
+          <span class="rc-no">块 11</span>
+          <span class="rc-size">56 words · §7</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Even so, it is possible to discern a philosophical gap. Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution, the more common view in China is that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> philosophical gap, harnessed</div>
+        <div class="rc-zh">即便如此，仍能看出一种哲学上的差距。美国一些人担心AI模型最终会超越人类智能并控制自身进化，而中国更普遍的观点是，AI是一种可以驾驭和引导的变革性技术，而不是会脱离人类掌控的东西。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-12">
+        <div class="rc-head">
+          <span class="rc-no">块 12</span>
+          <span class="rc-size">66 words · §8</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Xi Jinping compares AI to the steam engine, electricity and the internet— technologies that were epoch-shaping but did not pose dangers that required a co-ordinated slowdown. With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes. As China sees it, such an agreement looks both unnecessary and self-serving for Americans.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> Xi analogy, brakes</div>
+        <div class="rc-zh">习近平将AI比作蒸汽机、电力和互联网——这些技术塑造了时代，但并未构成需要协调放缓的危险。由于中国在AI前沿仍落后于美国，习近平更不愿意同意踩刹车。在中国看来，这样的协议既无必要，对美国也是自私自利。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-13">
+        <div class="rc-head">
+          <span class="rc-no">块 13</span>
+          <span class="rc-size">31 words · §8</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Unsurprisingly, Chinese officials devote much bandwidth to ideology. They want to ensure that models do not contradict the party on important matters, and that new tools do not undermine its control.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> ideology, party control</div>
+        <div class="rc-zh">毫不奇怪，中国官员在意识形态上投入大量精力。他们要确保模型在重要问题上不与党矛盾，并确保新工具不会削弱其控制。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-14">
+        <div class="rc-head">
+          <span class="rc-no">块 14</span>
+          <span class="rc-size">40 words · §9</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Yet there are more banal concerns, too, reflecting the soft paternalism of the Chinese state. Hence Mr Guo’s three golden seconds on the phone and a ban on offering virtual lovers or, for that matter, virtual relatives to minors.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> soft paternalism, virtual lovers</div>
+        <div class="rc-zh">然而，也有更平庸的担忧，反映了中国国家的软家长主义。因此有了郭先生的电话黄金三秒，以及禁止向未成年人提供虚拟恋人或虚拟亲属。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-15">
+        <div class="rc-head">
+          <span class="rc-no">块 15</span>
+          <span class="rc-size">53 words · §9</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">China’s yen for rules may have an unintended effect. In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails. In China firms are often more passive, waiting for directions from the party and government before applying controls.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> unintended effect, passive firms</div>
+        <div class="rc-zh">中国对规则的热衷可能产生意想不到的效果。在美国，政府干预要轻得多，公司已挺身而出，评估自己的模型并要求更多护栏。在中国，企业往往更被动，等待党和政府的指示后才实施控制。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-16">
+        <div class="rc-head">
+          <span class="rc-no">块 16</span>
+          <span class="rc-size">36 words · §10</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">A review by Concordia AI, a consultancy in Beijing, of ten Chinese firms with recently released models found that just five had published safety evaluations. That suggests possible perils if models develop faster than regulators expect.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> Concordia AI, five evaluations</div>
+        <div class="rc-zh">北京咨询公司Concordia AI对十家近期发布模型的中国公司进行审查，发现只有五家发布了安全评估。这表明如果模型发展速度超过监管机构预期，可能存在危险。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-17">
+        <div class="rc-head">
+          <span class="rc-no">块 17</span>
+          <span class="rc-size">76 words · §10</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">China’s rules will also fail to impress those who view its open-weight models as unavoidably dangerous. Critics fret that such models, unlike the closed ones dominant in America, can be abused more readily. Yet many in Chinese AI argue the benefits outweigh that hazard: they note that China’s open models have helped defend computer systems from rogue attacks launched by American closed models, as when OpenAI tools breached Hugging Face, an AI platform.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> open-weight, Hugging Face</div>
+        <div class="rc-zh">中国的规则也无法打动那些认为其开放权重模型必然危险的人。批评者担心，与美国主导的封闭模型不同，此类模型更容易被滥用。然而，中国AI界的许多人认为好处大于危险：他们指出，中国的开放模型帮助保护计算机系统免受美国封闭模型发起的恶意攻击，例如当OpenAI工具入侵AI平台Hugging Face时。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-18">
+        <div class="rc-head">
+          <span class="rc-no">块 18</span>
+          <span class="rc-size">72 words · §11</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">In any case, China is already working ontougher rules to govern open models. Insiders say that new releases face exacting safety reviews before being offered to the public. By most measures China’s AI models are a few months, or more, behind America’s in their performance. That is a big gap for such a fast-evolving technology. But do not accuse China of lagging behind America in its management of risks.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> tougher rules, lagging behind</div>
+        <div class="rc-zh">无论如何，中国已经在制定更严格的规则来管理开放模型。内部人士称，新发布的模型在向公众提供之前要经过严格的安全审查。按大多数标准，中国AI模型的性能落后美国几个月或更多。对于如此快速发展的技术来说，这是一个很大的差距。但不要指责中国在风险管理方面落后于美国。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-19">
+        <div class="rc-head">
+          <span class="rc-no">块 19</span>
+          <span class="rc-size">36 words · §12</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">When it comes to rules, controls, limits and warnings, China is in its element.■ This article was downloaded by zlibrary from https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> in its element, source</div>
+        <div class="rc-zh">在规则、控制、限制和警告方面，中国得心应手。■ 本文由zlibrary从https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-下载</div>
+      </article>
+      
+    </section>
+
+    <section class="card">
+      <h2 class="section">逐块复习表</h2>
+      <div class="table-scroll">
+        <table class="vocab-table rc-table">
+          <thead>
+            <tr>
+              <th>块</th><th>学习日</th>
+              <th>D+1</th><th>D+2</th><th>D+4</th><th>D+7</th><th>D+15</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+            <tr>
+              <td><b>1</b></td>
+              <td>2026-10-27</td>
+              <td>2026-10-28</td><td>2026-10-29</td><td>2026-10-31</td><td>2026-11-03</td><td>2026-11-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>2</b></td>
+              <td>2026-10-27</td>
+              <td>2026-10-28</td><td>2026-10-29</td><td>2026-10-31</td><td>2026-11-03</td><td>2026-11-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>3</b></td>
+              <td>2026-10-27</td>
+              <td>2026-10-28</td><td>2026-10-29</td><td>2026-10-31</td><td>2026-11-03</td><td>2026-11-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>4</b></td>
+              <td>2026-10-28</td>
+              <td>2026-10-29</td><td>2026-10-30</td><td>2026-11-01</td><td>2026-11-04</td><td>2026-11-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>5</b></td>
+              <td>2026-10-28</td>
+              <td>2026-10-29</td><td>2026-10-30</td><td>2026-11-01</td><td>2026-11-04</td><td>2026-11-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>6</b></td>
+              <td>2026-10-28</td>
+              <td>2026-10-29</td><td>2026-10-30</td><td>2026-11-01</td><td>2026-11-04</td><td>2026-11-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>7</b></td>
+              <td>2026-10-29</td>
+              <td>2026-10-30</td><td>2026-10-31</td><td>2026-11-02</td><td>2026-11-05</td><td>2026-11-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>8</b></td>
+              <td>2026-10-29</td>
+              <td>2026-10-30</td><td>2026-10-31</td><td>2026-11-02</td><td>2026-11-05</td><td>2026-11-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>9</b></td>
+              <td>2026-10-29</td>
+              <td>2026-10-30</td><td>2026-10-31</td><td>2026-11-02</td><td>2026-11-05</td><td>2026-11-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>10</b></td>
+              <td>2026-10-30</td>
+              <td>2026-10-31</td><td>2026-11-01</td><td>2026-11-03</td><td>2026-11-06</td><td>2026-11-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>11</b></td>
+              <td>2026-10-30</td>
+              <td>2026-10-31</td><td>2026-11-01</td><td>2026-11-03</td><td>2026-11-06</td><td>2026-11-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>12</b></td>
+              <td>2026-10-30</td>
+              <td>2026-10-31</td><td>2026-11-01</td><td>2026-11-03</td><td>2026-11-06</td><td>2026-11-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>13</b></td>
+              <td>2026-10-31</td>
+              <td>2026-11-01</td><td>2026-11-02</td><td>2026-11-04</td><td>2026-11-07</td><td>2026-11-15</td>
+            </tr>
+          
+            <tr>
+              <td><b>14</b></td>
+              <td>2026-10-31</td>
+              <td>2026-11-01</td><td>2026-11-02</td><td>2026-11-04</td><td>2026-11-07</td><td>2026-11-15</td>
+            </tr>
+          
+            <tr>
+              <td><b>15</b></td>
+              <td>2026-10-31</td>
+              <td>2026-11-01</td><td>2026-11-02</td><td>2026-11-04</td><td>2026-11-07</td><td>2026-11-15</td>
+            </tr>
+          
+            <tr>
+              <td><b>16</b></td>
+              <td>2026-11-01</td>
+              <td>2026-11-02</td><td>2026-11-03</td><td>2026-11-05</td><td>2026-11-08</td><td>2026-11-16</td>
+            </tr>
+          
+            <tr>
+              <td><b>17</b></td>
+              <td>2026-11-01</td>
+              <td>2026-11-02</td><td>2026-11-03</td><td>2026-11-05</td><td>2026-11-08</td><td>2026-11-16</td>
+            </tr>
+          
+            <tr>
+              <td><b>18</b></td>
+              <td>2026-11-01</td>
+              <td>2026-11-02</td><td>2026-11-03</td><td>2026-11-05</td><td>2026-11-08</td><td>2026-11-16</td>
+            </tr>
+          
+            <tr>
+              <td><b>19</b></td>
+              <td>2026-11-02</td>
+              <td>2026-11-03</td><td>2026-11-04</td><td>2026-11-06</td><td>2026-11-09</td><td>2026-11-17</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="checkin">
+      <h2 class="section">每日打卡</h2>
+      <div class="checkin-controls">
+        <div class="progress">
+          <div class="progress-bar"><i id="progressFill"></i></div>
+          <span class="progress-text" id="progressText">0 / 22 天</span>
+        </div>
+      </div>
+      <div class="day-list" id="dayList">
+        
+        <div class="day-row">
+          <span class="day-label">第 1 天 · 2026-10-27</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 1,2,3</span>
+            
+          </span>
+          <button class="rc-btn js-day-check" data-day="1" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 2 天 · 2026-10-28</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 4,5,6</span>
+            <span class="tag review">复习 1,2,3</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="2" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 3 天 · 2026-10-29</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 7,8,9</span>
+            <span class="tag review">复习 1,2,3,4,5,6</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="3" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 4 天 · 2026-10-30</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 10,11,12</span>
+            <span class="tag review">复习 4,5,6,7,8,9</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="4" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 5 天 · 2026-10-31</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 13,14,15</span>
+            <span class="tag review">复习 1,2,3,7,8,9,10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="5" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 6 天 · 2026-11-01</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 16,17,18</span>
+            <span class="tag review">复习 4,5,6,10,11,12,13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="6" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 7 天 · 2026-11-02</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 19</span>
+            <span class="tag review">复习 7,8,9,13,14,15,16,17,18</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="7" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 8 天 · 2026-11-03</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 1,2,3,10,11,12,16,17,18,19</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="8" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 9 天 · 2026-11-04</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 4,5,6,13,14,15,19</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="9" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 10 天 · 2026-11-05</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 7,8,9,16,17,18</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="10" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 11 天 · 2026-11-06</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 10,11,12,19</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="11" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 12 天 · 2026-11-07</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="12" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 13 天 · 2026-11-08</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 16,17,18</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="13" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 14 天 · 2026-11-09</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 19</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="14" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 15 天 · 2026-11-10</span>
+          <span class="day-tags">
+            
+            
+          </span>
+          <button class="rc-btn js-day-check" data-day="15" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 16 天 · 2026-11-11</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 1,2,3</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="16" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 17 天 · 2026-11-12</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 4,5,6</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="17" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 18 天 · 2026-11-13</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 7,8,9</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="18" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 19 天 · 2026-11-14</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="19" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 20 天 · 2026-11-15</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="20" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 21 天 · 2026-11-16</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 16,17,18</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="21" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 22 天 · 2026-11-17</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 19</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="22" type="button">完成</button>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+
+  <!-- 统计 -->
+  <div class="tab-panel" id="tab-stats" data-label="统计">
+    <div class="stat-grid">
+      <div class="stat"><b>1032</b><span>英文词数</span></div>
+      <div class="stat"><b>12</b><span>段落</span></div>
+      <div class="stat"><b>20</b><span>生词</span></div>
+      <div class="stat"><b>7</b><span>长难句</span></div>
+      <div class="stat"><b>8</b><span>结构部分</span></div>
+      <div class="stat"><b>19</b><span>背诵块</span></div>
+      <div class="stat"><b>18159</b><span>Tokens</span></div>
+      <div class="stat"><b>¥0.0286</b><span>本次费用</span></div>
+      <div class="stat"><b>34s</b><span>分析耗时</span></div>
+    </div>
+    <section class="card" style="margin-top:14px">
+      <h2 class="section">分阶段用量</h2>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>阶段</th><th>输入</th><th>输出</th><th>费用</th><th>结束原因</th></tr></thead>
+          <tbody>
+          
+            <tr>
+              <td>core</td>
+              <td>2109</td>
+              <td>2684</td>
+              <td>¥0.0075</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:1</td>
+              <td>1211</td>
+              <td>862</td>
+              <td>¥0.0029</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:2</td>
+              <td>699</td>
+              <td>409</td>
+              <td>¥0.0015</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>language</td>
+              <td>1893</td>
+              <td>3285</td>
+              <td>¥0.0085</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>recitation</td>
+              <td>1774</td>
+              <td>3233</td>
+              <td>¥0.0082</td>
+              <td>stop</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<div id="tip"></div>
+
+<script>
+(function () {
+  var VOCAB = {"v1": {"word": "in full command of", "note": "完全掌控；in full command of 表示对某事物有完全的控制权，常用于政治或军事语境。", "difficulty": "★★☆", "para": 1}, "v2": {"word": "stand in the way of", "note": "阻碍，妨碍；stand in the way of 是习语，表示阻止某事发生或发展。", "difficulty": "★★☆", "para": 2}, "v3": {"word": "brushed aside", "note": "被忽视，被搁置；brush aside 表示对某建议或请求不予理会。", "difficulty": "★★☆", "para": 3}, "v4": {"word": "fearmongering", "note": "散布恐惧，危言耸听；fearmongering 指故意制造恐慌的行为，常含贬义。", "difficulty": "★★☆", "para": 3}, "v5": {"word": "tip of an iceberg", "note": "冰山一角；习语，表示某事物只是更大问题的一小部分。", "difficulty": "★☆☆", "para": 3}, "v6": {"word": "loss-of-control scenarios", "note": "失控情景；指人工智能可能脱离人类控制的情形，是AI安全讨论中的术语。", "difficulty": "★★☆", "para": 4}, "v7": {"word": "let AI rip", "note": "放任AI发展；let something rip 是习语，意为任其自由发展、不加约束。", "difficulty": "★★☆", "para": 4}, "v8": {"word": "stringent", "note": "严格的，严厉的；stringent 常用来形容规则、法律或标准非常严格。", "difficulty": "★★☆", "para": 5}, "v9": {"word": "in force", "note": "生效，在实施中；in force 是法律或规则生效的固定表达。", "difficulty": "★☆☆", "para": 6}, "v10": {"word": "curbs", "note": "限制，约束；curb 作名词时常指对某事物的控制或限制，如出口限制。", "difficulty": "★★☆", "para": 6}, "v11": {"word": "glancing reference", "note": "一笔带过，轻描淡写地提及；glancing 在此表示间接的、简略的。", "difficulty": "★★☆", "para": 7}, "v12": {"word": "discern", "note": "察觉，辨别；discern 指通过观察看出或理解某事物，常用于抽象概念。", "difficulty": "★★☆", "para": 7}, "v13": {"word": "epoch-shaping", "note": "划时代的，开创性的；epoch-shaping 是复合形容词，表示塑造一个时代的。", "difficulty": "★★☆", "para": 8}, "v14": {"word": "apply the brakes", "note": "踩刹车，放缓；比喻采取措施减缓发展速度。", "difficulty": "★★☆", "para": 8}, "v15": {"word": "bandwidth", "note": "精力，注意力；bandwidth 原指带宽，此处比喻为投入的时间和精力。", "difficulty": "★★☆", "para": 8}, "v16": {"word": "soft paternalism", "note": "温和家长主义；指政府以保护民众为由进行温和干预的理念。", "difficulty": "★★☆", "para": 9}, "v17": {"word": "yen for", "note": "渴望，热望；yen 作名词表示强烈的欲望或倾向，常与 for 连用。", "difficulty": "★★☆", "para": 9}, "v18": {"word": "stepped into the breach", "note": "填补空缺，挺身而出；step into the breach 是习语，表示在困难时接手或填补空缺。", "difficulty": "★★☆", "para": 9}, "v19": {"word": "guardrails", "note": "防护措施，护栏；guardrails 在AI语境中指安全保护措施或监管框架。", "difficulty": "★★☆", "para": 9}, "v20": {"word": "open-weight models", "note": "开放权重模型；指模型参数公开可用的AI模型，与闭源模型相对。", "difficulty": "★★☆", "para": 10}};
+  var MATERIAL_ID = "2026-10-27_1621_China-Chaguan-Does-China-really-prize-AI_1956e3";
+  var DAY_TOTAL = 22;
+
+  // ── Tab 切换 ──
+  var tabBar = document.getElementById('tabBar');
+  function activateTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-tab') === id);
+    });
+    document.querySelectorAll('.tab-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === id);
+    });
+    try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
+    try { localStorage.setItem('economist-tab', id); } catch (e) {}
+  }
+  tabBar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab-btn');
+    if (btn) activateTab(btn.getAttribute('data-tab'));
+  });
+  var initialTab = location.hash.slice(1);
+  if (!initialTab) { try { initialTab = localStorage.getItem('economist-tab'); } catch (e) {} }
+  if (!initialTab || !document.getElementById(initialTab)) initialTab = 'tab-summary';
+  activateTab(initialTab);
+
+  // ── 定位到段落并高亮 ──
+  function locatePara(index, vid) {
+    if (!index) return;
+    activateTab('tab-translation');
+    var card = document.getElementById('para-' + index);
+    if (!card) return;
+    card.classList.remove('zh-off');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('flash');
+    var hit = vid ? card.querySelector('[data-vid="' + vid + '"]') : null;
+    if (hit) hit.classList.add('hit');
+    setTimeout(function () {
+      card.classList.remove('flash');
+      if (hit) hit.classList.remove('hit');
+    }, 2000);
+  }
+  document.querySelectorAll('.vocab-row[data-para]').forEach(function (row) {
+    row.addEventListener('click', function () {
+      locatePara(row.getAttribute('data-para'), row.getAttribute('data-vid'));
+    });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+    });
+  });
+  document.querySelectorAll('.ls-card[data-para], .fact-row[data-para]').forEach(function (el) {
+    el.addEventListener('click', function () { locatePara(el.getAttribute('data-para'), null); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  // ── 译文开关 ──
+  var hideAll = false;
+  var toggleAll = document.getElementById('toggleAllZh');
+  toggleAll.addEventListener('click', function () {
+    hideAll = !hideAll;
+    document.querySelectorAll('.para-card').forEach(function (c) {
+      c.classList.toggle('zh-off', hideAll);
+    });
+    toggleAll.textContent = hideAll ? '显示译文' : '隐藏译文';
+  });
+  document.querySelectorAll('.js-toggle-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.para-card').classList.toggle('zh-off');
+    });
+  });
+
+  // ── 生词 tooltip ──
+  var tip = document.getElementById('tip');
+  function hideTip() { tip.style.display = 'none'; }
+  function showTip(x, y, info) {
+    tip.innerHTML = '<div class="tip-word"></div><div class="tip-stars"></div><div class="tip-note"></div>';
+    tip.querySelector('.tip-word').textContent = info.word || '';
+    tip.querySelector('.tip-stars').textContent = info.difficulty || '';
+    tip.querySelector('.tip-note').textContent = info.note || '';
+    tip.style.display = 'block';
+    var r = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, x - r.width / 2), window.innerWidth - r.width - 8);
+    var top = y + 14;
+    if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+    tip.style.left = left + 'px';
+    tip.style.top = Math.max(8, top) + 'px';
+  }
+  document.querySelectorAll('.para-en').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var span = e.target.closest('.w');
+      if (!span) return;
+      var info = VOCAB[span.getAttribute('data-vid')];
+      if (!info) return;
+      e.stopPropagation();
+      showTip(e.clientX, e.clientY, info);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('#tip') && !e.target.closest('.w')) hideTip();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
+  window.addEventListener('scroll', hideTip, { passive: true });
+
+  // ── 背诵：翻译展开 / 遮住自测 ──
+  document.querySelectorAll('.js-toggle-chunk-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = b.closest('.rc-chunk');
+      card.classList.toggle('zh-on');
+      b.textContent = card.classList.contains('zh-on') ? '隐藏翻译' : '显示翻译';
+    });
+  });
+  document.querySelectorAll('.js-blank').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.rc-chunk').classList.toggle('blanked');
+    });
+  });
+
+  // ── 每日打卡（localStorage）──
+  var STORE_KEY = 'economist-recite-' + MATERIAL_ID;
+  function loadDone() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveDone(arr) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function renderProgress() {
+    var done = loadDone();
+    var pct = DAY_TOTAL ? Math.round(done.length / DAY_TOTAL * 100) : 0;
+    var fill = document.getElementById('progressFill');
+    var text = document.getElementById('progressText');
+    if (fill) fill.style.width = pct + '%';
+    if (text) text.textContent = done.length + ' / ' + DAY_TOTAL + ' 天';
+    document.querySelectorAll('.js-day-check').forEach(function (b) {
+      var on = done.indexOf(parseInt(b.getAttribute('data-day'), 10)) !== -1;
+      b.classList.toggle('done', on);
+      b.textContent = on ? '已完成' : '完成';
+    });
+  }
+  document.querySelectorAll('.js-day-check').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var day = parseInt(b.getAttribute('data-day'), 10);
+      var done = loadDone();
+      var i = done.indexOf(day);
+      if (i === -1) done.push(day); else done.splice(i, 1);
+      saveDone(done);
+      renderProgress();
+    });
+  });
+  renderProgress();
+})();
+</script>
+</body>
+</html>

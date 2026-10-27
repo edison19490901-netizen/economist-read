@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#12263a">
+<title>{{ title }} — 经济学人精读</title>
+<style>
+  :root{
+    --accent:#e3120b; --accent-soft:#fdecea; --ink:#12263a; --muted:#6b7280;
+    --bg:#f4f1ec; --card:#ffffff; --line:#e6e0d8; --soft:#fbf8f3;
+    --gold:#b8860b; --green:#0f766e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 14px 64px}
+  .muted{color:var(--muted)}
+  .small{font-size:12px}
+  .spacer{flex:1}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#12263a 0%,#1d3a52 60%,#2a4a63 100%);
+    color:#fff;border-radius:0 0 20px 20px;padding:30px 24px 24px;margin:0 -14px 14px;
+    box-shadow:0 8px 30px rgba(18,38,58,.18);
+  }
+  .kicker{font-size:10px;letter-spacing:.22em;color:#f2b8b5;font-weight:700}
+  .hero h1{font-size:25px;line-height:1.32;margin:8px 0 14px;font-weight:800;letter-spacing:-.01em}
+  .meta-chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:3px 9px;border-radius:999px;font-size:11px;color:#e8eef5}
+  .meta-chips.light .chip{background:var(--soft);border-color:var(--line);color:var(--ink)}
+
+  .notice{background:#fff8e6;border:1px solid #f0d9a8;color:#7a4a00;border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+  .notice.warn{background:#fdf2f2;border-color:#f3c2c0;color:#8a1f1a}
+
+  /* Tabs */
+  .tab-bar{
+    position:sticky;top:0;z-index:30;display:flex;gap:4px;overflow-x:auto;
+    background:rgba(244,241,236,.96);backdrop-filter:blur(10px);
+    padding:8px 2px;margin-bottom:4px;border-bottom:1px solid var(--line);scrollbar-width:none;
+  }
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{
+    white-space:nowrap;border:0;background:transparent;color:var(--muted);
+    padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;
+    transition:background .15s,color .15s;font-family:inherit;
+  }
+  .tab-btn:hover{background:#e9e4dc;color:var(--ink)}
+  .tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(227,18,11,.25)}
+
+  .tab-panel{display:none;padding-top:14px}
+  .tab-panel.active{display:block}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(18,38,58,.04)}
+  h2.section{font-size:16px;margin-bottom:12px;color:var(--ink);display:flex;align-items:baseline;gap:8px}
+  h2.section .count{font-size:12px;font-weight:500;color:var(--muted)}
+  .prose{font-size:14.5px;line-height:1.85;color:#374151}
+
+  /* Summary */
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .point-list{list-style:none}
+  .point-list li{position:relative;padding:9px 0 9px 20px;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.7}
+  .point-list li:last-child{border-bottom:0}
+  .point-list li:before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+  /* Translation */
+  .translation-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .btn{
+    border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;
+    padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-ghost{padding:3px 8px;font-size:11px;color:var(--muted)}
+  .para-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .2s,border-color .2s}
+  .para-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .para-no{font-size:11px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+  .para-en{font-family:Georgia,"Times New Roman",serif;font-size:16.5px;line-height:1.88;color:#1a2b3c}
+  .para-zh{font-size:14px;line-height:1.9;color:#4b5563;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+  .para-card.zh-off .para-zh{display:none}
+  .para-card.flash{animation:flash 1.8s ease}
+  @keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(227,18,11,0)}25%{box-shadow:0 0 0 4px rgba(227,18,11,.22)}}
+  .w{cursor:pointer;border-bottom:1px dotted rgba(227,18,11,.45);border-radius:2px}
+  .w:hover{background:var(--accent-soft)}
+  .w.hit{background:#ffe08a;box-shadow:0 0 0 2px #ffe08a}
+
+  /* Tables */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .vocab-table{width:100%;border-collapse:collapse;font-size:13px}
+  .vocab-table th{background:var(--ink);color:#fff;text-align:left;padding:8px 10px;font-size:11px;font-weight:600;white-space:nowrap}
+  .vocab-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .vocab-table tbody tr:last-child td{border-bottom:0}
+  .vocab-row[data-para]{cursor:pointer;transition:background .12s}
+  .vocab-row[data-para]:hover{background:var(--soft)}
+  .word-col{font-weight:800;color:var(--accent);white-space:nowrap}
+  .stars{color:var(--gold);white-space:nowrap}
+  .context-col{color:#6b7280;font-size:12px;min-width:220px}
+  .rc-table td{font-size:12px;white-space:nowrap}
+
+  /* Long sentences */
+  .ls-card{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff;cursor:pointer;transition:border-color .15s}
+  .ls-card:hover{border-color:#cfc7bb}
+  .ls-card[data-para].flash{animation:flash 1.8s ease}
+  .ls-sentence{font-family:Georgia,serif;font-size:15.5px;line-height:1.8;color:#1a2b3c}
+  .ls-zh{font-size:13.5px;color:#6b7280;margin-top:8px}
+  .struct{background:var(--soft);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px}
+  .struct dt{font-weight:800;color:var(--accent);font-size:11px;margin-top:7px}
+  .struct dt:first-child{margin-top:0}
+  .struct dd{color:#4b5563;margin-bottom:2px;line-height:1.7}
+
+  .mini-card{border:1px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:10px;background:#fff}
+  .mini-card:last-child{margin-bottom:0}
+  .mini-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .mini-card p{font-size:13.5px;color:#4b5563;line-height:1.75;margin-bottom:4px}
+  .mini-card blockquote{border-left:3px solid var(--accent);background:var(--soft);padding:8px 12px;margin:8px 0;font-family:Georgia,serif;font-size:13.5px;color:#374151;border-radius:0 6px 6px 0}
+  .role-badge{font-size:10px;font-weight:800;color:#fff;background:var(--green);padding:2px 7px;border-radius:999px}
+  .fact-row{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .fact-row:last-child{border-bottom:0}
+  .fact-row[data-para]{cursor:pointer}
+  .fact-row[data-para]:hover{background:var(--soft)}
+  .fact-data{white-space:nowrap;font-weight:800;color:var(--accent);font-size:12px;background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+
+  /* Recitation */
+  .rc-chunk{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .rc-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .rc-no{font-weight:800;color:var(--accent);font-size:12px}
+  .rc-size{font-size:11px;color:var(--muted)}
+  .rc-btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;color:#4b5563}
+  .rc-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .rc-text{padding:12px 14px;font-family:Georgia,"Times New Roman",serif;font-size:15.5px;line-height:1.9}
+  .rc-hint{padding:0 14px 11px;font-size:12px;color:var(--muted)}
+  .rc-hint b{color:var(--gold)}
+  .rc-zh{display:none;padding:10px 14px 13px;background:#fbf8f3;border-top:1px dashed var(--line);font-size:14px;color:#4b5563;line-height:1.8}
+  .rc-chunk.zh-on .rc-zh{display:block}
+  .rc-chunk.blanked .rc-text{display:none}
+  .rc-cover{display:none;padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
+  .rc-chunk.blanked .rc-cover{display:block}
+
+  .checkin-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .progress{display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+  .progress-bar{flex:1;height:8px;background:#eee;border-radius:999px;overflow:hidden}
+  .progress-bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+  .progress-text{font-size:12px;color:var(--muted);white-space:nowrap}
+  .day-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
+  .day-row:last-child{border-bottom:0}
+  .day-label{font-size:12.5px;font-weight:700;min-width:150px}
+  .day-tags{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+  .tag{font-size:11px;padding:2px 7px;border-radius:999px}
+  .tag.learn{background:#e8f5f2;color:var(--green)}
+  .tag.review{background:var(--accent-soft);color:var(--accent)}
+  .js-day-check.done{background:var(--green);border-color:var(--green);color:#fff}
+
+  /* Stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 10px;text-align:center}
+  .stat b{display:block;font-size:22px;color:var(--accent);line-height:1.2}
+  .stat span{font-size:11px;color:var(--muted)}
+
+  /* Tooltip */
+  #tip{position:fixed;z-index:100;max-width:300px;background:var(--ink);color:#fff;border-radius:9px;padding:10px 12px;font-size:12.5px;line-height:1.55;box-shadow:0 10px 30px rgba(0,0,0,.25);display:none}
+  #tip .tip-word{font-weight:800;font-size:14px;margin-bottom:1px}
+  #tip .tip-stars{color:#ffd166;font-size:11px;margin-bottom:4px}
+  #tip .tip-note{color:#dbe4ec}
+
+  @media (max-width:700px){
+    .summary-grid{grid-template-columns:1fr}
+    .hero h1{font-size:21px}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .vocab-table thead{display:none}
+    .vocab-table, .vocab-table tbody, .vocab-table tr, .vocab-table td{display:block;width:100%}
+    .vocab-table tr{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:8px 10px;background:#fff}
+    .vocab-table td{border:0;padding:4px 0}
+    .vocab-table td:before{content:attr(data-label);display:inline-block;min-width:64px;color:var(--muted);font-size:11px}
+    .context-col{min-width:0}
+  }
+  @media print{
+    body{background:#fff}
+    .tab-bar,.translation-toolbar,.rc-btn,.checkin-controls{display:none!important}
+    .hero{background:#fff!important;color:#000;box-shadow:none;padding:0 0 12px;margin:0 0 8px;border-bottom:2px solid #000}
+    .hero .kicker{color:#000}
+    .hero .chip{background:#fff;border-color:#999;color:#000}
+    .tab-panel{display:block!important;page-break-inside:avoid}
+    .tab-panel:before{content:attr(data-label);display:block;font-size:18px;font-weight:800;margin:20px 0 8px;padding-bottom:4px;border-bottom:2px solid #000;color:#000}
+    .para-card,.rc-chunk,.card{box-shadow:none;break-inside:avoid}
+    .para-zh,.rc-zh{display:block!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">THE ECONOMIST · 精读</div>
+    <h1>{{ title }}</h1>
+    <div class="meta-chips">
+      <span class="chip">{{ source_label }}</span>
+      <span class="chip">{{ meta.word_count }} 词</span>
+      <span class="chip">{{ paragraph_count }} 段</span>
+      {% if created_date %}<span class="chip">{{ created_date }}</span>{% endif %}
+      {% if meta.duration_seconds %}<span class="chip">分析 {{ duration }}</span>{% endif %}
+      {% if usage.cost_cny %}<span class="chip">¥{{ "%.4f"|format(usage.cost_cny) }}</span>{% endif %}
+    </div>
+  </header>
+
+  {% if truncated %}
+  <div class="notice">原文超过 60,000 字符，已按段落边界截断分析。</div>
+  {% endif %}
+  {% if warnings %}
+  <div class="notice warn">
+    {% for w in warnings %}<div>• {{ w }}</div>{% endfor %}
+  </div>
+  {% endif %}
+
+  <nav class="tab-bar" id="tabBar">
+    <button class="tab-btn active" data-tab="tab-summary">总结</button>
+    <button class="tab-btn" data-tab="tab-translation">对照翻译</button>
+    <button class="tab-btn" data-tab="tab-language">词汇长句</button>
+    <button class="tab-btn" data-tab="tab-decon">写作拆解</button>
+    <button class="tab-btn" data-tab="tab-background">背景观点</button>
+    <button class="tab-btn" data-tab="tab-apply">实际应用</button>
+    <button class="tab-btn" data-tab="tab-recite">背诵</button>
+    <button class="tab-btn" data-tab="tab-stats">统计</button>
+  </nav>
+
+  <!-- 总结 -->
+  <div class="tab-panel active" id="tab-summary" data-label="总结">
+    <div class="summary-grid">
+      <section class="card">
+        <h2 class="section">中文要点</h2>
+        <ul class="point-list">
+          {% for p in summary.zh_points %}<li>{{ p }}</li>{% endfor %}
+        </ul>
+      </section>
+      <section class="card">
+        <h2 class="section">English Key Points</h2>
+        <ul class="point-list">
+          {% for p in summary.en_points %}<li>{{ p }}</li>{% endfor %}
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- 对照翻译 -->
+  <div class="tab-panel" id="tab-translation" data-label="对照翻译">
+    <div class="translation-toolbar">
+      <div class="muted small">英文在上、中文在下；点生词表任意一行可跳转到对应段落。</div>
+      <button class="btn" id="toggleAllZh" type="button">隐藏译文</button>
+    </div>
+    <div id="translationList">
+      {% for p in paragraphs %}
+      <article class="para-card" id="para-{{ p.index }}" data-para="{{ p.index }}">
+        <div class="para-head">
+          <span class="para-no">§{{ p.index }}</span>
+          <span class="muted small">{{ p.word_count }} words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">{{ p.en_html | safe }}</p>
+        <p class="para-zh">{{ p.zh }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 词汇长句 -->
+  <div class="tab-panel" id="tab-language" data-label="词汇长句">
+    <section class="card">
+      <h2 class="section">重点词汇 <span class="count">{{ vocab_count }} 条</span></h2>
+      <p class="muted small" style="margin-bottom:10px">点击任意一行跳到原文段落并高亮；点原文中的虚线下划线词可查看释义。</p>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>单词 / 短语</th><th>难度</th><th>原文语境</th><th>中文注释</th></tr></thead>
+          <tbody>
+          {% for v in vocab_rows %}
+            <tr class="vocab-row"{% if v.paragraph_index %} data-para="{{ v.paragraph_index }}" data-vid="{{ v.id }}" tabindex="0" role="button"{% endif %}>
+              <td class="word-col" data-label="单词">{{ v.word }}</td>
+              <td class="stars" data-label="难度">{{ v.difficulty }}</td>
+              <td class="context-col" data-label="语境">{{ v.context_sentence }}</td>
+              <td data-label="注释">{{ v.chinese_note }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">长难句拆解 <span class="count">{{ long_count }} 句</span></h2>
+      {% for s in long_sentences %}
+      <div class="ls-card"{% if s.paragraph_index %} data-para="{{ s.paragraph_index }}" data-sid="{{ s.id }}" tabindex="0" role="button"{% endif %}>
+        <p class="ls-sentence">{{ s.sentence }}</p>
+        {% if s.translation %}<p class="ls-zh">{{ s.translation }}</p>{% endif %}
+        <dl class="struct">
+          {% if s.main_clause %}<dt>主干</dt><dd>{{ s.main_clause }}</dd>{% endif %}
+          {% if s.subordinate_clauses %}
+          <dt>从句</dt>
+          <dd>{% for c in s.subordinate_clauses %}<div><b>{{ c.type }}</b> — {{ c.text }}{% if c.function %}<span class="muted">（{{ c.function }}）</span>{% endif %}</div>{% endfor %}</dd>
+          {% endif %}
+          {% if s.modifiers %}
+          <dt>修饰成分</dt>
+          <dd>{% for m in s.modifiers %}<div><b>{{ m.type }}</b> — {{ m.text }}{% if m.modifies %}<span class="muted">（修饰 {{ m.modifies }}）</span>{% endif %}</div>{% endfor %}</dd>
+          {% endif %}
+          {% if s.note %}<dt>理解要点</dt><dd>{{ s.note }}</dd>{% endif %}
+        </dl>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+
+  <!-- 写作拆解 -->
+  <div class="tab-panel" id="tab-decon" data-label="写作拆解">
+    <section class="card">
+      <h2 class="section">写法总览</h2>
+      <p class="prose">{{ deconstruction.overview }}</p>
+    </section>
+    <section class="card">
+      <h2 class="section">结构拆解 <span class="count">{{ section_count }} 部分</span></h2>
+      {% for s in deconstruction.sections %}
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">{{ s.role }}</span>
+          <b>{{ s.title }}</b>
+          {% if s.paragraph_indices %}<span class="muted small">§{{ s.paragraph_indices|join(" · §") }}</span>{% endif %}
+        </div>
+        <p><b>论点</b>　{{ s.argument }}</p>
+        <p><b>论据</b>　{{ s.evidence }}</p>
+        <p><b>写法</b>　{{ s.technique }}</p>
+      </div>
+      {% endfor %}
+    </section>
+    <section class="card">
+      <h2 class="section">可借鉴的写作技巧 <span class="count">{{ technique_count }} 个</span></h2>
+      {% for t in deconstruction.writing_techniques %}
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>{{ t.name }}</b>
+          {% if t.paragraph_index %}<span class="muted small">§{{ t.paragraph_index }}</span>{% endif %}
+        </div>
+        <blockquote>{{ t.example }}</blockquote>
+        <p class="muted">{{ t.effect }}</p>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+
+  <!-- 背景观点 -->
+  <div class="tab-panel" id="tab-background" data-label="背景观点">
+    <section class="card">
+      <h2 class="section">事件背景</h2>
+      <p class="prose">{{ background.event_context }}</p>
+    </section>
+    <section class="card">
+      <h2 class="section">关键事实与数据</h2>
+      {% for f in background.key_facts %}
+      <div class="fact-row"{% if f.paragraph_index %} data-para="{{ f.paragraph_index }}" tabindex="0" role="button"{% endif %}>
+        <div>{{ f.fact }}</div>
+        {% if f.data %}<span class="fact-data">{{ f.data }}</span>{% endif %}
+      </div>
+      {% endfor %}
+    </section>
+    <section class="card">
+      <h2 class="section">作者立场</h2>
+      <p class="prose">{{ background.author_stance }}</p>
+      <h2 class="section" style="margin-top:16px">启示</h2>
+      <p class="prose">{{ background.implications }}</p>
+    </section>
+  </div>
+
+  <!-- 实际应用 -->
+  <div class="tab-panel" id="tab-apply" data-label="实际应用">
+    <section class="card">
+      <h2 class="section">可操作技能 <span class="count">{{ skill_count }} 个</span></h2>
+      {% for s in practical.actionable_skills %}
+      <div class="mini-card">
+        <div class="mini-head"><b>{{ s.skill }}</b></div>
+        <p>{{ s.how_to_apply }}</p>
+        {% if s.example %}<blockquote>{{ s.example }}</blockquote>{% endif %}
+      </div>
+      {% endfor %}
+    </section>
+    <section class="card">
+      <h2 class="section">思维模型 <span class="count">{{ model_count }} 个</span></h2>
+      {% for m in practical.thinking_models %}
+      <div class="mini-card">
+        <div class="mini-head"><b>{{ m.model }}</b></div>
+        <p>{{ m.explanation }}</p>
+        {% if m.how_to_use %}<p class="muted"><b>怎么用：</b>{{ m.how_to_use }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+
+  <!-- 背诵 -->
+  <div class="tab-panel" id="tab-recite" data-label="背诵">
+    <section class="card">
+      <h2 class="section">背诵建议</h2>
+      <p class="prose">{{ recitation.advice or "按意群分块，先通读，再逐块遮住自测。" }}</p>
+      <div class="meta-chips light" style="margin-top:12px">
+        <span class="chip">{{ chunk_count }} 块</span>
+        <span class="chip">每块 25-70 词</span>
+        <span class="chip">预计 {{ est_minutes }} 分钟背一遍</span>
+        <span class="chip">复习 D+{% for i in recitation.intervals %}{{ i }}{% if not loop.last %}/{% endif %}{% endfor %}</span>
+        <span class="chip">每天新背 {{ recitation.chunks_per_day }} 块</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">原文分块 <span class="count">{{ chunk_count }} 块</span></h2>
+      <p class="muted small" style="margin-bottom:10px">先通读英文；需要时点「显示翻译」；点「遮住自测」检查记忆。</p>
+      {% for c in chunks %}
+      <article class="rc-chunk" id="chunk-{{ c.index }}">
+        <div class="rc-head">
+          <span class="rc-no">块 {{ c.index }}</span>
+          <span class="rc-size">{{ c.word_count }} words · §{{ c.paragraph_start }}{% if c.paragraph_end != c.paragraph_start %}–§{{ c.paragraph_end }}{% endif %}</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">{{ c.text }}</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> {{ c.hint }}</div>
+        <div class="rc-zh">{{ c.translation }}</div>
+      </article>
+      {% endfor %}
+    </section>
+
+    <section class="card">
+      <h2 class="section">逐块复习表</h2>
+      <div class="table-scroll">
+        <table class="vocab-table rc-table">
+          <thead>
+            <tr>
+              <th>块</th><th>学习日</th>
+              {% for i in recitation.intervals %}<th>D+{{ i }}</th>{% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+          {% for row in schedule.per_chunk %}
+            <tr>
+              <td><b>{{ row.index }}</b></td>
+              <td>{{ row.learn_date }}</td>
+              {% for d in row.review_dates %}<td>{{ d }}</td>{% endfor %}
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="checkin">
+      <h2 class="section">每日打卡</h2>
+      <div class="checkin-controls">
+        <div class="progress">
+          <div class="progress-bar"><i id="progressFill"></i></div>
+          <span class="progress-text" id="progressText">0 / {{ schedule.daily|length }} 天</span>
+        </div>
+      </div>
+      <div class="day-list" id="dayList">
+        {% for d in schedule.daily %}
+        <div class="day-row">
+          <span class="day-label">第 {{ d.day }} 天 · {{ d.date }}</span>
+          <span class="day-tags">
+            {% if d.learn %}<span class="tag learn">新背 {{ d.learn|join(",") }}</span>{% endif %}
+            {% if d.review %}<span class="tag review">复习 {{ d.review|join(",") }}</span>{% endif %}
+          </span>
+          <button class="rc-btn js-day-check" data-day="{{ d.day }}" type="button">完成</button>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <!-- 统计 -->
+  <div class="tab-panel" id="tab-stats" data-label="统计">
+    <div class="stat-grid">
+      <div class="stat"><b>{{ meta.word_count }}</b><span>英文词数</span></div>
+      <div class="stat"><b>{{ paragraph_count }}</b><span>段落</span></div>
+      <div class="stat"><b>{{ vocab_count }}</b><span>生词</span></div>
+      <div class="stat"><b>{{ long_count }}</b><span>长难句</span></div>
+      <div class="stat"><b>{{ section_count }}</b><span>结构部分</span></div>
+      <div class="stat"><b>{{ chunk_count }}</b><span>背诵块</span></div>
+      <div class="stat"><b>{{ usage.total_tokens }}</b><span>Tokens</span></div>
+      <div class="stat"><b>¥{{ "%.4f"|format(usage.cost_cny) }}</b><span>本次费用</span></div>
+      <div class="stat"><b>{{ duration }}</b><span>分析耗时</span></div>
+    </div>
+    <section class="card" style="margin-top:14px">
+      <h2 class="section">分阶段用量</h2>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>阶段</th><th>输入</th><th>输出</th><th>费用</th><th>结束原因</th></tr></thead>
+          <tbody>
+          {% for c in usage.calls %}
+            <tr>
+              <td>{{ c.stage }}</td>
+              <td>{{ c.prompt_tokens }}</td>
+              <td>{{ c.completion_tokens }}</td>
+              <td>¥{{ "%.4f"|format(c.cost_cny) }}</td>
+              <td>{{ c.finish_reason }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<div id="tip"></div>
+
+<script>
+(function () {
+  var VOCAB = {{ vocab_map_json | safe }};
+  var MATERIAL_ID = {{ material_id | tojson }};
+  var DAY_TOTAL = {{ schedule.daily|length }};
+
+  // ── Tab 切换 ──
+  var tabBar = document.getElementById('tabBar');
+  function activateTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-tab') === id);
+    });
+    document.querySelectorAll('.tab-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === id);
+    });
+    try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
+    try { localStorage.setItem('economist-tab', id); } catch (e) {}
+  }
+  tabBar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab-btn');
+    if (btn) activateTab(btn.getAttribute('data-tab'));
+  });
+  var initialTab = location.hash.slice(1);
+  if (!initialTab) { try { initialTab = localStorage.getItem('economist-tab'); } catch (e) {} }
+  if (!initialTab || !document.getElementById(initialTab)) initialTab = 'tab-summary';
+  activateTab(initialTab);
+
+  // ── 定位到段落并高亮 ──
+  function locatePara(index, vid) {
+    if (!index) return;
+    activateTab('tab-translation');
+    var card = document.getElementById('para-' + index);
+    if (!card) return;
+    card.classList.remove('zh-off');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('flash');
+    var hit = vid ? card.querySelector('[data-vid="' + vid + '"]') : null;
+    if (hit) hit.classList.add('hit');
+    setTimeout(function () {
+      card.classList.remove('flash');
+      if (hit) hit.classList.remove('hit');
+    }, 2000);
+  }
+  document.querySelectorAll('.vocab-row[data-para]').forEach(function (row) {
+    row.addEventListener('click', function () {
+      locatePara(row.getAttribute('data-para'), row.getAttribute('data-vid'));
+    });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+    });
+  });
+  document.querySelectorAll('.ls-card[data-para], .fact-row[data-para]').forEach(function (el) {
+    el.addEventListener('click', function () { locatePara(el.getAttribute('data-para'), null); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  // ── 译文开关 ──
+  var hideAll = false;
+  var toggleAll = document.getElementById('toggleAllZh');
+  toggleAll.addEventListener('click', function () {
+    hideAll = !hideAll;
+    document.querySelectorAll('.para-card').forEach(function (c) {
+      c.classList.toggle('zh-off', hideAll);
+    });
+    toggleAll.textContent = hideAll ? '显示译文' : '隐藏译文';
+  });
+  document.querySelectorAll('.js-toggle-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.para-card').classList.toggle('zh-off');
+    });
+  });
+
+  // ── 生词 tooltip ──
+  var tip = document.getElementById('tip');
+  function hideTip() { tip.style.display = 'none'; }
+  function showTip(x, y, info) {
+    tip.innerHTML = '<div class="tip-word"></div><div class="tip-stars"></div><div class="tip-note"></div>';
+    tip.querySelector('.tip-word').textContent = info.word || '';
+    tip.querySelector('.tip-stars').textContent = info.difficulty || '';
+    tip.querySelector('.tip-note').textContent = info.note || '';
+    tip.style.display = 'block';
+    var r = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, x - r.width / 2), window.innerWidth - r.width - 8);
+    var top = y + 14;
+    if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+    tip.style.left = left + 'px';
+    tip.style.top = Math.max(8, top) + 'px';
+  }
+  document.querySelectorAll('.para-en').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var span = e.target.closest('.w');
+      if (!span) return;
+      var info = VOCAB[span.getAttribute('data-vid')];
+      if (!info) return;
+      e.stopPropagation();
+      showTip(e.clientX, e.clientY, info);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('#tip') && !e.target.closest('.w')) hideTip();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
+  window.addEventListener('scroll', hideTip, { passive: true });
+
+  // ── 背诵：翻译展开 / 遮住自测 ──
+  document.querySelectorAll('.js-toggle-chunk-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = b.closest('.rc-chunk');
+      card.classList.toggle('zh-on');
+      b.textContent = card.classList.contains('zh-on') ? '隐藏翻译' : '显示翻译';
+    });
+  });
+  document.querySelectorAll('.js-blank').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.rc-chunk').classList.toggle('blanked');
+    });
+  });
+
+  // ── 每日打卡（localStorage）──
+  var STORE_KEY = 'economist-recite-' + MATERIAL_ID;
+  function loadDone() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveDone(arr) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function renderProgress() {
+    var done = loadDone();
+    var pct = DAY_TOTAL ? Math.round(done.length / DAY_TOTAL * 100) : 0;
+    var fill = document.getElementById('progressFill');
+    var text = document.getElementById('progressText');
+    if (fill) fill.style.width = pct + '%';
+    if (text) text.textContent = done.length + ' / ' + DAY_TOTAL + ' 天';
+    document.querySelectorAll('.js-day-check').forEach(function (b) {
+      var on = done.indexOf(parseInt(b.getAttribute('data-day'), 10)) !== -1;
+      b.classList.toggle('done', on);
+      b.textContent = on ? '已完成' : '完成';
+    });
+  }
+  document.querySelectorAll('.js-day-check').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var day = parseInt(b.getAttribute('data-day'), 10);
+      var done = loadDone();
+      var i = done.indexOf(day);
+      if (i === -1) done.push(day); else done.splice(i, 1);
+      saveDone(done);
+      renderProgress();
+    });
+  });
+  renderProgress();
+})();
+</script>
+</body>
+</html>

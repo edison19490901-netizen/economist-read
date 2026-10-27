@@ -1,0 +1,1488 @@
+{
+  "meta": {
+    "id": "2026-10-27_1621_China-Chaguan-Does-China-really-prize-AI_1956e3",
+    "title": "China | Chaguan Does China really prize AI speed over safety?",
+    "source": "paste",
+    "url": null,
+    "language": "en",
+    "created": "2026-10-27T16:22:02",
+    "model": "deepseek-chat",
+    "word_count": 1032,
+    "paragraph_count": 12,
+    "truncated": false,
+    "duration_seconds": 34.8
+  },
+  "summary": {
+    "zh_points": [
+      "许多观察者（包括特朗普）认为中国不关心AI安全，但文章指出中国实际上在AI安全治理上投入了大量精力。",
+      "中国已出台全球最严格的AI规则框架，2026年9月更新版列出54项风险并提议设置人工检查点等措施。",
+      "随着AI能力增强，中国对失控风险的关注显著上升，新版框架中失控话题出现十余次。",
+      "中国将AI视为可引导的变革性技术，而非会脱离人类控制的威胁，这与美国部分观点存在哲学差异。",
+      "中国在规则制定上积极，但企业主动安全评估不足，十家发布新模型的公司中仅五家公布了安全评估。",
+      "中国在AI性能上落后美国数月，但在风险管理上并不落后，甚至可能更严格。"
+    ],
+    "en_points": [
+      "Contrary to claims that China disregards AI safety, it has developed one of the world's most stringent AI governance frameworks.",
+      "China's updated AI safety framework lists 54 risks and proposes human checkpoints and immediate shutdowns for problematic features.",
+      "China's concern about loss of control has grown, with the topic appearing over a dozen times in the latest framework versus once in 2024.",
+      "China views AI as a controllable transformative technology, not an existential threat that requires a coordinated slowdown.",
+      "Chinese firms are often passive on safety, with only five of ten recently reviewed companies publishing safety evaluations.",
+      "China lags the US in AI performance by months but is not lagging in risk management."
+    ]
+  },
+  "paragraphs": [
+    {
+      "index": 1,
+      "en": "China | Chaguan Does China really prize AI speed over safety? In full command of its own cyberspace, China wants the same for AI Oct 22nd 2026 “Guard the golden three seconds, guard your wallet.” In recent weeks a video of an avuncular policeman, Guo Tao, delivering this message—a warning about how to handle fraudsters on the phone—has spread widely in China. All it takes is a simple greeting for criminals to capture one’s voice and then use artificial intelligence to synthesise it for duping friends and relatives. So, as Mr Guo says, it is best to stay silent for three seconds when called from unknown numbers, to see if a real person speaks. Not bad advice.",
+      "zh": "中国 | 茶馆 中国真的重视AI速度胜过安全吗？中国完全掌控着自己的网络空间，也希望在AI领域如此 2026年10月22日 “守住黄金三秒，守住你的钱包。”最近几周，一段视频在中国广泛传播，视频中一位慈祥的警察郭涛传递了这一信息——警告人们如何应对电话诈骗者。犯罪分子只需一句简单的问候就能获取一个人的声音，然后利用人工智能合成声音来欺骗亲友。因此，正如郭警官所说，接到陌生号码来电时最好保持沉默三秒钟，看看是否真人在说话。这建议不错。"
+    },
+    {
+      "index": 2,
+      "en": "It also relates to one of the tech world’s most pressing questions: what does China think about the risks posed by AI? Many observers believe China does not care much about the dangers. Donald Trump is one. “China will be doing absolutely nothing to stand in the way of AI,” he claimed last month, explaining his own disdain forregulation. Indeed, surveys point to overwhelming Chinese optimism about AI.",
+      "zh": "这也关系到科技界最紧迫的问题之一：中国如何看待AI带来的风险？许多观察人士认为中国不太关心这些危险。唐纳德·特朗普就是其中之一。上个月，他声称“中国绝对不会采取任何行动阻碍AI”，以此解释他自己对监管的蔑视。确实，调查显示中国对AI的乐观情绪压倒性高涨。"
+    },
+    {
+      "index": 3,
+      "en": "In a poll by Gallup, 93% of respondents in China said it would mostly help their country, versus just 36% in America. Calls for China to work with America to slow down frontier models have been brushed aside in Beijing. “Fearmongering” serves no one, says China’s foreign ministry. In fact, China spends an awful lot of time thinking about AI safety. Telephone fraud is just the tip of an iceberg of anxieties.",
+      "zh": "在盖洛普的一项民意调查中，93%的中国受访者表示AI总体上会帮助他们的国家，而美国只有36%。要求中国与美国合作放缓前沿模型的呼吁在北京被置若罔闻。中国外交部表示，“散布恐慌”对谁都没有好处。事实上，中国花费大量时间思考AI安全问题。电话诈骗只是焦虑冰山的一角。"
+    },
+    {
+      "index": 4,
+      "en": "China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley. This should not be surprising. The Communist Party, which obsesses about danger in almost every domain of life, has fought for years to bring cyberspace under control. Is a regime that views the internet as an existential challenge suddenly about to let AI rip? If, as in the Trump administration, one defines regulation as intrinsically a form of slowdown, then China is, in effect, slowing AI—though it would never say so.",
+      "zh": "中国的担忧涵盖犯罪活动、劳动力替代和国家安全，乃至——没错——让硅谷夜不能寐的失控场景。这并不令人意外。中国共产党几乎对生活各个领域的危险都痴迷不已，多年来一直努力将网络空间置于控制之下。一个将互联网视为生存挑战的政权，会突然放任AI肆意发展吗？如果像特朗普政府那样，将监管定义为本质上的减速形式，那么中国实际上就是在减缓AI——尽管它永远不会这么说。"
+    },
+    {
+      "index": 5,
+      "en": "“China already has the most stringent AI rules anywhere in the world,” says Kendra Schaefer of Trivium, a consultancy based in Beijing. The foundational document is China’s framework for the governance of AI safety. A second update came out in September. It lists 54 risks under three categories: “inherent” (models behaving in unintended ways), “application” (use by criminals) and “secondary” (social alienation). It also proposes ways to eliminate or, at least, mitigate these threats.",
+      "zh": "“中国已经拥有世界上最严格的AI规则，”驻北京的咨询公司Trivium的Kendra Schaefer说。基础文件是中国的人工智能安全治理框架。第二次更新于9月发布。它列出了三大类54项风险：“固有”风险（模型以非预期方式行事）、“应用”风险（被犯罪分子利用）和“次生”风险（社会疏离）。它还提出了消除或至少缓解这些威胁的方法。"
+    },
+    {
+      "index": 6,
+      "en": "One is to require checkpoints at which humans (remember those?) must review and, if necessary, halt AI agents before they roam too widely. Some of the framework’s earlier ideas are already in force—for instance, AI-generated content such as audio and video must be clearly labelled. Others are likely to form the basis of new rules. Draft measures call for service providers to shut down any feature with serious problems immediately. On October 16th China also proposed curbs on exports of its most advanced AI technologies.",
+      "zh": "其中之一是要求设置检查点，人类（还记得人类吗？）必须在AI代理广泛活动之前进行审查，必要时予以制止。该框架的一些早期想法已经生效——例如，AI生成的音频和视频等内容必须明确标注。其他想法可能成为新规则的基础。措施草案要求服务提供商立即关闭任何存在严重问题的功能。10月16日，中国还提议限制其最先进AI技术的出口。"
+    },
+    {
+      "index": 7,
+      "en": "As AI has grown more powerful, China has paid more attention to doomsday possibilities. The original version of its safety framework, issued in 2024, made just one glancing reference to loss of control. In the newestversion, that topic comes up more than a dozen times. Even so, it is possible to discern a philosophical gap. Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution, the more common view in China is that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp.",
+      "zh": "随着AI变得更加强大，中国更加关注末日可能性。其安全框架的原始版本于2024年发布，仅顺带提及失控问题。在最新版本中，该话题被提及十几次以上。即便如此，仍能看出一种理念上的差距。美国一些人担心AI模型最终会超越人类智能并控制自身的进化，而中国更普遍的观点是，AI是一种变革性技术，可以被驾驭和引导，而不是会脱离人类掌控的东西。"
+    },
+    {
+      "index": 8,
+      "en": "Xi Jinping compares AI to the steam engine, electricity and the internet— technologies that were epoch-shaping but did not pose dangers that required a co-ordinated slowdown. With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes. As China sees it, such an agreement looks both unnecessary and self-serving for Americans. Unsurprisingly, Chinese officials devote much bandwidth to ideology. They want to ensure that models do not contradict the party on important matters, and that new tools do not undermine its control.",
+      "zh": "习近平将AI比作蒸汽机、电力和互联网——这些技术塑造了时代，但并未构成需要协调减速的危险。由于中国在AI前沿仍落后于美国，习近平更不愿意同意踩刹车。在中国看来，这样的协议既无必要，也是美国人的自私自利。毫不奇怪，中国官员将大量精力投入意识形态。他们希望确保模型在重要问题上不与党相矛盾，并确保新工具不会削弱其控制。"
+    },
+    {
+      "index": 9,
+      "en": "Yet there are more banal concerns, too, reflecting the soft paternalism of the Chinese state. Hence Mr Guo’s three golden seconds on the phone and a ban on offering virtual lovers or, for that matter, virtual relatives to minors. China’s yen for rules may have an unintended effect. In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails. In China firms are often more passive, waiting for directions from the party and government before applying controls.",
+      "zh": "然而，也存在一些更为寻常的担忧，反映了中国国家软性家长式作风。因此，郭先生设置了手机上的三秒黄金时间，并禁止向未成年人提供虚拟恋人，或就此而言，虚拟亲属。中国对规则的热衷可能产生意想不到的效果。在美国，政府干预要轻得多，公司已挺身填补空白，评估自己的模型并要求更多护栏。在中国，企业往往更被动，等待党和政府的指示后再实施控制。"
+    },
+    {
+      "index": 10,
+      "en": "A review by Concordia AI, a consultancy in Beijing, of ten Chinese firms with recently released models found that just five had published safety evaluations. That suggests possible perils if models develop faster than regulators expect. China’s rules will also fail to impress those who view its open-weight models as unavoidably dangerous. Critics fret that such models, unlike the closed ones dominant in America, can be abused more readily. Yet many in Chinese AI argue the benefits outweigh that hazard: they note that China’s open models have helped defend computer systems from rogue attacks launched by American closed models, as when OpenAI tools breached Hugging Face, an AI platform.",
+      "zh": "北京咨询公司Concordia AI对十家近期发布模型的中国公司进行审查发现，仅五家发布了安全评估。这表明如果模型发展速度超过监管机构预期，可能存在危险。中国的规则也无法打动那些认为其开放权重模型必然危险的人。批评者担心，此类模型与在美国占主导地位的封闭模型不同，更容易被滥用。然而，中国人工智能领域的许多人认为好处大于风险：他们指出，中国的开放模型帮助保护计算机系统免受美国封闭模型发起的恶意攻击，例如OpenAI工具入侵人工智能平台Hugging Face时。"
+    },
+    {
+      "index": 11,
+      "en": "In any case, China is already working ontougher rules to govern open models. Insiders say that new releases face exacting safety reviews before being offered to the public. By most measures China’s AI models are a few months, or more, behind America’s in their performance. That is a big gap for such a fast-evolving technology. But do not accuse China of lagging behind America in its management of risks.",
+      "zh": "无论如何，中国已经在制定更严格的规则来管理开放模型。内部人士表示，新发布的模型在向公众提供之前要经过严格的安全审查。从大多数指标来看，中国的人工智能模型在性能上落后美国几个月或更多。对于如此快速发展的技术来说，这是一个巨大的差距。但不要指责中国在风险管理方面落后于美国。"
+    },
+    {
+      "index": 12,
+      "en": "When it comes to rules, controls, limits and warnings, China is in its element.■ This article was downloaded by zlibrary from https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-",
+      "zh": "在规则、控制、限制和警告方面，中国得心应手。■ 本文由zlibrary从https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-下载"
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "v1",
+      "word": "in full command of",
+      "context_sentence": "In full command of its own cyberspace, China wants the same for AI",
+      "paragraph_index": 1,
+      "difficulty": "★★☆",
+      "chinese_note": "完全掌控；in full command of 表示对某事物有完全的控制权，常用于政治或军事语境。"
+    },
+    {
+      "id": "v2",
+      "word": "stand in the way of",
+      "context_sentence": "“China will be doing absolutely nothing to stand in the way of AI,” he claimed last month, explaining his own disdain for regulation.",
+      "paragraph_index": 2,
+      "difficulty": "★★☆",
+      "chinese_note": "阻碍，妨碍；stand in the way of 是习语，表示阻止某事发生或发展。"
+    },
+    {
+      "id": "v3",
+      "word": "brushed aside",
+      "context_sentence": "Calls for China to work with America to slow down frontier models have been brushed aside in Beijing.",
+      "paragraph_index": 3,
+      "difficulty": "★★☆",
+      "chinese_note": "被忽视，被搁置；brush aside 表示对某建议或请求不予理会。"
+    },
+    {
+      "id": "v4",
+      "word": "fearmongering",
+      "context_sentence": "“Fearmongering” serves no one, says China’s foreign ministry.",
+      "paragraph_index": 3,
+      "difficulty": "★★☆",
+      "chinese_note": "散布恐惧，危言耸听；fearmongering 指故意制造恐慌的行为，常含贬义。"
+    },
+    {
+      "id": "v5",
+      "word": "tip of an iceberg",
+      "context_sentence": "Telephone fraud is just the tip of an iceberg of anxieties.",
+      "paragraph_index": 3,
+      "difficulty": "★☆☆",
+      "chinese_note": "冰山一角；习语，表示某事物只是更大问题的一小部分。"
+    },
+    {
+      "id": "v6",
+      "word": "loss-of-control scenarios",
+      "context_sentence": "China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley.",
+      "paragraph_index": 4,
+      "difficulty": "★★☆",
+      "chinese_note": "失控情景；指人工智能可能脱离人类控制的情形，是AI安全讨论中的术语。"
+    },
+    {
+      "id": "v7",
+      "word": "let AI rip",
+      "context_sentence": "Is a regime that views the internet as an existential challenge suddenly about to let AI rip?",
+      "paragraph_index": 4,
+      "difficulty": "★★☆",
+      "chinese_note": "放任AI发展；let something rip 是习语，意为任其自由发展、不加约束。"
+    },
+    {
+      "id": "v8",
+      "word": "stringent",
+      "context_sentence": "“China already has the most stringent AI rules anywhere in the world,” says Kendra Schaefer of Trivium, a consultancy based in Beijing.",
+      "paragraph_index": 5,
+      "difficulty": "★★☆",
+      "chinese_note": "严格的，严厉的；stringent 常用来形容规则、法律或标准非常严格。"
+    },
+    {
+      "id": "v9",
+      "word": "in force",
+      "context_sentence": "Some of the framework’s earlier ideas are already in force—for instance, AI-generated content such as audio and video must be clearly labelled.",
+      "paragraph_index": 6,
+      "difficulty": "★☆☆",
+      "chinese_note": "生效，在实施中；in force 是法律或规则生效的固定表达。"
+    },
+    {
+      "id": "v10",
+      "word": "curbs",
+      "context_sentence": "On October 16th China also proposed curbs on exports of its most advanced AI technologies.",
+      "paragraph_index": 6,
+      "difficulty": "★★☆",
+      "chinese_note": "限制，约束；curb 作名词时常指对某事物的控制或限制，如出口限制。"
+    },
+    {
+      "id": "v11",
+      "word": "glancing reference",
+      "context_sentence": "The original version of its safety framework, issued in 2024, made just one glancing reference to loss of control.",
+      "paragraph_index": 7,
+      "difficulty": "★★☆",
+      "chinese_note": "一笔带过，轻描淡写地提及；glancing 在此表示间接的、简略的。"
+    },
+    {
+      "id": "v12",
+      "word": "discern",
+      "context_sentence": "Even so, it is possible to discern a philosophical gap.",
+      "paragraph_index": 7,
+      "difficulty": "★★☆",
+      "chinese_note": "察觉，辨别；discern 指通过观察看出或理解某事物，常用于抽象概念。"
+    },
+    {
+      "id": "v13",
+      "word": "epoch-shaping",
+      "context_sentence": "Xi Jinping compares AI to the steam engine, electricity and the internet—technologies that were epoch-shaping but did not pose dangers that required a co-ordinated slowdown.",
+      "paragraph_index": 8,
+      "difficulty": "★★☆",
+      "chinese_note": "划时代的，开创性的；epoch-shaping 是复合形容词，表示塑造一个时代的。"
+    },
+    {
+      "id": "v14",
+      "word": "apply the brakes",
+      "context_sentence": "With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes.",
+      "paragraph_index": 8,
+      "difficulty": "★★☆",
+      "chinese_note": "踩刹车，放缓；比喻采取措施减缓发展速度。"
+    },
+    {
+      "id": "v15",
+      "word": "bandwidth",
+      "context_sentence": "Unsurprisingly, Chinese officials devote much bandwidth to ideology.",
+      "paragraph_index": 8,
+      "difficulty": "★★☆",
+      "chinese_note": "精力，注意力；bandwidth 原指带宽，此处比喻为投入的时间和精力。"
+    },
+    {
+      "id": "v16",
+      "word": "soft paternalism",
+      "context_sentence": "Yet there are more banal concerns, too, reflecting the soft paternalism of the Chinese state.",
+      "paragraph_index": 9,
+      "difficulty": "★★☆",
+      "chinese_note": "温和家长主义；指政府以保护民众为由进行温和干预的理念。"
+    },
+    {
+      "id": "v17",
+      "word": "yen for",
+      "context_sentence": "China’s yen for rules may have an unintended effect.",
+      "paragraph_index": 9,
+      "difficulty": "★★☆",
+      "chinese_note": "渴望，热望；yen 作名词表示强烈的欲望或倾向，常与 for 连用。"
+    },
+    {
+      "id": "v18",
+      "word": "stepped into the breach",
+      "context_sentence": "In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails.",
+      "paragraph_index": 9,
+      "difficulty": "★★☆",
+      "chinese_note": "填补空缺，挺身而出；step into the breach 是习语，表示在困难时接手或填补空缺。"
+    },
+    {
+      "id": "v19",
+      "word": "guardrails",
+      "context_sentence": "In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails.",
+      "paragraph_index": 9,
+      "difficulty": "★★☆",
+      "chinese_note": "防护措施，护栏；guardrails 在AI语境中指安全保护措施或监管框架。"
+    },
+    {
+      "id": "v20",
+      "word": "open-weight models",
+      "context_sentence": "China’s rules will also fail to impress those who view its open-weight models as unavoidably dangerous.",
+      "paragraph_index": 10,
+      "difficulty": "★★☆",
+      "chinese_note": "开放权重模型；指模型参数公开可用的AI模型，与闭源模型相对。"
+    }
+  ],
+  "long_sentences": [
+    {
+      "id": "s1",
+      "sentence": "China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley.",
+      "paragraph_index": 4,
+      "main_clause": "China’s concerns run from A to B",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "causing sleepless nights in Silicon Valley",
+          "type": "分词短语",
+          "modifies": "the loss-of-control scenarios"
+        }
+      ],
+      "translation": "中国的担忧从犯罪活动、劳动力替代和国家安全，到——没错——让硅谷夜不能寐的失控情景。",
+      "note": "难点在于插入语“yes”和分词短语修饰；主干是run from...to...结构，表示范围。"
+    },
+    {
+      "id": "s2",
+      "sentence": "Is a regime that views the internet as an existential challenge suddenly about to let AI rip?",
+      "paragraph_index": 4,
+      "main_clause": "Is a regime about to let AI rip?",
+      "subordinate_clauses": [
+        {
+          "text": "that views the internet as an existential challenge",
+          "type": "定语从句",
+          "function": "修饰regime"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "suddenly",
+          "type": "副词",
+          "modifies": "about to let AI rip"
+        }
+      ],
+      "translation": "一个将互联网视为生存挑战的政权，会突然放任AI发展吗？",
+      "note": "疑问句主干是Is a regime about to...，定语从句和副词插入造成理解困难。"
+    },
+    {
+      "id": "s3",
+      "sentence": "Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution, the more common view in China is that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp.",
+      "paragraph_index": 7,
+      "main_clause": "the more common view in China is that...",
+      "subordinate_clauses": [
+        {
+          "text": "Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution",
+          "type": "状语从句",
+          "function": "表示对比"
+        },
+        {
+          "text": "that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp",
+          "type": "名词性从句",
+          "function": "作表语"
+        },
+        {
+          "text": "that can be harnessed and directed",
+          "type": "定语从句",
+          "function": "修饰technology"
+        },
+        {
+          "text": "that will slip human grasp",
+          "type": "定语从句",
+          "function": "修饰something"
+        }
+      ],
+      "modifiers": [],
+      "translation": "尽管美国一些人担心AI模型最终会超越人类智能并控制自身的进化，但在中国更普遍的观点是，AI是一种可以驾驭和引导的变革性技术，而不是会脱离人类掌控的东西。",
+      "note": "长句包含对比状语从句、表语从句和两个定语从句，需逐层拆分。"
+    },
+    {
+      "id": "s4",
+      "sentence": "With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes.",
+      "paragraph_index": 8,
+      "main_clause": "Mr Xi is all the less inclined to agree to apply the brakes",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "With China still trailing America at the frontier of AI",
+          "type": "介词短语",
+          "modifies": "整个主句"
+        }
+      ],
+      "translation": "由于中国在AI前沿领域仍落后于美国，习近平就更不愿意同意踩刹车了。",
+      "note": "with复合结构作原因状语，all the less inclined表示“更加不倾向于”。"
+    },
+    {
+      "id": "s5",
+      "sentence": "In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails.",
+      "paragraph_index": 9,
+      "main_clause": "companies have stepped into the breach",
+      "subordinate_clauses": [
+        {
+          "text": "where the government has a much lighter touch",
+          "type": "定语从句",
+          "function": "修饰America"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "evaluating their own models and asking for more guardrails",
+          "type": "分词短语",
+          "modifies": "companies"
+        }
+      ],
+      "translation": "在美国，政府干预要轻得多，公司已挺身而出填补空缺，评估自己的模型并要求更多防护措施。",
+      "note": "where引导的定语从句和现在分词短语作伴随状语，需注意逻辑主语。"
+    },
+    {
+      "id": "s6",
+      "sentence": "A review by Concordia AI, a consultancy in Beijing, of ten Chinese firms with recently released models found that just five had published safety evaluations.",
+      "paragraph_index": 10,
+      "main_clause": "A review found that...",
+      "subordinate_clauses": [
+        {
+          "text": "that just five had published safety evaluations",
+          "type": "名词性从句",
+          "function": "作found的宾语"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "by Concordia AI, a consultancy in Beijing",
+          "type": "介词短语",
+          "modifies": "A review"
+        },
+        {
+          "text": "of ten Chinese firms with recently released models",
+          "type": "介词短语",
+          "modifies": "A review"
+        }
+      ],
+      "translation": "北京咨询公司Concordia AI对十家近期发布模型的中国公司进行审查后发现，只有五家发布了安全评估。",
+      "note": "主语A review后有两个介词短语修饰，且插入同位语，造成主谓分离。"
+    },
+    {
+      "id": "s7",
+      "sentence": "Critics fret that such models, unlike the closed ones dominant in America, can be abused more readily.",
+      "paragraph_index": 10,
+      "main_clause": "Critics fret that...",
+      "subordinate_clauses": [
+        {
+          "text": "that such models can be abused more readily",
+          "type": "名词性从句",
+          "function": "作fret的宾语"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "unlike the closed ones dominant in America",
+          "type": "介词短语",
+          "modifies": "such models"
+        }
+      ],
+      "translation": "批评者担心，这类模型不同于美国主导的封闭模型，更容易被滥用。",
+      "note": "插入语unlike...造成主谓分离，dominant in America是后置定语。"
+    }
+  ],
+  "deconstruction": {
+    "overview": "文章以警察反诈视频引入，先驳斥中国不重视AI安全的流行观点，再系统展示中国在AI安全治理上的密集动作与哲学逻辑，最后指出中国规则严格但企业主动性不足。结构上先破后立，用数据、引语和对比层层推进，风格冷静、带点讽刺。",
+    "sections": [
+      {
+        "title": "反诈视频引出AI风险",
+        "role": "引入",
+        "argument": "AI语音合成诈骗已在中国出现，警方建议陌生电话沉默三秒。",
+        "evidence": "郭涛警官的视频广泛传播，提醒人们犯罪分子可用AI合成声音诈骗亲友。",
+        "technique": "以具体生活场景开篇，制造亲切感和悬念。",
+        "paragraph_indices": [
+          1
+        ]
+      },
+      {
+        "title": "驳斥中国不关心AI安全的观点",
+        "role": "提出论点",
+        "argument": "许多观察者（包括特朗普）认为中国不关心AI风险，但事实并非如此。",
+        "evidence": "特朗普称中国不会阻碍AI；盖洛普调查显示93%中国受访者认为AI主要有利，而美国仅36%。",
+        "technique": "引用名人言论和民调数据，先立靶再打靶。",
+        "paragraph_indices": [
+          2,
+          3
+        ]
+      },
+      {
+        "title": "中国对AI安全的广泛担忧",
+        "role": "论证",
+        "argument": "中国的担忧涵盖犯罪、就业、国家安全乃至失控场景，且与中共对网络空间的管控逻辑一致。",
+        "evidence": "中共多年来致力于控制网络空间；若视互联网为生存挑战，不会放任AI。",
+        "technique": "用类比和反问强化逻辑。",
+        "paragraph_indices": [
+          4
+        ]
+      },
+      {
+        "title": "中国AI安全框架的具体内容",
+        "role": "例证",
+        "argument": "中国已出台全球最严格的AI规则，2026年9月更新版列出54项风险并提议人工检查点等措施。",
+        "evidence": "框架将风险分为固有、应用和次生三类；要求AI生成内容标注；草案要求立即关闭有严重问题的功能；10月16日提议限制先进AI技术出口。",
+        "technique": "列举具体规则和日期，增强可信度。",
+        "paragraph_indices": [
+          5,
+          6
+        ]
+      },
+      {
+        "title": "对失控风险的关注上升与哲学差异",
+        "role": "转折",
+        "argument": "中国对失控风险的关注显著增加，但仍视AI为可引导的技术，而非会脱离人类控制。",
+        "evidence": "2024版框架仅一次提及失控，新版出现十余次；习近平将AI比作蒸汽机、电力和互联网。",
+        "technique": "对比不同版本框架和领导人比喻，揭示深层逻辑。",
+        "paragraph_indices": [
+          7,
+          8
+        ]
+      },
+      {
+        "title": "家长式规则与企业被动",
+        "role": "例证",
+        "argument": "中国规则体现软家长主义，但企业往往被动等待政府指令，安全评估不足。",
+        "evidence": "郭涛的三秒建议；禁止向未成年人提供虚拟恋人或亲属；Concordia AI审查十家公司仅五家公布安全评估。",
+        "technique": "用具体案例和数据说明规则与执行的落差。",
+        "paragraph_indices": [
+          9,
+          10
+        ]
+      },
+      {
+        "title": "开放模型的风险与中国的应对",
+        "role": "论证",
+        "argument": "中国开放权重模型被批评易滥用，但中国认为利大于弊，并正在制定更严格规则。",
+        "evidence": "中国开放模型曾帮助防御美国封闭模型的攻击；内部人士称新模型发布前需严格安全审查。",
+        "technique": "引入反方观点再反驳，平衡论述。",
+        "paragraph_indices": [
+          10,
+          11
+        ]
+      },
+      {
+        "title": "结论：中国在风险管理上不落后",
+        "role": "结论",
+        "argument": "中国在AI性能上落后美国，但在规则、控制、限制和警告方面得心应手。",
+        "evidence": "中国AI模型性能落后数月；但管理风险方面并不滞后。",
+        "technique": "首尾呼应，用短句收束，强化印象。",
+        "paragraph_indices": [
+          12
+        ]
+      }
+    ],
+    "writing_techniques": [
+      {
+        "name": "以具体场景开篇",
+        "example": "“Guard the golden three seconds, guard your wallet.”",
+        "effect": "用生活化场景吸引读者，引出AI风险主题。",
+        "paragraph_index": 1
+      },
+      {
+        "name": "先立靶后打靶",
+        "example": "“China will be doing absolutely nothing to stand in the way of AI,”",
+        "effect": "先呈现流行误解，再逐步驳斥，增强说服力。",
+        "paragraph_index": 2
+      },
+      {
+        "name": "数据对比",
+        "example": "93% of respondents in China said it would mostly help their country, versus just 36% in America.",
+        "effect": "用悬殊数据凸显中美态度差异，引发思考。",
+        "paragraph_index": 3
+      },
+      {
+        "name": "反问句强化逻辑",
+        "example": "Is a regime that views the internet as an existential challenge suddenly about to let AI rip?",
+        "effect": "以反问迫使读者认同中国不会放任AI风险。",
+        "paragraph_index": 4
+      },
+      {
+        "name": "列举具体规则",
+        "example": "It lists 54 risks under three categories: “inherent” (models behaving in unintended ways), “application” (use by criminals) and “secondary” (social alienation).",
+        "effect": "用精确数字和分类展示中国规则的细致，增强可信度。",
+        "paragraph_index": 5
+      },
+      {
+        "name": "首尾呼应",
+        "example": "When it comes to rules, controls, limits and warnings, China is in its element.",
+        "effect": "结尾短句总结全文，强化中国擅长规则管理的印象。",
+        "paragraph_index": 12
+      }
+    ]
+  },
+  "background": {
+    "event_context": "全球AI治理竞争加剧，美国与中国在AI安全理念上存在分歧。中国自2024年起逐步构建AI安全框架，2026年更新并提议出口管制。特朗普政府时期美国放松监管，中国则强调可控。",
+    "key_facts": [
+      {
+        "fact": "盖洛普调查显示中国受访者对AI的乐观比例远高于美国。",
+        "data": "93% vs 36%",
+        "paragraph_index": 3
+      },
+      {
+        "fact": "中国AI安全框架更新版列出风险数量。",
+        "data": "54项风险",
+        "paragraph_index": 5
+      },
+      {
+        "fact": "中国提议限制先进AI技术出口的日期。",
+        "data": "10月16日",
+        "paragraph_index": 6
+      },
+      {
+        "fact": "中国2024版框架提及失控风险的次数。",
+        "data": "1次",
+        "paragraph_index": 7
+      },
+      {
+        "fact": "Concordia AI审查的中国公司中公布安全评估的比例。",
+        "data": "十家中五家",
+        "paragraph_index": 10
+      }
+    ],
+    "author_stance": "作者认为中国实际上高度重视AI安全，规则严格，但企业主动性不足；中国视AI为可控技术，与美国存在哲学差异。文章带有一定讽刺，但总体客观。",
+    "implications": "对中国AI企业而言，合规成本上升但方向明确；对国际社会，中国在AI安全治理上可能比预期更积极，但开放模型监管仍是争议点；对政策制定者，需关注规则执行与企业自律的平衡。"
+  },
+  "practical_application": {
+    "actionable_skills": [
+      {
+        "skill": "用具体案例开篇",
+        "how_to_apply": "写作或演讲时，先讲一个生动的小故事或场景，再引出大主题。",
+        "example": "写AI安全文章时，先描述一个AI诈骗电话的案例。"
+      },
+      {
+        "skill": "先立靶后打靶",
+        "how_to_apply": "先陈述一个流行但错误的观点，再用证据反驳。",
+        "example": "先写“很多人认为中国不关心AI安全”，再列举中国规则。"
+      },
+      {
+        "skill": "数据对比",
+        "how_to_apply": "用两个反差大的数据并列，突出差异。",
+        "example": "对比中美受访者对AI的乐观比例。"
+      },
+      {
+        "skill": "列举具体规则和日期",
+        "how_to_apply": "在论述政策时，引用具体条款、数字和日期，增强可信度。",
+        "example": "写“中国框架列出54项风险，10月16日提议出口管制”。"
+      },
+      {
+        "skill": "首尾呼应",
+        "how_to_apply": "结尾用短句总结核心观点，呼应开头。",
+        "example": "结尾写“在规则、控制、限制和警告方面，中国得心应手”。"
+      }
+    ],
+    "thinking_models": [
+      {
+        "model": "破立结合",
+        "explanation": "先打破常见误解，再建立自己的论点。",
+        "how_to_use": "当你要说服读者接受一个反直觉观点时，先指出流行观点的错误。"
+      },
+      {
+        "model": "对比分析",
+        "explanation": "通过对比不同国家、版本或数据，揭示差异和本质。",
+        "how_to_use": "分析政策或现象时，选取两个可比对象进行对照。"
+      },
+      {
+        "model": "具体化思维",
+        "explanation": "用具体案例、数字和细节代替抽象概括。",
+        "how_to_use": "写作时多问“有没有例子？”“数据是多少？”"
+      },
+      {
+        "model": "系统思维",
+        "explanation": "将问题放在更大的政治、社会背景中理解。",
+        "how_to_use": "分析AI安全时，联系中国的网络管控传统和治理哲学。"
+      },
+      {
+        "model": "批判性思维",
+        "explanation": "不轻信流行观点，寻找反证。",
+        "how_to_use": "看到“中国不关心AI安全”的说法时，主动查找中国政策文件。"
+      }
+    ]
+  },
+  "recitation": {
+    "title_suggested": "China’s AI Safety Paradox: Speed vs. Caution",
+    "advice": "长句多在破折号和分号处换气，注意列举结构（如 criminal activity, labour displacement...）。用关键词串起全文：fraud warning → global perception → China’s framework → risk categories → human checkpoints → doomsday shift → Xi’s analogy → paternalism → open models → conclusion.",
+    "start_date": "2026-10-27",
+    "intervals": [
+      1,
+      2,
+      4,
+      7,
+      15
+    ],
+    "chunks_per_day": 3,
+    "chunks": [
+      {
+        "index": 1,
+        "text": "China | Chaguan Does China really prize AI speed over safety? In full command of its own cyberspace, China wants the same for AI Oct 22nd 2026 “Guard the golden three seconds, guard your wallet.”",
+        "hint": "title, golden three seconds",
+        "translation": "中国 | 茶馆 中国真的重视AI速度胜过安全吗？中国完全掌控着自己的网络空间，也希望以同样方式掌控AI。2026年10月22日 “守住黄金三秒，守住你的钱包。”",
+        "paragraph_start": 1,
+        "paragraph_end": 1
+      },
+      {
+        "index": 2,
+        "text": "In recent weeks a video of an avuncular policeman, Guo Tao, delivering this message—a warning about how to handle fraudsters on the phone—has spread widely in China.",
+        "hint": "Guo Tao video",
+        "translation": "最近几周，一段视频在中国广泛传播，视频中一位慈祥的警察郭涛传递了这一信息——警告人们如何应对电话诈骗者。",
+        "paragraph_start": 1,
+        "paragraph_end": 1
+      },
+      {
+        "index": 3,
+        "text": "All it takes is a simple greeting for criminals to capture one’s voice and then use artificial intelligence to synthesise it for duping friends and relatives. So, as Mr Guo says, it is best to stay silent for three seconds when called from unknown numbers, to see if a real person speaks. Not bad advice.",
+        "hint": "voice capture, stay silent",
+        "translation": "罪犯只需一句简单的问候就能捕获某人的声音，然后利用人工智能合成声音来欺骗亲友。所以，正如郭先生所说，接到未知号码来电时最好保持沉默三秒，看看是否是真人说话。这建议不错。",
+        "paragraph_start": 1,
+        "paragraph_end": 1
+      },
+      {
+        "index": 4,
+        "text": "It also relates to one of the tech world’s most pressing questions: what does China think about the risks posed by AI? Many observers believe China does not care much about the dangers. Donald Trump is one. “China will be doing absolutely nothing to stand in the way of AI,” he claimed last month, explaining his own disdain forregulation.",
+        "hint": "Trump claim, observers",
+        "translation": "这也关系到科技界最紧迫的问题之一：中国如何看待AI带来的风险？许多观察人士认为中国不太关心这些危险。唐纳德·特朗普就是其中之一。他上月声称：“中国绝对不会做任何事来阻碍AI”，以此解释他自己对监管的蔑视。",
+        "paragraph_start": 2,
+        "paragraph_end": 2
+      },
+      {
+        "index": 5,
+        "text": "Indeed, surveys point to overwhelming Chinese optimism about AI. In a poll by Gallup, 93% of respondents in China said it would mostly help their country, versus just 36% in America. Calls for China to work with America to slow down frontier models have been brushed aside in Beijing. “Fearmongering” serves no one, says China’s foreign ministry. In fact, China spends an awful lot of time thinking about AI safety. Telephone fraud is just the tip of an iceberg of anxieties.",
+        "hint": "Gallup poll, fearmongering",
+        "translation": "事实上，调查显示中国人对AI普遍持乐观态度。盖洛普的一项民调中，93%的中国受访者表示AI主要会帮助他们的国家，而美国只有36%。要求中国与美国合作放缓前沿模型的呼吁在北京被置之不理。中国外交部表示，“散布恐慌”对谁都没有好处。事实上，中国花大量时间思考AI安全问题。电话诈骗只是焦虑冰山的一角。",
+        "paragraph_start": 2,
+        "paragraph_end": 3
+      },
+      {
+        "index": 6,
+        "text": "China’s concerns run from criminal activity, labour displacement and national security to, yes, the loss-of-control scenarios causing sleepless nights in Silicon Valley. This should not be surprising. The Communist Party, which obsesses about danger in almost every domain of life, has fought for years to bring cyberspace under control.",
+        "hint": "concerns list, Communist Party",
+        "translation": "中国的担忧从犯罪活动、劳动力替代和国家安全，到——没错——让硅谷夜不能寐的失控场景。这并不奇怪。中国共产党几乎对生活各个领域的危险都痴迷，多年来一直努力将网络空间置于控制之下。",
+        "paragraph_start": 4,
+        "paragraph_end": 4
+      },
+      {
+        "index": 7,
+        "text": "Is a regime that views the internet as an existential challenge suddenly about to let AI rip? If, as in the Trump administration, one defines regulation as intrinsically a form of slowdown, then China is, in effect, slowing AI—though it would never say so.",
+        "hint": "let AI rip, slowing AI",
+        "translation": "一个将互联网视为生存挑战的政权，会突然放任AI吗？如果像特朗普政府那样，将监管本质上定义为一种放缓，那么中国实际上正在放缓AI——尽管它永远不会这么说。",
+        "paragraph_start": 4,
+        "paragraph_end": 4
+      },
+      {
+        "index": 8,
+        "text": "“China already has the most stringent AI rules anywhere in the world,” says Kendra Schaefer of Trivium, a consultancy based in Beijing. The foundational document is China’s framework for the governance of AI safety. A second update came out in September. It lists 54 risks under three categories: “inherent” (models behaving in unintended ways), “application” (use by criminals) and “secondary” (social alienation). It also proposes ways to eliminate or, at least, mitigate these threats.",
+        "hint": "Kendra Schaefer, 54 risks",
+        "translation": "“中国已经拥有世界上最严格的AI规则，”总部位于北京的咨询公司Trivium的Kendra Schaefer说。基础文件是中国AI安全治理框架。第二次更新于9月发布。它列出了三大类54项风险：“固有”（模型以非预期方式行为）、“应用”（被罪犯使用）和“次要”（社会疏离）。它还提出了消除或至少减轻这些威胁的方法。",
+        "paragraph_start": 5,
+        "paragraph_end": 5
+      },
+      {
+        "index": 9,
+        "text": "One is to require checkpoints at which humans (remember those?) must review and, if necessary, halt AI agents before they roam too widely. Some of the framework’s earlier ideas are already in force—for instance, AI-generated content such as audio and video must be clearly labelled. Others are likely to form the basis of new rules. Draft measures call for service providers to shut down any feature with serious problems immediately. On October 16th China also proposed curbs on exports of its most advanced AI technologies.",
+        "hint": "human checkpoints, labelling",
+        "translation": "其中之一是要求设置检查点，人类（还记得人类吗？）必须在AI代理广泛活动之前进行审查，必要时予以停止。该框架的一些早期想法已经生效——例如，AI生成的音频和视频等内容必须明确标注。其他想法可能成为新规则的基础。草案措施要求服务提供商立即关闭任何存在严重问题的功能。10月16日，中国还提议限制其最先进AI技术的出口。",
+        "paragraph_start": 6,
+        "paragraph_end": 6
+      },
+      {
+        "index": 10,
+        "text": "As AI has grown more powerful, China has paid more attention to doomsday possibilities. The original version of its safety framework, issued in 2024, made just one glancing reference to loss of control. In the newestversion, that topic comes up more than a dozen times.",
+        "hint": "doomsday, loss of control",
+        "translation": "随着AI日益强大，中国更加关注末日可能性。其安全框架的原始版本于2024年发布，仅顺带提及了一次失控。在最新版本中，该话题出现了十几次。",
+        "paragraph_start": 7,
+        "paragraph_end": 7
+      },
+      {
+        "index": 11,
+        "text": "Even so, it is possible to discern a philosophical gap. Whereas some in America fear that AI models will eventually surpass human intelligence and take control of their own evolution, the more common view in China is that AI is a transformative technology that can be harnessed and directed, not something that will slip human grasp.",
+        "hint": "philosophical gap, harnessed",
+        "translation": "即便如此，仍能看出一种哲学上的差距。美国一些人担心AI模型最终会超越人类智能并控制自身进化，而中国更普遍的观点是，AI是一种可以驾驭和引导的变革性技术，而不是会脱离人类掌控的东西。",
+        "paragraph_start": 7,
+        "paragraph_end": 7
+      },
+      {
+        "index": 12,
+        "text": "Xi Jinping compares AI to the steam engine, electricity and the internet— technologies that were epoch-shaping but did not pose dangers that required a co-ordinated slowdown. With China still trailing America at the frontier of AI, Mr Xi is all the less inclined to agree to apply the brakes. As China sees it, such an agreement looks both unnecessary and self-serving for Americans.",
+        "hint": "Xi analogy, brakes",
+        "translation": "习近平将AI比作蒸汽机、电力和互联网——这些技术塑造了时代，但并未构成需要协调放缓的危险。由于中国在AI前沿仍落后于美国，习近平更不愿意同意踩刹车。在中国看来，这样的协议既无必要，对美国也是自私自利。",
+        "paragraph_start": 8,
+        "paragraph_end": 8
+      },
+      {
+        "index": 13,
+        "text": "Unsurprisingly, Chinese officials devote much bandwidth to ideology. They want to ensure that models do not contradict the party on important matters, and that new tools do not undermine its control.",
+        "hint": "ideology, party control",
+        "translation": "毫不奇怪，中国官员在意识形态上投入大量精力。他们要确保模型在重要问题上不与党矛盾，并确保新工具不会削弱其控制。",
+        "paragraph_start": 8,
+        "paragraph_end": 8
+      },
+      {
+        "index": 14,
+        "text": "Yet there are more banal concerns, too, reflecting the soft paternalism of the Chinese state. Hence Mr Guo’s three golden seconds on the phone and a ban on offering virtual lovers or, for that matter, virtual relatives to minors.",
+        "hint": "soft paternalism, virtual lovers",
+        "translation": "然而，也有更平庸的担忧，反映了中国国家的软家长主义。因此有了郭先生的电话黄金三秒，以及禁止向未成年人提供虚拟恋人或虚拟亲属。",
+        "paragraph_start": 9,
+        "paragraph_end": 9
+      },
+      {
+        "index": 15,
+        "text": "China’s yen for rules may have an unintended effect. In America, where the government has a much lighter touch, companies have stepped into the breach, evaluating their own models and asking for more guardrails. In China firms are often more passive, waiting for directions from the party and government before applying controls.",
+        "hint": "unintended effect, passive firms",
+        "translation": "中国对规则的热衷可能产生意想不到的效果。在美国，政府干预要轻得多，公司已挺身而出，评估自己的模型并要求更多护栏。在中国，企业往往更被动，等待党和政府的指示后才实施控制。",
+        "paragraph_start": 9,
+        "paragraph_end": 9
+      },
+      {
+        "index": 16,
+        "text": "A review by Concordia AI, a consultancy in Beijing, of ten Chinese firms with recently released models found that just five had published safety evaluations. That suggests possible perils if models develop faster than regulators expect.",
+        "hint": "Concordia AI, five evaluations",
+        "translation": "北京咨询公司Concordia AI对十家近期发布模型的中国公司进行审查，发现只有五家发布了安全评估。这表明如果模型发展速度超过监管机构预期，可能存在危险。",
+        "paragraph_start": 10,
+        "paragraph_end": 10
+      },
+      {
+        "index": 17,
+        "text": "China’s rules will also fail to impress those who view its open-weight models as unavoidably dangerous. Critics fret that such models, unlike the closed ones dominant in America, can be abused more readily. Yet many in Chinese AI argue the benefits outweigh that hazard: they note that China’s open models have helped defend computer systems from rogue attacks launched by American closed models, as when OpenAI tools breached Hugging Face, an AI platform.",
+        "hint": "open-weight, Hugging Face",
+        "translation": "中国的规则也无法打动那些认为其开放权重模型必然危险的人。批评者担心，与美国主导的封闭模型不同，此类模型更容易被滥用。然而，中国AI界的许多人认为好处大于危险：他们指出，中国的开放模型帮助保护计算机系统免受美国封闭模型发起的恶意攻击，例如当OpenAI工具入侵AI平台Hugging Face时。",
+        "paragraph_start": 10,
+        "paragraph_end": 10
+      },
+      {
+        "index": 18,
+        "text": "In any case, China is already working ontougher rules to govern open models. Insiders say that new releases face exacting safety reviews before being offered to the public. By most measures China’s AI models are a few months, or more, behind America’s in their performance. That is a big gap for such a fast-evolving technology. But do not accuse China of lagging behind America in its management of risks.",
+        "hint": "tougher rules, lagging behind",
+        "translation": "无论如何，中国已经在制定更严格的规则来管理开放模型。内部人士称，新发布的模型在向公众提供之前要经过严格的安全审查。按大多数标准，中国AI模型的性能落后美国几个月或更多。对于如此快速发展的技术来说，这是一个很大的差距。但不要指责中国在风险管理方面落后于美国。",
+        "paragraph_start": 11,
+        "paragraph_end": 11
+      },
+      {
+        "index": 19,
+        "text": "When it comes to rules, controls, limits and warnings, China is in its element.■ This article was downloaded by zlibrary from https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-",
+        "hint": "in its element, source",
+        "translation": "在规则、控制、限制和警告方面，中国得心应手。■ 本文由zlibrary从https://www.economist.com/china/2026/10/19/does-china-really-prize-ai-speed-over-下载",
+        "paragraph_start": 12,
+        "paragraph_end": 12
+      }
+    ],
+    "schedule": {
+      "total_days": 22,
+      "per_chunk": [
+        {
+          "index": 1,
+          "learn_day": 1,
+          "learn_date": "2026-10-27",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-10-28",
+            "2026-10-29",
+            "2026-10-31",
+            "2026-11-03",
+            "2026-11-11"
+          ]
+        },
+        {
+          "index": 2,
+          "learn_day": 1,
+          "learn_date": "2026-10-27",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-10-28",
+            "2026-10-29",
+            "2026-10-31",
+            "2026-11-03",
+            "2026-11-11"
+          ]
+        },
+        {
+          "index": 3,
+          "learn_day": 1,
+          "learn_date": "2026-10-27",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-10-28",
+            "2026-10-29",
+            "2026-10-31",
+            "2026-11-03",
+            "2026-11-11"
+          ]
+        },
+        {
+          "index": 4,
+          "learn_day": 2,
+          "learn_date": "2026-10-28",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-10-29",
+            "2026-10-30",
+            "2026-11-01",
+            "2026-11-04",
+            "2026-11-12"
+          ]
+        },
+        {
+          "index": 5,
+          "learn_day": 2,
+          "learn_date": "2026-10-28",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-10-29",
+            "2026-10-30",
+            "2026-11-01",
+            "2026-11-04",
+            "2026-11-12"
+          ]
+        },
+        {
+          "index": 6,
+          "learn_day": 2,
+          "learn_date": "2026-10-28",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-10-29",
+            "2026-10-30",
+            "2026-11-01",
+            "2026-11-04",
+            "2026-11-12"
+          ]
+        },
+        {
+          "index": 7,
+          "learn_day": 3,
+          "learn_date": "2026-10-29",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-02",
+            "2026-11-05",
+            "2026-11-13"
+          ]
+        },
+        {
+          "index": 8,
+          "learn_day": 3,
+          "learn_date": "2026-10-29",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-02",
+            "2026-11-05",
+            "2026-11-13"
+          ]
+        },
+        {
+          "index": 9,
+          "learn_day": 3,
+          "learn_date": "2026-10-29",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-10-30",
+            "2026-10-31",
+            "2026-11-02",
+            "2026-11-05",
+            "2026-11-13"
+          ]
+        },
+        {
+          "index": 10,
+          "learn_day": 4,
+          "learn_date": "2026-10-30",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-10-31",
+            "2026-11-01",
+            "2026-11-03",
+            "2026-11-06",
+            "2026-11-14"
+          ]
+        },
+        {
+          "index": 11,
+          "learn_day": 4,
+          "learn_date": "2026-10-30",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-10-31",
+            "2026-11-01",
+            "2026-11-03",
+            "2026-11-06",
+            "2026-11-14"
+          ]
+        },
+        {
+          "index": 12,
+          "learn_day": 4,
+          "learn_date": "2026-10-30",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-10-31",
+            "2026-11-01",
+            "2026-11-03",
+            "2026-11-06",
+            "2026-11-14"
+          ]
+        },
+        {
+          "index": 13,
+          "learn_day": 5,
+          "learn_date": "2026-10-31",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-01",
+            "2026-11-02",
+            "2026-11-04",
+            "2026-11-07",
+            "2026-11-15"
+          ]
+        },
+        {
+          "index": 14,
+          "learn_day": 5,
+          "learn_date": "2026-10-31",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-01",
+            "2026-11-02",
+            "2026-11-04",
+            "2026-11-07",
+            "2026-11-15"
+          ]
+        },
+        {
+          "index": 15,
+          "learn_day": 5,
+          "learn_date": "2026-10-31",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-01",
+            "2026-11-02",
+            "2026-11-04",
+            "2026-11-07",
+            "2026-11-15"
+          ]
+        },
+        {
+          "index": 16,
+          "learn_day": 6,
+          "learn_date": "2026-11-01",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-02",
+            "2026-11-03",
+            "2026-11-05",
+            "2026-11-08",
+            "2026-11-16"
+          ]
+        },
+        {
+          "index": 17,
+          "learn_day": 6,
+          "learn_date": "2026-11-01",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-02",
+            "2026-11-03",
+            "2026-11-05",
+            "2026-11-08",
+            "2026-11-16"
+          ]
+        },
+        {
+          "index": 18,
+          "learn_day": 6,
+          "learn_date": "2026-11-01",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-02",
+            "2026-11-03",
+            "2026-11-05",
+            "2026-11-08",
+            "2026-11-16"
+          ]
+        },
+        {
+          "index": 19,
+          "learn_day": 7,
+          "learn_date": "2026-11-02",
+          "review_days": [
+            8,
+            9,
+            11,
+            14,
+            22
+          ],
+          "review_dates": [
+            "2026-11-03",
+            "2026-11-04",
+            "2026-11-06",
+            "2026-11-09",
+            "2026-11-17"
+          ]
+        }
+      ],
+      "daily": [
+        {
+          "day": 1,
+          "date": "2026-10-27",
+          "learn": [
+            1,
+            2,
+            3
+          ],
+          "review": []
+        },
+        {
+          "day": 2,
+          "date": "2026-10-28",
+          "learn": [
+            4,
+            5,
+            6
+          ],
+          "review": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-10-29",
+          "learn": [
+            7,
+            8,
+            9
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-10-30",
+          "learn": [
+            10,
+            11,
+            12
+          ],
+          "review": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-10-31",
+          "learn": [
+            13,
+            14,
+            15
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-01",
+          "learn": [
+            16,
+            17,
+            18
+          ],
+          "review": [
+            4,
+            5,
+            6,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-02",
+          "learn": [
+            19
+          ],
+          "review": [
+            7,
+            8,
+            9,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-03",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-11-04",
+          "learn": [],
+          "review": [
+            4,
+            5,
+            6,
+            13,
+            14,
+            15,
+            19
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-11-05",
+          "learn": [],
+          "review": [
+            7,
+            8,
+            9,
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-11-06",
+          "learn": [],
+          "review": [
+            10,
+            11,
+            12,
+            19
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-11-07",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-11-08",
+          "learn": [],
+          "review": [
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-11-09",
+          "learn": [],
+          "review": [
+            19
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-11-10",
+          "learn": [],
+          "review": []
+        },
+        {
+          "day": 16,
+          "date": "2026-11-11",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "day": 17,
+          "date": "2026-11-12",
+          "learn": [],
+          "review": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "day": 18,
+          "date": "2026-11-13",
+          "learn": [],
+          "review": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "day": 19,
+          "date": "2026-11-14",
+          "learn": [],
+          "review": [
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 20,
+          "date": "2026-11-15",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 21,
+          "date": "2026-11-16",
+          "learn": [],
+          "review": [
+            16,
+            17,
+            18
+          ]
+        },
+        {
+          "day": 22,
+          "date": "2026-11-17",
+          "learn": [],
+          "review": [
+            19
+          ]
+        }
+      ]
+    }
+  },
+  "usage": {
+    "calls": [
+      {
+        "stage": "core",
+        "prompt_tokens": 2109,
+        "completion_tokens": 2684,
+        "total_tokens": 4793,
+        "cost_cny": 0.007477,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:1",
+        "prompt_tokens": 1211,
+        "completion_tokens": 862,
+        "total_tokens": 2073,
+        "cost_cny": 0.002935,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:2",
+        "prompt_tokens": 699,
+        "completion_tokens": 409,
+        "total_tokens": 1108,
+        "cost_cny": 0.001517,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "language",
+        "prompt_tokens": 1893,
+        "completion_tokens": 3285,
+        "total_tokens": 5178,
+        "cost_cny": 0.008463,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "recitation",
+        "prompt_tokens": 1774,
+        "completion_tokens": 3233,
+        "total_tokens": 5007,
+        "cost_cny": 0.00824,
+        "finish_reason": "stop"
+      }
+    ],
+    "prompt_tokens": 7686,
+    "completion_tokens": 10473,
+    "total_tokens": 18159,
+    "cost_cny": 0.028632
+  },
+  "warnings": []
+}
