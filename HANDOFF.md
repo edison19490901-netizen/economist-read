@@ -125,6 +125,7 @@ python tools/publish_site.py --push
 
 补充说明：
 
+- Windows 下直接双击项目根目录的 `publish.bat` 即可，等价于上面的命令
 - 没有改动时会跳过提交和推送，可以安全地重复执行
 - `tools/publish_site.py --check` 只列出会发布哪些文章，不写文件
 - Pages 源：`main` 分支 `/docs`，HTTPS 已强制；推送后约 30–60 秒生效

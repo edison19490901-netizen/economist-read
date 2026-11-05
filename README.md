@@ -23,6 +23,8 @@ python tools/publish_site.py --push
 
 这一条命令会：扫描 `output/` → 重建 `docs/` 索引与各篇页面 → `git add docs output` → 提交 → 推送。没有改动时会自动跳过提交和推送；推送失败会打印 git 的错误信息。
 
+Windows 下也可以直接双击项目根目录的 `publish.bat`，等价于执行上面的命令：脚本会自动切到项目目录，结束后暂停显示结果。
+
 只想预览会发布哪些文章、不写文件也不推送：
 
 ```bash
