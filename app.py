@@ -14,6 +14,7 @@ from flask import Flask, redirect, render_template_string, request, send_file, u
 
 from economist_read.analyzer import analyze_article, save_analysis
 from economist_read.downloader import fetch_web_article
+from economist_read.file_reader import MAX_UPLOAD_BYTES, FileReadError, extract_text
 from economist_read.outputs.workbook import generate
 from economist_read.parser import (
     cap_paragraphs,
@@ -29,12 +30,12 @@ OUTPUT_DIR = BASE_DIR / "output"
 OUTPUT_DIR.mkdir(exist_ok=True)
 SITE_DIR = BASE_DIR / "site"  # 图标与 manifest，和 GitHub Pages 共用一份
 
-SOURCE_LABELS = {"paste": "粘贴文本", "url": "网页链接"}
+SOURCE_LABELS = {"paste": "粘贴文本", "url": "网页链接", "file": "上传文件"}
 MIN_WORDS = 80
 MIN_CHARS = 500
 
 app = Flask(__name__)
-app.config["MAX_CONTENT_LENGTH"] = 8 * 1024 * 1024
+app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 
 
 # ── 配置 ──────────────────────────────────────
@@ -129,6 +130,10 @@ HOME_HTML = """<!DOCTYPE html>
   .hint{font-weight:400;color:var(--muted)}
   input[type=text],input[type=url],textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:14px;font-family:inherit;background:#fdfcf9;color:var(--ink);outline:none;transition:border-color .15s,box-shadow .15s}
   input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(227,18,11,.08)}
+  input[type=file]{width:100%;border:1px dashed var(--line);border-radius:9px;padding:10px 12px;font-size:13px;font-family:inherit;background:#fdfcf9;color:var(--muted);cursor:pointer;transition:border-color .15s}
+  input[type=file]:hover{border-color:var(--accent)}
+  input[type=file]::file-selector-button{margin-right:12px;border:0;border-radius:7px;padding:7px 14px;font-family:inherit;font-size:13px;font-weight:700;background:var(--ink);color:#fff;cursor:pointer}
+  input[type=file]::file-selector-button:hover{background:#1d3a57}
   textarea{min-height:260px;resize:vertical;line-height:1.7}
   .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
   button{border:0;background:var(--accent);color:#fff;border-radius:9px;padding:11px 22px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 3px 10px rgba(227,18,11,.22)}
@@ -153,20 +158,26 @@ HOME_HTML = """<!DOCTYPE html>
   <header>
     <div class="kicker">THE ECONOMIST · 精读</div>
     <h1>经济学人精读</h1>
-    <div class="sub">粘贴正文或网页链接，生成八栏交互看板：总结 · 翻译 · 词汇 · 拆解 · 背景 · 应用 · 背诵 · 统计。</div>
+    <div class="sub">上传文件、粘贴正文或网页链接，生成八栏交互看板：总结 · 翻译 · 词汇 · 拆解 · 背景 · 应用 · 背诵 · 统计。</div>
   </header>
 
   {% if error %}<div class="error">{{ error }}</div>{% endif %}
   {% if not has_key %}<div class="note">未检测到 DEEPSEEK_API_KEY。请在项目根目录创建 <code>.env</code>，写入 <code>DEEPSEEK_API_KEY=sk-...</code>。</div>{% endif %}
 
-  <form class="card" method="post" action="/process" onsubmit="document.getElementById('go').disabled=true;document.getElementById('go').textContent='分析中…';document.getElementById('spin').style.display='inline';">
+  <form class="card" method="post" action="/process" enctype="multipart/form-data" onsubmit="document.getElementById('go').disabled=true;document.getElementById('go').textContent='分析中…';document.getElementById('spin').style.display='inline';">
     <fieldset>
-      <label for="text">文章正文 <span class="hint">（优先使用；直接粘贴英文全文）</span></label>
+      <label for="file">上传文件 <span class="hint">（txt / md / docx / doc / rtf / pdf 等；选择后优先于粘贴和链接）</span></label>
+      {% if file_name %}<div class="note">上次上传的「{{ file_name }}」需要重新选择；已提取的正文仍保留在下方文本框。</div>{% endif %}
+      <input type="file" id="file" name="file" accept=".txt,.text,.md,.markdown,.rst,.log,.csv,.json,.xml,.yaml,.yml,.src,.html,.htm,.doc,.docx,.docm,.odt,.rtf,.pdf,.epub,.py,.js,.ts,.java,.c,.cpp,.go,.rs,.rb,.php,.sql,.sh">
+    </fieldset>
+    <div class="divider">或者</div>
+    <fieldset>
+      <label for="text">文章正文 <span class="hint">（直接粘贴英文全文）</span></label>
       <textarea id="text" name="text" placeholder="Paste the full English article here…">{{ text }}</textarea>
     </fieldset>
     <div class="divider">或者</div>
     <fieldset>
-      <label for="url">网页链接 <span class="hint">（仅当正文为空时使用）</span></label>
+      <label for="url">网页链接 <span class="hint">（上传与正文都为空时使用）</span></label>
       <input type="url" id="url" name="url" placeholder="https://www.economist.com/…" value="{{ url }}">
     </fieldset>
     <fieldset>
@@ -190,7 +201,7 @@ HOME_HTML = """<!DOCTYPE html>
     {% endfor %}
   </ul>
   {% else %}
-  <div class="empty">还没有分析记录。粘贴一篇文章开始吧。</div>
+  <div class="empty">还没有分析记录。上传文件或粘贴一篇文章开始吧。</div>
   {% endif %}
 </div>
 <script>
@@ -210,6 +221,7 @@ def _home_context(**extra) -> dict:
         "text": "",
         "url": "",
         "title": "",
+        "file_name": "",
     }
     ctx.update(extra)
     return ctx
@@ -218,6 +230,17 @@ def _home_context(**extra) -> dict:
 @app.get("/")
 def index():
     return render_template_string(HOME_HTML, **_home_context())
+
+
+@app.errorhandler(413)
+def too_large(_err):
+    return (
+        render_template_string(
+            HOME_HTML,
+            **_home_context(error="上传文件过大，请选择 20 MB 以内的文件。"),
+        ),
+        413,
+    )
 
 
 # ── 静态资源（图标 / manifest）────────────────────
@@ -244,14 +267,24 @@ def manifest_file():
 # ── 处理 ──────────────────────────────────────
 
 
-def _fail(message: str, text: str, url: str, title: str):
+def _fail(message: str, text: str, url: str, title: str, file_name: str = ""):
     return (
         render_template_string(
             HOME_HTML,
-            **_home_context(error=message, text=text, url=url, title=title),
+            **_home_context(
+                error=message, text=text, url=url, title=title, file_name=file_name
+            ),
         ),
         400,
     )
+
+
+def _title_from_filename(filename: str) -> str:
+    """把上传文件名当作候选标题（「My_Article.txt」→「My Article」）。"""
+    stem = re.sub(r"[_\-]+", " ", Path(filename).stem).strip()
+    if not stem or stem.lower() in {"document", "untitled", "article", "download", "upload"}:
+        return ""
+    return stem[:160]
 
 
 @app.post("/process")
@@ -259,30 +292,48 @@ def process():
     text = (request.form.get("text") or "").strip()
     url = (request.form.get("url") or "").strip()
     title = (request.form.get("title") or "").strip()
+    upload = request.files.get("file")
+    file_name = (upload.filename or "").strip() if upload else ""
 
     api_key = _load_api_key()
     if not api_key:
-        return _fail("未找到 DEEPSEEK_API_KEY，请先配置 .env。", text, url, title)
+        return _fail("未找到 DEEPSEEK_API_KEY，请先配置 .env。", text, url, title, file_name)
 
     source = "paste"
     site = ""
+
+    if file_name:
+        # 上传文件优先：解析出的正文填入 text，后续流程与粘贴一致
+        source = "file"
+        try:
+            text = extract_text(file_name, upload.read())
+        except FileReadError as exc:
+            return _fail(
+                f"文件解析失败：{exc}\n可以改用「粘贴正文」。", text, url, title, file_name
+            )
+
     if text:
-        paragraphs = split_paragraphs(text)
+        # 上传文件的正文已提取为纯文本，不能把源码里的 <...> 当 HTML 标签删除
+        paragraphs = split_paragraphs(text, strip_html=source != "file")
     elif url:
         source = "url"
         try:
             article = fetch_web_article(url)
         except Exception as exc:  # noqa: BLE001
-            return _fail(f"网页抓取失败：{exc}\n可以改用「粘贴正文」。", text, url, title)
+            return _fail(
+                f"网页抓取失败：{exc}\n可以改用「粘贴正文」。", text, url, title, file_name
+            )
         paragraphs = split_paragraphs(article.text)
         title = title or article.title
         site = article.site
         text = join_paragraphs(paragraphs)
     else:
-        return _fail("请粘贴文章正文，或输入网页链接。", text, url, title)
+        return _fail(
+            "请上传文件、粘贴文章正文，或输入网页链接。", text, url, title, file_name
+        )
 
     if not paragraphs:
-        return _fail("没有解析出正文段落，请检查内容。", text, url, title)
+        return _fail("没有解析出正文段落，请检查内容。", text, url, title, file_name)
 
     cleaned = join_paragraphs(paragraphs)
     words = len(re.findall(r"[A-Za-z0-9']+", cleaned))
@@ -292,15 +343,23 @@ def process():
             text,
             url,
             title,
+            file_name,
         )
     language = detect_language(cleaned)
     if language != "en":
-        return _fail("本工具面向英文文章，检测到正文可能不是英文。", text, url, title)
+        return _fail(
+            "本工具面向英文文章，检测到正文可能不是英文。", text, url, title, file_name
+        )
 
     paragraphs, truncated = cap_paragraphs(paragraphs)
     full_text = join_paragraphs(paragraphs)
     if not title:
-        title = guess_title(paragraphs) or (site and f"{site} 文章") or "未命名文章"
+        title = (
+            guess_title(paragraphs)
+            or _title_from_filename(file_name)
+            or (site and f"{site} 文章")
+            or "未命名文章"
+        )
     title = title.strip()[:160]
 
     output_id = make_output_id(title, full_text, OUTPUT_DIR)
@@ -327,13 +386,14 @@ def process():
             folder.rmdir()
         except OSError:
             pass
-        return _fail(f"分析失败：{exc}", text, url, title)
+        return _fail(f"分析失败：{exc}", text, url, title, file_name)
 
     source_data = {
         "title": title,
         "url": url or None,
         "site": site,
         "source": source,
+        "file_name": file_name or None,
         "created": now_iso(),
         "language": language,
         "word_count": result.meta.word_count,
@@ -350,7 +410,7 @@ def process():
     except Exception as exc:  # noqa: BLE001
         traceback.print_exc()
         shutil.rmtree(folder, ignore_errors=True)
-        return _fail(f"结果保存失败：{exc}", text, url, title)
+        return _fail(f"结果保存失败：{exc}", text, url, title, file_name)
 
     elapsed = (datetime.now() - started).total_seconds()
     print(f"[done] {output_id} · {result.meta.word_count} words · {elapsed:.1f}s")

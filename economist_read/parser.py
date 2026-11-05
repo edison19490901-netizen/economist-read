@@ -7,15 +7,20 @@ import re
 
 # ── 文本清理 ──────────────────────────────────────
 
-_CLEANUP_PATTERNS: list[tuple[str, str]] = [
+_TAG_PATTERNS: list[tuple[str, str]] = [
     (r"<script[\s\S]*?</script>", " "),
     (r"<style[\s\S]*?</style>", " "),
     (r"<[^>]+>", " "),
+]
+
+_TEXT_PATTERNS: list[tuple[str, str]] = [
     (r"[​‌‍﻿]", ""),
     (r"\r\n?", "\n"),
     (r"[ \t]{2,}", " "),
     (r"\n{3,}", "\n\n"),
 ]
+
+_CLEANUP_PATTERNS: list[tuple[str, str]] = _TAG_PATTERNS + _TEXT_PATTERNS
 
 # 网页正文里常见的样板行（整行匹配时丢弃）
 _BOILERPLATE_RE = re.compile(
@@ -41,6 +46,13 @@ _BOILERPLATE_RE = re.compile(
 _SENTENCE_END = ".!?。！？；:;”\"')）】"
 
 
+def normalize_text(text: str) -> str:
+    """只整理空白与零宽字符，不删除尖括号内容（用于已提取好的纯文本/源码）。"""
+    for pattern, replacement in _TEXT_PATTERNS:
+        text = re.sub(pattern, replacement, text)
+    return text.strip()
+
+
 def clean_text(text: str) -> str:
     """清洗 HTML 标签、零宽字符与多余空白。"""
     for pattern, replacement in _CLEANUP_PATTERNS:
@@ -48,13 +60,16 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
-def split_paragraphs(raw: str) -> list[str]:
+def split_paragraphs(raw: str, *, strip_html: bool = True) -> list[str]:
     """把文章正文切成段落列表。
 
     优先按空行分段；没有空行时按单换行分段，并合并明显的自动换行续行。
     同时丢弃网页样板行（订阅、版权、分享等）。
+
+    strip_html=False 用于上传文件：正文已经提取为纯文本，
+    不能把源码或文章里的 ``<...>`` 当成 HTML 标签删掉。
     """
-    text = clean_text(raw or "")
+    text = clean_text(raw or "") if strip_html else normalize_text(raw or "")
     if not text:
         return []
 

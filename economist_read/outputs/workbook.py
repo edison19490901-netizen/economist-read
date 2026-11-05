@@ -14,7 +14,7 @@ from ..utils import format_duration
 
 TEMPLATE_DIR = Path(__file__).parent.parent / "templates"
 
-_SOURCE_LABELS = {"paste": "粘贴文本", "url": "网页链接"}
+_SOURCE_LABELS = {"paste": "粘贴文本", "url": "网页链接", "file": "上传文件"}
 
 
 def generate(result: AnalysisResult, source: dict, output_path: Path) -> Path:

@@ -31,7 +31,7 @@ GitHub Pages 只能托管静态文件，**跑不了 Flask**。所以"生成"永�
 ```
 D:\Claudeee\Economist_Read\
 ├─ app.py                       # Flask：首页 / process / result，端口 5001
-├─ requirements.txt             # openai, jinja2, flask, trafilatura, requests
+├─ requirements.txt             # openai, jinja2, flask, trafilatura, requests, pypdf
 ├─ .env                         # DEEPSEEK_API_KEY 等（gitignored，勿提交）
 ├─ .env.example
 ├─ README.md
@@ -39,6 +39,7 @@ D:\Claudeee\Economist_Read\
 ├─ economist_read/
 │  ├─ parser.py                 # 段落切分、单行长文回退、语言检测、截断
 │  ├─ downloader.py             # fetch_web_article（trafilatura）
+│  ├─ file_reader.py            # 上传文件 → 纯文本（txt/md/docx/doc/rtf/pdf/epub/html/源码）
 │  ├─ llm.py                    # DeepSeek 客户端、JSON 修复、重试、计费
 │  ├─ prompts.py                # 四组 prompt
 │  ├─ schema.py                 # 全部 dataclass 与序列化
@@ -166,7 +167,7 @@ PORT=5001                      # 5000 被另一常驻服务占用
 - **Pages 是只读的**：手机上无法新建分析。
 - **版权**：仓库是公开的，`output/` 与 `docs/` 里含《经济学人》文章全文（约 1,000 词）。若要撤下，需要 `git rm --cached` **并改写历史**，仅删文件不够。
 - **`promo/` 未入库**：本地保留，`.gitignore` 里写了 `promo/`。强制推送后 GitHub 仍会短暂保留旧 blob，直到 GC。
-- **不做**：期号/主题归档、跨文章生词本、全库统计、PDF/EPUB/音视频输入。
+- **不做**：期号/主题归档、跨文章生词本、全库统计、音视频/图片输入。PDF/EPUB 只提取文字层，扫描版 PDF 需先 OCR。
 
 ---
 
