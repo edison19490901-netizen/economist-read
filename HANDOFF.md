@@ -48,7 +48,7 @@ D:\Claudeee\Economist_Read\
 │  ├─ recite/planner.py         # 艾宾浩斯计划（D+1/2/4/7/15）
 │  ├─ outputs/workbook.py       # 看板渲染上下文 + 生词标注
 │  └─ templates/article.html.j2 # 8 面板单文件模板（CSS/JS 全内联）
-├─ tools/publish_site.py        # 扫描 output/ → 生成 docs/ 静态站点
+├─ tools/publish_site.py        # 扫描 output/ → 生成 docs/；--push 自动提交并推送
 ├─ docs/                        # GitHub Pages 托管目录（提交进仓库）
 ├─ output/<id>/                 # 每次分析：analysis.json / source.json / workbook.html
 └─ promo/                        # 小红书推广图文（**已 gitignore，不入库**）
@@ -111,8 +111,7 @@ warnings: []
 ## 5. 发布到 GitHub Pages
 
 ```bash
-python tools/publish_site.py     # 重建 docs/（索引页 + 各篇 index.html + .nojekyll）
-git add docs && git commit -m "publish" && git push
+python tools/publish_site.py --push   # 重建 docs/，并自动提交 docs/+output/ 后推送
 ```
 
 - Pages 源：`main` 分支 `/docs`，HTTPS 已强制

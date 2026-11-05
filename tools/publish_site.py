@@ -1,20 +1,21 @@
 """把 output/ 里已生成的分析发布成 GitHub Pages 站点。
 
 用法：
-    python tools/publish_site.py          # 重建 docs/ 并写入索引页
+    python tools/publish_site.py          # 只重建 docs/ 并写入索引页
     python tools/publish_site.py --check  # 只报告会发布哪些文章
+    python tools/publish_site.py --push   # 重建后自动提交 docs/ + output/ 并推送
 
 Pages 只能托管静态文件，所以这里做的事情很单纯：把每篇的 workbook.html
 复制成 docs/<id>/index.html，再生成一个列出全部文章的 docs/index.html。
-新分析生成后重跑一次，提交 docs/ 即可。
+新分析生成后跑一次 `--push` 即可完成发布与上传。
 """
 
 from __future__ import annotations
 
 import json
 import shutil
+import subprocess
 import sys
-from datetime import datetime
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,8 +140,60 @@ def _render_index(items: list[dict], updated: str) -> str:
     return env.from_string(INDEX_HTML).render(items=items, updated=updated)
 
 
+def _git(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", "-C", str(BASE_DIR), *args],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+
+
+def _push_site(items: list[dict]) -> int:
+    """提交 docs/ 与 output/ 的改动并推送到当前分支的上游。"""
+    if _git("rev-parse", "--is-inside-work-tree").returncode != 0:
+        print("当前目录不是 Git 仓库，无法自动提交/推送。")
+        return 1
+
+    added = _git("add", "--", "docs", "output")
+    if added.returncode != 0:
+        print(f"git add 失败：{added.stderr.strip()}")
+        return 1
+
+    if _git("diff", "--cached", "--quiet", "--", "docs", "output").returncode != 0:
+        message = f"发布站点：{items[0]['title']}（共 {len(items)} 篇）"
+        # 只提交 docs/ 与 output/，不把用户其他已暂存的改动带进来
+        committed = _git("commit", "-m", message, "--", "docs", "output")
+        if committed.returncode != 0:
+            print(f"git commit 失败：{committed.stderr.strip() or committed.stdout.strip()}")
+            return 1
+        print(f"已提交：{message}")
+    else:
+        print("docs/ 与 output/ 没有变化，跳过提交。")
+
+    branch = _git("rev-parse", "--abbrev-ref", "HEAD").stdout.strip() or "main"
+    has_upstream = _git("rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}")
+    push_args = ["push", "origin", branch]
+    if has_upstream.returncode == 0:
+        ahead = _git("rev-list", "--count", "@{u}..HEAD")
+        if ahead.returncode == 0 and ahead.stdout.strip() == "0":
+            print("没有待推送的提交，已是最新。")
+            return 0
+    else:
+        push_args = ["push", "-u", "origin", branch]
+
+    pushed = _git(*push_args)
+    if pushed.returncode != 0:
+        print(f"git push 失败：{pushed.stderr.strip() or pushed.stdout.strip()}")
+        return 1
+    print(f"已推送到 origin/{branch}，GitHub Pages 约 1 分钟后更新。")
+    return 0
+
+
 def main() -> int:
     check = "--check" in sys.argv
+    push = "--push" in sys.argv
     items = _collect()
     if not items:
         print("output/ 里没有可发布的分析（需要同时存在 analysis.json 和 workbook.html）。")
@@ -174,11 +227,15 @@ def main() -> int:
         target.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(it["workbook"], target / "index.html")
 
-    updated = datetime.now().strftime("%Y-%m-%d %H:%M")
+    # 用最新一篇文章的日期而不是构建时间，保证没有新内容时重建结果完全一致，
+    # 这样 --push 才能判断“没有改动”并跳过空提交。
+    updated = items[0]["created"] or "—"
     (DOCS_DIR / "index.html").write_text(
         _render_index(items, updated), encoding="utf-8"
     )
     print(f"已写入 {DOCS_DIR}")
+    if push:
+        return _push_site(items)
     return 0
 
 

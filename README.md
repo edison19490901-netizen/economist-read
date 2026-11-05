@@ -18,11 +18,18 @@ python app.py
 分析只在电脑上跑，但生成好的看板是单文件 HTML，可以直接发布成静态站点，手机上打开就能读——翻译、点词、背诵、打卡都正常。
 
 ```bash
-python tools/publish_site.py     # 扫描 output/，重建 docs/ 索引与各篇页面
-git add docs && git commit -m "publish" && git push
+python tools/publish_site.py --push
 ```
 
-Pages 源设为 `main` 分支的 `/docs` 目录，站点地址是 `https://<用户名>.github.io/<仓库名>/`。以后每生成一篇新分析，重跑 `publish_site.py` 并提交 `docs/` 即可。
+这一条命令会：扫描 `output/` → 重建 `docs/` 索引与各篇页面 → `git add docs output` → 提交 → 推送。没有改动时会自动跳过提交和推送；推送失败会打印 git 的错误信息。
+
+只想预览会发布哪些文章、不写文件也不推送：
+
+```bash
+python tools/publish_site.py --check
+```
+
+Pages 源设为 `main` 分支的 `/docs` 目录，站点地址是 `https://<用户名>.github.io/<仓库名>/`。以后每生成一篇新分析，跑一次 `--push` 即可。
 
 Pages 只能托管静态文件，跑不了 Flask，所以**新建分析仍然要用本机的 `python app.py`**。
 
