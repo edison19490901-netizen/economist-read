@@ -110,13 +110,24 @@ warnings: []
 
 ## 5. 发布到 GitHub Pages
 
+新分析生成后，一条命令完成「重建站点 + 提交 + 推送」：
+
 ```bash
-python tools/publish_site.py --push   # 重建 docs/，并自动提交 docs/+output/ 后推送
+python tools/publish_site.py --push
 ```
 
-- Pages 源：`main` 分支 `/docs`，HTTPS 已强制
-- 每次新分析后重跑脚本并提交 `docs/`，约 30 秒生效
+执行流程：
+
+1. 扫描 `output/`，把每篇的 `workbook.html` 复制成 `docs/<id>/index.html`，并重写 `docs/index.html` 索引
+2. `git add -- docs output`
+3. 有改动才 `git commit`，提交信息形如「发布站点：<最新标题>（共 N 篇）」，且只提交 `docs/` 与 `output/`
+4. `git push origin <当前分支>`；没有上游分支时自动加 `-u`
+
+补充说明：
+
+- 没有改动时会跳过提交和推送，可以安全地重复执行
 - `tools/publish_site.py --check` 只列出会发布哪些文章，不写文件
+- Pages 源：`main` 分支 `/docs`，HTTPS 已强制；推送后约 30–60 秒生效
 
 ---
 
@@ -174,7 +185,7 @@ PORT=5001                      # 5000 被另一常驻服务占用
 
 - [ ] 再跑 1–2 篇文章验证泛化（不同长度、不同栏目），重点看 `warnings` 是否为空
 - [ ] 超过 1,600 词的长文：确认翻译分批与背诵拆分都不报错
-- [ ] `docs/index.html` 目前只有 1 篇，多于 5 篇时考虑加分页或按月份分组
+- [ ] `docs/index.html` 目前 2 篇，多于 5 篇时考虑加分页或按月份分组
 - [ ] 若要在手机上"生成"，需重写为静态前端 + 无服务器转发（Cloudflare Worker 等）；注意 DeepSeek API 是否允许浏览器直连（CORS 未知，需先验证）
 - [ ] `promo/images` 若将来要入库，建议走 Releases 而不是塞进仓库（2.9MB）
 
