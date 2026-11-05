@@ -1,0 +1,2037 @@
+{
+  "meta": {
+    "id": "2026-11-05_1350_United-States-Divisive-dividends_b44adf",
+    "title": "United States | Divisive dividends",
+    "source": "file",
+    "url": null,
+    "language": "en",
+    "created": "2026-11-05T13:50:55",
+    "model": "deepseek-chat",
+    "word_count": 924,
+    "paragraph_count": 79,
+    "truncated": false,
+    "duration_seconds": 36.5
+  },
+  "summary": {
+    "zh_points": [
+      "阿拉斯加自1982年起每年向居民发放石油收益分红，2026年10月每人将获1200美元，其永久基金规模已达900亿美元。",
+      "该州因废除个人所得税、高度依赖石油收入，在油价波动下财政陷入零和博弈，分红与公共服务支出相互挤压。",
+      "州长邓利维曾承诺恢复3000美元分红公式，但面对预算现实，任内平均分红仅约1500美元，服务支出也被削减。",
+      "美国政界正借鉴阿拉斯加模式，讨论将AI公司股份注入公共基金以分红或资助公共服务，但作者提醒这既有示范意义也有警示。",
+      "阿拉斯加的经验显示，过度依赖单一收入来源会使分红沦为政治足球，特朗普已借中期选举抛出无关AI的“特朗普分红”承诺。"
+    ],
+    "en_points": [
+      "Alaska has paid annual dividends from its Permanent Fund since 1982, with each resident receiving $1,200 this October from a $90bn fund.",
+      "The state's reliance on oil revenue, combined with the absence of personal income tax, has turned budgeting into a zero-sum contest between dividends and public services.",
+      "Governor Mike Dunleavy promised to restore a $3,000 dividend formula but has delivered average payouts of about $1,500 while cutting services.",
+      "American lawmakers are now looking to Alaska as both a model and a cautionary tale for sharing AI-generated wealth through a public fund.",
+      "Alaska's experience shows the danger of over-reliance on a single revenue source and how easily dividends become a political football."
+    ]
+  },
+  "paragraphs": [
+    {
+      "index": 1,
+      "en": "United States | Divisive dividends",
+      "zh": "美国 | 分歧的红利"
+    },
+    {
+      "index": 2,
+      "en": "How to share the wealth from AI? Alaska offers",
+      "zh": "如何分享人工智能带来的财富？阿拉斯加提供了"
+    },
+    {
+      "index": 3,
+      "en": "lessons",
+      "zh": "经验教训"
+    },
+    {
+      "index": 4,
+      "en": "Divvying up the proceeds of a boom is harder than it looks",
+      "zh": "分配繁荣的收益比看起来更难"
+    },
+    {
+      "index": 5,
+      "en": "Oct 22nd 2026",
+      "zh": "2026年10月22日"
+    },
+    {
+      "index": 6,
+      "en": "OCTOBER IS EVENTFUL in Alaska. Its vast landscapes erupt in a riot of",
+      "zh": "十月在阿拉斯加是多事之秋。广袤的景观爆发出五彩斑斓的色彩，"
+    },
+    {
+      "index": 7,
+      "en": "colour, daylight becomes precious and beefy bears rush to fatten themselves",
+      "zh": "日光变得珍贵，壮硕的熊匆匆赶在冬天来临前把自己喂胖。"
+    },
+    {
+      "index": 8,
+      "en": "before winter. It is also the month Alaskans get a payday. Each October the",
+      "zh": "这也是阿拉斯加人领钱的一个月。每年十月，"
+    },
+    {
+      "index": 9,
+      "en": "state government disburses dividends from the investment earnings of its oil",
+      "zh": "州政府从石油投资收益中发放红利"
+    },
+    {
+      "index": 10,
+      "en": "revenues. The amount varies, but this October each resident who has lived in",
+      "zh": "收入。金额各不相同，但今年10月，每位在该州居住满一个完整日历年的人将获得1200美元。"
+    },
+    {
+      "index": 11,
+      "en": "the state at least one full calendar year will receive $1,200.",
+      "zh": "每位在该州居住满一个完整日历年的人将获得1200美元。"
+    },
+    {
+      "index": 12,
+      "en": "For half a century Alaska has run an experiment in how to use revenues",
+      "zh": "半个世纪以来，阿拉斯加一直在进行一项实验，探讨如何利用其丰富石油资源的收入"
+    },
+    {
+      "index": 13,
+      "en": "from its abundant oil resources for the public good. Now, as American",
+      "zh": "造福公众。如今，随着美国立法者努力应对是否以及如何分享人工智能可能创造的财富，"
+    },
+    {
+      "index": 14,
+      "en": "lawmakers grapple with whether and how to share the wealth that artificial",
+      "zh": "立法者正在努力应对是否以及如何分享人工智能可能创造的财富，"
+    },
+    {
+      "index": 15,
+      "en": "intelligence might create, the state’s experience has new relevance.",
+      "zh": "该州的经验有了新的相关性。"
+    },
+    {
+      "index": 16,
+      "en": "Proposals to put stakes in AI companies into a public fund, and use theproceeds to pay dividends or finance public services, echo Alaska’s",
+      "zh": "将人工智能公司的股份投入公共基金，并利用收益支付红利或资助公共服务的提案，与阿拉斯加的做法相呼应。"
+    },
+    {
+      "index": 17,
+      "en": "approach. But Alaska’s Permanent Fund and its dividend offer both a model",
+      "zh": "做法。但阿拉斯加的永久基金及其分红既提供了一个模式，"
+    },
+    {
+      "index": 18,
+      "en": "and a cautionary tale.",
+      "zh": "也提供了一个警示故事。"
+    },
+    {
+      "index": 19,
+      "en": "The state’s good fortune dates back to 1968, when roughnecks drilling at",
+      "zh": "该州的好运可以追溯到1968年，当时在阿拉斯加北坡"
+    },
+    {
+      "index": 20,
+      "en": "Prudhoe Bay, on Alaska’s North Slope, struck oil. Less than a decade later",
+      "zh": "普拉德霍湾钻探的油井工人打出了石油。不到十年后，"
+    },
+    {
+      "index": 21,
+      "en": "Alaskans voted to create the Permanent Fund, an investment vehicle for a",
+      "zh": "阿拉斯加人投票决定创建永久基金，这是一个将每年部分矿产特许权使用费"
+    },
+    {
+      "index": 22,
+      "en": "portion of annual mineral royalties. The idea, says Mike Dunleavy, the",
+      "zh": "用于投资的工具。共和党州长迈克·邓利维说，这个想法"
+    },
+    {
+      "index": 23,
+      "en": "Republican governor, “was to ensure that finite resources such as oil mining",
+      "zh": "“是为了确保石油开采等有限资源"
+    },
+    {
+      "index": 24,
+      "en": "could be converted into infinite revenue for the people of Alaska”. In 1980",
+      "zh": "能够转化为阿拉斯加人民无限的收入”。1980年"
+    },
+    {
+      "index": 25,
+      "en": "the legislature created an independent state-run corporation to manage the",
+      "zh": "立法机构创建了一家独立的州营公司来管理"
+    },
+    {
+      "index": 26,
+      "en": "Permanent Fund’s investments. Two years later Alaska began paying the",
+      "zh": "永久基金的投资。两年后，阿拉斯加开始支付"
+    },
+    {
+      "index": 27,
+      "en": "dividend. Today the fund is worth $90bn, or roughly $122,000 per Alaskan.",
+      "zh": "红利。如今该基金价值900亿美元，相当于每个阿拉斯加人约12.2万美元。"
+    },
+    {
+      "index": 28,
+      "en": "The remaining mineral royalties, along with oil production taxes, are used to",
+      "zh": "剩余的矿产特许权使用费以及石油生产税，被用于"
+    },
+    {
+      "index": 29,
+      "en": "finance public services. For a long time the riches seemed inexhaustible. A",
+      "zh": "资助公共服务。很长一段时间里，这些财富似乎取之不尽。"
+    },
+    {
+      "index": 30,
+      "en": "single lease sale in 1969 raised more than five times the state’s annual",
+      "zh": "1969年的一次租约拍卖所得，超过该州年度预算的五倍。"
+    },
+    {
+      "index": 31,
+      "en": "budget. In 1980 Alaskan lawmakers repealed the state’s personal income tax.",
+      "zh": "1980年，阿拉斯加立法者废除了该州的个人所得税。"
+    },
+    {
+      "index": 32,
+      "en": "They have since shunned other broad-based levies on residents. This makes",
+      "zh": "此后他们一直避免对居民征收其他广泛税种。这使得"
+    },
+    {
+      "index": 33,
+      "en": "Alaska unique among American petro-states. Others, such as Texas and New",
+      "zh": "阿拉斯加在美国的石油州中独树一帜。其他州，如得克萨斯州和新"
+    },
+    {
+      "index": 34,
+      "en": "Mexico, continue to collect sales or income taxes to finance their spending.",
+      "zh": "墨西哥州，继续征收销售税或所得税来为支出融资。"
+    },
+    {
+      "index": 35,
+      "en": "Alaska’s utter dependence on the black stuff has left it hostage to",
+      "zh": "阿拉斯加对石油的完全依赖使其受制于"
+    },
+    {
+      "index": 36,
+      "en": "fluctuations in the oil price. In 2018, after several lean years, lawmakers",
+      "zh": "油价的波动。2018年，在经历了几个低迷年份后，立法者"
+    },
+    {
+      "index": 37,
+      "en": "decided to use Permanent Fund earnings to help bankroll the state",
+      "zh": "决定首次使用永久基金收益来为州"
+    },
+    {
+      "index": 38,
+      "en": "government for the first time. Now annual draws from the fund account for",
+      "zh": "政府提供资金。如今，该基金的年度提取额占"
+    },
+    {
+      "index": 39,
+      "en": "roughly two-thirds of the state’s budget. Lawmakers must haggle over how",
+      "zh": "州预算的大约三分之二。立法者必须就如何"
+    },
+    {
+      "index": 40,
+      "en": "to divide the oil money between dividends and public services. Brett",
+      "zh": "在分红和公共服务之间分配石油收入进行讨价还价。布雷特"
+    },
+    {
+      "index": 41,
+      "en": "Watson, an economist at the University of Alaska Anchorage, says Alaska’s",
+      "zh": "阿拉斯加安克雷奇大学的经济学家沃森表示，阿拉斯加的"
+    },
+    {
+      "index": 42,
+      "en": "budgeting has become “zero sum”.",
+      "zh": "预算编制已变成“零和博弈”。"
+    },
+    {
+      "index": 43,
+      "en": "Mr Dunleavy was elected in 2018 after promising to restore a long-standing",
+      "zh": "邓利维先生于2018年当选，此前他承诺恢复一项长期存在的"
+    },
+    {
+      "index": 44,
+      "en": "formula linking dividends to the fund’s investment earnings, which would",
+      "zh": "公式，将分红与基金的投资收益挂钩，这将"
+    },
+    {
+      "index": 45,
+      "en": "have given Alaskans annual payments of more than $3,000. But lawmakers",
+      "zh": "使阿拉斯加人每年获得超过3000美元的款项。但议员们"
+    },
+    {
+      "index": 46,
+      "en": "had stopped following the formula two years earlier, amid a budget crisis. In",
+      "zh": "在两年前因预算危机而停止遵循该公式。在"
+    },
+    {
+      "index": 47,
+      "en": "office, Mr Dunleavy has had to face up to the maths; the average dividend",
+      "zh": "任内，邓利维先生不得不面对算术现实；他任职期间的平均分红"
+    },
+    {
+      "index": 48,
+      "en": "during his tenure has been roughly $1,500. “Every legislator who gets",
+      "zh": "约为1500美元。“每一位获得"
+    },
+    {
+      "index": 49,
+      "en": "elected saying, ‘I promise you a $3,000 dividend’, once they get down toJuneau, and they look at that budget, they realise you cannot do that,”",
+      "zh": "当选后说，‘我向你们保证3000美元分红’，一旦他们到了朱诺，看看那个预算，他们意识到你做不到，"
+    },
+    {
+      "index": 50,
+      "en": "explains Gary Stevens, the Republican state Senate president.",
+      "zh": "共和党州参议院议长加里·史蒂文斯解释道。"
+    },
+    {
+      "index": 51,
+      "en": "Under Mr Dunleavy, lawmakers have also cut spending on services, both to",
+      "zh": "在邓利维先生的领导下，立法者还削减了服务支出，既是为了"
+    },
+    {
+      "index": 52,
+      "en": "balance the books and to preserve money for dividends. Deprived of state",
+      "zh": "平衡收支，也是为了保住分红资金。由于缺乏州政府"
+    },
+    {
+      "index": 53,
+      "en": "dollars, cities and boroughs are operating on shoestring budgets. “Many",
+      "zh": "拨款，市和区正在紧缩预算下运作。“许多"
+    },
+    {
+      "index": 54,
+      "en": "local governments…just close when they run out of money,” says Nils",
+      "zh": "地方政府……钱花完就关门了，”非营利组织阿拉斯加市政联盟的尼尔斯"
+    },
+    {
+      "index": 55,
+      "en": "Andreassen of the Alaska Municipal League, a non-profit. Lawmakers have",
+      "zh": "安德烈亚森说。立法者长期"
+    },
+    {
+      "index": 56,
+      "en": "long hoped the dividend would help keep residents; some now worry that",
+      "zh": "希望分红有助于留住居民；现在一些人担心"
+    },
+    {
+      "index": 57,
+      "en": "worsening services will drive them away. The state’s net migration has been",
+      "zh": "不断恶化的服务将把他们赶走。该州的净移民自2013年以来每年都是"
+    },
+    {
+      "index": 58,
+      "en": "negative in each year since 2013.",
+      "zh": "负值。"
+    },
+    {
+      "index": 59,
+      "en": "The war with Iran offers a band-aid: higher oil prices are propping up the",
+      "zh": "与伊朗的战争提供了一个权宜之计：油价上涨支撑着"
+    },
+    {
+      "index": 60,
+      "en": "state budget. Bernadette Wilson, a Republican candidate for governor, is",
+      "zh": "州预算。州长共和党候选人伯纳黛特·威尔逊"
+    },
+    {
+      "index": 61,
+      "en": "calling for bigger dividend cheques; her opponent, Jonathan Kreiss-Tomkins,",
+      "zh": "呼吁发放更大的股息支票；她的对手、前民主党州议员"
+    },
+    {
+      "index": 62,
+      "en": "a former Democratic state legislator, favours fiscal reform.",
+      "zh": "乔纳森·克赖斯-汤姆金斯则支持财政改革。"
+    },
+    {
+      "index": 63,
+      "en": "When it comes to AI wealth, the debate is only beginning. Bernie Sanders, a",
+      "zh": "谈到人工智能财富，争论才刚刚开始。佛蒙特州"
+    },
+    {
+      "index": 64,
+      "en": "senator from Vermont, wants big AI firms to hand over 50% of their shares",
+      "zh": "参议员伯尼·桑德斯希望大型人工智能公司交出50%的股份"
+    },
+    {
+      "index": 65,
+      "en": "to a sovereign wealth fund, which would pay Americans at least $1,000 a",
+      "zh": "投入一只主权财富基金，该基金每年将向美国人支付至少1000美元，"
+    },
+    {
+      "index": 66,
+      "en": "year and eventually support health care and other services. The bosses of",
+      "zh": "并最终支持医疗保健和其他服务。OpenAI和Anthropic的老板们"
+    },
+    {
+      "index": 67,
+      "en": "OpenAI and Anthropic favour donating a more modest 5% stake to a public",
+      "zh": "倾向于向一只公共基金捐赠更为适度的5%股份。"
+    },
+    {
+      "index": 68,
+      "en": "fund. OpenAI also backs higher taxes on capital gains and corporate income.",
+      "zh": "OpenAI还支持提高资本利得税和企业所得税。"
+    },
+    {
+      "index": 69,
+      "en": "An AI fund would not initially face the same fiscal pressures as Alaska’s",
+      "zh": "人工智能基金最初不会面临与阿拉斯加永久基金相同的财政压力："
+    },
+    {
+      "index": 70,
+      "en": "Permanent Fund: America, after all, still collects federal income taxes. But",
+      "zh": "毕竟，美国仍在征收联邦所得税。但"
+    },
+    {
+      "index": 71,
+      "en": "Alaska’s predicament shows the dangers of relying too heavily on a single",
+      "zh": "阿拉斯加的困境表明了过度依赖单一收入来源的危险，"
+    },
+    {
+      "index": 72,
+      "en": "source of revenue, and how easily dividends can become a political football.",
+      "zh": "以及分红多么容易变成政治足球。"
+    },
+    {
+      "index": 73,
+      "en": "Donald Trump is already dangling a “Trump dividend”, unrelated to AI, if",
+      "zh": "唐纳德·特朗普已经在许诺一项与人工智能无关的“特朗普红利”，如果"
+    },
+    {
+      "index": 74,
+      "en": "Republicans win the midterms. Just vote for the party’s candidates, he",
+      "zh": "共和党赢得中期选举的话。他最近恳求道，只要投票给该党的候选人，"
+    },
+    {
+      "index": 75,
+      "en": "implored recently, “and you will each have $5,000”. ■",
+      "zh": "“你们每个人都将获得5000美元”。■"
+    },
+    {
+      "index": 76,
+      "en": "Stay on top of American politics with The US in brief, our daily newsletter",
+      "zh": "通过我们的每日简报《美国简讯》掌握美国政治动态，"
+    },
+    {
+      "index": 77,
+      "en": "with fast analysis of the most important political news, and Checks and",
+      "zh": "该简报对最重要的政治新闻进行快速分析；还有《制衡》周刊，"
+    },
+    {
+      "index": 78,
+      "en": "Balance, a weekly note that examines the state of American democracy and",
+      "zh": "探讨美国民主的状况以及"
+    },
+    {
+      "index": 79,
+      "en": "the issues that matter to voters.",
+      "zh": "对选民至关重要的议题。"
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "v1",
+      "word": "divvying up",
+      "context_sentence": "Divvying up the proceeds of a boom is harder than it looks",
+      "paragraph_index": 4,
+      "difficulty": "★★☆",
+      "chinese_note": "分配，分摊（非正式用语，常与 profits/proceeds 搭配）"
+    },
+    {
+      "id": "v2",
+      "word": "disburses",
+      "context_sentence": "Each October the state government disburses dividends from the investment earnings of its oil revenues.",
+      "paragraph_index": 9,
+      "difficulty": "★★☆",
+      "chinese_note": "支付， disbursement 名词；常与 funds/dividends 搭配"
+    },
+    {
+      "id": "v3",
+      "word": "grapple with",
+      "context_sentence": "Now, as American lawmakers grapple with whether and how to share the wealth that artificial intelligence might create, the state’s experience has new relevance.",
+      "paragraph_index": 14,
+      "difficulty": "★★☆",
+      "chinese_note": "努力应对，设法解决（难题）"
+    },
+    {
+      "id": "v4",
+      "word": "cautionary tale",
+      "context_sentence": "But Alaska’s Permanent Fund and its dividend offer both a model and a cautionary tale.",
+      "paragraph_index": 17,
+      "difficulty": "★★☆",
+      "chinese_note": "警示故事，前车之鉴"
+    },
+    {
+      "id": "v5",
+      "word": "roughnecks",
+      "context_sentence": "The state’s good fortune dates back to 1968, when roughnecks drilling at Prudhoe Bay, on Alaska’s North Slope, struck oil.",
+      "paragraph_index": 19,
+      "difficulty": "★★☆",
+      "chinese_note": "石油钻井工人（非正式）"
+    },
+    {
+      "id": "v6",
+      "word": "struck oil",
+      "context_sentence": "The state’s good fortune dates back to 1968, when roughnecks drilling at Prudhoe Bay, on Alaska’s North Slope, struck oil.",
+      "paragraph_index": 19,
+      "difficulty": "★☆☆",
+      "chinese_note": "钻探到石油， strike oil 为固定搭配"
+    },
+    {
+      "id": "v7",
+      "word": "investment vehicle",
+      "context_sentence": "Less than a decade later Alaskans voted to create the Permanent Fund, an investment vehicle for a portion of annual mineral royalties.",
+      "paragraph_index": 21,
+      "difficulty": "★★☆",
+      "chinese_note": "投资工具/载体（金融术语）"
+    },
+    {
+      "id": "v8",
+      "word": "royalties",
+      "context_sentence": "Less than a decade later Alaskans voted to create the Permanent Fund, an investment vehicle for a portion of annual mineral royalties.",
+      "paragraph_index": 21,
+      "difficulty": "★★☆",
+      "chinese_note": "特许权使用费，矿区使用费"
+    },
+    {
+      "id": "v9",
+      "word": "inexhaustible",
+      "context_sentence": "For a long time the riches seemed inexhaustible.",
+      "paragraph_index": 29,
+      "difficulty": "★★☆",
+      "chinese_note": "无穷无尽的，用不完的"
+    },
+    {
+      "id": "v10",
+      "word": "repealed",
+      "context_sentence": "In 1980 Alaskan lawmakers repealed the state’s personal income tax.",
+      "paragraph_index": 31,
+      "difficulty": "★★☆",
+      "chinese_note": "废除（法律），撤销"
+    },
+    {
+      "id": "v11",
+      "word": "shunned",
+      "context_sentence": "They have since shunned other broad-based levies on residents.",
+      "paragraph_index": 32,
+      "difficulty": "★★☆",
+      "chinese_note": "回避，避免（shun 的过去分词）"
+    },
+    {
+      "id": "v12",
+      "word": "levies",
+      "context_sentence": "They have since shunned other broad-based levies on residents.",
+      "paragraph_index": 32,
+      "difficulty": "★★☆",
+      "chinese_note": "征税，征收款（levy 的复数）"
+    },
+    {
+      "id": "v13",
+      "word": "hostage to",
+      "context_sentence": "Alaska’s utter dependence on the black stuff has left it hostage to fluctuations in the oil price.",
+      "paragraph_index": 35,
+      "difficulty": "★★☆",
+      "chinese_note": "受制于，成为…的俘虏"
+    },
+    {
+      "id": "v14",
+      "word": "bankroll",
+      "context_sentence": "In 2018, after several lean years, lawmakers decided to use Permanent Fund earnings to help bankroll the state government for the first time.",
+      "paragraph_index": 37,
+      "difficulty": "★★☆",
+      "chinese_note": "为…提供资金，资助"
+    },
+    {
+      "id": "v15",
+      "word": "haggle over",
+      "context_sentence": "Lawmakers must haggle over how to divide the oil money between dividends and public services.",
+      "paragraph_index": 40,
+      "difficulty": "★★☆",
+      "chinese_note": "讨价还价，争论"
+    },
+    {
+      "id": "v16",
+      "word": "zero sum",
+      "context_sentence": "Brett Watson, an economist at the University of Alaska Anchorage, says Alaska’s budgeting has become “zero sum”.",
+      "paragraph_index": 41,
+      "difficulty": "★★☆",
+      "chinese_note": "零和的（指一方得益另一方受损）"
+    },
+    {
+      "id": "v17",
+      "word": "face up to",
+      "context_sentence": "In office, Mr Dunleavy has had to face up to the maths; the average dividend during his tenure has been roughly $1,500.",
+      "paragraph_index": 47,
+      "difficulty": "★★☆",
+      "chinese_note": "正视，面对（现实）"
+    },
+    {
+      "id": "v18",
+      "word": "tenure",
+      "context_sentence": "In office, Mr Dunleavy has had to face up to the maths; the average dividend during his tenure has been roughly $1,500.",
+      "paragraph_index": 47,
+      "difficulty": "★★☆",
+      "chinese_note": "任期，任职期间"
+    },
+    {
+      "id": "v19",
+      "word": "shoestring budgets",
+      "context_sentence": "Deprived of state dollars, cities and boroughs are operating on shoestring budgets.",
+      "paragraph_index": 53,
+      "difficulty": "★★☆",
+      "chinese_note": "微薄的预算，拮据的预算（on a shoestring 指用很少的钱）"
+    },
+    {
+      "id": "v20",
+      "word": "band-aid",
+      "context_sentence": "The war with Iran offers a band-aid: higher oil prices are propping up the state budget.",
+      "paragraph_index": 59,
+      "difficulty": "★★☆",
+      "chinese_note": "权宜之计，临时补救措施"
+    }
+  ],
+  "long_sentences": [
+    {
+      "id": "s1",
+      "sentence": "Now, as American lawmakers grapple with whether and how to share the wealth that artificial intelligence might create, the state’s experience has new relevance.",
+      "paragraph_index": null,
+      "main_clause": "the state’s experience has new relevance",
+      "subordinate_clauses": [
+        {
+          "text": "as American lawmakers grapple with whether and how to share the wealth that artificial intelligence might create",
+          "type": "状语从句",
+          "function": "时间/原因状语，说明主句背景"
+        },
+        {
+          "text": "that artificial intelligence might create",
+          "type": "定语从句",
+          "function": "修饰 the wealth"
+        },
+        {
+          "text": "whether and how to share the wealth",
+          "type": "名词性从句",
+          "function": "作 grapple with 的宾语"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "Now",
+          "type": "副词",
+          "modifies": "整个句子，表示时间"
+        }
+      ],
+      "translation": "如今，随着美国立法者努力应对是否以及如何分享人工智能可能创造的财富，该州的经验有了新的相关性。",
+      "note": "主句较短，前面有 as 引导的状语从句，其中又嵌套了 whether and how 引导的宾语从句和 that 引导的定语从句，层次较多。"
+    },
+    {
+      "id": "s2",
+      "sentence": "Proposals to put stakes in AI companies into a public fund, and use the proceeds to pay dividends or finance public services, echo Alaska’s approach.",
+      "paragraph_index": 16,
+      "main_clause": "Proposals echo Alaska’s approach",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "to put stakes in AI companies into a public fund, and use the proceeds to pay dividends or finance public services",
+          "type": "不定式短语",
+          "modifies": "Proposals，作后置定语"
+        }
+      ],
+      "translation": "将人工智能公司的股份投入公共基金，并利用收益支付股息或资助公共服务的提议，与阿拉斯加的做法如出一辙。",
+      "note": "主语 Proposals 后跟一个很长的的不定式短语作定语，其中包含并列的动词 put 和 use，以及介词短语 into a public fund 和 to pay dividends or finance public services。"
+    },
+    {
+      "id": "s3",
+      "sentence": "The idea, says Mike Dunleavy, the Republican governor, “was to ensure that finite resources such as oil mining could be converted into infinite revenue for the people of Alaska”.",
+      "paragraph_index": null,
+      "main_clause": "The idea was to ensure that...",
+      "subordinate_clauses": [
+        {
+          "text": "that finite resources such as oil mining could be converted into infinite revenue for the people of Alaska",
+          "type": "名词性从句",
+          "function": "作 ensure 的宾语"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "says Mike Dunleavy, the Republican governor",
+          "type": "插入语",
+          "modifies": "整个句子，表示信息来源"
+        }
+      ],
+      "translation": "共和党州长迈克·邓利维说，这个想法“是为了确保像石油开采这样的有限资源能够转化为阿拉斯加人民的无限收入”。",
+      "note": "句子包含插入语和直接引语，引语中又套了 that 引导的宾语从句，需要分清引号内外的主干。"
+    },
+    {
+      "id": "s4",
+      "sentence": "In 2018, after several lean years, lawmakers decided to use Permanent Fund earnings to help bankroll the state government for the first time.",
+      "paragraph_index": null,
+      "main_clause": "lawmakers decided to use Permanent Fund earnings to help bankroll the state government",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "In 2018",
+          "type": "介词短语",
+          "modifies": "整个句子，表示时间"
+        },
+        {
+          "text": "after several lean years",
+          "type": "介词短语",
+          "modifies": "整个句子，表示时间背景"
+        },
+        {
+          "text": "for the first time",
+          "type": "介词短语",
+          "modifies": "decided to use...，表示首次"
+        }
+      ],
+      "translation": "2018年，在经历了几个萧条年份后，立法者决定首次使用永久基金的收益来帮助为州政府提供资金。",
+      "note": "主干是 lawmakers decided to use...，前面有两个时间状语，后面有目的状语 to help bankroll... 和 for the first time。"
+    },
+    {
+      "id": "s5",
+      "sentence": "Mr Dunleavy was elected in 2018 after promising to restore a long-standing formula linking dividends to the fund’s investment earnings, which would have given Alaskans annual payments of more than $3,000.",
+      "paragraph_index": null,
+      "main_clause": "Mr Dunleavy was elected in 2018",
+      "subordinate_clauses": [
+        {
+          "text": "after promising to restore a long-standing formula linking dividends to the fund’s investment earnings",
+          "type": "状语从句",
+          "function": "时间状语，说明当选背景"
+        },
+        {
+          "text": "which would have given Alaskans annual payments of more than $3,000",
+          "type": "定语从句",
+          "function": "修饰前面的 formula，说明该公式本会带来的结果"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "linking dividends to the fund’s investment earnings",
+          "type": "分词短语",
+          "modifies": "formula，作后置定语"
+        }
+      ],
+      "translation": "邓利维在2018年当选，此前他承诺恢复一项长期存在的公式，将股息与基金的投资收益挂钩，该公式本会给阿拉斯加人带来每年超过3000美元的支付。",
+      "note": "主句后跟 after 引导的状语，其中 promising 的宾语 formula 后又有分词短语和 which 引导的定语从句，从句中用了虚拟语气 would have given。"
+    },
+    {
+      "id": "s6",
+      "sentence": "“Every legislator who gets elected saying, ‘I promise you a $3,000 dividend’, once they get down to Juneau, and they look at that budget, they realise you cannot do that,” explains Gary Stevens, the Republican state Senate president.",
+      "paragraph_index": 49,
+      "main_clause": "Every legislator... they realise you cannot do that",
+      "subordinate_clauses": [
+        {
+          "text": "who gets elected saying, ‘I promise you a $3,000 dividend’",
+          "type": "定语从句",
+          "function": "修饰 Every legislator"
+        },
+        {
+          "text": "once they get down to Juneau, and they look at that budget",
+          "type": "状语从句",
+          "function": "时间状语，说明 realize 的条件"
+        },
+        {
+          "text": "you cannot do that",
+          "type": "名词性从句",
+          "function": "作 realise 的宾语"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "explains Gary Stevens, the Republican state Senate president",
+          "type": "插入语",
+          "modifies": "整个句子，表示信息来源"
+        }
+      ],
+      "translation": "“每一位当选的立法者都说，‘我承诺给你们3000美元的股息’，一旦他们到了朱诺，看看那个预算，他们就会意识到你做不到，”共和党州参议院议长加里·史蒂文斯解释说。",
+      "note": "直接引语较长，包含定语从句、时间状语从句和宾语从句，且主句前有 every legislator 作主语，后面 they realise 中的 they 指代 legislator，需要理清指代关系。"
+    },
+    {
+      "id": "s7",
+      "sentence": "An AI fund would not initially face the same fiscal pressures as Alaska’s Permanent Fund: America, after all, still collects federal income taxes.",
+      "paragraph_index": 69,
+      "main_clause": "An AI fund would not initially face the same fiscal pressures as Alaska’s Permanent Fund",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "initially",
+          "type": "副词",
+          "modifies": "face，表示时间"
+        },
+        {
+          "text": "as Alaska’s Permanent Fund",
+          "type": "介词短语",
+          "modifies": "the same fiscal pressures，表示比较对象"
+        },
+        {
+          "text": "after all",
+          "type": "副词短语",
+          "modifies": "整个冒号后的解释句，表示让步"
+        }
+      ],
+      "translation": "人工智能基金最初不会面临与阿拉斯加永久基金相同的财政压力：毕竟，美国仍然征收联邦所得税。",
+      "note": "主句是简单句，但包含 the same...as 比较结构，冒号后是补充解释，after all 表示“毕竟”。"
+    }
+  ],
+  "deconstruction": {
+    "overview": "文章以阿拉斯加十月分红为切入点，先描述现象，再回溯永久基金的历史与制度设计，接着分析其财政困境与政治博弈，最后将话题引向AI财富分配，用阿拉斯加的经验作为镜鉴。结构上由具体到抽象、由历史到当下、由个案到政策辩论，风格冷静克制，善用数据与引语，结尾以特朗普的“分红”承诺收束，暗示政治化风险。",
+    "sections": [
+      {
+        "title": "阿拉斯加的分红传统",
+        "role": "引入",
+        "argument": "阿拉斯加每年十月向居民发放石油收益分红，已成为一种制度性传统。",
+        "evidence": "2026年10月每位居住满一年的居民将获得1200美元；永久基金规模达900亿美元，人均约12.2万美元。",
+        "technique": "以季节意象和具体数字开篇，营造画面感并建立事实基础。",
+        "paragraph_indices": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "title": "从石油到AI：阿拉斯加经验的当代意义",
+        "role": "提出论点",
+        "argument": "阿拉斯加利用石油收入服务公共利益的实验，对当前美国讨论如何分配AI财富具有新的相关性。",
+        "evidence": "有人提议将AI公司股份注入公共基金，用收益支付分红或资助公共服务，这与阿拉斯加的做法如出一辙。",
+        "technique": "类比与设问，将历史案例与当下政策辩论挂钩。",
+        "paragraph_indices": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "title": "永久基金的历史与制度设计",
+        "role": "例证",
+        "argument": "阿拉斯加通过永久基金将有限的石油资源转化为无限的人民收入，并建立了独立的管理公司。",
+        "evidence": "1968年发现石油，1976年公投创建基金，1980年成立州营公司管理投资，1982年开始分红；1969年一次租约销售就超过州年度预算的五倍。",
+        "technique": "时间线叙事与关键数据结合，引用州长原话增强权威性。",
+        "paragraph_indices": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ]
+      },
+      {
+        "title": "财政依赖与零和困境",
+        "role": "转折",
+        "argument": "对石油的完全依赖使阿拉斯加受制于油价波动，2018年起动用基金收益填补预算，分红与公共服务形成零和博弈。",
+        "evidence": "基金年度提取约占州预算三分之二；经济学家称预算已变成“零和”；2018年因多年财政紧张而首次使用基金收益。",
+        "technique": "引用专家观点和具体比例，揭示制度性矛盾。",
+        "paragraph_indices": [
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      },
+      {
+        "title": "政治承诺与预算现实",
+        "role": "论证",
+        "argument": "州长邓利维承诺恢复3000美元分红公式，但面对预算现实，任内平均分红仅约1500美元，服务支出也被削减。",
+        "evidence": "邓利维2018年当选时承诺恢复公式；立法者两年前已停止遵循公式；参议院议长解释一旦看到预算就明白无法兑现。",
+        "technique": "对比承诺与实绩，引用政客原话展现政治修辞与治理现实的落差。",
+        "paragraph_indices": [
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ]
+      },
+      {
+        "title": "油价与选举政治",
+        "role": "例证",
+        "argument": "与伊朗的战争推高油价，暂时支撑州预算；州长选战中候选人就分红与财政改革展开辩论。",
+        "evidence": "共和党候选人伯纳黛特·威尔逊呼吁更大分红支票；民主党对手乔纳森·克雷斯-汤金斯支持财政改革。",
+        "technique": "以当前政治事件佐证分红已成为选举议题。",
+        "paragraph_indices": [
+          59,
+          60,
+          61,
+          62
+        ]
+      },
+      {
+        "title": "AI财富分配的辩论与警示",
+        "role": "结论",
+        "argument": "围绕AI财富的分配辩论刚刚开始，阿拉斯加的经验既提供模型也发出警告：过度依赖单一收入来源和分红政治化风险。",
+        "evidence": "桑德斯提议AI公司上交50%股份给主权财富基金，每年向美国人支付至少1000美元；OpenAI和Anthropic支持捐赠5%股份；特朗普则抛出无关AI的“特朗普分红”承诺。",
+        "technique": "并列不同立场，以阿拉斯加的教训收束全文，结尾引用特朗普原话强化政治化主题。",
+        "paragraph_indices": [
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ]
+      }
+    ],
+    "writing_techniques": [
+      {
+        "name": "以具体场景开篇",
+        "example": "OCTOBER IS EVENTFUL in Alaska. Its vast landscapes erupt in a riot of colour, daylight becomes precious and beefy bears rush to fatten themselves before winter.",
+        "effect": "用生动的季节描写吸引读者，将抽象的经济政策具象化，增强可读性。",
+        "paragraph_index": 6
+      },
+      {
+        "name": "数据锚定论点",
+        "example": "Today the fund is worth $90bn, or roughly $122,000 per Alaskan.",
+        "effect": "用精确数字建立可信度，让读者直观感受基金规模。",
+        "paragraph_index": 27
+      },
+      {
+        "name": "引用权威原话",
+        "example": "“Every legislator who gets elected saying, ‘I promise you a $3,000 dividend’, once they get down to Juneau, and they look at that budget, they realise you cannot do that,” explains Gary Stevens, the Republican state Senate president.",
+        "effect": "借政客之口揭示承诺与现实的矛盾，增强叙事张力与真实感。",
+        "paragraph_index": 49
+      },
+      {
+        "name": "类比迁移",
+        "example": "Proposals to put stakes in AI companies into a public fund, and use the proceeds to pay dividends or finance public services, echo Alaska’s approach.",
+        "effect": "将历史案例与当下AI辩论连接，使旧经验获得新意义。",
+        "paragraph_index": 16
+      },
+      {
+        "name": "对比与反讽",
+        "example": "Donald Trump is already dangling a “Trump dividend”, unrelated to AI, if Republicans win the midterms.",
+        "effect": "以政治口号收尾，暗示分红易沦为选举工具，强化警示意味。",
+        "paragraph_index": 73
+      }
+    ]
+  },
+  "background": {
+    "event_context": "阿拉斯加自20世纪70年代起利用石油收入建立永久基金，成为美国唯一向居民发放分红的州。当前美国正就AI财富分配展开辩论，桑德斯等政客提议设立主权财富基金，而阿拉斯加的经验被视作参照。同时，阿拉斯加因废除个人所得税、依赖石油收入，财政在油价波动下日益紧张，分红与公共服务之争成为政治焦点。",
+    "key_facts": [
+      {
+        "fact": "阿拉斯加永久基金规模",
+        "data": "$90bn",
+        "paragraph_index": 27
+      },
+      {
+        "fact": "2026年10月每位合格居民分红金额",
+        "data": "$1,200",
+        "paragraph_index": 11
+      },
+      {
+        "fact": "基金年度提取占州预算比例",
+        "data": "约三分之二",
+        "paragraph_index": 39
+      },
+      {
+        "fact": "邓利维任内平均分红",
+        "data": "约$1,500",
+        "paragraph_index": 48
+      },
+      {
+        "fact": "桑德斯提议AI公司上交股份比例",
+        "data": "50%",
+        "paragraph_index": 64
+      },
+      {
+        "fact": "OpenAI和Anthropic支持捐赠股份比例",
+        "data": "5%",
+        "paragraph_index": 67
+      }
+    ],
+    "author_stance": "作者对阿拉斯加模式持审慎态度，既承认其创新性，又强调其警示意义：过度依赖单一收入来源会导致财政脆弱，分红易被政治化。文章隐含判断是，AI财富分配应吸取阿拉斯加教训，避免重蹈覆辙。",
+    "implications": "对政策制定者而言，阿拉斯加案例提醒在设计AI公共基金时需考虑收入来源多元化、财政纪律与政治干预风险；对行业而言，AI公司可能面临更大压力以股份或税收形式回馈社会；对读者而言，理解分红政治化有助于审视选举承诺。"
+  },
+  "practical_application": {
+    "actionable_skills": [
+      {
+        "skill": "用具体场景开篇",
+        "how_to_apply": "在写作或演讲开头，选择一个与主题相关的生动场景，用感官细节吸引读者，再自然过渡到核心议题。",
+        "example": "写AI财富分配时，可先描述一个普通家庭收到年度AI分红的场景，再引出政策辩论。"
+      },
+      {
+        "skill": "数据锚定论点",
+        "how_to_apply": "在提出观点后，立即用一两个精确数字支撑，避免模糊表述，增强说服力。",
+        "example": "说“基金规模巨大”不如说“基金规模达900亿美元，人均约12.2万美元”。"
+      },
+      {
+        "skill": "引用权威原话",
+        "how_to_apply": "采访或引用关键人物时，保留其口语化表达，让读者感受到真实语气，而非转述。",
+        "example": "直接引用参议院议长的话：“一旦他们到朱诺，看看预算，就明白你做不到。”"
+      },
+      {
+        "skill": "类比迁移",
+        "how_to_apply": "将历史案例与当下新问题并置，指出相似性，帮助读者理解新问题的本质。",
+        "example": "把AI公共基金比作阿拉斯加永久基金，分析其共同挑战。"
+      }
+    ],
+    "thinking_models": [
+      {
+        "model": "资源诅咒",
+        "explanation": "指拥有丰富自然资源的国家或地区反而经济增长缓慢、治理困难的现象。",
+        "how_to_use": "分析依赖单一资源的经济体时，检查其是否出现财政依赖、产业单一、政治寻租等问题。"
+      },
+      {
+        "model": "零和博弈",
+        "explanation": "一方所得即另一方所失的局面，总收益固定。",
+        "how_to_use": "当预算固定、多方争夺时，识别是否陷入零和，思考如何做大蛋糕或建立规则。"
+      },
+      {
+        "model": "政治足球",
+        "explanation": "指某个议题被政客反复利用以获取选票，而非基于理性决策。",
+        "how_to_use": "观察选举周期中哪些承诺被反复抛出却难以兑现，警惕其政治化风险。"
+      },
+      {
+        "model": "路径依赖",
+        "explanation": "过去的决策和制度会限制未来的选择范围。",
+        "how_to_use": "分析政策改革时，考虑历史制度惯性，评估变革阻力。"
+      }
+    ]
+  },
+  "recitation": {
+    "title_suggested": "Dividing the AI Pie: Alaska's Cautionary Tale",
+    "advice": "长句在分号或破折号处换气，如P16的'Proposals to put stakes...'可在'and use the proceeds'前稍停。用关键词串起全文：Permanent Fund, dividend, oil, AI, public services, political football。背诵时先记阿拉斯加模式（基金+分红），再记其困境（依赖石油、预算零和），最后记AI辩论的呼应。",
+    "start_date": "2026-11-05",
+    "intervals": [
+      1,
+      2,
+      4,
+      7,
+      15
+    ],
+    "chunks_per_day": 4,
+    "chunks": [
+      {
+        "index": 1,
+        "text": "United States | Divisive dividends\n\nHow to share the wealth from AI? Alaska offers\n\nlessons\n\nDivvying up the proceeds of a boom is harder than it looks\n\nOct 22nd 2026",
+        "hint": "标题、副标题、日期",
+        "translation": "美国 | 分裂性红利\n\n如何分享人工智能创造的财富？阿拉斯加提供了\n\n经验教训\n\n分配繁荣带来的收益比看起来更难\n\n2026年10月22日",
+        "paragraph_start": 1,
+        "paragraph_end": 5
+      },
+      {
+        "index": 2,
+        "text": "OCTOBER IS EVENTFUL in Alaska. Its vast landscapes erupt in a riot of\n\ncolour, daylight becomes precious and beefy bears rush to fatten themselves\n\nbefore winter. It is also the month Alaskans get a payday.",
+        "hint": "October, eventful, payday",
+        "translation": "十月在阿拉斯加是多事之秋。广袤的风景迸发出绚烂的色彩，白昼变得珍贵，壮硕的熊赶在冬天前匆忙增肥。这也是阿拉斯加人领薪水的月份。",
+        "paragraph_start": 6,
+        "paragraph_end": 8
+      },
+      {
+        "index": 3,
+        "text": "Each October the\n\nstate government disburses dividends from the investment earnings of its oil\n\nrevenues. The amount varies, but this October each resident who has lived in\n\nthe state at least one full calendar year will receive $1,200.",
+        "hint": "dividends, oil revenues, $1,200",
+        "translation": "每年十月，州政府从其石油收入的投资收益中发放红利。金额不定，但今年十月，每位在该州居住至少满一个完整日历年的居民将收到1200美元。",
+        "paragraph_start": 8,
+        "paragraph_end": 11
+      },
+      {
+        "index": 4,
+        "text": "For half a century Alaska has run an experiment in how to use revenues\n\nfrom its abundant oil resources for the public good. Now, as American\n\nlawmakers grapple with whether and how to share the wealth that artificial\n\nintelligence might create, the state’s experience has new relevance.",
+        "hint": "experiment, AI wealth, relevance",
+        "translation": "半个世纪以来，阿拉斯加一直在进行一项实验：如何将其丰富的石油资源收入用于公共福利。如今，当美国立法者努力应对是否以及如何分享人工智能可能创造的财富时，该州的经验有了新的相关性。",
+        "paragraph_start": 12,
+        "paragraph_end": 15
+      },
+      {
+        "index": 5,
+        "text": "Proposals to put stakes in AI companies into a public fund, and use theproceeds to pay dividends or finance public services, echo Alaska’s\n\napproach. But Alaska’s Permanent Fund and its dividend offer both a model\n\nand a cautionary tale.",
+        "hint": "AI stakes, public fund, cautionary tale",
+        "translation": "将人工智能公司的股份投入公共基金，并用收益支付红利或资助公共服务的提议，与阿拉斯加的做法如出一辙。但阿拉斯加的永久基金及其红利既提供了模式，也提供了警示。",
+        "paragraph_start": 16,
+        "paragraph_end": 18
+      },
+      {
+        "index": 6,
+        "text": "The state’s good fortune dates back to 1968, when roughnecks drilling at\n\nPrudhoe Bay, on Alaska’s North Slope, struck oil. Less than a decade later\n\nAlaskans voted to create the Permanent Fund, an investment vehicle for a\n\nportion of annual mineral royalties.",
+        "hint": "1968, Prudhoe Bay, Permanent Fund",
+        "translation": "该州的好运可追溯到1968年，当时在阿拉斯加北坡的普拉德霍湾钻探的油井工人发现了石油。不到十年后，阿拉斯加人投票决定创建永久基金，这是一个用于部分年度矿产特许权使用费的投资工具。",
+        "paragraph_start": 19,
+        "paragraph_end": 22
+      },
+      {
+        "index": 7,
+        "text": "The idea, says Mike Dunleavy, the\n\nRepublican governor, “was to ensure that finite resources such as oil mining\n\ncould be converted into infinite revenue for the people of Alaska”. In 1980\n\nthe legislature created an independent state-run corporation to manage the\n\nPermanent Fund’s investments.",
+        "hint": "Dunleavy, finite to infinite, corporation",
+        "translation": "共和党州长迈克·邓利维说，这个想法“是为了确保像石油开采这样的有限资源能够转化为阿拉斯加人民的无限收入”。1980年，立法机构创建了一家独立的州营公司来管理永久基金的投资。",
+        "paragraph_start": 22,
+        "paragraph_end": 26
+      },
+      {
+        "index": 8,
+        "text": "Two years later Alaska began paying the\n\ndividend. Today the fund is worth $90bn, or roughly $122,000 per Alaskan.\n\nThe remaining mineral royalties, along with oil production taxes, are used to\n\nfinance public services.",
+        "hint": "$90bn, $122,000, public services",
+        "translation": "两年后，阿拉斯加开始支付红利。如今，该基金价值900亿美元，即每个阿拉斯加人约12.2万美元。剩余的矿产特许权使用费以及石油生产税用于资助公共服务。",
+        "paragraph_start": 26,
+        "paragraph_end": 29
+      },
+      {
+        "index": 9,
+        "text": "For a long time the riches seemed inexhaustible. A\n\nsingle lease sale in 1969 raised more than five times the state’s annual\n\nbudget. In 1980 Alaskan lawmakers repealed the state’s personal income tax.\n\nThey have since shunned other broad-based levies on residents.",
+        "hint": "inexhaustible, lease sale, income tax",
+        "translation": "很长一段时间里，财富似乎取之不尽。1969年的一次租赁销售就筹集了该州年度预算的五倍多。1980年，阿拉斯加立法者废除了该州的个人所得税。此后，他们一直避免对居民征收其他广泛的税种。",
+        "paragraph_start": 29,
+        "paragraph_end": 32
+      },
+      {
+        "index": 10,
+        "text": "This makes\n\nAlaska unique among American petro-states. Others, such as Texas and New\n\nMexico, continue to collect sales or income taxes to finance their spending.",
+        "hint": "unique, Texas, New Mexico",
+        "translation": "这使得阿拉斯加在美国的石油州中独树一帜。其他州，如得克萨斯州和新墨西哥州，继续征收销售税或所得税来资助其支出。",
+        "paragraph_start": 32,
+        "paragraph_end": 34
+      },
+      {
+        "index": 11,
+        "text": "Alaska’s utter dependence on the black stuff has left it hostage to\n\nfluctuations in the oil price. In 2018, after several lean years, lawmakers\n\ndecided to use Permanent Fund earnings to help bankroll the state\n\ngovernment for the first time.",
+        "hint": "dependence, oil price, 2018",
+        "translation": "阿拉斯加对石油的完全依赖使其受制于油价的波动。2018年，在经历了几个不景气的年份后，立法者决定首次使用永久基金的收益来资助州政府。",
+        "paragraph_start": 35,
+        "paragraph_end": 38
+      },
+      {
+        "index": 12,
+        "text": "Now annual draws from the fund account for\n\nroughly two-thirds of the state’s budget. Lawmakers must haggle over how\n\nto divide the oil money between dividends and public services. Brett\n\nWatson, an economist at the University of Alaska Anchorage, says Alaska’s\n\nbudgeting has become “zero sum”.",
+        "hint": "two-thirds, haggle, zero sum",
+        "translation": "如今，每年从该基金提取的资金约占州预算的三分之二。立法者必须就如何在红利和公共服务之间分配石油收入进行讨价还价。阿拉斯加安克雷奇大学的经济学家布雷特·沃森说，阿拉斯加的预算编制已变得“零和”。",
+        "paragraph_start": 38,
+        "paragraph_end": 42
+      },
+      {
+        "index": 13,
+        "text": "Mr Dunleavy was elected in 2018 after promising to restore a long-standing\n\nformula linking dividends to the fund’s investment earnings, which would\n\nhave given Alaskans annual payments of more than $3,000. But lawmakers\n\nhad stopped following the formula two years earlier, amid a budget crisis.",
+        "hint": "Dunleavy, formula, $3,000",
+        "translation": "邓利维先生于2018年当选，此前他承诺恢复一项长期存在的公式，将红利与基金的投资收益挂钩，这将给阿拉斯加人带来每年超过3000美元的支付。但立法者两年前在预算危机中已停止遵循该公式。",
+        "paragraph_start": 43,
+        "paragraph_end": 46
+      },
+      {
+        "index": 14,
+        "text": "In\n\noffice, Mr Dunleavy has had to face up to the maths; the average dividend\n\nduring his tenure has been roughly $1,500. “Every legislator who gets\n\nelected saying, ‘I promise you a $3,000 dividend’, once they get down toJuneau, and they look at that budget, they realise you cannot do that,”\n\nexplains Gary Stevens, the Republican state Senate president.",
+        "hint": "maths, $1,500, Juneau",
+        "translation": "在任期间，邓利维先生不得不面对数学现实；他任期内平均红利约为1500美元。“每一位当选的立法者都说‘我承诺给你们3000美元红利’，一旦他们到了朱诺，看看那份预算，他们就会意识到你做不到，”共和党州参议院议长加里·史蒂文斯解释道。",
+        "paragraph_start": 46,
+        "paragraph_end": 50
+      },
+      {
+        "index": 15,
+        "text": "Under Mr Dunleavy, lawmakers have also cut spending on services, both to\n\nbalance the books and to preserve money for dividends. Deprived of state\n\ndollars, cities and boroughs are operating on shoestring budgets.",
+        "hint": "cut spending, shoestring budgets",
+        "translation": "在邓利维先生的领导下，立法者还削减了服务支出，既为了平衡账目，也为了保留资金用于红利。由于失去了州政府的资金，城市和行政区只能靠微薄的预算运作。",
+        "paragraph_start": 51,
+        "paragraph_end": 53
+      },
+      {
+        "index": 16,
+        "text": "“Many\n\nlocal governments…just close when they run out of money,” says Nils\n\nAndreassen of the Alaska Municipal League, a non-profit. Lawmakers have\n\nlong hoped the dividend would help keep residents; some now worry that\n\nworsening services will drive them away. The state’s net migration has been\n\nnegative in each year since 2013.",
+        "hint": "local governments close, migration negative",
+        "translation": "“许多地方政府……在资金耗尽时就关门了，”非营利组织阿拉斯加市政联盟的尼尔斯·安德烈亚森说。立法者长期以来希望红利能帮助留住居民；一些人现在担心日益恶化的服务会将他们赶走。自2013年以来，该州的净移民每年都是负值。",
+        "paragraph_start": 53,
+        "paragraph_end": 58
+      },
+      {
+        "index": 17,
+        "text": "The war with Iran offers a band-aid: higher oil prices are propping up the\n\nstate budget. Bernadette Wilson, a Republican candidate for governor, is\n\ncalling for bigger dividend cheques; her opponent, Jonathan Kreiss-Tomkins,\n\na former Democratic state legislator, favours fiscal reform.",
+        "hint": "Iran war, band-aid, candidates",
+        "translation": "与伊朗的战争提供了一剂创可贴：油价上涨支撑着州预算。共和党州长候选人伯纳黛特·威尔逊呼吁发放更大的红利支票；她的对手、前民主党州议员乔纳森·克赖斯-汤姆金斯则支持财政改革。",
+        "paragraph_start": 59,
+        "paragraph_end": 62
+      },
+      {
+        "index": 18,
+        "text": "When it comes to AI wealth, the debate is only beginning. Bernie Sanders, a\n\nsenator from Vermont, wants big AI firms to hand over 50% of their shares\n\nto a sovereign wealth fund, which would pay Americans at least $1,000 a\n\nyear and eventually support health care and other services.",
+        "hint": "Bernie Sanders, 50%, sovereign wealth fund",
+        "translation": "谈到人工智能财富，辩论才刚刚开始。来自佛蒙特州的参议员伯尼·桑德斯希望大型人工智能公司将其50%的股份交给一家主权财富基金，该基金将每年向美国人支付至少1000美元，并最终支持医疗保健和其他服务。",
+        "paragraph_start": 63,
+        "paragraph_end": 66
+      },
+      {
+        "index": 19,
+        "text": "The bosses of\n\nOpenAI and Anthropic favour donating a more modest 5% stake to a public\n\nfund. OpenAI also backs higher taxes on capital gains and corporate income.",
+        "hint": "OpenAI, Anthropic, 5% stake",
+        "translation": "OpenAI和Anthropic的老板们倾向于向公共基金捐赠更为适度的5%股份。OpenAI还支持提高资本利得税和企业所得税。",
+        "paragraph_start": 66,
+        "paragraph_end": 68
+      },
+      {
+        "index": 20,
+        "text": "An AI fund would not initially face the same fiscal pressures as Alaska’s\n\nPermanent Fund: America, after all, still collects federal income taxes. But\n\nAlaska’s predicament shows the dangers of relying too heavily on a single\n\nsource of revenue, and how easily dividends can become a political football.",
+        "hint": "fiscal pressures, single source, political football",
+        "translation": "人工智能基金最初不会面临与阿拉斯加永久基金相同的财政压力：毕竟，美国仍然征收联邦所得税。但阿拉斯加的困境显示了过度依赖单一收入来源的危险，以及红利多么容易变成政治足球。",
+        "paragraph_start": 69,
+        "paragraph_end": 72
+      },
+      {
+        "index": 21,
+        "text": "Donald Trump is already dangling a “Trump dividend”, unrelated to AI, if\n\nRepublicans win the midterms. Just vote for the party’s candidates, he\n\nimplored recently, “and you will each have $5,000”. ■",
+        "hint": "Trump dividend, midterms, $5,000",
+        "translation": "唐纳德·特朗普已经在许诺一个与人工智能无关的“特朗普红利”，如果共和党赢得中期选举。他最近恳求道，只要投票给该党的候选人，“你们每人将获得5000美元”。■",
+        "paragraph_start": 73,
+        "paragraph_end": 75
+      },
+      {
+        "index": 22,
+        "text": "Stay on top of American politics with The US in brief, our daily newsletter\n\nwith fast analysis of the most important political news, and Checks and\n\nBalance, a weekly note that examines the state of American democracy and\n\nthe issues that matter to voters.",
+        "hint": "newsletter, Checks and Balance",
+        "translation": "通过《美国简报》掌握美国政治动态，这是我们每日通讯，快速分析最重要的政治新闻，以及《制衡》，一份每周笔记，审视美国民主的状况和选民关心的问题。",
+        "paragraph_start": 76,
+        "paragraph_end": 79
+      }
+    ],
+    "schedule": {
+      "total_days": 21,
+      "per_chunk": [
+        {
+          "index": 1,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 2,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 3,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 4,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 5,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 6,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 7,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 8,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 9,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 10,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 11,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 12,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 13,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 14,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 15,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 16,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 17,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 18,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 19,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 20,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 21,
+          "learn_day": 6,
+          "learn_date": "2026-11-10",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-14",
+            "2026-11-17",
+            "2026-11-25"
+          ]
+        },
+        {
+          "index": 22,
+          "learn_day": 6,
+          "learn_date": "2026-11-10",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-14",
+            "2026-11-17",
+            "2026-11-25"
+          ]
+        }
+      ],
+      "daily": [
+        {
+          "day": 1,
+          "date": "2026-11-05",
+          "learn": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "review": []
+        },
+        {
+          "day": 2,
+          "date": "2026-11-06",
+          "learn": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-11-07",
+          "learn": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-11-08",
+          "learn": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "review": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-11-09",
+          "learn": [
+            17,
+            18,
+            19,
+            20
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-10",
+          "learn": [
+            21,
+            22
+          ],
+          "review": [
+            5,
+            6,
+            7,
+            8,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-11",
+          "learn": [],
+          "review": [
+            9,
+            10,
+            11,
+            12,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-12",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            15,
+            16,
+            21,
+            22
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-11-13",
+          "learn": [],
+          "review": [
+            5,
+            6,
+            7,
+            8,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-11-14",
+          "learn": [],
+          "review": [
+            9,
+            10,
+            11,
+            12,
+            21,
+            22
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-11-15",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-11-16",
+          "learn": [],
+          "review": [
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-11-17",
+          "learn": [],
+          "review": [
+            21,
+            22
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-11-18",
+          "learn": [],
+          "review": []
+        },
+        {
+          "day": 15,
+          "date": "2026-11-19",
+          "learn": [],
+          "review": []
+        },
+        {
+          "day": 16,
+          "date": "2026-11-20",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "day": 17,
+          "date": "2026-11-21",
+          "learn": [],
+          "review": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "day": 18,
+          "date": "2026-11-22",
+          "learn": [],
+          "review": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 19,
+          "date": "2026-11-23",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "day": 20,
+          "date": "2026-11-24",
+          "learn": [],
+          "review": [
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "day": 21,
+          "date": "2026-11-25",
+          "learn": [],
+          "review": [
+            21,
+            22
+          ]
+        }
+      ]
+    }
+  },
+  "usage": {
+    "calls": [
+      {
+        "stage": "core",
+        "prompt_tokens": 2332,
+        "completion_tokens": 3108,
+        "total_tokens": 5440,
+        "cost_cny": 0.008548,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:1",
+        "prompt_tokens": 420,
+        "completion_tokens": 203,
+        "total_tokens": 623,
+        "cost_cny": 0.000826,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:2",
+        "prompt_tokens": 454,
+        "completion_tokens": 254,
+        "total_tokens": 708,
+        "cost_cny": 0.000962,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:3",
+        "prompt_tokens": 451,
+        "completion_tokens": 230,
+        "total_tokens": 681,
+        "cost_cny": 0.000911,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:4",
+        "prompt_tokens": 454,
+        "completion_tokens": 233,
+        "total_tokens": 687,
+        "cost_cny": 0.00092,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:5",
+        "prompt_tokens": 445,
+        "completion_tokens": 234,
+        "total_tokens": 679,
+        "cost_cny": 0.000913,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:6",
+        "prompt_tokens": 450,
+        "completion_tokens": 176,
+        "total_tokens": 626,
+        "cost_cny": 0.000802,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:7",
+        "prompt_tokens": 465,
+        "completion_tokens": 242,
+        "total_tokens": 707,
+        "cost_cny": 0.000949,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:8",
+        "prompt_tokens": 448,
+        "completion_tokens": 225,
+        "total_tokens": 673,
+        "cost_cny": 0.000898,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:9",
+        "prompt_tokens": 447,
+        "completion_tokens": 220,
+        "total_tokens": 667,
+        "cost_cny": 0.000887,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:10",
+        "prompt_tokens": 420,
+        "completion_tokens": 191,
+        "total_tokens": 611,
+        "cost_cny": 0.000802,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "language",
+        "prompt_tokens": 2116,
+        "completion_tokens": 3801,
+        "total_tokens": 5917,
+        "cost_cny": 0.009718,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "recitation",
+        "prompt_tokens": 1997,
+        "completion_tokens": 3584,
+        "total_tokens": 5581,
+        "cost_cny": 0.009165,
+        "finish_reason": "stop"
+      }
+    ],
+    "prompt_tokens": 10899,
+    "completion_tokens": 12701,
+    "total_tokens": 23600,
+    "cost_cny": 0.036301
+  },
+  "warnings": []
+}
