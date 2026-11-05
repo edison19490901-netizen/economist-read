@@ -13,6 +13,22 @@ python app.py
 
 打开 <http://127.0.0.1:5001>。端口 5001 是为了避开本机 5000 上常驻的旧服务。
 
+### 一键分析文本（Windows）
+
+把文章（txt / md / docx / doc / rtf / pdf / epub 等）放到项目根目录，双击 `analyze.bat`：
+
+- 目录里只有一个候选文件时直接开始；有多个会列出序号让你选
+- 也可以把文件直接拖到 `analyze.bat` 上
+- 完成后自动用浏览器打开生成的看板
+
+命令行等价：
+
+```bash
+python tools/analyze_text.py 文章.txt
+python tools/analyze_text.py                       # 自动查找当前目录
+python tools/analyze_text.py 文章.txt --title "自定义标题" --no-open
+```
+
 ## 发布到 GitHub Pages（手机阅读）
 
 分析只在电脑上跑，但生成好的看板是单文件 HTML，可以直接发布成静态站点，手机上打开就能读——翻译、点词、背诵、打卡都正常。

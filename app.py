@@ -287,6 +287,104 @@ def _title_from_filename(filename: str) -> str:
     return stem[:160]
 
 
+class InputError(Exception):
+    """输入校验或分析执行失败；消息可直接展示给用户。"""
+
+
+def run_analysis(
+    paragraphs: list[str],
+    *,
+    api_key: str,
+    title: str = "",
+    source: str = "paste",
+    url: str = "",
+    site: str = "",
+    file_name: str = "",
+):
+    """校验段落、调用模型并保存结果，返回 (output_id, result)。
+
+    Flask 路由与命令行脚本共用这一份流程，避免两边行为漂移。
+    """
+    if not paragraphs:
+        raise InputError("没有解析出正文段落，请检查内容。")
+
+    cleaned = join_paragraphs(paragraphs)
+    words = len(re.findall(r"[A-Za-z0-9']+", cleaned))
+    if words < MIN_WORDS or len(cleaned) < MIN_CHARS:
+        raise InputError(
+            f"内容过短（{words} 词 / {len(cleaned)} 字符），"
+            f"至少需要 {MIN_WORDS} 词或 {MIN_CHARS} 字符。"
+        )
+    language = detect_language(cleaned)
+    if language != "en":
+        raise InputError("本工具面向英文文章，检测到正文可能不是英文。")
+
+    paragraphs, truncated = cap_paragraphs(paragraphs)
+    full_text = join_paragraphs(paragraphs)
+    if not title:
+        title = (
+            guess_title(paragraphs)
+            or _title_from_filename(file_name)
+            or (site and f"{site} 文章")
+            or "未命名文章"
+        )
+    title = title.strip()[:160]
+
+    output_id = make_output_id(title, full_text, OUTPUT_DIR)
+    folder = OUTPUT_DIR / output_id
+    folder.mkdir(parents=True, exist_ok=False)
+
+    started = datetime.now()
+    try:
+        result = analyze_article(
+            paragraphs,
+            title,
+            output_id=output_id,
+            source=source,
+            url=url or None,
+            language=language,
+            truncated=truncated,
+            api_key=api_key,
+            model=_model(),
+            max_workers=_max_workers(),
+        )
+    except Exception as exc:  # noqa: BLE001
+        traceback.print_exc()
+        try:
+            folder.rmdir()
+        except OSError:
+            pass
+        raise InputError(f"分析失败：{exc}") from exc
+
+    source_data = {
+        "title": title,
+        "url": url or None,
+        "site": site,
+        "source": source,
+        "file_name": file_name or None,
+        "created": now_iso(),
+        "language": language,
+        "word_count": result.meta.word_count,
+        "paragraph_count": result.meta.paragraph_count,
+        "truncated": truncated,
+        "full_text": full_text,
+    }
+    try:
+        (folder / "source.json").write_text(
+            json.dumps(source_data, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        save_analysis(result, folder / "analysis.json")
+        generate(result, source_data, folder / "workbook.html")
+    except Exception as exc:  # noqa: BLE001
+        traceback.print_exc()
+        shutil.rmtree(folder, ignore_errors=True)
+        raise InputError(f"结果保存失败：{exc}") from exc
+
+    elapsed = (datetime.now() - started).total_seconds()
+    print(f"[done] {output_id} · {result.meta.word_count} words · {elapsed:.1f}s")
+    return output_id, result
+
+
 @app.post("/process")
 def process():
     text = (request.form.get("text") or "").strip()
@@ -332,88 +430,19 @@ def process():
             "请上传文件、粘贴文章正文，或输入网页链接。", text, url, title, file_name
         )
 
-    if not paragraphs:
-        return _fail("没有解析出正文段落，请检查内容。", text, url, title, file_name)
-
-    cleaned = join_paragraphs(paragraphs)
-    words = len(re.findall(r"[A-Za-z0-9']+", cleaned))
-    if words < MIN_WORDS or len(cleaned) < MIN_CHARS:
-        return _fail(
-            f"内容过短（{words} 词 / {len(cleaned)} 字符），至少需要 {MIN_WORDS} 词或 {MIN_CHARS} 字符。",
-            text,
-            url,
-            title,
-            file_name,
-        )
-    language = detect_language(cleaned)
-    if language != "en":
-        return _fail(
-            "本工具面向英文文章，检测到正文可能不是英文。", text, url, title, file_name
-        )
-
-    paragraphs, truncated = cap_paragraphs(paragraphs)
-    full_text = join_paragraphs(paragraphs)
-    if not title:
-        title = (
-            guess_title(paragraphs)
-            or _title_from_filename(file_name)
-            or (site and f"{site} 文章")
-            or "未命名文章"
-        )
-    title = title.strip()[:160]
-
-    output_id = make_output_id(title, full_text, OUTPUT_DIR)
-    folder = OUTPUT_DIR / output_id
-    folder.mkdir(parents=True, exist_ok=False)
-
-    started = datetime.now()
     try:
-        result = analyze_article(
+        output_id, _result = run_analysis(
             paragraphs,
-            title,
-            output_id=output_id,
-            source=source,
-            url=url or None,
-            language=language,
-            truncated=truncated,
             api_key=api_key,
-            model=_model(),
-            max_workers=_max_workers(),
+            title=title,
+            source=source,
+            url=url,
+            site=site,
+            file_name=file_name,
         )
-    except Exception as exc:  # noqa: BLE001
-        traceback.print_exc()
-        try:
-            folder.rmdir()
-        except OSError:
-            pass
-        return _fail(f"分析失败：{exc}", text, url, title, file_name)
+    except InputError as exc:
+        return _fail(str(exc), text, url, title, file_name)
 
-    source_data = {
-        "title": title,
-        "url": url or None,
-        "site": site,
-        "source": source,
-        "file_name": file_name or None,
-        "created": now_iso(),
-        "language": language,
-        "word_count": result.meta.word_count,
-        "paragraph_count": result.meta.paragraph_count,
-        "truncated": truncated,
-        "full_text": full_text,
-    }
-    try:
-        (folder / "source.json").write_text(
-            json.dumps(source_data, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-        save_analysis(result, folder / "analysis.json")
-        generate(result, source_data, folder / "workbook.html")
-    except Exception as exc:  # noqa: BLE001
-        traceback.print_exc()
-        shutil.rmtree(folder, ignore_errors=True)
-        return _fail(f"结果保存失败：{exc}", text, url, title, file_name)
-
-    elapsed = (datetime.now() - started).total_seconds()
-    print(f"[done] {output_id} · {result.meta.word_count} words · {elapsed:.1f}s")
     return redirect(url_for("result", output_id=output_id))
 
 

@@ -13,16 +13,26 @@
 - 内容理解：写作论证拆解、背景观点
 - 记忆应用：艾宾浩斯背诵分块、实际应用、用量统计
 
-**两种使用方式**
+**三种使用方式**
 
 | 场景 | 入口 |
 |---|---|
-| 电脑上生成新分析 | `python app.py` → <http://127.0.0.1:5001> |
+| 电脑上一键分析文本 | 把文章放进项目根目录，双击 `analyze.bat`（或把文件拖到它上面） |
+| 电脑上通过网页生成新分析 | `python app.py` → <http://127.0.0.1:5001> |
 | 手机上阅读已生成的看板 | <https://edison19490901-netizen.github.io/economist-read/> |
 
 GitHub Pages 只能托管静态文件，**跑不了 Flask**。所以"生成"永远在电脑上，"阅读"才在线上。
 
-**仓库**：<https://github.com/edison19490901-netizen/economist-read>（公开，`main` 分支，26 个文件，约 3,400 行）
+**仓库**：<https://github.com/edison19490901-netizen/economist-read>（公开，`main` 分支）
+
+**一键分析（Windows）**
+
+把文章（txt / md / docx / pdf 等）放到项目根目录，双击 `analyze.bat`：
+
+- 只有一个候选文件时直接开始；有多个会列出序号让你选
+- 也可以把文件直接拖到 `analyze.bat` 上
+- 完成后自动用浏览器打开 `output/<id>/workbook.html`
+- 命令行等价：`python tools/analyze_text.py 文章.txt`（`--title` 自定义标题，`--no-open` 不打开浏览器）
 
 ---
 
@@ -31,6 +41,8 @@ GitHub Pages 只能托管静态文件，**跑不了 Flask**。所以"生成"永�
 ```
 D:\Claudeee\Economist_Read\
 ├─ app.py                       # Flask：首页 / process / result，端口 5001
+├─ analyze.bat                  # 一键分析：双击找同目录文本，或把文件拖上来
+├─ publish.bat                  # 一键发布：重建 docs/ 并提交推送
 ├─ requirements.txt             # openai, jinja2, flask, trafilatura, requests, pypdf
 ├─ .env                         # DEEPSEEK_API_KEY 等（gitignored，勿提交）
 ├─ .env.example
@@ -48,6 +60,7 @@ D:\Claudeee\Economist_Read\
 │  ├─ recite/planner.py         # 艾宾浩斯计划（D+1/2/4/7/15）
 │  ├─ outputs/workbook.py       # 看板渲染上下文 + 生词标注
 │  └─ templates/article.html.j2 # 8 面板单文件模板（CSS/JS 全内联）
+├─ tools/analyze_text.py        # 命令行精读（analyze.bat 调用，与 Flask 共用 run_analysis）
 ├─ tools/publish_site.py        # 扫描 output/ → 生成 docs/；--push 自动提交并推送
 ├─ docs/                        # GitHub Pages 托管目录（提交进仓库）
 ├─ output/<id>/                 # 每次分析：analysis.json / source.json / workbook.html
