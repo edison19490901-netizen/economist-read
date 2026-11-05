@@ -1,0 +1,1848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e3120b">
+<title>Leaders | Pick your phantom — 经济学人精读</title>
+<link rel="icon" href="../icons/favicon-32.png" sizes="32x32">
+<link rel="icon" href="../icons/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="精读">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+  :root{
+    --accent:#e3120b; --accent-soft:#fdecea; --ink:#12263a; --muted:#6b7280;
+    --bg:#f4f1ec; --card:#ffffff; --line:#e6e0d8; --soft:#fbf8f3;
+    --gold:#b8860b; --green:#0f766e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 14px 64px}
+  .muted{color:var(--muted)}
+  .small{font-size:12px}
+  .spacer{flex:1}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#12263a 0%,#1d3a52 60%,#2a4a63 100%);
+    color:#fff;border-radius:0 0 20px 20px;padding:30px 24px 24px;margin:0 -14px 14px;
+    box-shadow:0 8px 30px rgba(18,38,58,.18);
+  }
+  .kicker{font-size:10px;letter-spacing:.22em;color:#f2b8b5;font-weight:700}
+  .hero h1{font-size:25px;line-height:1.32;margin:8px 0 14px;font-weight:800;letter-spacing:-.01em}
+  .meta-chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:3px 9px;border-radius:999px;font-size:11px;color:#e8eef5}
+  .meta-chips.light .chip{background:var(--soft);border-color:var(--line);color:var(--ink)}
+
+  .notice{background:#fff8e6;border:1px solid #f0d9a8;color:#7a4a00;border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+  .notice.warn{background:#fdf2f2;border-color:#f3c2c0;color:#8a1f1a}
+
+  /* Tabs */
+  .tab-bar{
+    position:sticky;top:0;z-index:30;display:flex;gap:4px;overflow-x:auto;
+    background:rgba(244,241,236,.96);backdrop-filter:blur(10px);
+    padding:8px 2px;margin-bottom:4px;border-bottom:1px solid var(--line);scrollbar-width:none;
+  }
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{
+    white-space:nowrap;border:0;background:transparent;color:var(--muted);
+    padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;
+    transition:background .15s,color .15s;font-family:inherit;
+  }
+  .tab-btn:hover{background:#e9e4dc;color:var(--ink)}
+  .tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(227,18,11,.25)}
+
+  /* scroll-margin 让 #tab-xxx 深链跳转时不被 50px 的 sticky 导航盖住 */
+  .tab-panel{display:none;padding-top:14px;scroll-margin-top:62px}
+  .tab-panel.active{display:block}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(18,38,58,.04)}
+  h2.section{font-size:16px;margin-bottom:12px;color:var(--ink);display:flex;align-items:baseline;gap:8px}
+  h2.section .count{font-size:12px;font-weight:500;color:var(--muted)}
+  .prose{font-size:14.5px;line-height:1.85;color:#374151}
+
+  /* Summary */
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .point-list{list-style:none}
+  .point-list li{position:relative;padding:9px 0 9px 20px;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.7}
+  .point-list li:last-child{border-bottom:0}
+  .point-list li:before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+  /* Translation */
+  .translation-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .btn{
+    border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;
+    padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-ghost{padding:3px 8px;font-size:11px;color:var(--muted)}
+  .para-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .2s,border-color .2s}
+  .para-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .para-no{font-size:11px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+  .para-en{font-family:Georgia,"Times New Roman",serif;font-size:16.5px;line-height:1.88;color:#1a2b3c}
+  .para-zh{font-size:14px;line-height:1.9;color:#4b5563;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+  .para-card.zh-off .para-zh{display:none}
+  .para-card.flash{animation:flash 1.8s ease}
+  @keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(227,18,11,0)}25%{box-shadow:0 0 0 4px rgba(227,18,11,.22)}}
+  .w{cursor:pointer;border-bottom:1px dotted rgba(227,18,11,.45);border-radius:2px}
+  .w:hover{background:var(--accent-soft)}
+  .w.hit{background:#ffe08a;box-shadow:0 0 0 2px #ffe08a}
+
+  /* Tables */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .vocab-table{width:100%;border-collapse:collapse;font-size:13px}
+  .vocab-table th{background:var(--ink);color:#fff;text-align:left;padding:8px 10px;font-size:11px;font-weight:600;white-space:nowrap}
+  .vocab-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .vocab-table tbody tr:last-child td{border-bottom:0}
+  .vocab-row[data-para]{cursor:pointer;transition:background .12s}
+  .vocab-row[data-para]:hover{background:var(--soft)}
+  .word-col{font-weight:800;color:var(--accent);white-space:nowrap}
+  .stars{color:var(--gold);white-space:nowrap}
+  .context-col{color:#6b7280;font-size:12px;min-width:220px}
+  .rc-table td{font-size:12px;white-space:nowrap}
+
+  /* Long sentences */
+  .ls-card{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff;cursor:pointer;transition:border-color .15s}
+  .ls-card:hover{border-color:#cfc7bb}
+  .ls-card[data-para].flash{animation:flash 1.8s ease}
+  .ls-sentence{font-family:Georgia,serif;font-size:15.5px;line-height:1.8;color:#1a2b3c}
+  .ls-zh{font-size:13.5px;color:#6b7280;margin-top:8px}
+  .struct{background:var(--soft);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px}
+  .struct dt{font-weight:800;color:var(--accent);font-size:11px;margin-top:7px}
+  .struct dt:first-child{margin-top:0}
+  .struct dd{color:#4b5563;margin-bottom:2px;line-height:1.7}
+
+  .mini-card{border:1px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:10px;background:#fff}
+  .mini-card:last-child{margin-bottom:0}
+  .mini-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .mini-card p{font-size:13.5px;color:#4b5563;line-height:1.75;margin-bottom:4px}
+  .mini-card blockquote{border-left:3px solid var(--accent);background:var(--soft);padding:8px 12px;margin:8px 0;font-family:Georgia,serif;font-size:13.5px;color:#374151;border-radius:0 6px 6px 0}
+  .role-badge{font-size:10px;font-weight:800;color:#fff;background:var(--green);padding:2px 7px;border-radius:999px}
+  .fact-row{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .fact-row:last-child{border-bottom:0}
+  .fact-row[data-para]{cursor:pointer}
+  .fact-row[data-para]:hover{background:var(--soft)}
+  .fact-data{white-space:nowrap;font-weight:800;color:var(--accent);font-size:12px;background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+
+  /* Recitation */
+  .rc-chunk{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .rc-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .rc-no{font-weight:800;color:var(--accent);font-size:12px}
+  .rc-size{font-size:11px;color:var(--muted)}
+  .rc-btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;color:#4b5563}
+  .rc-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .rc-text{padding:12px 14px;font-family:Georgia,"Times New Roman",serif;font-size:15.5px;line-height:1.9}
+  .rc-hint{padding:0 14px 11px;font-size:12px;color:var(--muted)}
+  .rc-hint b{color:var(--gold)}
+  .rc-zh{display:none;padding:10px 14px 13px;background:#fbf8f3;border-top:1px dashed var(--line);font-size:14px;color:#4b5563;line-height:1.8}
+  .rc-chunk.zh-on .rc-zh{display:block}
+  .rc-chunk.blanked .rc-text{display:none}
+  .rc-cover{display:none;padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
+  .rc-chunk.blanked .rc-cover{display:block}
+
+  .checkin-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .progress{display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+  .progress-bar{flex:1;height:8px;background:#eee;border-radius:999px;overflow:hidden}
+  .progress-bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+  .progress-text{font-size:12px;color:var(--muted);white-space:nowrap}
+  .day-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
+  .day-row:last-child{border-bottom:0}
+  .day-label{font-size:12.5px;font-weight:700;min-width:150px}
+  .day-tags{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+  .tag{font-size:11px;padding:2px 7px;border-radius:999px}
+  .tag.learn{background:#e8f5f2;color:var(--green)}
+  .tag.review{background:var(--accent-soft);color:var(--accent)}
+  .js-day-check.done{background:var(--green);border-color:var(--green);color:#fff}
+
+  /* Stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 10px;text-align:center}
+  .stat b{display:block;font-size:22px;color:var(--accent);line-height:1.2}
+  .stat span{font-size:11px;color:var(--muted)}
+
+  /* Tooltip */
+  #tip{position:fixed;z-index:100;max-width:300px;background:var(--ink);color:#fff;border-radius:9px;padding:10px 12px;font-size:12.5px;line-height:1.55;box-shadow:0 10px 30px rgba(0,0,0,.25);display:none}
+  #tip .tip-word{font-weight:800;font-size:14px;margin-bottom:1px}
+  #tip .tip-stars{color:#ffd166;font-size:11px;margin-bottom:4px}
+  #tip .tip-note{color:#dbe4ec}
+
+  @media (max-width:700px){
+    .summary-grid{grid-template-columns:1fr}
+    .hero h1{font-size:21px}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .vocab-table thead{display:none}
+    .vocab-table, .vocab-table tbody, .vocab-table tr, .vocab-table td{display:block;width:100%}
+    .vocab-table tr{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:8px 10px;background:#fff}
+    .vocab-table td{border:0;padding:4px 0}
+    .vocab-table td:before{content:attr(data-label);display:inline-block;min-width:64px;color:var(--muted);font-size:11px}
+    .context-col{min-width:0}
+  }
+  @media print{
+    body{background:#fff}
+    .tab-bar,.translation-toolbar,.rc-btn,.checkin-controls{display:none!important}
+    .hero{background:#fff!important;color:#000;box-shadow:none;padding:0 0 12px;margin:0 0 8px;border-bottom:2px solid #000}
+    .hero .kicker{color:#000}
+    .hero .chip{background:#fff;border-color:#999;color:#000}
+    .tab-panel{display:block!important;page-break-inside:avoid}
+    .tab-panel:before{content:attr(data-label);display:block;font-size:18px;font-weight:800;margin:20px 0 8px;padding-bottom:4px;border-bottom:2px solid #000;color:#000}
+    .para-card,.rc-chunk,.card{box-shadow:none;break-inside:avoid}
+    .para-zh,.rc-zh{display:block!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">THE ECONOMIST · 精读</div>
+    <h1>Leaders | Pick your phantom</h1>
+    <div class="meta-chips">
+      <span class="chip">上传文件</span>
+      <span class="chip">817 词</span>
+      <span class="chip">23 段</span>
+      <span class="chip">2026-11-05</span>
+      <span class="chip">分析 1m 5s</span>
+      <span class="chip">¥0.0201</span>
+    </div>
+  </header>
+
+  
+  
+  <div class="notice warn">
+    <div>• 背诵分块失败：[recitation] 无法解析模型返回的 JSON: JSON 修复失败</div>
+  </div>
+  
+
+  <nav class="tab-bar" id="tabBar">
+    <button class="tab-btn active" data-tab="tab-summary">总结</button>
+    <button class="tab-btn" data-tab="tab-translation">对照翻译</button>
+    <button class="tab-btn" data-tab="tab-language">词汇长句</button>
+    <button class="tab-btn" data-tab="tab-decon">写作拆解</button>
+    <button class="tab-btn" data-tab="tab-background">背景观点</button>
+    <button class="tab-btn" data-tab="tab-apply">实际应用</button>
+    <button class="tab-btn" data-tab="tab-recite">背诵</button>
+    <button class="tab-btn" data-tab="tab-stats">统计</button>
+  </nav>
+
+  <!-- 总结 -->
+  <div class="tab-panel active" id="tab-summary" data-label="总结">
+    <div class="summary-grid">
+      <section class="card">
+        <h2 class="section">中文要点</h2>
+        <ul class="point-list">
+          <li>文章指出金融市场面临两大风险：AI泡沫破裂和主权债务危机，但两者不太可能同时发生。</li><li>近期AI相关资产价格下跌引发市场担忧，而主权债券收益率上升也令投资者不安。</li><li>作者认为当前更应担心主权债务问题，因为政府债务水平高企且利率上升加剧财政压力。</li><li>若AI泡沫破裂，可能导致经济衰退，但央行降息和资本需求缓解可能减轻政府债务负担。</li><li>然而，若利率上升引发主权债务危机，后果将更为严重，可能威胁美元避险地位和金融稳定。</li><li>作者判断AI风险更类似2000年互联网泡沫，而非2008年金融危机，因此主权债务风险更值得警惕。</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2 class="section">English Key Points</h2>
+        <ul class="point-list">
+          <li>Financial markets face two spectres: an AI bust and a sovereign-debt crisis, but they are unlikely to strike simultaneously.</li><li>Recent declines in AI-related assets and rising bond yields have heightened investor anxiety.</li><li>The Economist is currently more worried about sovereign debt due to high government borrowing and rising interest rates.</li><li>An AI crash could ease fiscal pressures by lowering interest rates and reducing competition for capital.</li><li>A sovereign-debt blow-up would be more severe, potentially undermining the dollar&#39;s safe-haven status and causing political instability.</li><li>The AI risk is likened to the dotcom bubble rather than the global financial crisis, making sovereign debt the bigger concern.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- 对照翻译 -->
+  <div class="tab-panel" id="tab-translation" data-label="对照翻译">
+    <div class="translation-toolbar">
+      <div class="muted small">英文在上、中文在下；点生词表任意一行可跳转到对应段落。</div>
+      <button class="btn" id="toggleAllZh" type="button">隐藏译文</button>
+    </div>
+    <div id="translationList">
+      
+      <article class="para-card" id="para-1" data-para="1">
+        <div class="para-head">
+          <span class="para-no">§1</span>
+          <span class="muted small">4 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Leaders | Pick your <span class="w" data-vid="v1" data-w="phantom">phantom</span></p>
+        <p class="para-zh">领袖 | 选择你的幽灵</p>
+      </article>
+      
+      <article class="para-card" id="para-2" data-para="2">
+        <div class="para-head">
+          <span class="para-no">§2</span>
+          <span class="muted small">11 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Either AI or public debt could crash markets. Butprobably not both</p>
+        <p class="para-zh">人工智能或公共债务都可能让市场崩溃。但两者或许不会同时发生</p>
+      </article>
+      
+      <article class="para-card" id="para-3" data-para="3">
+        <div class="para-head">
+          <span class="para-no">§3</span>
+          <span class="muted small">8 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">If AI stocks collapse, bond yields will fall</p>
+        <p class="para-zh">如果人工智能股票暴跌，债券收益率将下降</p>
+      </article>
+      
+      <article class="para-card" id="para-4" data-para="4">
+        <div class="para-head">
+          <span class="para-no">§4</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Oct 22nd 2026</p>
+        <p class="para-zh">2026年10月22日</p>
+      </article>
+      
+      <article class="para-card" id="para-5" data-para="5">
+        <div class="para-head">
+          <span class="para-no">§5</span>
+          <span class="muted small">63 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Two SPECTRES <span class="w" data-vid="v3" data-w="stalk">stalk</span> financial markets. One is the fear that <span class="w" data-vid="v4" data-w="surging">surging</span> bondyields will make the rich world’s <span class="w" data-vid="v5" data-w="shaky">shaky</span> public finances unsustainable,triggering a nasty fiscal crisis. The other is the worry that the revenues fromartificial intelligence needed to keep the data-centre boom going will fail toarrive. As we report, that would <span class="w" data-vid="v7" data-w="devastate">devastate</span> credit markets and cause a big fallin stocks, too.</p>
+        <p class="para-zh">两个幽灵在金融市场上徘徊。其一是担心债券收益率飙升将使富裕国家摇摇欲坠的公共财政难以为继，引发一场严重的财政危机。其二是担心维持数据中心繁荣所需的人工智能收入将无法兑现。正如我们所报道的，这将重创信贷市场，并导致股市大幅下跌。</p>
+      </article>
+      
+      <article class="para-card" id="para-6" data-para="6">
+        <div class="para-head">
+          <span class="para-no">§6</span>
+          <span class="muted small">35 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">The good news is that only an <span class="w" data-vid="v8" data-w="Ichabod Crane">Ichabod Crane</span> would think that both thesescenarios could strike at once. Instead, investors must decide which story isscarier. For now, The Economist is more worried about sovereign debt.</p>
+        <p class="para-zh">好消息是，只有伊卡博德·克兰才会认为这两种情景会同时发生。相反，投资者必须判断哪个故事更可怕。目前，《经济学人》更担心主权债务。</p>
+      </article>
+      
+      <article class="para-card" id="para-7" data-para="7">
+        <div class="para-head">
+          <span class="para-no">§7</span>
+          <span class="muted small">86 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">For most of the year, concerns about governments have dominated. Betweenthe end of February and the start of October, the yield on 30-year USTreasuries rose by a full percentage point. The Iran war has sent inflation upand forced central banks to raise interest rates. Strong economic growth andthe rush to build data centres have caused a scramble for capital in whichgovernments have had to compete with the private sector. In Japan, Britainand especially France, investors have fretted about the ability ofgovernments to <span class="w" data-vid="v10" data-w="service their debts">service their debts</span>.</p>
+        <p class="para-zh">今年大部分时间里，对政府的担忧一直占据主导。从2月底到10月初，30年期美国国债收益率上升了整整一个百分点。伊朗战争推高了通胀，并迫使央行加息。强劲的经济增长和建设数据中心的热潮引发了资本争夺，政府不得不与私营部门竞争。在日本、英国，尤其是法国，投资者一直担忧政府偿还债务的能力。</p>
+      </article>
+      
+      <article class="para-card" id="para-8" data-para="8">
+        <div class="para-head">
+          <span class="para-no">§8</span>
+          <span class="muted small">111 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">In recent weeks, though, the prospect of an end to the AI boom has scaredthe markets more. The five-year bonds of CoreWeave, a “<span class="w" data-vid="v11" data-w="neocloud">neocloud</span>” thatrents out data centres, trade at a 15% yield, up from 10% in July. Thecompany’s share price has fallen by about a third in the past month. Theslowing revenue growth of Anthropic, an AI-model provider, has investorsworried that the cash CoreWeave and its peers need may not arrive, or atleast not quickly enough to pay their creditors. <span class="w" data-vid="v12" data-w="Interlinked">Interlinked</span> financing meansthat pain could spread quickly, through both the ai supply chain and theprivate-credit and insurance firms that hold a lot of data-centre debt.</p>
+        <p class="para-zh">然而最近几周，人工智能繁荣可能终结的前景更令市场感到恐惧。出租数据中心的“新云”公司CoreWeave的五年期债券收益率为15%，高于7月份的10%。该公司股价在过去一个月下跌了约三分之一。人工智能模型提供商Anthropic的收入增长放缓，令投资者担心CoreWeave及其同行所需的现金可能无法到位，或者至少不够快，无法偿还债权人。相互关联的融资意味着痛苦可能迅速蔓延，既通过人工智能供应链，也通过持有大量数据中心债务的私人信贷和保险公司。</p>
+      </article>
+      
+      <article class="para-card" id="para-9" data-para="9">
+        <div class="para-head">
+          <span class="para-no">§9</span>
+          <span class="muted small">5 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">CoreWeave five-year CDS spread</p>
+        <p class="para-zh">CoreWeave五年期信用违约互换利差</p>
+      </article>
+      
+      <article class="para-card" id="para-10" data-para="10">
+        <div class="para-head">
+          <span class="para-no">§10</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">2026, basis points</p>
+        <p class="para-zh">2026年，基点</p>
+      </article>
+      
+      <article class="para-card" id="para-11" data-para="11">
+        <div class="para-head">
+          <span class="para-no">§11</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">1,200</p>
+        <p class="para-zh">1,200</p>
+      </article>
+      
+      <article class="para-card" id="para-12" data-para="12">
+        <div class="para-head">
+          <span class="para-no">§12</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">1,000</p>
+        <p class="para-zh">1,000</p>
+      </article>
+      
+      <article class="para-card" id="para-13" data-para="13">
+        <div class="para-head">
+          <span class="para-no">§13</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">800</p>
+        <p class="para-zh">800</p>
+      </article>
+      
+      <article class="para-card" id="para-14" data-para="14">
+        <div class="para-head">
+          <span class="para-no">§14</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">600</p>
+        <p class="para-zh">600</p>
+      </article>
+      
+      <article class="para-card" id="para-15" data-para="15">
+        <div class="para-head">
+          <span class="para-no">§15</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">400</p>
+        <p class="para-zh">400</p>
+      </article>
+      
+      <article class="para-card" id="para-16" data-para="16">
+        <div class="para-head">
+          <span class="para-no">§16</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">FMAM</p>
+        <p class="para-zh">F M A M</p>
+      </article>
+      
+      <article class="para-card" id="para-17" data-para="17">
+        <div class="para-head">
+          <span class="para-no">§17</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">JJAs0Source: Bloomberg</p>
+        <p class="para-zh">JJAs0来源：彭博社</p>
+      </article>
+      
+      <article class="para-card" id="para-18" data-para="18">
+        <div class="para-head">
+          <span class="para-no">§18</span>
+          <span class="muted small">35 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">As a result, many sovereign bonds have rallied. There has been little relieffor France, where riots are worsening a political crisis, or Britain, where anupcoming budget makes investors nervous. But yields on ten-year Treasuries</p>
+        <p class="para-zh">因此，许多主权债券出现反弹。法国和英国几乎没有得到缓解：法国的骚乱正在加剧政治危机，英国即将公布的预算案令投资者紧张不安。但十年期美国国债收益率</p>
+      </article>
+      
+      <article class="para-card" id="para-19" data-para="19">
+        <div class="para-head">
+          <span class="para-no">§19</span>
+          <span class="muted small">51 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">are down by a fifth of a point. Investors usually flee to the safety ofAmerican bonds in a downturn. Everywhere else, as data-centre investmentslowed, an AI crash would ease the scramble for capital. And it would leadcentral banks to lower interest rates to support growth, thereby making debtseasier to service.</p>
+        <p class="para-zh">下降了五分之一个百分点。在经济低迷时期，投资者通常会逃向安全的美国债券。在其他所有地方，随着数据中心投资放缓，人工智能泡沫破裂将缓解对资本的争夺。而且，这将导致央行降低利率以支持增长，从而使债务更容易偿还。</p>
+      </article>
+      
+      <article class="para-card" id="para-20" data-para="20">
+        <div class="para-head">
+          <span class="para-no">§20</span>
+          <span class="muted small">81 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Only in a big crash <span class="w" data-vid="v15" data-w="akin to">akin to</span> the global financial crisis (GFC) of 2007-09would the two risks collide. Governments are already sufficiently in the redthat a deep recession would, by collapsing tax revenues and increasingwelfare spending, make budget deficits look truly terrifying. Long-termbond yields might rise even as short-term interest rates fell—a nastysymptom of <span class="w" data-vid="v16" data-w="fiscal malaise">fiscal malaise</span> that sometimes strikes emerging markets. It didnot happen during the GFC, but the starting-point for debt and deficits todayis higher.</p>
+        <p class="para-zh">只有在类似于2007-09年全球金融危机（GFC）的大崩盘中，这两种风险才会发生碰撞。各国政府已经深陷赤字，一场深度衰退将通过税收收入锐减和福利支出增加，使预算赤字看起来真正令人恐惧。长期债券收益率可能甚至在短期利率下降时上升——这是财政弊病的一种恶劣症状，有时会袭击新兴市场。在全球金融危机期间并未发生这种情况，但如今债务和赤字的起点更高。</p>
+      </article>
+      
+      <article class="para-card" id="para-21" data-para="21">
+        <div class="para-head">
+          <span class="para-no">§21</span>
+          <span class="muted small">112 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Thankfully, there is no reason to expect such a deep crash. True, the historyof finance shows that useful new technologies often bring about a boom andbust, and the web of financing behind AI has become complex. But theindustry’s interlinkages are better understood than the alphabet-soup ofhousing-market securities was in 2007. Banks are safer, too. Though theyare exposed to ai via their lending to private-credit firms, their balancesheets are less fragile and better monitored. And backstopping much of theindustry is the chipmaker Nvidia, which has an enormous cash pile. Mostimportant, AI assets, though a big slice of many stock indices, are a smallerchunk of household wealth than housing.</p>
+        <p class="para-zh">幸运的是，没有理由预期如此深度的崩盘。诚然，金融史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互关联比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能风险，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。</p>
+      </article>
+      
+      <article class="para-card" id="para-22" data-para="22">
+        <div class="para-head">
+          <span class="para-no">§22</span>
+          <span class="muted small">105 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">So the best comparison for today’s AI vulnerabilities remains the dotcombubble of the late 1990s. When it burst in 2000, <span class="w" data-vid="v18" data-w="cratering">cratering</span> stocks caused onlya mild recession. Bond yields came down, too, and underlying productivitygrowth held up. Such a scenario would hardly solve governments’ long-termbudget problems, but it might <span class="w" data-vid="v19" data-w="forestall">forestall</span> them. Many economies outsideAmerica are less exposed to the AI boom than they are to bond yields;growth falling by less than interest rates would make legacy debts a lighterburden. America’s deficit would grow in a recession, but so would theworld’s appetite for Treasuries, because the dollar is the world’s reservecurrency.</p>
+        <p class="para-zh">因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票仅导致轻微衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这样的情景几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将减轻遗留债务的负担。美国的赤字在衰退中会增加，但世界对美国国债的需求也会增加，因为美元是世界储备货币。</p>
+      </article>
+      
+      <article class="para-card" id="para-23" data-para="23">
+        <div class="para-head">
+          <span class="para-no">§23</span>
+          <span class="muted small">94 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">By contrast, if high interest rates triggered a sovereign-debt blow-up theconsequences would be truly grave. If investors lost confidence inTreasuries, it would threaten the dollar’s valuable status as a haven. AsFrance is discovering, trying to close big deficits under duress can lead topolitical instability. Governments may prefer to <span class="w" data-vid="v20" data-w="inflate away debt">inflate away debt</span> than to payit down. That could imperil the stability on which all investment depends. Arun on sovereign debt in a big advanced economy could well leave investorswishing that a dotcom-style ai bust was all they had to worry about. ■</p>
+        <p class="para-zh">相比之下，如果高利率引发主权债务爆炸，后果将真正严重。如果投资者对美国国债失去信心，将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更倾向于通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大型发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■</p>
+      </article>
+      
+    </div>
+  </div>
+
+  <!-- 词汇长句 -->
+  <div class="tab-panel" id="tab-language" data-label="词汇长句">
+    <section class="card">
+      <h2 class="section">重点词汇 <span class="count">20 条</span></h2>
+      <p class="muted small" style="margin-bottom:10px">点击任意一行跳到原文段落并高亮；点原文中的虚线下划线词可查看释义。</p>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>单词 / 短语</th><th>难度</th><th>原文语境</th><th>中文注释</th></tr></thead>
+          <tbody>
+          
+            <tr class="vocab-row" data-para="1" data-vid="v1" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">phantom</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Leaders | Pick your phantom</td>
+              <td data-label="注释">幽灵；幻影。标题中比喻两种可能冲击市场的风险，像幽灵一样萦绕。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v2" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">spectre</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Two SPECTRES stalk financial markets.</td>
+              <td data-label="注释">幽灵；恐怖之物。英式拼写，美式为 specter。常比喻令人担忧的潜在威胁。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v3" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">stalk</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Two SPECTRES stalk financial markets.</td>
+              <td data-label="注释">悄悄跟踪；萦绕。此处拟人化，表示两种风险笼罩市场。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v4" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">surging</td>
+              <td class="stars" data-label="难度">★☆☆</td>
+              <td class="context-col" data-label="语境">One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.</td>
+              <td data-label="注释">飙升的；急剧上升的。常与 prices, yields, demand 等搭配。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v5" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">shaky</td>
+              <td class="stars" data-label="难度">★☆☆</td>
+              <td class="context-col" data-label="语境">One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.</td>
+              <td data-label="注释">不稳固的；摇摇欲坠的。常形容经济、财政、信心等。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v6" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">trigger</td>
+              <td class="stars" data-label="难度">★☆☆</td>
+              <td class="context-col" data-label="语境">One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.</td>
+              <td data-label="注释">引发；触发。常与 crisis, recession, reaction 等搭配。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="5" data-vid="v7" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">devastate</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">As we report, that would devastate credit markets and cause a big fall in stocks, too.</td>
+              <td data-label="注释">摧毁；严重破坏。此处指对信贷市场造成巨大冲击。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="6" data-vid="v8" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">Ichabod Crane</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">The good news is that only an Ichabod Crane would think that both these scenarios could strike at once.</td>
+              <td data-label="注释">伊卡博德·克兰，美国作家华盛顿·欧文小说《睡谷传奇》中的人物，以迷信、胆小著称。此处借指轻信鬼故事的人。</td>
+            </tr>
+          
+            <tr class="vocab-row">
+              <td class="word-col" data-label="单词">fret about</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In Japan, Britain and especially France, investors have fretted about the ability of governments to service their debts.</td>
+              <td data-label="注释">为……担忧；烦恼。常与 about/over 搭配。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="7" data-vid="v10" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">service their debts</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In Japan, Britain and especially France, investors have fretted about the ability of governments to service their debts.</td>
+              <td data-label="注释">偿还债务（包括支付利息和本金）。金融经济常用表达。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="8" data-vid="v11" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">neocloud</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">The five-year bonds of CoreWeave, a “neocloud” that rents out data centres, trade at a 15% yield, up from 10% in July.</td>
+              <td data-label="注释">新型云服务商，指专门提供 GPU 算力租赁等服务的云计算公司。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="8" data-vid="v12" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">interlinked</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Interlinked financing means that pain could spread quickly, through both the ai supply chain and the private-credit and insurance firms that hold a lot of data-centre debt.</td>
+              <td data-label="注释">相互关联的；相互联系的。常形容金融网络、系统等。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="18" data-vid="v13" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">rally</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">As a result, many sovereign bonds have rallied.</td>
+              <td data-label="注释">（债券、股票等）反弹，回升。此处指主权债券价格回升、收益率下降。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="19" data-vid="v14" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">flee to the safety of</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Investors usually flee to the safety of American bonds in a downturn.</td>
+              <td data-label="注释">逃向安全资产；避险。常指投资者在动荡时转向美国国债等安全资产。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="20" data-vid="v15" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">akin to</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Only in a big crash akin to the global financial crisis (GFC) of 2007-09 would the two risks collide.</td>
+              <td data-label="注释">类似于；与……相似。常用于正式文体。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="20" data-vid="v16" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">fiscal malaise</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">Long-term bond yields might rise even as short-term interest rates fell—a nasty symptom of fiscal malaise that sometimes strikes emerging markets.</td>
+              <td data-label="注释">财政痼疾；财政不适。malaise 指难以名状的不适或问题，常与 economic, fiscal 等搭配。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="21" data-vid="v17" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">backstop</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">And backstopping much of the industry is the chipmaker Nvidia, which has an enormous cash pile.</td>
+              <td data-label="注释">支持；为……提供后盾。金融语境中指提供最后担保或资金支持。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="22" data-vid="v18" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">cratering</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">When it burst in 2000, cratering stocks caused only a mild recession.</td>
+              <td data-label="注释">暴跌的；急剧下降的。crater 原意“形成坑”，引申为价值暴跌。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="22" data-vid="v19" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">forestall</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Such a scenario would hardly solve governments’ long-term budget problems, but it might forestall them.</td>
+              <td data-label="注释">预先阻止；防患于未然。常与 crisis, problems 等搭配。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="23" data-vid="v20" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">inflate away debt</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">Governments may prefer to inflate away debt than to pay it down.</td>
+              <td data-label="注释">通过通货膨胀来稀释债务。指政府利用通胀降低债务实际价值。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">长难句拆解 <span class="count">8 句</span></h2>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.</p>
+        <p class="ls-zh">其一是担心飙升的债券收益率将使富裕国家摇摇欲坠的公共财政变得不可持续，从而引发一场严重的财政危机。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>One is the fear</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>名词性从句</b> — that surging bond yields will make the rich world’s shaky public finances unsustainable<span class="muted">（作 fear 的同位语从句，解释恐惧的内容）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>分词短语</b> — triggering a nasty fiscal crisis<span class="muted">（修饰 整个前面的情况，表示结果）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>主干是“One is the fear”，后面 that 从句解释 fear 的内容，现在分词 triggering 作结果状语。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">The other is the worry that the revenues from artificial intelligence needed to keep the data-centre boom going will fail to arrive.</p>
+        <p class="ls-zh">另一个是担心维持数据中心繁荣所需的人工智能收入将无法到位。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>The other is the worry</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>名词性从句</b> — that the revenues from artificial intelligence needed to keep the data-centre boom going will fail to arrive<span class="muted">（作 worry 的同位语从句，说明担忧的内容）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>分词短语</b> — needed to keep the data-centre boom going<span class="muted">（修饰 the revenues from artificial intelligence）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>that 从句中主语是 the revenues，谓语是 will fail to arrive，中间的分词短语修饰 revenues。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Interlinked financing means that pain could spread quickly, through both the ai supply chain and the private-credit and insurance firms that hold a lot of data-centre debt.</p>
+        <p class="ls-zh">相互关联的融资意味着痛苦可能迅速蔓延，既通过人工智能供应链，也通过持有大量数据中心债务的私人信贷和保险公司。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Interlinked financing means that...</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>名词性从句</b> — that pain could spread quickly, through both the ai supply chain and the private-credit and insurance firms that hold a lot of data-centre debt<span class="muted">（作 means 的宾语从句）</span></div><div><b>定语从句</b> — that hold a lot of data-centre debt<span class="muted">（修饰 the private-credit and insurance firms）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — through both the ai supply chain and the private-credit and insurance firms<span class="muted">（修饰 spread）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>宾语从句中又有定语从句，且 through 短语较长，需分清层次。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Only in a big crash akin to the global financial crisis (GFC) of 2007-09 would the two risks collide.</p>
+        <p class="ls-zh">只有在类似于2007-09年全球金融危机（GFC）的大崩盘中，这两种风险才会同时发生。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>the two risks would collide</dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — Only in a big crash akin to the global financial crisis (GFC) of 2007-09<span class="muted">（修饰 整个句子，作状语）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>Only + 状语置于句首引起部分倒装，助动词 would 提前。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Governments are already sufficiently in the red that a deep recession would, by collapsing tax revenues and increasing welfare spending, make budget deficits look truly terrifying.</p>
+        <p class="ls-zh">各国政府已经负债累累，以至于一场深度衰退会通过导致税收崩溃和福利支出增加，使预算赤字看起来真正可怕。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Governments are already sufficiently in the red</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>结果状语从句</b> — that a deep recession would, by collapsing tax revenues and increasing welfare spending, make budget deficits look truly terrifying<span class="muted">（与 sufficiently 呼应，表示“如此……以至于”）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — by collapsing tax revenues and increasing welfare spending<span class="muted">（修饰 make budget deficits look truly terrifying）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>sufficiently...that 结构，中间插入 by 短语表示方式。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Though they are exposed to ai via their lending to private-credit firms, their balance-sheets are less fragile and better monitored.</p>
+        <p class="ls-zh">尽管它们通过向私人信贷公司放贷而暴露于人工智能风险，但它们的资产负债表更稳健，监管也更完善。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>their balance-sheets are less fragile and better monitored</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>让步状语从句</b> — Though they are exposed to ai via their lending to private-credit firms<span class="muted">（表示尽管）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — via their lending to private-credit firms<span class="muted">（修饰 are exposed to ai）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>Though 引导让步从句，主句用 less...and better... 对比。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Most important, AI assets, though a big slice of many stock indices, are a smaller chunk of household wealth than housing.</p>
+        <p class="ls-zh">最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占的比例却小于房地产。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>AI assets are a smaller chunk of household wealth than housing</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>让步状语从句（省略形式）</b> — though a big slice of many stock indices<span class="muted">（表示尽管）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>副词短语</b> — Most important<span class="muted">（修饰 整个句子，作评注状语）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>though 引导的让步状语从句省略了主语和谓语（though they are a big slice...）。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Many economies outside America are less exposed to the AI boom than they are to bond yields; growth falling by less than interest rates would make legacy debts a lighter burden.</p>
+        <p class="ls-zh">美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；如果增长率下降幅度小于利率下降幅度，遗留债务的负担就会减轻。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Many economies outside America are less exposed to the AI boom than they are to bond yields</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>比较状语从句</b> — than they are to bond yields<span class="muted">（与 less 呼应，比较暴露程度）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — outside America<span class="muted">（修饰 Many economies）</span></div><div><b>分词短语</b> — falling by less than interest rates<span class="muted">（修饰 growth）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>分号连接两个独立分句，第二个分句中 growth falling... 是独立主格结构，作条件状语。</dd>
+        </dl>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 写作拆解 -->
+  <div class="tab-panel" id="tab-decon" data-label="写作拆解">
+    <section class="card">
+      <h2 class="section">写法总览</h2>
+      <p class="prose">文章以对比结构展开，先提出两大风险，再分析各自影响，最后比较并得出结论。主线是评估AI泡沫与主权债务风险孰轻孰重，风格冷静分析，运用数据、类比和逻辑推演。</p>
+    </section>
+    <section class="card">
+      <h2 class="section">结构拆解 <span class="count">8 部分</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">引入</span>
+          <b>引入两大风险</b>
+          <span class="muted small">§5</span>
+        </div>
+        <p><b>论点</b>　金融市场面临两大幽灵：主权债务危机和AI收入不及预期。</p>
+        <p><b>论据</b>　描述两种风险的具体表现：债券收益率飙升和AI收入不足。</p>
+        <p><b>写法</b>　使用比喻（spectres）和对比，设置悬念。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">提出论点</span>
+          <b>提出核心论点</b>
+          <span class="muted small">§6</span>
+        </div>
+        <p><b>论点</b>　两种风险不太可能同时发生，投资者需判断哪个更可怕，目前更担心主权债务。</p>
+        <p><b>论据</b>　引用Ichabod Crane的典故，表明同时发生是荒谬的。</p>
+        <p><b>写法</b>　文学典故和明确表态。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>主权债务担忧的论证</b>
+          <span class="muted small">§7</span>
+        </div>
+        <p><b>论点</b>　今年以来市场主要担忧政府债务，因收益率上升、通胀和资本竞争。</p>
+        <p><b>论据</b>　30年期美债收益率上升1个百分点；伊朗战争推高通胀；日本、英国、法国投资者担忧。</p>
+        <p><b>写法</b>　数据列举和具体国家案例。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">例证</span>
+          <b>AI风险的具体例证</b>
+          <span class="muted small">§8</span>
+        </div>
+        <p><b>论点</b>　近期AI热潮可能结束的担忧加剧，CoreWeave等公司债券收益率飙升，股价大跌。</p>
+        <p><b>论据</b>　CoreWeave五年期债券收益率从10%升至15%；股价下跌三分之一；Anthropic收入增长放缓。</p>
+        <p><b>写法</b>　具体公司数据和因果分析。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>AI崩溃对债市的影响</b>
+          <span class="muted small">§18 · §19</span>
+        </div>
+        <p><b>论点</b>　AI崩溃可能导致资金逃向安全资产，缓解资本争夺，央行降息，从而减轻债务压力。</p>
+        <p><b>论据</b>　十年期美债收益率下降0.2个百分点；法国和英国例外。</p>
+        <p><b>写法</b>　对比和逻辑推演。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">转折</span>
+          <b>两种风险碰撞的条件</b>
+          <span class="muted small">§20</span>
+        </div>
+        <p><b>论点</b>　只有类似2008年全球金融危机的深度衰退才会使两种风险同时爆发。</p>
+        <p><b>论据</b>　政府赤字已高，深度衰退将导致税收下降和福利支出增加，长期债券收益率可能上升。</p>
+        <p><b>写法</b>　条件假设和历史对比。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>AI风险可控的论证</b>
+          <span class="muted small">§21</span>
+        </div>
+        <p><b>论点</b>　AI风险更类似互联网泡沫，而非全球金融危机，因为金融关联更透明，银行更安全，英伟达有大量现金。</p>
+        <p><b>论据</b>　AI资产占家庭财富比例小于房地产；银行资产负债表更稳健；英伟达现金充裕。</p>
+        <p><b>写法</b>　类比和对比分析。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">结论</span>
+          <b>结论：主权债务风险更严重</b>
+          <span class="muted small">§22 · §23</span>
+        </div>
+        <p><b>论点</b>　若利率上升引发主权债务危机，后果将非常严重，可能威胁美元地位和政治稳定。</p>
+        <p><b>论据</b>　法国政治危机；投资者可能失去对美债信心；政府可能通过通胀稀释债务。</p>
+        <p><b>写法</b>　后果分析和警示性结论。</p>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">可借鉴的写作技巧 <span class="count">5 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>比喻与意象</b>
+          <span class="muted small">§5</span>
+        </div>
+        <blockquote>Two SPECTRES stalk financial markets.</blockquote>
+        <p class="muted">将风险拟人化为幽灵，增强画面感和紧迫感，吸引读者。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>文学典故</b>
+          <span class="muted small">§6</span>
+        </div>
+        <blockquote>only an Ichabod Crane would think that both these scenarios could strike at once</blockquote>
+        <p class="muted">借用《睡谷传奇》中胆小的人物，幽默地强调同时发生的不可能性。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>数据对比</b>
+          <span class="muted small">§7</span>
+        </div>
+        <blockquote>the yield on 30-year US Treasuries rose by a full percentage point</blockquote>
+        <p class="muted">用具体数据量化主权债务担忧的严重性，增强说服力。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>具体案例</b>
+          <span class="muted small">§8</span>
+        </div>
+        <blockquote>The five-year bonds of CoreWeave, a “neocloud” that rents out data centres, trade at a 15% yield, up from 10% in July.</blockquote>
+        <p class="muted">通过具体公司债券收益率变化，生动展示AI风险的市场表现。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>历史类比</b>
+          <span class="muted small">§21</span>
+        </div>
+        <blockquote>the best comparison for today’s AI vulnerabilities remains the dotcom bubble of the late 1990s</blockquote>
+        <p class="muted">将当前AI风险与互联网泡沫类比，帮助读者理解风险性质。</p>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 背景观点 -->
+  <div class="tab-panel" id="tab-background" data-label="背景观点">
+    <section class="card">
+      <h2 class="section">事件背景</h2>
+      <p class="prose">文章讨论2026年金融市场面临的两大风险：AI投资热潮可能消退和主权债务危机。背景包括伊朗战争推高通胀、央行加息、政府债务高企、AI数据中心建设热潮等。</p>
+    </section>
+    <section class="card">
+      <h2 class="section">关键事实与数据</h2>
+      
+      <div class="fact-row" data-para="7" tabindex="0" role="button">
+        <div>30年期美国国债收益率在2月底至10月初上升了整整一个百分点。</div>
+        <span class="fact-data">1 percentage point</span>
+      </div>
+      
+      <div class="fact-row" data-para="8" tabindex="0" role="button">
+        <div>CoreWeave五年期债券收益率从7月的10%升至15%。</div>
+        <span class="fact-data">15% yield, up from 10%</span>
+      </div>
+      
+      <div class="fact-row" data-para="8" tabindex="0" role="button">
+        <div>CoreWeave股价在过去一个月下跌约三分之一。</div>
+        <span class="fact-data">about a third</span>
+      </div>
+      
+      <div class="fact-row" data-para="18" tabindex="0" role="button">
+        <div>十年期美国国债收益率下降了0.2个百分点。</div>
+        <span class="fact-data">a fifth of a point</span>
+      </div>
+      
+      <div class="fact-row" data-para="21" tabindex="0" role="button">
+        <div>AI资产占家庭财富的比例小于房地产。</div>
+        
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">作者立场</h2>
+      <p class="prose">作者认为主权债务风险比AI泡沫风险更值得担忧，因为主权债务危机可能引发更严重的后果，而AI风险更可能类似互联网泡沫，可控且可能缓解债务压力。</p>
+      <h2 class="section" style="margin-top:16px">启示</h2>
+      <p class="prose">投资者和政策制定者应更关注主权债务的可持续性，警惕利率上升引发的财政危机，同时AI投资热潮的消退可能带来经济放缓但并非灾难。</p>
+    </section>
+  </div>
+
+  <!-- 实际应用 -->
+  <div class="tab-panel" id="tab-apply" data-label="实际应用">
+    <section class="card">
+      <h2 class="section">可操作技能 <span class="count">4 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>风险对比分析</b></div>
+        <p>列出两种主要风险，分别评估其发生概率和潜在影响，比较哪个更值得关注。</p>
+        <blockquote>在投资决策中，比较AI泡沫破裂和主权债务危机的概率与影响，优先防范主权债务风险。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>历史类比法</b></div>
+        <p>寻找与当前情况相似的历史事件，分析其发展路径和后果，以推断当前风险的可能走向。</p>
+        <blockquote>将当前AI投资热潮与1990年代末互联网泡沫对比，判断可能的市场调整幅度。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>数据驱动论证</b></div>
+        <p>引用具体数据（如收益率变化、股价跌幅）来支撑观点，增强说服力。</p>
+        <blockquote>用CoreWeave债券收益率从10%升至15%的数据说明AI相关信用风险上升。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>条件假设分析</b></div>
+        <p>设定极端条件（如深度衰退），分析多种风险同时爆发的可能性及后果。</p>
+        <blockquote>假设发生类似2008年的深度衰退，评估主权债务和AI风险如何相互强化。</blockquote>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">思维模型 <span class="count">4 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>风险矩阵</b></div>
+        <p>将风险按发生概率和影响程度分类，优先处理高概率高影响的风险。</p>
+        <p class="muted"><b>怎么用：</b>在评估多种风险时，绘制矩阵，定位各风险的位置，集中资源应对关键风险。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>反脆弱性</b></div>
+        <p>系统在冲击下反而受益的特性。</p>
+        <p class="muted"><b>怎么用：</b>分析AI崩溃是否可能通过降息和资本重新配置使经济更具韧性。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>二阶思维</b></div>
+        <p>考虑事件的连锁反应和间接影响。</p>
+        <p class="muted"><b>怎么用：</b>分析AI崩溃不仅影响股市，还会通过债市、央行政策等渠道影响主权债务。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>黑天鹅与灰犀牛</b></div>
+        <p>黑天鹅是罕见不可预测事件，灰犀牛是明显但被忽视的高概率事件。</p>
+        <p class="muted"><b>怎么用：</b>将主权债务危机视为灰犀牛，AI泡沫破裂视为可能的黑天鹅，分别制定应对策略。</p>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 背诵 -->
+  <div class="tab-panel" id="tab-recite" data-label="背诵">
+    <section class="card">
+      <h2 class="section">背诵建议</h2>
+      <p class="prose">按意群分块，先通读，再逐块遮住自测。</p>
+      <div class="meta-chips light" style="margin-top:12px">
+        <span class="chip">16 块</span>
+        <span class="chip">每块 25-70 词</span>
+        <span class="chip">预计 10 分钟背一遍</span>
+        <span class="chip">复习 D+1/2/4/7/15</span>
+        <span class="chip">每天新背 3 块</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">原文分块 <span class="count">16 块</span></h2>
+      <p class="muted small" style="margin-bottom:10px">先通读英文；需要时点「显示翻译」；点「遮住自测」检查记忆。</p>
+      
+      <article class="rc-chunk" id="chunk-1">
+        <div class="rc-head">
+          <span class="rc-no">块 1</span>
+          <span class="rc-size">53 words · §1–§5</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Leaders | Pick your phantom Either AI or public debt could crash markets. Butprobably not both If AI stocks collapse, bond yields will fall Oct 22nd 2026 Two SPECTRES stalk financial markets. One is the fear that surging bondyields will make the rich world’s shaky public finances unsustainable,triggering a nasty fiscal crisis.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> leaders pick your phantom</div>
+        <div class="rc-zh">领袖 | 选择你的幽灵 人工智能或公共债务都可能让市场崩溃。但两者或许不会同时发生 如果人工智能股票暴跌，债券收益率将下降 2026年10月22日 两个幽灵在金融市场上徘徊。其一是担心债券收益率飙升将使富裕国家摇摇欲坠的公共财政难以为继，引发一场严重的财政危机。其二是担心维持数据中心繁荣所需的人工智能收入将无法兑现。正如我们所报道的，这将重创信贷市场，并导致股市大幅下跌。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-2">
+        <div class="rc-head">
+          <span class="rc-no">块 2</span>
+          <span class="rc-size">54 words · §5–§6</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">The other is the worry that the revenues fromartificial intelligence needed to keep the data-centre boom going will fail toarrive. As we report, that would devastate credit markets and cause a big fallin stocks, too. The good news is that only an Ichabod Crane would think that both thesescenarios could strike at once.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> the other is the</div>
+        <div class="rc-zh">两个幽灵在金融市场上徘徊。其一是担心债券收益率飙升将使富裕国家摇摇欲坠的公共财政难以为继，引发一场严重的财政危机。其二是担心维持数据中心繁荣所需的人工智能收入将无法兑现。正如我们所报道的，这将重创信贷市场，并导致股市大幅下跌。 好消息是，只有伊卡博德·克兰才会认为这两种情景会同时发生。相反，投资者必须判断哪个故事更可怕。目前，《经济学人》更担心主权债务。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-3">
+        <div class="rc-head">
+          <span class="rc-no">块 3</span>
+          <span class="rc-size">48 words · §6–§7</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Instead, investors must decide which story isscarier. For now, The Economist is more worried about sovereign debt. For most of the year, concerns about governments have dominated. Betweenthe end of February and the start of October, the yield on 30-year USTreasuries rose by a full percentage point.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> instead investors must decide</div>
+        <div class="rc-zh">好消息是，只有伊卡博德·克兰才会认为这两种情景会同时发生。相反，投资者必须判断哪个故事更可怕。目前，《经济学人》更担心主权债务。 今年大部分时间里，对政府的担忧一直占据主导。从2月底到10月初，30年期美国国债收益率上升了整整一个百分点。伊朗战争推高了通胀，并迫使央行加息。强劲的经济增长和建设数据中心的热潮引发了资本争夺，政府不得不与私营部门竞争。在日本、英国，尤其是法国，投资者一直担忧政府偿还债务的能力。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-4">
+        <div class="rc-head">
+          <span class="rc-no">块 4</span>
+          <span class="rc-size">55 words · §7</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">The Iran war has sent inflation upand forced central banks to raise interest rates. Strong economic growth andthe rush to build data centres have caused a scramble for capital in whichgovernments have had to compete with the private sector. In Japan, Britainand especially France, investors have fretted about the ability ofgovernments to service their debts.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> the iran war has</div>
+        <div class="rc-zh">今年大部分时间里，对政府的担忧一直占据主导。从2月底到10月初，30年期美国国债收益率上升了整整一个百分点。伊朗战争推高了通胀，并迫使央行加息。强劲的经济增长和建设数据中心的热潮引发了资本争夺，政府不得不与私营部门竞争。在日本、英国，尤其是法国，投资者一直担忧政府偿还债务的能力。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-5">
+        <div class="rc-head">
+          <span class="rc-no">块 5</span>
+          <span class="rc-size">53 words · §8</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">In recent weeks, though, the prospect of an end to the AI boom has scaredthe markets more. The five-year bonds of CoreWeave, a “neocloud” thatrents out data centres, trade at a 15% yield, up from 10% in July. Thecompany’s share price has fallen by about a third in the past month.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> in recent weeks though</div>
+        <div class="rc-zh">然而最近几周，人工智能繁荣可能终结的前景更令市场感到恐惧。出租数据中心的“新云”公司CoreWeave的五年期债券收益率为15%，高于7月份的10%。该公司股价在过去一个月下跌了约三分之一。人工智能模型提供商Anthropic的收入增长放缓，令投资者担心CoreWeave及其同行所需的现金可能无法到位，或者至少不够快，无法偿还债权人。相互关联的融资意味着痛苦可能迅速蔓延，既通过人工智能供应链，也通过持有大量数据中心债务的私人信贷和保险公司。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-6">
+        <div class="rc-head">
+          <span class="rc-no">块 6</span>
+          <span class="rc-size">58 words · §8</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Theslowing revenue growth of Anthropic, an AI-model provider, has investorsworried that the cash CoreWeave and its peers need may not arrive, or atleast not quickly enough to pay their creditors. Interlinked financing meansthat pain could spread quickly, through both the ai supply chain and theprivate-credit and insurance firms that hold a lot of data-centre debt.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> theslowing revenue growth of</div>
+        <div class="rc-zh">然而最近几周，人工智能繁荣可能终结的前景更令市场感到恐惧。出租数据中心的“新云”公司CoreWeave的五年期债券收益率为15%，高于7月份的10%。该公司股价在过去一个月下跌了约三分之一。人工智能模型提供商Anthropic的收入增长放缓，令投资者担心CoreWeave及其同行所需的现金可能无法到位，或者至少不够快，无法偿还债权人。相互关联的融资意味着痛苦可能迅速蔓延，既通过人工智能供应链，也通过持有大量数据中心债务的私人信贷和保险公司。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-7">
+        <div class="rc-head">
+          <span class="rc-no">块 7</span>
+          <span class="rc-size">47 words · §9–§18</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">CoreWeave five-year CDS spread 2026, basis points 1,200 1,000 800 600 400 FMAM JJAs0Source: Bloomberg As a result, many sovereign bonds have rallied. There has been little relieffor France, where riots are worsening a political crisis, or Britain, where anupcoming budget makes investors nervous.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> coreweave five year cds</div>
+        <div class="rc-zh">CoreWeave五年期信用违约互换利差 2026年，基点 1,200 1,000 800 600 400 F M A M JJAs0来源：彭博社 因此，许多主权债券出现反弹。法国和英国几乎没有得到缓解：法国的骚乱正在加剧政治危机，英国即将公布的预算案令投资者紧张不安。但十年期美国国债收益率</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-8">
+        <div class="rc-head">
+          <span class="rc-no">块 8</span>
+          <span class="rc-size">57 words · §18–§19</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">But yields on ten-year Treasuries are down by a fifth of a point. Investors usually flee to the safety ofAmerican bonds in a downturn. Everywhere else, as data-centre investmentslowed, an AI crash would ease the scramble for capital. And it would leadcentral banks to lower interest rates to support growth, thereby making debtseasier to service.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> but yields on ten</div>
+        <div class="rc-zh">因此，许多主权债券出现反弹。法国和英国几乎没有得到缓解：法国的骚乱正在加剧政治危机，英国即将公布的预算案令投资者紧张不安。但十年期美国国债收益率 下降了五分之一个百分点。在经济低迷时期，投资者通常会逃向安全的美国债券。在其他所有地方，随着数据中心投资放缓，人工智能泡沫破裂将缓解对资本的争夺。而且，这将导致央行降低利率以支持增长，从而使债务更容易偿还。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-9">
+        <div class="rc-head">
+          <span class="rc-no">块 9</span>
+          <span class="rc-size">65 words · §20</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Only in a big crash akin to the global financial crisis (GFC) of 2007-09would the two risks collide. Governments are already sufficiently in the redthat a deep recession would, by collapsing tax revenues and increasingwelfare spending, make budget deficits look truly terrifying. Long-termbond yields might rise even as short-term interest rates fell—a nastysymptom of fiscal malaise that sometimes strikes emerging markets.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> only in a big</div>
+        <div class="rc-zh">只有在类似于2007-09年全球金融危机（GFC）的大崩盘中，这两种风险才会发生碰撞。各国政府已经深陷赤字，一场深度衰退将通过税收收入锐减和福利支出增加，使预算赤字看起来真正令人恐惧。长期债券收益率可能甚至在短期利率下降时上升——这是财政弊病的一种恶劣症状，有时会袭击新兴市场。在全球金融危机期间并未发生这种情况，但如今债务和赤字的起点更高。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-10">
+        <div class="rc-head">
+          <span class="rc-no">块 10</span>
+          <span class="rc-size">52 words · §20–§21</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">It didnot happen during the GFC, but the starting-point for debt and deficits todayis higher. Thankfully, there is no reason to expect such a deep crash. True, the historyof finance shows that useful new technologies often bring about a boom andbust, and the web of financing behind AI has become complex.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> it didnot happen during</div>
+        <div class="rc-zh">只有在类似于2007-09年全球金融危机（GFC）的大崩盘中，这两种风险才会发生碰撞。各国政府已经深陷赤字，一场深度衰退将通过税收收入锐减和福利支出增加，使预算赤字看起来真正令人恐惧。长期债券收益率可能甚至在短期利率下降时上升——这是财政弊病的一种恶劣症状，有时会袭击新兴市场。在全球金融危机期间并未发生这种情况，但如今债务和赤字的起点更高。 幸运的是，没有理由预期如此深度的崩盘。诚然，金融史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互关联比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能风险，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-11">
+        <div class="rc-head">
+          <span class="rc-no">块 11</span>
+          <span class="rc-size">57 words · §21</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">But theindustry’s interlinkages are better understood than the alphabet-soup ofhousing-market securities was in 2007. Banks are safer, too. Though theyare exposed to ai via their lending to private-credit firms, their balancesheets are less fragile and better monitored. And backstopping much of theindustry is the chipmaker Nvidia, which has an enormous cash pile.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> but theindustry s interlinkages</div>
+        <div class="rc-zh">幸运的是，没有理由预期如此深度的崩盘。诚然，金融史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互关联比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能风险，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-12">
+        <div class="rc-head">
+          <span class="rc-no">块 12</span>
+          <span class="rc-size">46 words · §21–§22</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Mostimportant, AI assets, though a big slice of many stock indices, are a smallerchunk of household wealth than housing. So the best comparison for today’s AI vulnerabilities remains the dotcombubble of the late 1990s. When it burst in 2000, cratering stocks caused onlya mild recession.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> mostimportant ai assets though</div>
+        <div class="rc-zh">幸运的是，没有理由预期如此深度的崩盘。诚然，金融史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互关联比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能风险，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。 因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票仅导致轻微衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这样的情景几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将减轻遗留债务的负担。美国的赤字在衰退中会增加，但世界对美国国债的需求也会增加，因为美元是世界储备货币。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-13">
+        <div class="rc-head">
+          <span class="rc-no">块 13</span>
+          <span class="rc-size">54 words · §22</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Bond yields came down, too, and underlying productivitygrowth held up. Such a scenario would hardly solve governments’ long-termbudget problems, but it might forestall them. Many economies outsideAmerica are less exposed to the AI boom than they are to bond yields;growth falling by less than interest rates would make legacy debts a lighterburden.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> bond yields came down</div>
+        <div class="rc-zh">因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票仅导致轻微衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这样的情景几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将减轻遗留债务的负担。美国的赤字在衰退中会增加，但世界对美国国债的需求也会增加，因为美元是世界储备货币。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-14">
+        <div class="rc-head">
+          <span class="rc-no">块 14</span>
+          <span class="rc-size">57 words · §22–§23</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">America’s deficit would grow in a recession, but so would theworld’s appetite for Treasuries, because the dollar is the world’s reservecurrency. By contrast, if high interest rates triggered a sovereign-debt blow-up theconsequences would be truly grave. If investors lost confidence inTreasuries, it would threaten the dollar’s valuable status as a haven.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> america s deficit would</div>
+        <div class="rc-zh">因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票仅导致轻微衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这样的情景几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将减轻遗留债务的负担。美国的赤字在衰退中会增加，但世界对美国国债的需求也会增加，因为美元是世界储备货币。 相比之下，如果高利率引发主权债务爆炸，后果将真正严重。如果投资者对美国国债失去信心，将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更倾向于通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大型发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-15">
+        <div class="rc-head">
+          <span class="rc-no">块 15</span>
+          <span class="rc-size">61 words · §23</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">AsFrance is discovering, trying to close big deficits under duress can lead topolitical instability. Governments may prefer to inflate away debt than to payit down. That could imperil the stability on which all investment depends. Arun on sovereign debt in a big advanced economy could well leave investorswishing that a dotcom-style ai bust was all they had to worry about.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> asfrance is discovering trying</div>
+        <div class="rc-zh">相比之下，如果高利率引发主权债务爆炸，后果将真正严重。如果投资者对美国国债失去信心，将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更倾向于通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大型发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-16">
+        <div class="rc-head">
+          <span class="rc-no">块 16</span>
+          <span class="rc-size">0 words · §23</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">■</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> </div>
+        <div class="rc-zh">相比之下，如果高利率引发主权债务爆炸，后果将真正严重。如果投资者对美国国债失去信心，将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更倾向于通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大型发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■</div>
+      </article>
+      
+    </section>
+
+    <section class="card">
+      <h2 class="section">逐块复习表</h2>
+      <div class="table-scroll">
+        <table class="vocab-table rc-table">
+          <thead>
+            <tr>
+              <th>块</th><th>学习日</th>
+              <th>D+1</th><th>D+2</th><th>D+4</th><th>D+7</th><th>D+15</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+            <tr>
+              <td><b>1</b></td>
+              <td>2026-11-05</td>
+              <td>2026-11-06</td><td>2026-11-07</td><td>2026-11-09</td><td>2026-11-12</td><td>2026-11-20</td>
+            </tr>
+          
+            <tr>
+              <td><b>2</b></td>
+              <td>2026-11-05</td>
+              <td>2026-11-06</td><td>2026-11-07</td><td>2026-11-09</td><td>2026-11-12</td><td>2026-11-20</td>
+            </tr>
+          
+            <tr>
+              <td><b>3</b></td>
+              <td>2026-11-05</td>
+              <td>2026-11-06</td><td>2026-11-07</td><td>2026-11-09</td><td>2026-11-12</td><td>2026-11-20</td>
+            </tr>
+          
+            <tr>
+              <td><b>4</b></td>
+              <td>2026-11-06</td>
+              <td>2026-11-07</td><td>2026-11-08</td><td>2026-11-10</td><td>2026-11-13</td><td>2026-11-21</td>
+            </tr>
+          
+            <tr>
+              <td><b>5</b></td>
+              <td>2026-11-06</td>
+              <td>2026-11-07</td><td>2026-11-08</td><td>2026-11-10</td><td>2026-11-13</td><td>2026-11-21</td>
+            </tr>
+          
+            <tr>
+              <td><b>6</b></td>
+              <td>2026-11-06</td>
+              <td>2026-11-07</td><td>2026-11-08</td><td>2026-11-10</td><td>2026-11-13</td><td>2026-11-21</td>
+            </tr>
+          
+            <tr>
+              <td><b>7</b></td>
+              <td>2026-11-07</td>
+              <td>2026-11-08</td><td>2026-11-09</td><td>2026-11-11</td><td>2026-11-14</td><td>2026-11-22</td>
+            </tr>
+          
+            <tr>
+              <td><b>8</b></td>
+              <td>2026-11-07</td>
+              <td>2026-11-08</td><td>2026-11-09</td><td>2026-11-11</td><td>2026-11-14</td><td>2026-11-22</td>
+            </tr>
+          
+            <tr>
+              <td><b>9</b></td>
+              <td>2026-11-07</td>
+              <td>2026-11-08</td><td>2026-11-09</td><td>2026-11-11</td><td>2026-11-14</td><td>2026-11-22</td>
+            </tr>
+          
+            <tr>
+              <td><b>10</b></td>
+              <td>2026-11-08</td>
+              <td>2026-11-09</td><td>2026-11-10</td><td>2026-11-12</td><td>2026-11-15</td><td>2026-11-23</td>
+            </tr>
+          
+            <tr>
+              <td><b>11</b></td>
+              <td>2026-11-08</td>
+              <td>2026-11-09</td><td>2026-11-10</td><td>2026-11-12</td><td>2026-11-15</td><td>2026-11-23</td>
+            </tr>
+          
+            <tr>
+              <td><b>12</b></td>
+              <td>2026-11-08</td>
+              <td>2026-11-09</td><td>2026-11-10</td><td>2026-11-12</td><td>2026-11-15</td><td>2026-11-23</td>
+            </tr>
+          
+            <tr>
+              <td><b>13</b></td>
+              <td>2026-11-09</td>
+              <td>2026-11-10</td><td>2026-11-11</td><td>2026-11-13</td><td>2026-11-16</td><td>2026-11-24</td>
+            </tr>
+          
+            <tr>
+              <td><b>14</b></td>
+              <td>2026-11-09</td>
+              <td>2026-11-10</td><td>2026-11-11</td><td>2026-11-13</td><td>2026-11-16</td><td>2026-11-24</td>
+            </tr>
+          
+            <tr>
+              <td><b>15</b></td>
+              <td>2026-11-09</td>
+              <td>2026-11-10</td><td>2026-11-11</td><td>2026-11-13</td><td>2026-11-16</td><td>2026-11-24</td>
+            </tr>
+          
+            <tr>
+              <td><b>16</b></td>
+              <td>2026-11-10</td>
+              <td>2026-11-11</td><td>2026-11-12</td><td>2026-11-14</td><td>2026-11-17</td><td>2026-11-25</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="checkin">
+      <h2 class="section">每日打卡</h2>
+      <div class="checkin-controls">
+        <div class="progress">
+          <div class="progress-bar"><i id="progressFill"></i></div>
+          <span class="progress-text" id="progressText">0 / 21 天</span>
+        </div>
+      </div>
+      <div class="day-list" id="dayList">
+        
+        <div class="day-row">
+          <span class="day-label">第 1 天 · 2026-11-05</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 1,2,3</span>
+            
+          </span>
+          <button class="rc-btn js-day-check" data-day="1" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 2 天 · 2026-11-06</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 4,5,6</span>
+            <span class="tag review">复习 1,2,3</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="2" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 3 天 · 2026-11-07</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 7,8,9</span>
+            <span class="tag review">复习 1,2,3,4,5,6</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="3" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 4 天 · 2026-11-08</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 10,11,12</span>
+            <span class="tag review">复习 4,5,6,7,8,9</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="4" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 5 天 · 2026-11-09</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 13,14,15</span>
+            <span class="tag review">复习 1,2,3,7,8,9,10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="5" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 6 天 · 2026-11-10</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 16</span>
+            <span class="tag review">复习 4,5,6,10,11,12,13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="6" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 7 天 · 2026-11-11</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 7,8,9,13,14,15,16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="7" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 8 天 · 2026-11-12</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 1,2,3,10,11,12,16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="8" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 9 天 · 2026-11-13</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 4,5,6,13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="9" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 10 天 · 2026-11-14</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 7,8,9,16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="10" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 11 天 · 2026-11-15</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="11" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 12 天 · 2026-11-16</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="12" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 13 天 · 2026-11-17</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="13" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 14 天 · 2026-11-18</span>
+          <span class="day-tags">
+            
+            
+          </span>
+          <button class="rc-btn js-day-check" data-day="14" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 15 天 · 2026-11-19</span>
+          <span class="day-tags">
+            
+            
+          </span>
+          <button class="rc-btn js-day-check" data-day="15" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 16 天 · 2026-11-20</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 1,2,3</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="16" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 17 天 · 2026-11-21</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 4,5,6</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="17" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 18 天 · 2026-11-22</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 7,8,9</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="18" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 19 天 · 2026-11-23</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="19" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 20 天 · 2026-11-24</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 13,14,15</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="20" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 21 天 · 2026-11-25</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="21" type="button">完成</button>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+
+  <!-- 统计 -->
+  <div class="tab-panel" id="tab-stats" data-label="统计">
+    <div class="stat-grid">
+      <div class="stat"><b>817</b><span>英文词数</span></div>
+      <div class="stat"><b>23</b><span>段落</span></div>
+      <div class="stat"><b>20</b><span>生词</span></div>
+      <div class="stat"><b>8</b><span>长难句</span></div>
+      <div class="stat"><b>8</b><span>结构部分</span></div>
+      <div class="stat"><b>16</b><span>背诵块</span></div>
+      <div class="stat"><b>12988</b><span>Tokens</span></div>
+      <div class="stat"><b>¥0.0201</b><span>本次费用</span></div>
+      <div class="stat"><b>1m 5s</b><span>分析耗时</span></div>
+    </div>
+    <section class="card" style="margin-top:14px">
+      <h2 class="section">分阶段用量</h2>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>阶段</th><th>输入</th><th>输出</th><th>费用</th><th>结束原因</th></tr></thead>
+          <tbody>
+          
+            <tr>
+              <td>core</td>
+              <td>1995</td>
+              <td>2410</td>
+              <td>¥0.0068</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:1</td>
+              <td>759</td>
+              <td>441</td>
+              <td>¥0.0016</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:2</td>
+              <td>361</td>
+              <td>98</td>
+              <td>¥0.0006</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:3</td>
+              <td>960</td>
+              <td>629</td>
+              <td>¥0.0022</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>language</td>
+              <td>1779</td>
+              <td>3556</td>
+              <td>¥0.0089</td>
+              <td>stop</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<div id="tip"></div>
+
+<script>
+(function () {
+  var VOCAB = {"v1": {"word": "phantom", "note": "幽灵；幻影。标题中比喻两种可能冲击市场的风险，像幽灵一样萦绕。", "difficulty": "★★☆", "para": 1}, "v2": {"word": "spectre", "note": "幽灵；恐怖之物。英式拼写，美式为 specter。常比喻令人担忧的潜在威胁。", "difficulty": "★★☆", "para": 5}, "v3": {"word": "stalk", "note": "悄悄跟踪；萦绕。此处拟人化，表示两种风险笼罩市场。", "difficulty": "★★☆", "para": 5}, "v4": {"word": "surging", "note": "飙升的；急剧上升的。常与 prices, yields, demand 等搭配。", "difficulty": "★☆☆", "para": 5}, "v5": {"word": "shaky", "note": "不稳固的；摇摇欲坠的。常形容经济、财政、信心等。", "difficulty": "★☆☆", "para": 5}, "v6": {"word": "trigger", "note": "引发；触发。常与 crisis, recession, reaction 等搭配。", "difficulty": "★☆☆", "para": 5}, "v7": {"word": "devastate", "note": "摧毁；严重破坏。此处指对信贷市场造成巨大冲击。", "difficulty": "★★☆", "para": 5}, "v8": {"word": "Ichabod Crane", "note": "伊卡博德·克兰，美国作家华盛顿·欧文小说《睡谷传奇》中的人物，以迷信、胆小著称。此处借指轻信鬼故事的人。", "difficulty": "★★★", "para": 6}, "v9": {"word": "fret about", "note": "为……担忧；烦恼。常与 about/over 搭配。", "difficulty": "★★☆", "para": null}, "v10": {"word": "service their debts", "note": "偿还债务（包括支付利息和本金）。金融经济常用表达。", "difficulty": "★★☆", "para": 7}, "v11": {"word": "neocloud", "note": "新型云服务商，指专门提供 GPU 算力租赁等服务的云计算公司。", "difficulty": "★★★", "para": 8}, "v12": {"word": "interlinked", "note": "相互关联的；相互联系的。常形容金融网络、系统等。", "difficulty": "★★☆", "para": 8}, "v13": {"word": "rally", "note": "（债券、股票等）反弹，回升。此处指主权债券价格回升、收益率下降。", "difficulty": "★★☆", "para": 18}, "v14": {"word": "flee to the safety of", "note": "逃向安全资产；避险。常指投资者在动荡时转向美国国债等安全资产。", "difficulty": "★★☆", "para": 19}, "v15": {"word": "akin to", "note": "类似于；与……相似。常用于正式文体。", "difficulty": "★★☆", "para": 20}, "v16": {"word": "fiscal malaise", "note": "财政痼疾；财政不适。malaise 指难以名状的不适或问题，常与 economic, fiscal 等搭配。", "difficulty": "★★★", "para": 20}, "v17": {"word": "backstop", "note": "支持；为……提供后盾。金融语境中指提供最后担保或资金支持。", "difficulty": "★★★", "para": 21}, "v18": {"word": "cratering", "note": "暴跌的；急剧下降的。crater 原意“形成坑”，引申为价值暴跌。", "difficulty": "★★☆", "para": 22}, "v19": {"word": "forestall", "note": "预先阻止；防患于未然。常与 crisis, problems 等搭配。", "difficulty": "★★☆", "para": 22}, "v20": {"word": "inflate away debt", "note": "通过通货膨胀来稀释债务。指政府利用通胀降低债务实际价值。", "difficulty": "★★★", "para": 23}};
+  var MATERIAL_ID = "2026-11-05_1454_Leaders-Pick-your-phantom_c12243";
+  var DAY_TOTAL = 21;
+
+  // ── Tab 切换 ──
+  var tabBar = document.getElementById('tabBar');
+  function activateTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-tab') === id);
+    });
+    document.querySelectorAll('.tab-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === id);
+    });
+    try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
+    try { localStorage.setItem('economist-tab', id); } catch (e) {}
+  }
+  tabBar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab-btn');
+    if (btn) activateTab(btn.getAttribute('data-tab'));
+  });
+  var initialTab = location.hash.slice(1);
+  if (!initialTab) { try { initialTab = localStorage.getItem('economist-tab'); } catch (e) {} }
+  if (!initialTab || !document.getElementById(initialTab)) initialTab = 'tab-summary';
+  activateTab(initialTab);
+
+  // ── 定位到段落并高亮 ──
+  function locatePara(index, vid) {
+    if (!index) return;
+    activateTab('tab-translation');
+    var card = document.getElementById('para-' + index);
+    if (!card) return;
+    card.classList.remove('zh-off');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('flash');
+    var hit = vid ? card.querySelector('[data-vid="' + vid + '"]') : null;
+    if (hit) hit.classList.add('hit');
+    setTimeout(function () {
+      card.classList.remove('flash');
+      if (hit) hit.classList.remove('hit');
+    }, 2000);
+  }
+  document.querySelectorAll('.vocab-row[data-para]').forEach(function (row) {
+    row.addEventListener('click', function () {
+      locatePara(row.getAttribute('data-para'), row.getAttribute('data-vid'));
+    });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+    });
+  });
+  document.querySelectorAll('.ls-card[data-para], .fact-row[data-para]').forEach(function (el) {
+    el.addEventListener('click', function () { locatePara(el.getAttribute('data-para'), null); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  // ── 译文开关 ──
+  var hideAll = false;
+  var toggleAll = document.getElementById('toggleAllZh');
+  toggleAll.addEventListener('click', function () {
+    hideAll = !hideAll;
+    document.querySelectorAll('.para-card').forEach(function (c) {
+      c.classList.toggle('zh-off', hideAll);
+    });
+    toggleAll.textContent = hideAll ? '显示译文' : '隐藏译文';
+  });
+  document.querySelectorAll('.js-toggle-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.para-card').classList.toggle('zh-off');
+    });
+  });
+
+  // ── 生词 tooltip ──
+  var tip = document.getElementById('tip');
+  function hideTip() { tip.style.display = 'none'; }
+  function showTip(x, y, info) {
+    tip.innerHTML = '<div class="tip-word"></div><div class="tip-stars"></div><div class="tip-note"></div>';
+    tip.querySelector('.tip-word').textContent = info.word || '';
+    tip.querySelector('.tip-stars').textContent = info.difficulty || '';
+    tip.querySelector('.tip-note').textContent = info.note || '';
+    tip.style.display = 'block';
+    var r = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, x - r.width / 2), window.innerWidth - r.width - 8);
+    var top = y + 14;
+    if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+    tip.style.left = left + 'px';
+    tip.style.top = Math.max(8, top) + 'px';
+  }
+  document.querySelectorAll('.para-en').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var span = e.target.closest('.w');
+      if (!span) return;
+      var info = VOCAB[span.getAttribute('data-vid')];
+      if (!info) return;
+      e.stopPropagation();
+      showTip(e.clientX, e.clientY, info);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('#tip') && !e.target.closest('.w')) hideTip();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
+  window.addEventListener('scroll', hideTip, { passive: true });
+
+  // ── 背诵：翻译展开 / 遮住自测 ──
+  document.querySelectorAll('.js-toggle-chunk-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = b.closest('.rc-chunk');
+      card.classList.toggle('zh-on');
+      b.textContent = card.classList.contains('zh-on') ? '隐藏翻译' : '显示翻译';
+    });
+  });
+  document.querySelectorAll('.js-blank').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.rc-chunk').classList.toggle('blanked');
+    });
+  });
+
+  // ── 每日打卡（localStorage）──
+  var STORE_KEY = 'economist-recite-' + MATERIAL_ID;
+  function loadDone() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveDone(arr) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function renderProgress() {
+    var done = loadDone();
+    var pct = DAY_TOTAL ? Math.round(done.length / DAY_TOTAL * 100) : 0;
+    var fill = document.getElementById('progressFill');
+    var text = document.getElementById('progressText');
+    if (fill) fill.style.width = pct + '%';
+    if (text) text.textContent = done.length + ' / ' + DAY_TOTAL + ' 天';
+    document.querySelectorAll('.js-day-check').forEach(function (b) {
+      var on = done.indexOf(parseInt(b.getAttribute('data-day'), 10)) !== -1;
+      b.classList.toggle('done', on);
+      b.textContent = on ? '已完成' : '完成';
+    });
+  }
+  document.querySelectorAll('.js-day-check').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var day = parseInt(b.getAttribute('data-day'), 10);
+      var done = loadDone();
+      var i = done.indexOf(day);
+      if (i === -1) done.push(day); else done.splice(i, 1);
+      saveDone(done);
+      renderProgress();
+    });
+  });
+  renderProgress();
+})();
+</script>
+</body>
+</html>

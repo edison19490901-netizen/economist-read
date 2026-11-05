@@ -1,0 +1,1441 @@
+{
+  "meta": {
+    "id": "2026-11-05_1459_Leaders-Pick-your-phantom_c12243",
+    "title": "Leaders | Pick your phantom",
+    "source": "file",
+    "url": null,
+    "language": "en",
+    "created": "2026-11-05T15:00:01",
+    "model": "deepseek-chat",
+    "word_count": 817,
+    "paragraph_count": 23,
+    "truncated": false,
+    "duration_seconds": 29.5
+  },
+  "summary": {
+    "zh_points": [
+      "文章指出金融市场面临两大风险：AI 热潮退潮和主权债务危机，但两者同时爆发的可能性很低。",
+      "近期市场更担心 AI 泡沫破裂，因为 CoreWeave 等数据中心相关债券收益率飙升、股价大跌，引发对 AI 收入不及预期的忧虑。",
+      "若 AI 泡沫破裂，资金会涌向国债，收益率下降，央行降息，反而缓解债务压力；只有类似 2007-09 年全球金融危机的深度衰退才会让两大风险叠加。",
+      "作者认为当前 AI 脆弱性更像 2000 年互联网泡沫，而非 2008 年金融危机，因为金融关联更透明、银行更稳健、英伟达现金充裕。",
+      "相比之下，若高利率引爆主权债务危机，后果更严重：可能动摇美元避险地位、引发政治动荡甚至通胀赖账。",
+      "因此《经济学人》目前更担心主权债务风险，认为 AI 泡沫破裂的冲击相对可控。"
+    ],
+    "en_points": [
+      "Financial markets face two spectres: an AI boom bust and a sovereign-debt crisis, but they are unlikely to strike simultaneously.",
+      "Recently, fears of an AI downturn have dominated, as CoreWeave's bonds yield 15% and its shares have fallen by about a third in a month.",
+      "An AI crash would push investors into Treasuries, lower yields and prompt central banks to cut rates, easing debt burdens.",
+      "Only a deep recession akin to the 2007-09 GFC would cause both risks to collide, but such a crash is not expected.",
+      "Today's AI vulnerabilities resemble the dotcom bubble more than the GFC, given better-understood interlinkages, safer banks and Nvidia's cash buffer.",
+      "A sovereign-debt blow-up would be graver, threatening the dollar's haven status and political stability, so The Economist is more worried about public debt."
+    ]
+  },
+  "paragraphs": [
+    {
+      "index": 1,
+      "en": "Leaders | Pick your phantom",
+      "zh": "领袖 | 选择你的幽灵"
+    },
+    {
+      "index": 2,
+      "en": "Either AI or public debt could crash markets. Butprobably not both",
+      "zh": "人工智能或公共债务都可能让市场崩溃。但大概不会同时发生"
+    },
+    {
+      "index": 3,
+      "en": "If AI stocks collapse, bond yields will fall",
+      "zh": "如果人工智能股票暴跌，债券收益率将下降"
+    },
+    {
+      "index": 4,
+      "en": "Oct 22nd 2026",
+      "zh": "2026年10月22日"
+    },
+    {
+      "index": 5,
+      "en": "Two SPECTRES stalk financial markets. One is the fear that surging bondyields will make the rich world’s shaky public finances unsustainable,triggering a nasty fiscal crisis. The other is the worry that the revenues fromartificial intelligence needed to keep the data-centre boom going will fail toarrive. As we report, that would devastate credit markets and cause a big fallin stocks, too.",
+      "zh": "两个幽灵在金融市场游荡。一个是担心飙升的债券收益率将使富裕世界摇摇欲坠的公共财政不可持续，引发一场严重的财政危机。另一个是担心维持数据中心繁荣所需的人工智能收入将无法到位。正如我们所报道的，这将摧毁信贷市场，并导致股市大幅下跌。"
+    },
+    {
+      "index": 6,
+      "en": "The good news is that only an Ichabod Crane would think that both thesescenarios could strike at once. Instead, investors must decide which story isscarier. For now, The Economist is more worried about sovereign debt.",
+      "zh": "好消息是，只有伊卡博德·克莱恩才会认为这两种情景会同时发生。相反，投资者必须决定哪个故事更可怕。目前，《经济学人》更担心主权债务。"
+    },
+    {
+      "index": 7,
+      "en": "For most of the year, concerns about governments have dominated. Betweenthe end of February and the start of October, the yield on 30-year USTreasuries rose by a full percentage point. The Iran war has sent inflation upand forced central banks to raise interest rates. Strong economic growth andthe rush to build data centres have caused a scramble for capital in whichgovernments have had to compete with the private sector. In Japan, Britainand especially France, investors have fretted about the ability ofgovernments to service their debts.",
+      "zh": "今年大部分时间，对政府的担忧一直占主导地位。从2月底到10月初，30年期美国国债收益率上升了整整一个百分点。伊朗战争推高了通胀，并迫使央行加息。强劲的经济增长和建设数据中心的热潮引发了对资本的争夺，政府不得不与私营部门竞争。在日本、英国，尤其是法国，投资者一直担心政府偿还债务的能力。"
+    },
+    {
+      "index": 8,
+      "en": "In recent weeks, though, the prospect of an end to the AI boom has scaredthe markets more. The five-year bonds of CoreWeave, a “neocloud” thatrents out data centres, trade at a 15% yield, up from 10% in July. Thecompany’s share price has fallen by about a third in the past month. Theslowing revenue growth of Anthropic, an AI-model provider, has investorsworried that the cash CoreWeave and its peers need may not arrive, or atleast not quickly enough to pay their creditors. Interlinked financing meansthat pain could spread quickly, through both the ai supply chain and theprivate-credit and insurance firms that hold a lot of data-centre debt.",
+      "zh": "然而最近几周，人工智能繁荣可能结束的前景让市场更加恐慌。出租数据中心的“新云”公司CoreWeave的五年期债券收益率为15%，高于7月份的10%。该公司股价在过去一个月下跌了约三分之一。人工智能模型提供商Anthropic的收入增长放缓，让投资者担心CoreWeave及其同行所需的现金可能无法到位，或者至少不够快，无法偿还债权人。相互关联的融资意味着痛苦可能迅速蔓延，通过人工智能供应链以及持有大量数据中心债务的私人信贷和保险公司传播。"
+    },
+    {
+      "index": 9,
+      "en": "CoreWeave five-year CDS spread",
+      "zh": "CoreWeave五年期信用违约互换利差"
+    },
+    {
+      "index": 10,
+      "en": "2026, basis points",
+      "zh": "2026年，基点"
+    },
+    {
+      "index": 11,
+      "en": "1,200",
+      "zh": "1,200"
+    },
+    {
+      "index": 12,
+      "en": "1,000",
+      "zh": "1,000"
+    },
+    {
+      "index": 13,
+      "en": "800",
+      "zh": "800"
+    },
+    {
+      "index": 14,
+      "en": "600",
+      "zh": "600"
+    },
+    {
+      "index": 15,
+      "en": "400",
+      "zh": "400"
+    },
+    {
+      "index": 16,
+      "en": "FMAM",
+      "zh": "FMAM"
+    },
+    {
+      "index": 17,
+      "en": "JJAs0Source: Bloomberg",
+      "zh": "JJAs0来源：彭博社"
+    },
+    {
+      "index": 18,
+      "en": "As a result, many sovereign bonds have rallied. There has been little relieffor France, where riots are worsening a political crisis, or Britain, where anupcoming budget makes investors nervous. But yields on ten-year Treasuries",
+      "zh": "因此，许多主权债券出现反弹。法国几乎没有得到缓解，骚乱正在加剧政治危机；英国也没有缓解，即将公布的预算让投资者感到紧张。但十年期美国国债收益率"
+    },
+    {
+      "index": 19,
+      "en": "are down by a fifth of a point. Investors usually flee to the safety ofAmerican bonds in a downturn. Everywhere else, as data-centre investmentslowed, an AI crash would ease the scramble for capital. And it would leadcentral banks to lower interest rates to support growth, thereby making debtseasier to service.",
+      "zh": "下降了五分之一个百分点。在经济低迷时期，投资者通常会逃向安全的美国债券。在其他所有地方，随着数据中心投资放缓，人工智能崩溃将缓解对资本的争夺。而且这将导致央行降低利率以支持增长，从而使债务更容易偿还。"
+    },
+    {
+      "index": 20,
+      "en": "Only in a big crash akin to the global financial crisis (GFC) of 2007-09would the two risks collide. Governments are already sufficiently in the redthat a deep recession would, by collapsing tax revenues and increasingwelfare spending, make budget deficits look truly terrifying. Long-termbond yields might rise even as short-term interest rates fell—a nastysymptom of fiscal malaise that sometimes strikes emerging markets. It didnot happen during the GFC, but the starting-point for debt and deficits todayis higher.",
+      "zh": "只有在类似于2007-09年全球金融危机（GFC）的大崩溃中，这两种风险才会发生碰撞。各国政府已经深陷赤字，深度衰退将通过税收收入崩溃和福利支出增加，使预算赤字看起来真正可怕。长期债券收益率可能上升，即使短期利率下降——这是财政不适的恶劣症状，有时会袭击新兴市场。在全球金融危机期间并未发生这种情况，但今天债务和赤字的起点更高。"
+    },
+    {
+      "index": 21,
+      "en": "Thankfully, there is no reason to expect such a deep crash. True, the historyof finance shows that useful new technologies often bring about a boom andbust, and the web of financing behind AI has become complex. But theindustry’s interlinkages are better understood than the alphabet-soup ofhousing-market securities was in 2007. Banks are safer, too. Though theyare exposed to ai via their lending to private-credit firms, their balance\u0002sheets are less fragile and better monitored. And backstopping much of theindustry is the chipmaker Nvidia, which has an enormous cash pile. Mostimportant, AI assets, though a big slice of many stock indices, are a smallerchunk of household wealth than housing.",
+      "zh": "幸运的是，没有理由预期如此严重的崩溃。诚然，金融历史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互联系比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。"
+    },
+    {
+      "index": 22,
+      "en": "So the best comparison for today’s AI vulnerabilities remains the dotcombubble of the late 1990s. When it burst in 2000, cratering stocks caused onlya mild recession. Bond yields came down, too, and underlying productivitygrowth held up. Such a scenario would hardly solve governments’ long-termbudget problems, but it might forestall them. Many economies outsideAmerica are less exposed to the AI boom than they are to bond yields;growth falling by less than interest rates would make legacy debts a lighterburden. America’s deficit would grow in a recession, but so would theworld’s appetite for Treasuries, because the dollar is the world’s reservecurrency.",
+      "zh": "因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票只导致了轻微的衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这种情况几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将使遗留债务负担更轻。美国的赤字在衰退中会增加，但世界对美国国债的胃口也会增加，因为美元是世界储备货币。"
+    },
+    {
+      "index": 23,
+      "en": "By contrast, if high interest rates triggered a sovereign-debt blow-up theconsequences would be truly grave. If investors lost confidence inTreasuries, it would threaten the dollar’s valuable status as a haven. AsFrance is discovering, trying to close big deficits under duress can lead topolitical instability. Governments may prefer to inflate away debt than to payit down. That could imperil the stability on which all investment depends. Arun on sovereign debt in a big advanced economy could well leave investorswishing that a dotcom-style ai bust was all they had to worry about. ■",
+      "zh": "相比之下，如果高利率引发主权债务危机，后果将真正严重。如果投资者对美国国债失去信心，这将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更愿意通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■"
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "v1",
+      "word": "phantom",
+      "context_sentence": "Leaders | Pick your phantom",
+      "paragraph_index": 1,
+      "difficulty": "★★☆",
+      "chinese_note": "幽灵；幻影。标题中比喻两种可能冲击市场的风险，像幽灵一样萦绕。"
+    },
+    {
+      "id": "v2",
+      "word": "spectre",
+      "context_sentence": "Two SPECTRES stalk financial markets.",
+      "paragraph_index": 5,
+      "difficulty": "★★☆",
+      "chinese_note": "幽灵；恐怖的事物。英式拼写，美式为 specter。常与 haunt/stalk 搭配，表示威胁。"
+    },
+    {
+      "id": "v3",
+      "word": "stalk",
+      "context_sentence": "Two SPECTRES stalk financial markets.",
+      "paragraph_index": 5,
+      "difficulty": "★★☆",
+      "chinese_note": "（幽灵、危险等）潜行，萦绕，威胁。此处形象表达风险笼罩市场。"
+    },
+    {
+      "id": "v4",
+      "word": "surging",
+      "context_sentence": "One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.",
+      "paragraph_index": 5,
+      "difficulty": "★☆☆",
+      "chinese_note": "飙升的；急剧上升的。常修饰 prices, yields, demand 等。"
+    },
+    {
+      "id": "v5",
+      "word": "shaky",
+      "context_sentence": "One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.",
+      "paragraph_index": 5,
+      "difficulty": "★☆☆",
+      "chinese_note": "不稳固的；摇摇欲坠的。常与 finances, foundations, evidence 搭配。"
+    },
+    {
+      "id": "v6",
+      "word": "trigger",
+      "context_sentence": "One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.",
+      "paragraph_index": 5,
+      "difficulty": "★☆☆",
+      "chinese_note": "引发；触发。常与 crisis, reaction, change 搭配。"
+    },
+    {
+      "id": "v7",
+      "word": "devastate",
+      "context_sentence": "As we report, that would devastate credit markets and cause a big fall in stocks, too.",
+      "paragraph_index": 5,
+      "difficulty": "★★☆",
+      "chinese_note": "摧毁；严重破坏。此处指对信贷市场造成毁灭性打击。"
+    },
+    {
+      "id": "v8",
+      "word": "Ichabod Crane",
+      "context_sentence": "The good news is that only an Ichabod Crane would think that both these scenarios could strike at once.",
+      "paragraph_index": 6,
+      "difficulty": "★★★",
+      "chinese_note": "伊卡博德·克兰，美国作家华盛顿·欧文小说《睡谷传奇》中的人物，以胆小怕事著称。此处借指胆小或轻信的人。"
+    },
+    {
+      "id": "v9",
+      "word": "sovereign debt",
+      "context_sentence": "For now, The Economist is more worried about sovereign debt.",
+      "paragraph_index": 6,
+      "difficulty": "★★☆",
+      "chinese_note": "主权债务；政府债务。指一国政府发行的债券。"
+    },
+    {
+      "id": "v10",
+      "word": "scramble for",
+      "context_sentence": "Strong economic growth and the rush to build data centres have caused a scramble for capital in which governments have had to compete with the private sector.",
+      "paragraph_index": 7,
+      "difficulty": "★★☆",
+      "chinese_note": "争夺；抢夺。常与 capital, resources, talent 搭配。"
+    },
+    {
+      "id": "v11",
+      "word": "fret about",
+      "context_sentence": "In Japan, Britain and especially France, investors have fretted about the ability of governments to service their debts.",
+      "paragraph_index": null,
+      "difficulty": "★★☆",
+      "chinese_note": "为……担忧；烦恼。常与 over/about 搭配。"
+    },
+    {
+      "id": "v12",
+      "word": "service their debts",
+      "context_sentence": "In Japan, Britain and especially France, investors have fretted about the ability of governments to service their debts.",
+      "paragraph_index": 7,
+      "difficulty": "★★☆",
+      "chinese_note": "偿还债务（包括支付利息和本金）。service a debt 为固定搭配。"
+    },
+    {
+      "id": "v13",
+      "word": "neocloud",
+      "context_sentence": "The five-year bonds of CoreWeave, a “neocloud” that rents out data centres, trade at a 15% yield, up from 10% in July.",
+      "paragraph_index": 8,
+      "difficulty": "★★★",
+      "chinese_note": "新型云服务商；指专门提供GPU算力租赁的云服务公司，如CoreWeave。"
+    },
+    {
+      "id": "v14",
+      "word": "interlinked financing",
+      "context_sentence": "Interlinked financing means that pain could spread quickly, through both the ai supply chain and the private-credit and insurance firms that hold a lot of data-centre debt.",
+      "paragraph_index": 8,
+      "difficulty": "★★☆",
+      "chinese_note": "相互关联的融资；指金融体系中各方相互借贷、风险交织。"
+    },
+    {
+      "id": "v15",
+      "word": "rallied",
+      "context_sentence": "As a result, many sovereign bonds have rallied.",
+      "paragraph_index": 18,
+      "difficulty": "★★☆",
+      "chinese_note": "（债券、股票等）反弹，回升。此处指国债价格回升、收益率下降。"
+    },
+    {
+      "id": "v16",
+      "word": "fiscal malaise",
+      "context_sentence": "Long-term bond yields might rise even as short-term interest rates fell—a nasty symptom of fiscal malaise that sometimes strikes emerging markets.",
+      "paragraph_index": 20,
+      "difficulty": "★★★",
+      "chinese_note": "财政痼疾；财政状况不佳。malaise 指难以名状的不适或问题。"
+    },
+    {
+      "id": "v17",
+      "word": "backstop",
+      "context_sentence": "And backstopping much of the industry is the chipmaker Nvidia, which has an enormous cash pile.",
+      "paragraph_index": 21,
+      "difficulty": "★★☆",
+      "chinese_note": "支持；为……提供后盾。动词，常指提供财务支持或担保。"
+    },
+    {
+      "id": "v18",
+      "word": "dotcom bubble",
+      "context_sentence": "So the best comparison for today’s AI vulnerabilities remains the dotcom bubble of the late 1990s.",
+      "paragraph_index": null,
+      "difficulty": "★★☆",
+      "chinese_note": "互联网泡沫；指20世纪90年代末科技股泡沫。"
+    },
+    {
+      "id": "v19",
+      "word": "forestall",
+      "context_sentence": "Such a scenario would hardly solve governments’ long-term budget problems, but it might forestall them.",
+      "paragraph_index": 22,
+      "difficulty": "★★★",
+      "chinese_note": "预先阻止；防患于未然。常与 crisis, disaster 搭配。"
+    },
+    {
+      "id": "v20",
+      "word": "inflate away debt",
+      "context_sentence": "Governments may prefer to inflate away debt than to pay it down.",
+      "paragraph_index": 23,
+      "difficulty": "★★★",
+      "chinese_note": "通过通货膨胀稀释债务；指政府用通胀降低债务实际价值。"
+    }
+  ],
+  "long_sentences": [
+    {
+      "id": "s1",
+      "sentence": "One is the fear that surging bond yields will make the rich world’s shaky public finances unsustainable, triggering a nasty fiscal crisis.",
+      "paragraph_index": null,
+      "main_clause": "One is the fear",
+      "subordinate_clauses": [
+        {
+          "text": "that surging bond yields will make the rich world’s shaky public finances unsustainable",
+          "type": "名词性从句",
+          "function": "作 fear 的同位语从句，解释恐惧的内容"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "triggering a nasty fiscal crisis",
+          "type": "分词短语",
+          "modifies": "整个从句所述情况，表示结果"
+        }
+      ],
+      "translation": "其中之一是担心飙升的债券收益率将使富裕国家摇摇欲坠的公共财政变得不可持续，从而引发一场严重的财政危机。",
+      "note": "主干是 One is the fear，后接同位语从句；现在分词 triggering 作结果状语。"
+    },
+    {
+      "id": "s2",
+      "sentence": "The other is the worry that the revenues from artificial intelligence needed to keep the data-centre boom going will fail to arrive.",
+      "paragraph_index": null,
+      "main_clause": "The other is the worry",
+      "subordinate_clauses": [
+        {
+          "text": "that the revenues from artificial intelligence needed to keep the data-centre boom going will fail to arrive",
+          "type": "名词性从句",
+          "function": "作 worry 的同位语从句，说明担忧的内容"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "needed to keep the data-centre boom going",
+          "type": "分词短语",
+          "modifies": "the revenues from artificial intelligence"
+        }
+      ],
+      "translation": "另一个是担心维持数据中心繁荣所需的人工智能收入将无法到位。",
+      "note": "同位语从句中主语 the revenues 后带过去分词修饰语，谓语是 will fail to arrive。"
+    },
+    {
+      "id": "s3",
+      "sentence": "Strong economic growth and the rush to build data centres have caused a scramble for capital in which governments have had to compete with the private sector.",
+      "paragraph_index": null,
+      "main_clause": "Strong economic growth and the rush to build data centres have caused a scramble for capital",
+      "subordinate_clauses": [
+        {
+          "text": "in which governments have had to compete with the private sector",
+          "type": "定语从句",
+          "function": "修饰 a scramble for capital，说明争夺资本的具体情形"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "to build data centres",
+          "type": "不定式短语",
+          "modifies": "the rush"
+        }
+      ],
+      "translation": "强劲的经济增长和建设数据中心的热潮引发了对资本的争夺，各国政府不得不与私营部门竞争。",
+      "note": "主句是主谓宾结构，in which 引导定语从句修饰 scramble。"
+    },
+    {
+      "id": "s4",
+      "sentence": "Interlinked financing means that pain could spread quickly, through both the ai supply chain and the private-credit and insurance firms that hold a lot of data-centre debt.",
+      "paragraph_index": null,
+      "main_clause": "Interlinked financing means that pain could spread quickly",
+      "subordinate_clauses": [
+        {
+          "text": "that pain could spread quickly",
+          "type": "名词性从句",
+          "function": "作 means 的宾语从句"
+        },
+        {
+          "text": "that hold a lot of data-centre debt",
+          "type": "定语从句",
+          "function": "修饰 the private-credit and insurance firms"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "through both the ai supply chain and the private-credit and insurance firms",
+          "type": "介词短语",
+          "modifies": "spread"
+        }
+      ],
+      "translation": "相互关联的融资意味着痛苦可能迅速蔓延，既通过人工智能供应链，也通过持有大量数据中心债务的私人信贷和保险公司。",
+      "note": "宾语从句中又嵌套定语从句，through 短语说明蔓延渠道。"
+    },
+    {
+      "id": "s5",
+      "sentence": "Only in a big crash akin to the global financial crisis (GFC) of 2007-09 would the two risks collide.",
+      "paragraph_index": null,
+      "main_clause": "the two risks would collide",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "Only in a big crash akin to the global financial crisis (GFC) of 2007-09",
+          "type": "介词短语",
+          "modifies": "整个句子，作状语"
+        }
+      ],
+      "translation": "只有在类似于2007-09年全球金融危机（GFC）的大崩盘中，这两种风险才会碰撞。",
+      "note": "Only + 状语置于句首引起部分倒装，would 提到主语前。"
+    },
+    {
+      "id": "s6",
+      "sentence": "Governments are already sufficiently in the red that a deep recession would, by collapsing tax revenues and increasing welfare spending, make budget deficits look truly terrifying.",
+      "paragraph_index": null,
+      "main_clause": "Governments are already sufficiently in the red",
+      "subordinate_clauses": [
+        {
+          "text": "that a deep recession would make budget deficits look truly terrifying",
+          "type": "结果状语从句",
+          "function": "与 sufficiently 呼应，表示程度结果"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "by collapsing tax revenues and increasing welfare spending",
+          "type": "介词短语",
+          "modifies": "would make，表示方式"
+        }
+      ],
+      "translation": "各国政府已经赤字累累，以至于一场深度衰退将通过税收锐减和福利支出增加，使预算赤字看起来真正可怕。",
+      "note": "sufficiently...that 引导结果状语从句，插入 by 短语说明方式。"
+    },
+    {
+      "id": "s7",
+      "sentence": "Though they are exposed to ai via their lending to private-credit firms, their balance-sheets are less fragile and better monitored.",
+      "paragraph_index": null,
+      "main_clause": "their balance-sheets are less fragile and better monitored",
+      "subordinate_clauses": [
+        {
+          "text": "Though they are exposed to ai via their lending to private-credit firms",
+          "type": "让步状语从句",
+          "function": "表示让步"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "via their lending to private-credit firms",
+          "type": "介词短语",
+          "modifies": "are exposed"
+        }
+      ],
+      "translation": "尽管它们通过向私人信贷公司放贷而暴露于人工智能风险，但它们的资产负债表不那么脆弱，且受到更好的监控。",
+      "note": "Though 引导让步从句，主句为并列形容词结构。"
+    },
+    {
+      "id": "s8",
+      "sentence": "Many economies outside America are less exposed to the AI boom than they are to bond yields; growth falling by less than interest rates would make legacy debts a lighter burden.",
+      "paragraph_index": null,
+      "main_clause": "Many economies outside America are less exposed to the AI boom than they are to bond yields",
+      "subordinate_clauses": [
+        {
+          "text": "than they are to bond yields",
+          "type": "比较状语从句",
+          "function": "与 less 呼应，比较暴露程度"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "outside America",
+          "type": "介词短语",
+          "modifies": "Many economies"
+        },
+        {
+          "text": "falling by less than interest rates",
+          "type": "分词短语",
+          "modifies": "growth"
+        }
+      ],
+      "translation": "美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；如果增长下降幅度小于利率下降幅度，遗留债务的负担就会减轻。",
+      "note": "比较结构 less...than...；分号后为独立分句，含独立主格结构 growth falling...。"
+    }
+  ],
+  "deconstruction": {
+    "overview": "文章以'两个幽灵'的比喻开篇，提出AI泡沫与主权债务风险二选一的议题，随后先分析债务担忧的近期表现，再转向AI泡沫的近期恐慌，论证两者同时爆发的条件苛刻，并通过与互联网泡沫和全球金融危机的对比，得出主权债务风险更值得担忧的结论。结构上先分述后对比，最后以条件句强化立场，风格上善用比喻、数据与历史类比。",
+    "sections": [
+      {
+        "title": "引入两个幽灵",
+        "role": "引入",
+        "argument": "金融市场被两种恐惧笼罩：债券收益率飙升引发财政危机，以及AI收入不足以支撑数据中心繁荣。",
+        "evidence": "以'两个幽灵'的比喻开篇，并指出AI收入不及预期会冲击信贷市场和股市。",
+        "technique": "比喻开篇，设置悬念，吸引读者。",
+        "paragraph_indices": [
+          5
+        ]
+      },
+      {
+        "title": "提出核心论点",
+        "role": "提出论点",
+        "argument": "只有像Ichabod Crane那样胆小的人才会认为两种情景会同时发生；投资者需判断哪个故事更可怕，而本刊更担心主权债务。",
+        "evidence": "引用文学形象Ichabod Crane，并直接表明《经济学人》的立场。",
+        "technique": "文学典故与明确表态，增强说服力。",
+        "paragraph_indices": [
+          6
+        ]
+      },
+      {
+        "title": "债务担忧主导市场",
+        "role": "论证",
+        "argument": "今年以来，对政府的担忧主导市场，30年期美债收益率上升整整一个百分点，多国投资者担心政府偿债能力。",
+        "evidence": "列举美债收益率数据、伊朗战争推高通胀、央行加息、资本争夺，以及日本、英国、法国的具体担忧。",
+        "technique": "数据与案例结合，展示债务担忧的普遍性。",
+        "paragraph_indices": [
+          7
+        ]
+      },
+      {
+        "title": "AI泡沫恐慌近期升温",
+        "role": "转折",
+        "argument": "近几周，AI繁荣可能结束的前景更令市场恐慌，CoreWeave债券收益率升至15%，股价一个月跌约三分之一。",
+        "evidence": "CoreWeave五年期债券收益率从7月的10%升至15%，股价下跌三分之一，Anthropic收入增长放缓引发连锁担忧。",
+        "technique": "具体公司数据与因果链分析，突出风险传导。",
+        "paragraph_indices": [
+          8
+        ]
+      },
+      {
+        "title": "AI崩溃反而缓解债务压力",
+        "role": "论证",
+        "argument": "AI崩溃会导致资金逃向美债，收益率下降，央行降息，从而减轻债务偿付压力；只有类似全球金融危机的深度衰退才会让两大风险碰撞。",
+        "evidence": "10年期美债收益率下降0.2个百分点，法国和英国例外；深度衰退会因税收减少和福利支出增加而恶化赤字。",
+        "technique": "对比与条件推演，说明风险互斥的逻辑。",
+        "paragraph_indices": [
+          18,
+          19,
+          20
+        ]
+      },
+      {
+        "title": "AI脆弱性更像互联网泡沫",
+        "role": "例证",
+        "argument": "当前AI脆弱性更像1990年代末的互联网泡沫，而非2008年金融危机，因为金融关联更透明、银行更安全、英伟达现金充裕，且AI资产占家庭财富比例小于房地产。",
+        "evidence": "对比2007年住房抵押证券的复杂性与当前AI融资的可理解性，指出银行资产负债表更稳健，英伟达提供后盾。",
+        "technique": "历史类比与对比分析，降低对AI崩溃的恐慌。",
+        "paragraph_indices": [
+          21,
+          22
+        ]
+      },
+      {
+        "title": "主权债务危机后果更严重",
+        "role": "结论",
+        "argument": "若高利率引爆主权债务危机，后果将非常严重：可能动摇美元避险地位、引发政治动荡、甚至通过通胀赖账，破坏投资所需的稳定。",
+        "evidence": "以法国为例，说明在压力下削减赤字可能导致政治不稳定；投资者可能希望只面对互联网式的AI泡沫破裂。",
+        "technique": "条件句与反事实推理，强化对债务风险的警告。",
+        "paragraph_indices": [
+          23
+        ]
+      }
+    ],
+    "writing_techniques": [
+      {
+        "name": "比喻开篇",
+        "example": "Two SPECTRES stalk financial markets.",
+        "effect": "用'幽灵'形象化两大风险，制造悬念，吸引读者继续阅读。",
+        "paragraph_index": 5
+      },
+      {
+        "name": "文学典故",
+        "example": "only an Ichabod Crane would think that both these scenarios could strike at once",
+        "effect": "借用胆小形象，生动表达'同时发生概率极低'的观点，增加趣味性。",
+        "paragraph_index": 6
+      },
+      {
+        "name": "数据支撑",
+        "example": "the yield on 30-year US Treasuries rose by a full percentage point",
+        "effect": "用具体数据增强论证的可信度，让读者直观感受债务担忧的严重性。",
+        "paragraph_index": 7
+      },
+      {
+        "name": "对比论证",
+        "example": "the industry’s interlinkages are better understood than the alphabet-soup of housing-market securities was in 2007",
+        "effect": "通过对比2007年金融产品的复杂难懂，突出当前AI融资更透明，从而降低恐慌。",
+        "paragraph_index": 21
+      },
+      {
+        "name": "条件句强化",
+        "example": "if high interest rates triggered a sovereign-debt blow-up the consequences would be truly grave",
+        "effect": "用条件句推演最坏情景，强化对主权债务风险的警告，呼应开头立场。",
+        "paragraph_index": 23
+      }
+    ]
+  },
+  "background": {
+    "event_context": "2026年，全球金融市场面临双重不确定性：一方面，AI投资热潮推动数据中心建设，但AI收入增长放缓引发泡沫担忧；另一方面，伊朗战争推高通胀，央行加息，政府债务高企，多国财政面临压力。投资者在AI风险和主权债务风险之间权衡。",
+    "key_facts": [
+      {
+        "fact": "30年期美国国债收益率在2月底至10月初上升了整整一个百分点。",
+        "data": "1 percentage point",
+        "paragraph_index": 7
+      },
+      {
+        "fact": "CoreWeave的五年期债券收益率从7月的10%升至15%。",
+        "data": "15%",
+        "paragraph_index": 8
+      },
+      {
+        "fact": "CoreWeave股价在过去一个月下跌约三分之一。",
+        "data": "about a third",
+        "paragraph_index": 8
+      },
+      {
+        "fact": "10年期美国国债收益率下降了0.2个百分点。",
+        "data": "a fifth of a point",
+        "paragraph_index": 18
+      },
+      {
+        "fact": "全球金融危机发生于2007-09年。",
+        "data": "2007-09",
+        "paragraph_index": 20
+      }
+    ],
+    "author_stance": "作者认为AI泡沫破裂的风险相对可控，更担心主权债务危机，因为后者可能动摇美元地位、引发政治动荡和通胀赖账，后果更严重。",
+    "implications": "对投资者而言，需关注主权债务风险甚于AI泡沫；对政策制定者，应警惕高利率下财政可持续性，避免债务危机引发系统性动荡。"
+  },
+  "practical_application": {
+    "actionable_skills": [
+      {
+        "skill": "风险对比分析",
+        "how_to_apply": "列出两种主要风险，分别评估其触发条件、传导路径和后果严重性，判断哪个更值得担忧。",
+        "example": "在投资组合中，比较AI股票回调与债券收益率飙升对组合的影响，优先对冲主权债务风险。"
+      },
+      {
+        "skill": "历史类比法",
+        "how_to_apply": "寻找与当前情况相似的历史事件，对比关键特征，判断风险程度。",
+        "example": "将当前AI融资结构与2000年互联网泡沫对比，发现银行更稳健、信息更透明，从而避免过度恐慌。"
+      },
+      {
+        "skill": "条件推演",
+        "how_to_apply": "设定极端情景，推演其连锁反应，识别关键变量。",
+        "example": "假设AI收入不及预期，推演信贷市场、股市、央行政策的连锁反应，提前布局防御性资产。"
+      },
+      {
+        "skill": "数据锚定",
+        "how_to_apply": "用具体数据支撑判断，避免模糊印象。",
+        "example": "关注CoreWeave债券收益率和股价变化，作为AI信贷风险的先行指标。"
+      }
+    ],
+    "thinking_models": [
+      {
+        "model": "互斥风险模型",
+        "explanation": "两个风险事件可能因内在逻辑而不会同时发生。",
+        "how_to_use": "当面临多个风险时，分析其触发条件是否互斥，避免过度对冲。"
+      },
+      {
+        "model": "二阶思维",
+        "explanation": "考虑事件发生的连锁反应和间接影响。",
+        "how_to_use": "在评估风险时，不仅看直接冲击，还要看市场参与者的反应和反馈循环。"
+      },
+      {
+        "model": "历史类比模型",
+        "explanation": "通过历史事件类比，理解当前风险的性质。",
+        "how_to_use": "当新事物出现时，寻找相似历史模式，但注意关键差异。"
+      },
+      {
+        "model": "尾部风险模型",
+        "explanation": "关注低概率但高影响的极端事件。",
+        "how_to_use": "在投资决策中，评估极端情景的可能性和后果，做好预案。"
+      }
+    ]
+  },
+  "recitation": {
+    "title_suggested": "Pick your phantom: AI bust or sovereign debt?",
+    "advice": "长句多在分号或破折号处换气，如 P5 的两个恐惧、P20 的 GFC 对比。用关键词串起全文：two spectres → sovereign debt worry → AI boom fear → only one likely → dotcom comparison → sovereign debt worse。背诵时先抓每段主题句，再补细节。",
+    "start_date": "2026-11-05",
+    "intervals": [
+      1,
+      2,
+      4,
+      7,
+      15
+    ],
+    "chunks_per_day": 3,
+    "chunks": [
+      {
+        "index": 1,
+        "text": "Leaders | Pick your phantom Either AI or public debt could crash markets. Butprobably not both If AI stocks collapse, bond yields will fall Oct 22nd 2026 Two SPECTRES stalk financial markets. One is the fear that surging bondyields will make the rich world’s shaky public finances unsustainable,triggering a nasty fiscal crisis.",
+        "hint": "leaders pick your phantom",
+        "translation": "领袖 | 选择你的幽灵 人工智能或公共债务都可能让市场崩溃。但大概不会同时发生 如果人工智能股票暴跌，债券收益率将下降 2026年10月22日 两个幽灵在金融市场游荡。一个是担心飙升的债券收益率将使富裕世界摇摇欲坠的公共财政不可持续，引发一场严重的财政危机。另一个是担心维持数据中心繁荣所需的人工智能收入将无法到位。正如我们所报道的，这将摧毁信贷市场，并导致股市大幅下跌。",
+        "paragraph_start": 1,
+        "paragraph_end": 5
+      },
+      {
+        "index": 2,
+        "text": "The other is the worry that the revenues fromartificial intelligence needed to keep the data-centre boom going will fail toarrive. As we report, that would devastate credit markets and cause a big fallin stocks, too. The good news is that only an Ichabod Crane would think that both thesescenarios could strike at once.",
+        "hint": "the other is the",
+        "translation": "两个幽灵在金融市场游荡。一个是担心飙升的债券收益率将使富裕世界摇摇欲坠的公共财政不可持续，引发一场严重的财政危机。另一个是担心维持数据中心繁荣所需的人工智能收入将无法到位。正如我们所报道的，这将摧毁信贷市场，并导致股市大幅下跌。 好消息是，只有伊卡博德·克莱恩才会认为这两种情景会同时发生。相反，投资者必须决定哪个故事更可怕。目前，《经济学人》更担心主权债务。",
+        "paragraph_start": 5,
+        "paragraph_end": 6
+      },
+      {
+        "index": 3,
+        "text": "Instead, investors must decide which story isscarier. For now, The Economist is more worried about sovereign debt. For most of the year, concerns about governments have dominated. Betweenthe end of February and the start of October, the yield on 30-year USTreasuries rose by a full percentage point.",
+        "hint": "instead investors must decide",
+        "translation": "好消息是，只有伊卡博德·克莱恩才会认为这两种情景会同时发生。相反，投资者必须决定哪个故事更可怕。目前，《经济学人》更担心主权债务。 今年大部分时间，对政府的担忧一直占主导地位。从2月底到10月初，30年期美国国债收益率上升了整整一个百分点。伊朗战争推高了通胀，并迫使央行加息。强劲的经济增长和建设数据中心的热潮引发了对资本的争夺，政府不得不与私营部门竞争。在日本、英国，尤其是法国，投资者一直担心政府偿还债务的能力。",
+        "paragraph_start": 6,
+        "paragraph_end": 7
+      },
+      {
+        "index": 4,
+        "text": "The Iran war has sent inflation upand forced central banks to raise interest rates. Strong economic growth andthe rush to build data centres have caused a scramble for capital in whichgovernments have had to compete with the private sector. In Japan, Britainand especially France, investors have fretted about the ability ofgovernments to service their debts.",
+        "hint": "the iran war has",
+        "translation": "今年大部分时间，对政府的担忧一直占主导地位。从2月底到10月初，30年期美国国债收益率上升了整整一个百分点。伊朗战争推高了通胀，并迫使央行加息。强劲的经济增长和建设数据中心的热潮引发了对资本的争夺，政府不得不与私营部门竞争。在日本、英国，尤其是法国，投资者一直担心政府偿还债务的能力。",
+        "paragraph_start": 7,
+        "paragraph_end": 7
+      },
+      {
+        "index": 5,
+        "text": "In recent weeks, though, the prospect of an end to the AI boom has scaredthe markets more. The five-year bonds of CoreWeave, a “neocloud” thatrents out data centres, trade at a 15% yield, up from 10% in July. Thecompany’s share price has fallen by about a third in the past month.",
+        "hint": "in recent weeks though",
+        "translation": "然而最近几周，人工智能繁荣可能结束的前景让市场更加恐慌。出租数据中心的“新云”公司CoreWeave的五年期债券收益率为15%，高于7月份的10%。该公司股价在过去一个月下跌了约三分之一。人工智能模型提供商Anthropic的收入增长放缓，让投资者担心CoreWeave及其同行所需的现金可能无法到位，或者至少不够快，无法偿还债权人。相互关联的融资意味着痛苦可能迅速蔓延，通过人工智能供应链以及持有大量数据中心债务的私人信贷和保险公司传播。",
+        "paragraph_start": 8,
+        "paragraph_end": 8
+      },
+      {
+        "index": 6,
+        "text": "Theslowing revenue growth of Anthropic, an AI-model provider, has investorsworried that the cash CoreWeave and its peers need may not arrive, or atleast not quickly enough to pay their creditors. Interlinked financing meansthat pain could spread quickly, through both the ai supply chain and theprivate-credit and insurance firms that hold a lot of data-centre debt.",
+        "hint": "theslowing revenue growth of",
+        "translation": "然而最近几周，人工智能繁荣可能结束的前景让市场更加恐慌。出租数据中心的“新云”公司CoreWeave的五年期债券收益率为15%，高于7月份的10%。该公司股价在过去一个月下跌了约三分之一。人工智能模型提供商Anthropic的收入增长放缓，让投资者担心CoreWeave及其同行所需的现金可能无法到位，或者至少不够快，无法偿还债权人。相互关联的融资意味着痛苦可能迅速蔓延，通过人工智能供应链以及持有大量数据中心债务的私人信贷和保险公司传播。",
+        "paragraph_start": 8,
+        "paragraph_end": 8
+      },
+      {
+        "index": 7,
+        "text": "CoreWeave five-year CDS spread 2026, basis points 1,200 1,000 800 600 400 FMAM JJAs0Source: Bloomberg As a result, many sovereign bonds have rallied. There has been little relieffor France, where riots are worsening a political crisis, or Britain, where anupcoming budget makes investors nervous.",
+        "hint": "coreweave five year cds",
+        "translation": "CoreWeave五年期信用违约互换利差 2026年，基点 1,200 1,000 800 600 400 FMAM JJAs0来源：彭博社 因此，许多主权债券出现反弹。法国几乎没有得到缓解，骚乱正在加剧政治危机；英国也没有缓解，即将公布的预算让投资者感到紧张。但十年期美国国债收益率",
+        "paragraph_start": 9,
+        "paragraph_end": 18
+      },
+      {
+        "index": 8,
+        "text": "But yields on ten-year Treasuries are down by a fifth of a point. Investors usually flee to the safety ofAmerican bonds in a downturn. Everywhere else, as data-centre investmentslowed, an AI crash would ease the scramble for capital. And it would leadcentral banks to lower interest rates to support growth, thereby making debtseasier to service.",
+        "hint": "but yields on ten",
+        "translation": "因此，许多主权债券出现反弹。法国几乎没有得到缓解，骚乱正在加剧政治危机；英国也没有缓解，即将公布的预算让投资者感到紧张。但十年期美国国债收益率 下降了五分之一个百分点。在经济低迷时期，投资者通常会逃向安全的美国债券。在其他所有地方，随着数据中心投资放缓，人工智能崩溃将缓解对资本的争夺。而且这将导致央行降低利率以支持增长，从而使债务更容易偿还。",
+        "paragraph_start": 18,
+        "paragraph_end": 19
+      },
+      {
+        "index": 9,
+        "text": "Only in a big crash akin to the global financial crisis (GFC) of 2007-09would the two risks collide. Governments are already sufficiently in the redthat a deep recession would, by collapsing tax revenues and increasingwelfare spending, make budget deficits look truly terrifying. Long-termbond yields might rise even as short-term interest rates fell—a nastysymptom of fiscal malaise that sometimes strikes emerging markets.",
+        "hint": "only in a big",
+        "translation": "只有在类似于2007-09年全球金融危机（GFC）的大崩溃中，这两种风险才会发生碰撞。各国政府已经深陷赤字，深度衰退将通过税收收入崩溃和福利支出增加，使预算赤字看起来真正可怕。长期债券收益率可能上升，即使短期利率下降——这是财政不适的恶劣症状，有时会袭击新兴市场。在全球金融危机期间并未发生这种情况，但今天债务和赤字的起点更高。",
+        "paragraph_start": 20,
+        "paragraph_end": 20
+      },
+      {
+        "index": 10,
+        "text": "It didnot happen during the GFC, but the starting-point for debt and deficits todayis higher. Thankfully, there is no reason to expect such a deep crash. True, the historyof finance shows that useful new technologies often bring about a boom andbust, and the web of financing behind AI has become complex.",
+        "hint": "it didnot happen during",
+        "translation": "只有在类似于2007-09年全球金融危机（GFC）的大崩溃中，这两种风险才会发生碰撞。各国政府已经深陷赤字，深度衰退将通过税收收入崩溃和福利支出增加，使预算赤字看起来真正可怕。长期债券收益率可能上升，即使短期利率下降——这是财政不适的恶劣症状，有时会袭击新兴市场。在全球金融危机期间并未发生这种情况，但今天债务和赤字的起点更高。 幸运的是，没有理由预期如此严重的崩溃。诚然，金融历史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互联系比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。",
+        "paragraph_start": 20,
+        "paragraph_end": 21
+      },
+      {
+        "index": 11,
+        "text": "But theindustry’s interlinkages are better understood than the alphabet-soup ofhousing-market securities was in 2007. Banks are safer, too. Though theyare exposed to ai via their lending to private-credit firms, their balance\u0002sheets are less fragile and better monitored. And backstopping much of theindustry is the chipmaker Nvidia, which has an enormous cash pile.",
+        "hint": "but theindustry s interlinkages",
+        "translation": "幸运的是，没有理由预期如此严重的崩溃。诚然，金融历史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互联系比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。",
+        "paragraph_start": 21,
+        "paragraph_end": 21
+      },
+      {
+        "index": 12,
+        "text": "Mostimportant, AI assets, though a big slice of many stock indices, are a smallerchunk of household wealth than housing. So the best comparison for today’s AI vulnerabilities remains the dotcombubble of the late 1990s. When it burst in 2000, cratering stocks caused onlya mild recession.",
+        "hint": "mostimportant ai assets though",
+        "translation": "幸运的是，没有理由预期如此严重的崩溃。诚然，金融历史表明，有用的新技术往往带来繁荣与萧条，而人工智能背后的融资网络已变得复杂。但该行业的相互联系比2007年字母汤般的住房市场证券更容易理解。银行也更安全。尽管它们通过向私人信贷公司贷款而暴露于人工智能，但其资产负债表不那么脆弱，且受到更好的监控。而支撑该行业大部分的是芯片制造商英伟达，它拥有巨额现金储备。最重要的是，人工智能资产虽然在许多股票指数中占很大一部分，但在家庭财富中所占比例小于房地产。 因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票只导致了轻微的衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这种情况几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将使遗留债务负担更轻。美国的赤字在衰退中会增加，但世界对美国国债的胃口也会增加，因为美元是世界储备货币。",
+        "paragraph_start": 21,
+        "paragraph_end": 22
+      },
+      {
+        "index": 13,
+        "text": "Bond yields came down, too, and underlying productivitygrowth held up. Such a scenario would hardly solve governments’ long-termbudget problems, but it might forestall them. Many economies outsideAmerica are less exposed to the AI boom than they are to bond yields;growth falling by less than interest rates would make legacy debts a lighterburden.",
+        "hint": "bond yields came down",
+        "translation": "因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票只导致了轻微的衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这种情况几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将使遗留债务负担更轻。美国的赤字在衰退中会增加，但世界对美国国债的胃口也会增加，因为美元是世界储备货币。",
+        "paragraph_start": 22,
+        "paragraph_end": 22
+      },
+      {
+        "index": 14,
+        "text": "America’s deficit would grow in a recession, but so would theworld’s appetite for Treasuries, because the dollar is the world’s reservecurrency. By contrast, if high interest rates triggered a sovereign-debt blow-up theconsequences would be truly grave. If investors lost confidence inTreasuries, it would threaten the dollar’s valuable status as a haven.",
+        "hint": "america s deficit would",
+        "translation": "因此，对当今人工智能脆弱性的最佳比较仍然是1990年代末的互联网泡沫。当它在2000年破裂时，暴跌的股票只导致了轻微的衰退。债券收益率也下降了，潜在的生产率增长保持稳定。这种情况几乎无法解决政府的长期预算问题，但可能会预防它们。美国以外的许多经济体对人工智能繁荣的暴露程度低于对债券收益率的暴露程度；增长下降幅度小于利率下降幅度将使遗留债务负担更轻。美国的赤字在衰退中会增加，但世界对美国国债的胃口也会增加，因为美元是世界储备货币。 相比之下，如果高利率引发主权债务危机，后果将真正严重。如果投资者对美国国债失去信心，这将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更愿意通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■",
+        "paragraph_start": 22,
+        "paragraph_end": 23
+      },
+      {
+        "index": 15,
+        "text": "AsFrance is discovering, trying to close big deficits under duress can lead topolitical instability. Governments may prefer to inflate away debt than to payit down. That could imperil the stability on which all investment depends. Arun on sovereign debt in a big advanced economy could well leave investorswishing that a dotcom-style ai bust was all they had to worry about.",
+        "hint": "asfrance is discovering trying",
+        "translation": "相比之下，如果高利率引发主权债务危机，后果将真正严重。如果投资者对美国国债失去信心，这将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更愿意通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■",
+        "paragraph_start": 23,
+        "paragraph_end": 23
+      },
+      {
+        "index": 16,
+        "text": "■",
+        "hint": "",
+        "translation": "相比之下，如果高利率引发主权债务危机，后果将真正严重。如果投资者对美国国债失去信心，这将威胁美元作为避风港的宝贵地位。正如法国正在发现的那样，在胁迫下试图消除巨额赤字可能导致政治不稳定。政府可能更愿意通过通货膨胀来稀释债务，而不是偿还债务。这可能危及所有投资所依赖的稳定。一个大发达经济体发生主权债务挤兑，很可能让投资者希望他们只需担心互联网泡沫式的人工智能崩溃就好了。■",
+        "paragraph_start": 23,
+        "paragraph_end": 23
+      }
+    ],
+    "schedule": {
+      "total_days": 21,
+      "per_chunk": [
+        {
+          "index": 1,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 2,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 3,
+          "learn_day": 1,
+          "learn_date": "2026-11-05",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-09",
+            "2026-11-12",
+            "2026-11-20"
+          ]
+        },
+        {
+          "index": 4,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 5,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 6,
+          "learn_day": 2,
+          "learn_date": "2026-11-06",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-13",
+            "2026-11-21"
+          ]
+        },
+        {
+          "index": 7,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 8,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 9,
+          "learn_day": 3,
+          "learn_date": "2026-11-07",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-08",
+            "2026-11-09",
+            "2026-11-11",
+            "2026-11-14",
+            "2026-11-22"
+          ]
+        },
+        {
+          "index": 10,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 11,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 12,
+          "learn_day": 4,
+          "learn_date": "2026-11-08",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-09",
+            "2026-11-10",
+            "2026-11-12",
+            "2026-11-15",
+            "2026-11-23"
+          ]
+        },
+        {
+          "index": 13,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 14,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 15,
+          "learn_day": 5,
+          "learn_date": "2026-11-09",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-13",
+            "2026-11-16",
+            "2026-11-24"
+          ]
+        },
+        {
+          "index": 16,
+          "learn_day": 6,
+          "learn_date": "2026-11-10",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-14",
+            "2026-11-17",
+            "2026-11-25"
+          ]
+        }
+      ],
+      "daily": [
+        {
+          "day": 1,
+          "date": "2026-11-05",
+          "learn": [
+            1,
+            2,
+            3
+          ],
+          "review": []
+        },
+        {
+          "day": 2,
+          "date": "2026-11-06",
+          "learn": [
+            4,
+            5,
+            6
+          ],
+          "review": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-11-07",
+          "learn": [
+            7,
+            8,
+            9
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-11-08",
+          "learn": [
+            10,
+            11,
+            12
+          ],
+          "review": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-11-09",
+          "learn": [
+            13,
+            14,
+            15
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-10",
+          "learn": [
+            16
+          ],
+          "review": [
+            4,
+            5,
+            6,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-11",
+          "learn": [],
+          "review": [
+            7,
+            8,
+            9,
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-12",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3,
+            10,
+            11,
+            12,
+            16
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-11-13",
+          "learn": [],
+          "review": [
+            4,
+            5,
+            6,
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-11-14",
+          "learn": [],
+          "review": [
+            7,
+            8,
+            9,
+            16
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-11-15",
+          "learn": [],
+          "review": [
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-11-16",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-11-17",
+          "learn": [],
+          "review": [
+            16
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-11-18",
+          "learn": [],
+          "review": []
+        },
+        {
+          "day": 15,
+          "date": "2026-11-19",
+          "learn": [],
+          "review": []
+        },
+        {
+          "day": 16,
+          "date": "2026-11-20",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "day": 17,
+          "date": "2026-11-21",
+          "learn": [],
+          "review": [
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "day": 18,
+          "date": "2026-11-22",
+          "learn": [],
+          "review": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "day": 19,
+          "date": "2026-11-23",
+          "learn": [],
+          "review": [
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 20,
+          "date": "2026-11-24",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15
+          ]
+        },
+        {
+          "day": 21,
+          "date": "2026-11-25",
+          "learn": [],
+          "review": [
+            16
+          ]
+        }
+      ]
+    }
+  },
+  "usage": {
+    "calls": [
+      {
+        "stage": "core",
+        "prompt_tokens": 1995,
+        "completion_tokens": 2721,
+        "total_tokens": 4716,
+        "cost_cny": 0.007437,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:1",
+        "prompt_tokens": 759,
+        "completion_tokens": 438,
+        "total_tokens": 1197,
+        "cost_cny": 0.001635,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:2",
+        "prompt_tokens": 361,
+        "completion_tokens": 96,
+        "total_tokens": 457,
+        "cost_cny": 0.000553,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:3",
+        "prompt_tokens": 960,
+        "completion_tokens": 618,
+        "total_tokens": 1578,
+        "cost_cny": 0.002196,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "language",
+        "prompt_tokens": 1779,
+        "completion_tokens": 3512,
+        "total_tokens": 5291,
+        "cost_cny": 0.008803,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "recitation",
+        "prompt_tokens": 1660,
+        "completion_tokens": 3070,
+        "total_tokens": 4730,
+        "cost_cny": 0.0078,
+        "finish_reason": "stop"
+      }
+    ],
+    "prompt_tokens": 7514,
+    "completion_tokens": 10455,
+    "total_tokens": 17969,
+    "cost_cny": 0.028424
+  },
+  "warnings": [
+    "背诵分块与原文覆盖不一致，已按段落重建。"
+  ]
+}
