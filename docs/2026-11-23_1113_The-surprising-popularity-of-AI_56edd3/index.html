@@ -1,0 +1,2663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e3120b">
+<title>The surprising popularity of AI — 经济学人精读</title>
+<link rel="icon" href="../icons/favicon-32.png" sizes="32x32">
+<link rel="icon" href="../icons/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="apple-mobile-web-app-title" content="精读">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+  :root{
+    --accent:#e3120b; --accent-soft:#fdecea; --ink:#12263a; --muted:#6b7280;
+    --bg:#f4f1ec; --card:#ffffff; --line:#e6e0d8; --soft:#fbf8f3;
+    --gold:#b8860b; --green:#0f766e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:0 14px 64px}
+  .muted{color:var(--muted)}
+  .small{font-size:12px}
+  .spacer{flex:1}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#12263a 0%,#1d3a52 60%,#2a4a63 100%);
+    color:#fff;border-radius:0 0 20px 20px;padding:30px 24px 24px;margin:0 -14px 14px;
+    box-shadow:0 8px 30px rgba(18,38,58,.18);
+  }
+  .kicker{font-size:10px;letter-spacing:.22em;color:#f2b8b5;font-weight:700}
+  .hero h1{font-size:25px;line-height:1.32;margin:8px 0 14px;font-weight:800;letter-spacing:-.01em}
+  .meta-chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:3px 9px;border-radius:999px;font-size:11px;color:#e8eef5}
+  .meta-chips.light .chip{background:var(--soft);border-color:var(--line);color:var(--ink)}
+
+  .notice{background:#fff8e6;border:1px solid #f0d9a8;color:#7a4a00;border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+  .notice.warn{background:#fdf2f2;border-color:#f3c2c0;color:#8a1f1a}
+
+  /* Tabs */
+  .tab-bar{
+    position:sticky;top:0;z-index:30;display:flex;gap:4px;overflow-x:auto;
+    background:rgba(244,241,236,.96);backdrop-filter:blur(10px);
+    padding:8px 2px;margin-bottom:4px;border-bottom:1px solid var(--line);scrollbar-width:none;
+  }
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{
+    white-space:nowrap;border:0;background:transparent;color:var(--muted);
+    padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;
+    transition:background .15s,color .15s;font-family:inherit;
+  }
+  .tab-btn:hover{background:#e9e4dc;color:var(--ink)}
+  .tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(227,18,11,.25)}
+
+  /* scroll-margin 让 #tab-xxx 深链跳转时不被 50px 的 sticky 导航盖住 */
+  .tab-panel{display:none;padding-top:14px;scroll-margin-top:62px}
+  .tab-panel.active{display:block}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(18,38,58,.04)}
+  h2.section{font-size:16px;margin-bottom:12px;color:var(--ink);display:flex;align-items:baseline;gap:8px}
+  h2.section .count{font-size:12px;font-weight:500;color:var(--muted)}
+  .prose{font-size:14.5px;line-height:1.85;color:#374151}
+
+  /* Summary */
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .point-list{list-style:none}
+  .point-list li{position:relative;padding:9px 0 9px 20px;border-bottom:1px dashed var(--line);font-size:14px;line-height:1.7}
+  .point-list li:last-child{border-bottom:0}
+  .point-list li:before{content:"";position:absolute;left:0;top:16px;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+  /* Translation */
+  .translation-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .btn{
+    border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;
+    padding:7px 12px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-ghost{padding:3px 8px;font-size:11px;color:var(--muted)}
+  .para-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;transition:box-shadow .2s,border-color .2s}
+  .para-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .para-no{font-size:11px;font-weight:800;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+  .para-en{font-family:Georgia,"Times New Roman",serif;font-size:16.5px;line-height:1.88;color:#1a2b3c}
+  .para-zh{font-size:14px;line-height:1.9;color:#4b5563;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+  .para-card.zh-off .para-zh{display:none}
+  .para-card.flash{animation:flash 1.8s ease}
+  @keyframes flash{0%,100%{box-shadow:0 0 0 0 rgba(227,18,11,0)}25%{box-shadow:0 0 0 4px rgba(227,18,11,.22)}}
+  .w{cursor:pointer;border-bottom:1px dotted rgba(227,18,11,.45);border-radius:2px}
+  .w:hover{background:var(--accent-soft)}
+  .w.hit{background:#ffe08a;box-shadow:0 0 0 2px #ffe08a}
+
+  /* Tables */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .vocab-table{width:100%;border-collapse:collapse;font-size:13px}
+  .vocab-table th{background:var(--ink);color:#fff;text-align:left;padding:8px 10px;font-size:11px;font-weight:600;white-space:nowrap}
+  .vocab-table td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .vocab-table tbody tr:last-child td{border-bottom:0}
+  .vocab-row[data-para]{cursor:pointer;transition:background .12s}
+  .vocab-row[data-para]:hover{background:var(--soft)}
+  .word-col{font-weight:800;color:var(--accent);white-space:nowrap}
+  .stars{color:var(--gold);white-space:nowrap}
+  .context-col{color:#6b7280;font-size:12px;min-width:220px}
+  .rc-table td{font-size:12px;white-space:nowrap}
+
+  /* Long sentences */
+  .ls-card{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff;cursor:pointer;transition:border-color .15s}
+  .ls-card:hover{border-color:#cfc7bb}
+  .ls-card[data-para].flash{animation:flash 1.8s ease}
+  .ls-sentence{font-family:Georgia,serif;font-size:15.5px;line-height:1.8;color:#1a2b3c}
+  .ls-zh{font-size:13.5px;color:#6b7280;margin-top:8px}
+  .struct{background:var(--soft);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px}
+  .struct dt{font-weight:800;color:var(--accent);font-size:11px;margin-top:7px}
+  .struct dt:first-child{margin-top:0}
+  .struct dd{color:#4b5563;margin-bottom:2px;line-height:1.7}
+
+  .mini-card{border:1px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:10px;background:#fff}
+  .mini-card:last-child{margin-bottom:0}
+  .mini-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .mini-card p{font-size:13.5px;color:#4b5563;line-height:1.75;margin-bottom:4px}
+  .mini-card blockquote{border-left:3px solid var(--accent);background:var(--soft);padding:8px 12px;margin:8px 0;font-family:Georgia,serif;font-size:13.5px;color:#374151;border-radius:0 6px 6px 0}
+  .role-badge{font-size:10px;font-weight:800;color:#fff;background:var(--green);padding:2px 7px;border-radius:999px}
+  .fact-row{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .fact-row:last-child{border-bottom:0}
+  .fact-row[data-para]{cursor:pointer}
+  .fact-row[data-para]:hover{background:var(--soft)}
+  .fact-data{white-space:nowrap;font-weight:800;color:var(--accent);font-size:12px;background:var(--accent-soft);padding:2px 8px;border-radius:999px}
+
+  /* Recitation */
+  .rc-chunk{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .rc-head{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .rc-no{font-weight:800;color:var(--accent);font-size:12px}
+  .rc-size{font-size:11px;color:var(--muted)}
+  .rc-btn{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;color:#4b5563}
+  .rc-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .rc-text{padding:12px 14px;font-family:Georgia,"Times New Roman",serif;font-size:15.5px;line-height:1.9}
+  .rc-hint{padding:0 14px 11px;font-size:12px;color:var(--muted)}
+  .rc-hint b{color:var(--gold)}
+  .rc-zh{display:none;padding:10px 14px 13px;background:#fbf8f3;border-top:1px dashed var(--line);font-size:14px;color:#4b5563;line-height:1.8}
+  .rc-chunk.zh-on .rc-zh{display:block}
+  .rc-chunk.blanked .rc-text{display:none}
+  .rc-cover{display:none;padding:22px 14px;text-align:center;color:var(--muted);font-size:13px}
+  .rc-chunk.blanked .rc-cover{display:block}
+
+  .checkin-controls{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+  .progress{display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+  .progress-bar{flex:1;height:8px;background:#eee;border-radius:999px;overflow:hidden}
+  .progress-bar>i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+  .progress-text{font-size:12px;color:var(--muted);white-space:nowrap}
+  .day-row{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap}
+  .day-row:last-child{border-bottom:0}
+  .day-label{font-size:12.5px;font-weight:700;min-width:150px}
+  .day-tags{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+  .tag{font-size:11px;padding:2px 7px;border-radius:999px}
+  .tag.learn{background:#e8f5f2;color:var(--green)}
+  .tag.review{background:var(--accent-soft);color:var(--accent)}
+  .js-day-check.done{background:var(--green);border-color:var(--green);color:#fff}
+
+  /* Stats */
+  .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 10px;text-align:center}
+  .stat b{display:block;font-size:22px;color:var(--accent);line-height:1.2}
+  .stat span{font-size:11px;color:var(--muted)}
+
+  /* Tooltip */
+  #tip{position:fixed;z-index:100;max-width:300px;background:var(--ink);color:#fff;border-radius:9px;padding:10px 12px;font-size:12.5px;line-height:1.55;box-shadow:0 10px 30px rgba(0,0,0,.25);display:none}
+  #tip .tip-word{font-weight:800;font-size:14px;margin-bottom:1px}
+  #tip .tip-stars{color:#ffd166;font-size:11px;margin-bottom:4px}
+  #tip .tip-note{color:#dbe4ec}
+
+  @media (max-width:700px){
+    .summary-grid{grid-template-columns:1fr}
+    .hero h1{font-size:21px}
+    .stat-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:640px){
+    .vocab-table thead{display:none}
+    .vocab-table, .vocab-table tbody, .vocab-table tr, .vocab-table td{display:block;width:100%}
+    .vocab-table tr{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;padding:8px 10px;background:#fff}
+    .vocab-table td{border:0;padding:4px 0}
+    .vocab-table td:before{content:attr(data-label);display:inline-block;min-width:64px;color:var(--muted);font-size:11px}
+    .context-col{min-width:0}
+  }
+  @media print{
+    body{background:#fff}
+    .tab-bar,.translation-toolbar,.rc-btn,.checkin-controls{display:none!important}
+    .hero{background:#fff!important;color:#000;box-shadow:none;padding:0 0 12px;margin:0 0 8px;border-bottom:2px solid #000}
+    .hero .kicker{color:#000}
+    .hero .chip{background:#fff;border-color:#999;color:#000}
+    .tab-panel{display:block!important;page-break-inside:avoid}
+    .tab-panel:before{content:attr(data-label);display:block;font-size:18px;font-weight:800;margin:20px 0 8px;padding-bottom:4px;border-bottom:2px solid #000;color:#000}
+    .para-card,.rc-chunk,.card{box-shadow:none;break-inside:avoid}
+    .para-zh,.rc-zh{display:block!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">THE ECONOMIST · 精读</div>
+    <h1>The surprising popularity of AI</h1>
+    <div class="meta-chips">
+      <span class="chip">上传文件</span>
+      <span class="chip">1788 词</span>
+      <span class="chip">69 段</span>
+      <span class="chip">2026-11-23</span>
+      <span class="chip">分析 42s</span>
+      <span class="chip">¥0.0449</span>
+    </div>
+  </header>
+
+  
+  
+  <div class="notice warn">
+    <div>• 背诵分块与原文覆盖不一致，已按段落重建。</div>
+  </div>
+  
+
+  <nav class="tab-bar" id="tabBar">
+    <button class="tab-btn active" data-tab="tab-summary">总结</button>
+    <button class="tab-btn" data-tab="tab-translation">对照翻译</button>
+    <button class="tab-btn" data-tab="tab-language">词汇长句</button>
+    <button class="tab-btn" data-tab="tab-decon">写作拆解</button>
+    <button class="tab-btn" data-tab="tab-background">背景观点</button>
+    <button class="tab-btn" data-tab="tab-apply">实际应用</button>
+    <button class="tab-btn" data-tab="tab-recite">背诵</button>
+    <button class="tab-btn" data-tab="tab-stats">统计</button>
+  </nav>
+
+  <!-- 总结 -->
+  <div class="tab-panel active" id="tab-summary" data-label="总结">
+    <div class="summary-grid">
+      <section class="card">
+        <h2 class="section">中文要点</h2>
+        <ul class="point-list">
+          <li>调查显示，全球多数国家对AI持乐观态度，尤其是尼日利亚、越南等发展中国家，近九成受访者认为AI将改善人类生活。</li><li>西方富国情绪明显更悲观，美国、加拿大、法国负面看法者多于正面，其他西方国家净正面但远低于穷国。</li><li>穷国工人从AI中获益更多，因为非正式工作风险高，AI提供廉价工具帮助小商户提升生意，且人们对隐私等风险担忧较少。</li><li>部分亚洲国家乐观源于劳动力短缺和对技术变革的亲身经历，而西方悲观与社交媒体和大科技公司的负面体验有关。</li><li>这种乐观可能脆弱，若AI造成可见的失业或不公，态度可能转变，但目前数据中心的抗议尚未形成大规模反弹。</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2 class="section">English Key Points</h2>
+        <ul class="point-list">
+          <li>Surveys across 34 countries show that nearly nine in ten people in Nigeria and Vietnam believe AI will improve humanity, while rich Western countries are much gloomier.</li><li>In America, Canada and France more people feel negatively than positively about AI&#39;s future impact, and even net-positive Western countries are far less optimistic than poor ones.</li><li>Workers in poorer countries have less to lose from AI because informal and precarious jobs are common, and many already use cheap AI tools to boost small businesses.</li><li>Optimism in some Asian countries stems from looming worker shortages and living memory of rapid technological transformation, while Western pessimism reflects distrust of Big Tech and politicians.</li><li>This positive sentiment could be fragile if AI produces visible losers, but so far protests against data centres have not turned into a broad backlash outside America.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <!-- 对照翻译 -->
+  <div class="tab-panel" id="tab-translation" data-label="对照翻译">
+    <div class="translation-toolbar">
+      <div class="muted small">英文在上、中文在下；点生词表任意一行可跳转到对应段落。</div>
+      <button class="btn" id="toggleAllZh" type="button">隐藏译文</button>
+    </div>
+    <div id="translationList">
+      
+      <article class="para-card" id="para-1" data-para="1">
+        <div class="para-head">
+          <span class="para-no">§1</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">International | What <span class="w" data-vid="v1" data-w="backlash">backlash</span>?</p>
+        <p class="para-zh">国际 | 什么反弹？</p>
+      </article>
+      
+      <article class="para-card" id="para-2" data-para="2">
+        <div class="para-head">
+          <span class="para-no">§2</span>
+          <span class="muted small">5 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">The surprising popularity of AI</p>
+        <p class="para-zh">AI出人意料的受欢迎程度</p>
+      </article>
+      
+      <article class="para-card" id="para-3" data-para="3">
+        <div class="para-head">
+          <span class="para-no">§3</span>
+          <span class="muted small">11 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Unlike rich Westerners, many around the world feel hopeful about the</p>
+        <p class="para-zh">与富裕的西方人不同，世界许多地方对这项</p>
+      </article>
+      
+      <article class="para-card" id="para-4" data-para="4">
+        <div class="para-head">
+          <span class="para-no">§4</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">technology</p>
+        <p class="para-zh">技术感到充满希望</p>
+      </article>
+      
+      <article class="para-card" id="para-5" data-para="5">
+        <div class="para-head">
+          <span class="para-no">§5</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Turn my scattered</p>
+        <p class="para-zh">把我零散的</p>
+      </article>
+      
+      <article class="para-card" id="para-6" data-para="6">
+        <div class="para-head">
+          <span class="para-no">§6</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">nistory flashcards into</p>
+        <p class="para-zh">历史闪卡变成</p>
+      </article>
+      
+      <article class="para-card" id="para-7" data-para="7">
+        <div class="para-head">
+          <span class="para-no">§7</span>
+          <span class="muted small">4 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">a story I1I remember</p>
+        <p class="para-zh">一个我能记住的故事</p>
+      </article>
+      
+      <article class="para-card" id="para-8" data-para="8">
+        <div class="para-head">
+          <span class="para-no">§8</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">⑤ChatGPTOct 22nd 2026</p>
+        <p class="para-zh">⑤ChatGPT 2026年10月22日</p>
+      </article>
+      
+      <article class="para-card" id="para-9" data-para="9">
+        <div class="para-head">
+          <span class="para-no">§9</span>
+          <span class="muted small">138 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome. “The manual era is completely ingrained in me,” says the 70-year-oldviolin salesman, sitting under a tree in a park in Seoul’s Jong-no district. Herecalls having to use a foot-operated “treadle pump” to get water, as well ashis delight when the first tractors rolled into the South Korean countryside.In recent decades he has seen things “develop so conveniently”, with theinternet and smartphones. And what about artificial intelligence? “It’snothing for humans to worry about. This kind of thing is good,” he says.“They should keep developing the technology. Humanity has advanced somuch up to our generation. There’s no telling how the world will change.”</p>
+        <p class="para-zh">在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。”</p>
+      </article>
+      
+      <article class="para-card" id="para-10" data-para="10">
+        <div class="para-head">
+          <span class="para-no">§10</span>
+          <span class="muted small">4 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Welcoming our new overlords</p>
+        <p class="para-zh">欢迎我们的新霸主</p>
+      </article>
+      
+      <article class="para-card" id="para-11" data-para="11">
+        <div class="para-head">
+          <span class="para-no">§11</span>
+          <span class="muted small">10 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">&quot;Overall, do you think Al will have a positive or</p>
+        <p class="para-zh">“总体而言，您认为人工智能对人类整体会产生积极还是</p>
+      </article>
+      
+      <article class="para-card" id="para-12" data-para="12">
+        <div class="para-head">
+          <span class="para-no">§12</span>
+          <span class="muted small">8 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">negative impact on hu manity as a whole?&quot;</p>
+        <p class="para-zh">消极的影响？”</p>
+      </article>
+      
+      <article class="para-card" id="para-13" data-para="13">
+        <div class="para-head">
+          <span class="para-no">§13</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">September 2026, % responding</p>
+        <p class="para-zh">2026年9月，受访者回答百分比</p>
+      </article>
+      
+      <article class="para-card" id="para-14" data-para="14">
+        <div class="para-head">
+          <span class="para-no">§14</span>
+          <span class="muted small">4 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">mVery positiveESomewhat positiveENo impact</p>
+        <p class="para-zh">非常积极  有些积极  没有影响</p>
+      </article>
+      
+      <article class="para-card" id="para-15" data-para="15">
+        <div class="para-head">
+          <span class="para-no">§15</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Somewhat negative</p>
+        <p class="para-zh">有些消极</p>
+      </article>
+      
+      <article class="para-card" id="para-16" data-para="16">
+        <div class="para-head">
+          <span class="para-no">§16</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Very negative</p>
+        <p class="para-zh">非常消极</p>
+      </article>
+      
+      <article class="para-card" id="para-17" data-para="17">
+        <div class="para-head">
+          <span class="para-no">§17</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">2040</p>
+        <p class="para-zh">2040年</p>
+      </article>
+      
+      <article class="para-card" id="para-18" data-para="18">
+        <div class="para-head">
+          <span class="para-no">§18</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">6080100</p>
+        <p class="para-zh">6080100</p>
+      </article>
+      
+      <article class="para-card" id="para-19" data-para="19">
+        <div class="para-head">
+          <span class="para-no">§19</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Vietnam</p>
+        <p class="para-zh">越南</p>
+      </article>
+      
+      <article class="para-card" id="para-20" data-para="20">
+        <div class="para-head">
+          <span class="para-no">§20</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Nigeria</p>
+        <p class="para-zh">尼日利亚</p>
+      </article>
+      
+      <article class="para-card" id="para-21" data-para="21">
+        <div class="para-head">
+          <span class="para-no">§21</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">China</p>
+        <p class="para-zh">中国</p>
+      </article>
+      
+      <article class="para-card" id="para-22" data-para="22">
+        <div class="para-head">
+          <span class="para-no">§22</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Indonesia</p>
+        <p class="para-zh">印度尼西亚</p>
+      </article>
+      
+      <article class="para-card" id="para-23" data-para="23">
+        <div class="para-head">
+          <span class="para-no">§23</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Kenya</p>
+        <p class="para-zh">肯尼亚</p>
+      </article>
+      
+      <article class="para-card" id="para-24" data-para="24">
+        <div class="para-head">
+          <span class="para-no">§24</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">India</p>
+        <p class="para-zh">印度</p>
+      </article>
+      
+      <article class="para-card" id="para-25" data-para="25">
+        <div class="para-head">
+          <span class="para-no">§25</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Brazil</p>
+        <p class="para-zh">巴西</p>
+      </article>
+      
+      <article class="para-card" id="para-26" data-para="26">
+        <div class="para-head">
+          <span class="para-no">§26</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Mexico</p>
+        <p class="para-zh">墨西哥</p>
+      </article>
+      
+      <article class="para-card" id="para-27" data-para="27">
+        <div class="para-head">
+          <span class="para-no">§27</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">South Kore</p>
+        <p class="para-zh">韩国</p>
+      </article>
+      
+      <article class="para-card" id="para-28" data-para="28">
+        <div class="para-head">
+          <span class="para-no">§28</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Britain</p>
+        <p class="para-zh">英国</p>
+      </article>
+      
+      <article class="para-card" id="para-29" data-para="29">
+        <div class="para-head">
+          <span class="para-no">§29</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Canada</p>
+        <p class="para-zh">加拿大</p>
+      </article>
+      
+      <article class="para-card" id="para-30" data-para="30">
+        <div class="para-head">
+          <span class="para-no">§30</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">United States</p>
+        <p class="para-zh">美国</p>
+      </article>
+      
+      <article class="para-card" id="para-31" data-para="31">
+        <div class="para-head">
+          <span class="para-no">§31</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">France</p>
+        <p class="para-zh">法国</p>
+      </article>
+      
+      <article class="para-card" id="para-32" data-para="32">
+        <div class="para-head">
+          <span class="para-no">§32</span>
+          <span class="muted small">4 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Sources GlobeScan, The Economist</p>
+        <p class="para-zh">来源：GlobeScan、《经济学人》</p>
+      </article>
+      
+      <article class="para-card" id="para-33" data-para="33">
+        <div class="para-head">
+          <span class="para-no">§33</span>
+          <span class="muted small">91 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">&quot;Survey conducted onineRead the headlines in Western media and it may seem as though a backlashto AI is spreading fast everywhere. But so far, it is not. Mr Bae’s <span class="w" data-vid="v2" data-w="sunnydisposition">sunnydisposition</span> about AI is shared by almost two-thirds of South Koreans,according to a survey that GlobeScan, a polling firm, conducted for TheEconomist. Outside rich countries this good feeling is even more stronglyshared: nearly nine in ten people in Nigeria and Vietnam, for example, saidthat AI will improve not only their own lives, but the lot of humanity (seechart 1).</p>
+        <p class="para-zh">在网上进行的调查。读一读西方媒体的头条新闻，可能让人觉得对人工智能的抵制正在各地迅速蔓延。但到目前为止，情况并非如此。根据民调公司GlobeScan为《经济学人》进行的一项调查，几乎三分之二的韩国人都和裴先生一样对人工智能持乐观态度。在富裕国家之外，这种好感甚至更为普遍：例如，尼日利亚和越南近九成的人表示，人工智能不仅会改善他们自己的生活，还会改善人类的命运（见图表1）。</p>
+      </article>
+      
+      <article class="para-card" id="para-34" data-para="34">
+        <div class="para-head">
+          <span class="para-no">§34</span>
+          <span class="muted small">84 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">The polling across 34 countries was carried out online, which could tiltattitudes in favour of AI. Yet in the same survey sentiment in rich Westerncountries was much gloomier. In America, Canada and France more peoplefelt negatively than positively about AI’s future impact on humanity. In otherWestern countries sentiment was <span class="w" data-vid="v5" data-w="net-positive">net-positive</span>, but far less so than in the poorworld. Another recent survey of 37 countries, carried out by Gallup withMicrosoft, returned similar results: AI is broadly popular, but less so in richWestern countries.</p>
+        <p class="para-zh">这项覆盖34个国家的调查是在网上进行的，这可能会使受访态度偏向支持人工智能。然而，在同一项调查中，富裕西方国家民众的情绪要悲观得多。在美国、加拿大和法国，对人工智能未来对人类影响持负面看法的人多于持正面看法的人。在其他西方国家，总体情绪是正面的，但远不如贫穷国家那么积极。盖洛普与微软最近对37个国家进行的另一项调查也得出了类似结果：人工智能广受欢迎，但在富裕西方国家则不那么受欢迎。</p>
+      </article>
+      
+      <article class="para-card" id="para-35" data-para="35">
+        <div class="para-head">
+          <span class="para-no">§35</span>
+          <span class="muted small">53 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Why the gap between the West and the rest? Some of the optimism may coolas more people in poor countries come into direct contact with AI or datacentres, and see the technology helping or hurting some more than others.Around 9% of working-age Kenyans used AI in the second quarter of 2026,</p>
+        <p class="para-zh">西方与其他地区为何存在这种差距？随着贫穷国家更多人直接接触人工智能或数据中心，并看到这项技术对某些人的帮助或伤害大于其他人，部分乐观情绪可能会降温。根据微软的一项研究，2026年第二季度约有9%的肯尼亚劳动年龄人口使用过人工智能，</p>
+      </article>
+      
+      <article class="para-card" id="para-36" data-para="36">
+        <div class="para-head">
+          <span class="para-no">§36</span>
+          <span class="muted small">18 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">according to a study by Microsoft. Yet 85% told GlobeScan that it wouldchange their lives for the better.</p>
+        <p class="para-zh">然而，85%的人告诉GlobeScan，这会让他们的生活变得更好。</p>
+      </article>
+      
+      <article class="para-card" id="para-37" data-para="37">
+        <div class="para-head">
+          <span class="para-no">§37</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Great expectations</p>
+        <p class="para-zh">高期望</p>
+      </article>
+      
+      <article class="para-card" id="para-38" data-para="38">
+        <div class="para-head">
+          <span class="para-no">§38</span>
+          <span class="muted small">10 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">“Overall, do you think Al will have a positive or</p>
+        <p class="para-zh">“总体而言，你认为人工智能会对你的个人生活产生积极还是</p>
+      </article>
+      
+      <article class="para-card" id="para-39" data-para="39">
+        <div class="para-head">
+          <span class="para-no">§39</span>
+          <span class="muted small">6 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">negative impact on your life personally?”</p>
+        <p class="para-zh">消极影响？”</p>
+      </article>
+      
+      <article class="para-card" id="para-40" data-para="40">
+        <div class="para-head">
+          <span class="para-no">§40</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">September 2026, % responding*</p>
+        <p class="para-zh">2026年9月，回答百分比*</p>
+      </article>
+      
+      <article class="para-card" id="para-41" data-para="41">
+        <div class="para-head">
+          <span class="para-no">§41</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Very positiveSomewhat positive</p>
+        <p class="para-zh">非常积极 有些积极</p>
+      </article>
+      
+      <article class="para-card" id="para-42" data-para="42">
+        <div class="para-head">
+          <span class="para-no">§42</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">No impact</p>
+        <p class="para-zh">没有影响</p>
+      </article>
+      
+      <article class="para-card" id="para-43" data-para="43">
+        <div class="para-head">
+          <span class="para-no">§43</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Somewhat negative</p>
+        <p class="para-zh">有些消极</p>
+      </article>
+      
+      <article class="para-card" id="para-44" data-para="44">
+        <div class="para-head">
+          <span class="para-no">§44</span>
+          <span class="muted small">3 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Africa and the</p>
+        <p class="para-zh">非洲和</p>
+      </article>
+      
+      <article class="para-card" id="para-45" data-para="45">
+        <div class="para-head">
+          <span class="para-no">§45</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Middle East</p>
+        <p class="para-zh">中东</p>
+      </article>
+      
+      <article class="para-card" id="para-46" data-para="46">
+        <div class="para-head">
+          <span class="para-no">§46</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Non-OECD</p>
+        <p class="para-zh">非经合组织</p>
+      </article>
+      
+      <article class="para-card" id="para-47" data-para="47">
+        <div class="para-head">
+          <span class="para-no">§47</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">countries</p>
+        <p class="para-zh">国家</p>
+      </article>
+      
+      <article class="para-card" id="para-48" data-para="48">
+        <div class="para-head">
+          <span class="para-no">§48</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Asia-Pacific</p>
+        <p class="para-zh">亚太地区</p>
+      </article>
+      
+      <article class="para-card" id="para-49" data-para="49">
+        <div class="para-head">
+          <span class="para-no">§49</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Latin America</p>
+        <p class="para-zh">拉丁美洲</p>
+      </article>
+      
+      <article class="para-card" id="para-50" data-para="50">
+        <div class="para-head">
+          <span class="para-no">§50</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">OECD countries</p>
+        <p class="para-zh">经合组织国家</p>
+      </article>
+      
+      <article class="para-card" id="para-51" data-para="51">
+        <div class="para-head">
+          <span class="para-no">§51</span>
+          <span class="muted small">1 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Europe</p>
+        <p class="para-zh">欧洲</p>
+      </article>
+      
+      <article class="para-card" id="para-52" data-para="52">
+        <div class="para-head">
+          <span class="para-no">§52</span>
+          <span class="muted small">2 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">North America</p>
+        <p class="para-zh">北美</p>
+      </article>
+      
+      <article class="para-card" id="para-53" data-para="53">
+        <div class="para-head">
+          <span class="para-no">§53</span>
+          <span class="muted small">4 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Sources: GlobeScan; The Economist</p>
+        <p class="para-zh">来源：GlobeScan；《经济学人》</p>
+      </article>
+      
+      <article class="para-card" id="para-54" data-para="54">
+        <div class="para-head">
+          <span class="para-no">§54</span>
+          <span class="muted small">60 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">*Survey conducted onlineBut plenty of people, poor and rich alike, are already at least vaguelyconscious of AI’s <span class="w" data-vid="v6" data-w="pitfalls">pitfalls</span>. In a survey by Pew Research Centre, SouthKoreans were most likely (along with Australians) to say they expect AI togenerate massive job losses and worsen inequality. For now, though, suchfears appear to be outweighed by <span class="w" data-vid="v8" data-w="intrigue">intrigue</span> about the technology’s promise.</p>
+        <p class="para-zh">*在线调查。但许多人不分贫富，至少已模糊意识到人工智能的隐患。皮尤研究中心的一项调查中，韩国人（与澳大利亚人一样）最可能表示，他们预计人工智能将导致大规模失业并加剧不平等。不过，目前此类担忧似乎被对该技术前景的好奇心所压倒。</p>
+      </article>
+      
+      <article class="para-card" id="para-55" data-para="55">
+        <div class="para-head">
+          <span class="para-no">§55</span>
+          <span class="muted small">71 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Part of the explanation is that many workers outside the richest countrieshave less to lose from AI than do their counterparts in the West. In much ofthe poor world work is often informal and, compared with jobs in the West,<span class="w" data-vid="v9" data-w="precarious">precarious</span>. The notion of losing a secure office job to technology is more ofa rich-world problem (though in India, say, information-technology andother back-office workers look <span class="w" data-vid="v10" data-w="vulnerable">vulnerable</span> to <span class="w" data-vid="v11" data-w="disruption">disruption</span>).</p>
+        <p class="para-zh">部分原因在于，富裕国家以外的许多劳动者比西方同行更少可失去的东西。在许多贫困国家，工作往往是非正规的，与西方的工作相比更不稳定。失去一份稳定的办公室工作给技术，这更多是富裕国家的问题（尽管在印度，信息技术和其他后台办公岗位看起来容易受到冲击）。</p>
+      </article>
+      
+      <article class="para-card" id="para-56" data-para="56">
+        <div class="para-head">
+          <span class="para-no">§56</span>
+          <span class="muted small">50 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">The poor world has much to gain from AI, too. In countries whereinstitutions and formal education can be lacking, AI helps some people helpthemselves. “Pessimism is a privilege for those who can afford to despair,”argues Payal Arora, author of “From Pessimism to Promise”, a book aboutdiverging attitudes to technology.</p>
+        <p class="para-zh">贫困国家也能从人工智能中获益良多。在制度和正规教育可能匮乏的国家，人工智能帮助一些人自助。《从悲观到希望》一书的作者帕亚尔·阿罗拉认为，悲观是那些负担得起绝望的人的奢侈品。该书探讨了对技术态度的分歧。</p>
+      </article>
+      
+      <article class="para-card" id="para-57" data-para="57">
+        <div class="para-head">
+          <span class="para-no">§57</span>
+          <span class="muted small">77 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">In India users have gained cheap or free access to apps like Gemini from Google or ChatGPT from OpenAI; nearly one in five working-age Indians used generative AI in the second quarter of 2026, compared with a third of Americans, according to a recent Microsoft study. DeepSeek, a free Chinese alternative, is popular in Africa, where Microsoft estimates that in many countries about one in ten working-age people used generative AI in the second quarter.</p>
+        <p class="para-zh">在印度，用户已经可以免费或廉价地使用谷歌的Gemini或OpenAI的ChatGPT等应用；根据微软最近的一项研究，2026年第二季度，近五分之一的印度劳动年龄人口使用过生成式AI，而美国这一比例为三分之一。免费的中国替代产品DeepSeek在非洲很受欢迎，微软估计，在非洲许多国家，第二季度约有十分之一的劳动年龄人口使用过生成式AI。</p>
+      </article>
+      
+      <article class="para-card" id="para-58" data-para="58">
+        <div class="para-head">
+          <span class="para-no">§58</span>
+          <span class="muted small">108 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">A narrow street in a busy suburb of Mumbai illustrates the benefits. Many shops on it use ChatGPT to generate advertisements. Dinesh Chandra, an optician, asked the chatbot to produce a “gravity-defying” photo for his brand. It duly created an image, now printed on brochures, of glasses floating above clouds while riding a feather. Next door Omkar Sapre, who sells dried fruit, masalas and pickles, posts “beautiful pictures” from ChatGPT on Instagram and WhatsApp, and has noticed his sales pick up.Ashlesha, who works at a dry cleaner on the same street, says, “We work hard and AI is extra support for us. Everyone is on Instagram.”</p>
+        <p class="para-zh">孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。”</p>
+      </article>
+      
+      <article class="para-card" id="para-59" data-para="59">
+        <div class="para-head">
+          <span class="para-no">§59</span>
+          <span class="muted small">64 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">All of them love the convenience of using AI; none worry about safety,privacy or data leaks, much less “AI slop”. The shaming of AI content seems less common outside America and Europe. Westerners “have historically <span class="w" data-vid="v12" data-w="monopolised">monopolised</span> knowledge and <span class="w" data-vid="v13" data-w="ideational">ideational</span> production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University. “Is it a crisis only for those who lose from <span class="w" data-vid="v11" data-w="disruption">disruption</span>?”</p>
+        <p class="para-zh">他们都喜欢使用AI的便利；没有人担心安全、隐私或数据泄露，更不用说“AI垃圾内容”了。对AI内容的羞辱似乎在欧美以外不那么常见。约翰斯·霍普金斯大学的洪源远说，西方人“历史上垄断了知识和思想生产，但AI挑战了这一点”。“这仅仅是对那些在颠覆中受损的人来说才是危机吗？”</p>
+      </article>
+      
+      <article class="para-card" id="para-60" data-para="60">
+        <div class="para-head">
+          <span class="para-no">§60</span>
+          <span class="muted small">75 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">As Mr Bae illustrates, even in some rich and middle-income countries where there seems more to lose from <span class="w" data-vid="v11" data-w="disruption">disruption</span>, AI is surprisingly popular.Singaporeans are among the world’s top AI users, says Microsoft; nearly two-thirds told GlobeScan they thought the technology would have a positive effect on their lives. In Malaysia, which is experiencing a big data-centre boom, minor protests against the sites have not yet turned into a wider <span class="w" data-vid="v1" data-w="backlash">backlash</span>.</p>
+        <p class="para-zh">正如裴先生所说明的，即使在一些似乎更容易因颠覆而受损的富裕和中等收入国家，AI也出人意料地受欢迎。微软表示，新加坡人是全球最大的AI用户群体之一；近三分之二的人告诉GlobeScan，他们认为这项技术会对自己的生活产生积极影响。在正经历大型数据中心热潮的马来西亚，针对这些数据中心的轻微抗议尚未演变成更广泛的抵制。</p>
+      </article>
+      
+      <article class="para-card" id="para-61" data-para="61">
+        <div class="para-head">
+          <span class="para-no">§61</span>
+          <span class="muted small">51 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Some countries where AI-optimism runs high share common factors that seem to <span class="w" data-vid="v14" data-w="cut across">cut across</span> socioeconomic lines. One is a <span class="w" data-vid="v15" data-w="looming">looming</span> shortage of workers. Parts of the world that have long had low fertility rates, like East Asia, are ageing rapidly. Many hope that AI (and AI-powered robots) can fill</p>
+        <p class="para-zh">一些AI乐观情绪高涨的国家有着似乎跨越社会经济阶层的共同因素。其中之一是迫在眉睫的劳动力短缺。长期生育率低的地区，如东亚，正在迅速老龄化。许多人希望AI（以及AI驱动的机器人）能够填补</p>
+      </article>
+      
+      <article class="para-card" id="para-62" data-para="62">
+        <div class="para-head">
+          <span class="para-no">§62</span>
+          <span class="muted small">14 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">in for workers who do not exist, helping countries to care for greying populations.</p>
+        <p class="para-zh">不存在的工人的空缺，帮助各国照顾日益老龄化的 population。</p>
+      </article>
+      
+      <article class="para-card" id="para-63" data-para="63">
+        <div class="para-head">
+          <span class="para-no">§63</span>
+          <span class="muted small">127 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Another feature of some AI-optimist countries is a living memory of technology radically transforming societies in the span of a lifetime.Singapore, South Korea and Taiwan went from poor to rich partly by rapidly adopting new technologies that originated abroad.In China and India technological leaps, including through digital payment and delivery apps, have brought extraordinary convenience and autonomy.“At our age, we’ve lived through countless changes,” says Ms Meng, who works in advertising in Beijing and who, at 40, feels ancient. “Things haven’t even settled in China before another huge shift comes two or three years later.” In India smartphones have offered hundreds of millions of people a “God in their hand” over the course of just a few years, says Ms Arora.</p>
+        <p class="para-zh">一些AI乐观主义国家的另一个特征是，人们对技术在一生中彻底改变社会有着鲜活的记忆。新加坡、韩国和台湾地区部分通过迅速采用源自国外的新技术而从贫穷走向富裕。在中国和印度，包括数字支付和外卖应用在内的技术飞跃带来了非凡的便利和自主性。“在我们这个年纪，我们已经经历了无数变化，”在北京从事广告工作的孟女士说，40岁的她觉得自己已经老了。“在中国，事情甚至还没稳定下来，两三年后又会迎来另一场巨大转变。”阿罗拉女士说，在印度，智能手机在短短几年内为数亿人提供了“手中的神”。</p>
+      </article>
+      
+      <article class="para-card" id="para-64" data-para="64">
+        <div class="para-head">
+          <span class="para-no">§64</span>
+          <span class="muted small">71 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">In Western countries, by contrast, pessimism towards AI may reflect people’s perception that their lives are not getting much better, that AI could make their lives worse—and that politicians cannot be relied upon to protect their interests. Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to <span class="w" data-vid="v16" data-w="rein in">rein in</span>.</p>
+        <p class="para-zh">相比之下，在西方国家，对AI的悲观情绪可能反映了人们的一种看法：他们的生活没有变得更好，AI可能让生活更糟，而且不能指望政客保护他们的利益。《技术治理》一书的作者丹尼尔·多布里克戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司体验的影响，而西方政府一直难以约束这些公司。</p>
+      </article>
+      
+      <article class="para-card" id="para-65" data-para="65">
+        <div class="para-head">
+          <span class="para-no">§65</span>
+          <span class="muted small">95 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">The ways in which politicians and firms talk about AI may also make a difference. Bosses of American labs warn of job losses and human extinction as they race towards “artificial general intelligence”. Asian politicians and tech bosses rarely talk like that, perhaps in part because they are not developing frontier capabilities of their own. Instead they tend to focus on the practical uses of AI—what they will do with the technology,rather than what it will do to them. You are unlikely to hear the boss of Samsung talking publicly about AI doom.</p>
+        <p class="para-zh">政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。</p>
+      </article>
+      
+      <article class="para-card" id="para-66" data-para="66">
+        <div class="para-head">
+          <span class="para-no">§66</span>
+          <span class="muted small">31 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">In China, where big advances in AI are being made, officials do worry about risks, from cyber-security threats to economic dislocation. But the general tenor of state media is <span class="w" data-vid="v17" data-w="boosterish">boosterish</span>.</p>
+        <p class="para-zh">在人工智能取得重大进展的中国，官员们确实担心风险，从网络安全威胁到经济失调。但官方媒体的总体基调是乐观的。</p>
+      </article>
+      
+      <article class="para-card" id="para-67" data-para="67">
+        <div class="para-head">
+          <span class="para-no">§67</span>
+          <span class="muted small">77 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">It would be wrong to conclude, though, that people in more AI-positive countries have no worries at all. Some are more <span class="w" data-vid="v18" data-w="resigned">resigned</span> to the advance of technology as a fate that cannot be avoided. “AI’s impact might be different from every previous shift. But the Earth has its own rhythms,” says Ms Meng in Beijing. “When it’s not meant for you to survive, you won’t. You can’t live every day worrying, right?”</p>
+        <p class="para-zh">不过，如果认为对人工智能更积极的国家的民众就完全没有担忧，那是不对的。有些人更倾向于把技术的进步视为一种无法避免的命运而接受。北京的孟女士说：“人工智能的影响可能不同于以往每一次变革。但地球有自己的节奏。当你不该活下来的时候，你就活不下来。你总不能每天都忧心忡忡吧，对吧？”</p>
+      </article>
+      
+      <article class="para-card" id="para-68" data-para="68">
+        <div class="para-head">
+          <span class="para-no">§68</span>
+          <span class="muted small">99 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Cho Kyu-jin of Seoul National University reckons that South Koreans are embracing AI despite their concerns because the “fear of being left behind is higher than that of losing stability”. Kim Ah-ran, a 40-year-old labour lawyer, says, “When changes came in the Industrial Revolution, there were positive and negative effects. We’ll find a way to live.” Her young son,standing next to her at the Galaxy Robot Park outside Seoul, is mimicking a humanoid that is practising Muay Thai moves, while clutching a workbook that explains how to use AI to code such robots.</p>
+        <p class="para-zh">首尔国立大学的赵圭镇认为，韩国人尽管有担忧，仍在拥抱人工智能，因为“害怕被落下甚于害怕失去稳定”。40岁的劳动法律师金阿兰说：“工业革命带来变革时，有积极影响也有消极影响。我们会找到生存之道。”在首尔郊外的银河机器人公园，她的小儿子站在她身旁，一边模仿一个正在练习泰拳动作的人形机器人，一边紧紧抓着一本讲解如何用人工智能为这类机器人编程的练习册。</p>
+      </article>
+      
+      <article class="para-card" id="para-69" data-para="69">
+        <div class="para-head">
+          <span class="para-no">§69</span>
+          <span class="muted small">198 words</span>
+          <span class="spacer"></span>
+          <button class="btn btn-ghost js-toggle-zh" type="button">译</button>
+        </div>
+        <p class="para-en">Such pragmatic acceptance suggests that positive attitudes like Mr Bae’s could yet be fragile. Kim Jeong-nam of KAIST, a tech-focused university,serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy. He thinks that South Koreans’ tolerance is conditional on “competently built” policy. If AI starts to “produce visible losers”, such as in exam fairness or jobs, he worries that leeway could vanish. The same could hold true elsewhere. “How are you going to invent an AI that can drive a motorbike?” asks Anderson Santos, a delivery driver in São Paulo,Brazil, who is later dismayed at a mention of driverless cars.There are some <span class="w" data-vid="v19" data-w="nascent">nascent</span> signs of data-centre <span class="w" data-vid="v1" data-w="backlash">backlash</span> in other parts of the world, too, if nothing like the <span class="w" data-vid="v20" data-w="outright">outright</span> rebellion seen in many parts of America. In the Philippines people are marching against “Pax Silica”, an American-led initiative to develop AI and semiconductor supply chains. In Thane, a city near Mumbai, hundreds have protested against an Amazon hyperscale data centre that is planned for their neighbourhood. Rage is not yet all-consuming, though. “It’s just like any other factory,” says one resident. “AI is the future.”■</p>
+        <p class="para-zh">这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”</p>
+      </article>
+      
+    </div>
+  </div>
+
+  <!-- 词汇长句 -->
+  <div class="tab-panel" id="tab-language" data-label="词汇长句">
+    <section class="card">
+      <h2 class="section">重点词汇 <span class="count">20 条</span></h2>
+      <p class="muted small" style="margin-bottom:10px">点击任意一行跳到原文段落并高亮；点原文中的虚线下划线词可查看释义。</p>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>单词 / 短语</th><th>难度</th><th>原文语境</th><th>中文注释</th></tr></thead>
+          <tbody>
+          
+            <tr class="vocab-row" data-para="1" data-vid="v1" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">backlash</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Read the headlines in Western media and it may seem as though a backlash to AI is spreading fast everywhere.</td>
+              <td data-label="注释">强烈反对，抵制；常指公众对某种社会变化或政策的激烈反弹。搭配：a backlash against/to sth.</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="33" data-vid="v2" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">sunnydisposition</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans, according to a survey that GlobeScan, a polling firm, conducted for The Economist.</td>
+              <td data-label="注释">乐观开朗的性格/态度；此处指对AI的积极看法。sunny disposition 原意为开朗的性情。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="34" data-vid="v3" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">tilt</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">The polling across 34 countries was carried out online, which could tilt attitudes in favour of AI.</td>
+              <td data-label="注释">使倾向于，使偏向；tilt sth in favour of 使……有利于。也可作名词，如 a tilt towards protectionism。</td>
+            </tr>
+          
+            <tr class="vocab-row">
+              <td class="word-col" data-label="单词">gloomy</td>
+              <td class="stars" data-label="难度">★☆☆</td>
+              <td class="context-col" data-label="语境">Yet in the same survey sentiment in rich Western countries was much gloomier.</td>
+              <td data-label="注释">悲观的，沮丧的；gloomy sentiment 悲观情绪。反义词：optimistic。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="34" data-vid="v5" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">net-positive</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In other Western countries sentiment was net-positive, but far less so than in the poor world.</td>
+              <td data-label="注释">净正面的；指正面评价多于负面评价。常用于经济、民调语境，如 net-positive effect。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="54" data-vid="v6" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">pitfalls</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">But plenty of people, poor and rich alike, are already at least vaguely conscious of AI’s pitfalls.</td>
+              <td data-label="注释">隐患，陷阱；常指不易察觉的危险或困难。搭配：avoid the pitfalls of sth.</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="54" data-vid="v7" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">outweigh</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">For now, though, such fears appear to be outweighed by intrigue about the technology’s promise.</td>
+              <td data-label="注释">超过，比……更重要；outweigh 常用于比较利弊，如 benefits outweigh costs。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="54" data-vid="v8" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">intrigue</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">For now, though, such fears appear to be outweighed by intrigue about the technology’s promise.</td>
+              <td data-label="注释">好奇心，兴趣；此处指对技术前景的着迷。动词意为“激起兴趣”。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="55" data-vid="v9" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">precarious</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">In much of the poor world work is often informal and, compared with jobs in the West, precarious.</td>
+              <td data-label="注释">不稳定的，不安全的；常形容工作、处境。搭配：precarious employment/livelihood。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="55" data-vid="v10" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">vulnerable</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">The notion of losing a secure office job to technology is more of a rich-world problem (though in India, say, information-technology and other back-office workers look vulnerable to disruption).</td>
+              <td data-label="注释">脆弱的，易受伤害的；be vulnerable to 易受……影响/攻击。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="55" data-vid="v11" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">disruption</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">The notion of losing a secure office job to technology is more of a rich-world problem (though in India, say, information-technology and other back-office workers look vulnerable to disruption).</td>
+              <td data-label="注释">颠覆，扰乱；常指技术对行业的冲击。搭配：technological disruption, market disruption。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="59" data-vid="v12" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">monopolised</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University.</td>
+              <td data-label="注释">垄断，独占；monopolise 动词，名词 monopoly。此处指西方长期垄断知识与思想生产。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="59" data-vid="v13" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">ideational</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University.</td>
+              <td data-label="注释">观念的，思想上的；ideational production 指思想/观念的生产。较学术用词。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="61" data-vid="v14" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">cut across</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Some countries where AI-optimism runs high share common factors that seem to cut across socioeconomic lines.</td>
+              <td data-label="注释">超越，跨越（界限）；cut across socioeconomic lines 跨越社会经济阶层。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="61" data-vid="v15" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">looming</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">One is a looming shortage of workers.</td>
+              <td data-label="注释">逼近的，即将发生的（通常指不好的事）；looming shortage/crisis。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="64" data-vid="v16" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">rein in</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in.</td>
+              <td data-label="注释">控制，约束；rein in 原指勒住马，引申为遏制。搭配：rein in spending/abuses。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="66" data-vid="v17" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">boosterish</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">But the general tenor of state media is boosterish.</td>
+              <td data-label="注释">鼓吹的，大力支持的；boosterish 指带有宣传鼓动色彩的。名词 booster 支持者。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="67" data-vid="v18" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">resigned</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">Some are more resigned to the advance of technology as a fate that cannot be avoided.</td>
+              <td data-label="注释">顺从的，无可奈何的；be resigned to sth 听任，接受。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="69" data-vid="v19" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">nascent</td>
+              <td class="stars" data-label="难度">★★★</td>
+              <td class="context-col" data-label="语境">There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.</td>
+              <td data-label="注释">初期的，萌芽的；nascent signs 初现的迹象。常用于正式文体。</td>
+            </tr>
+          
+            <tr class="vocab-row" data-para="69" data-vid="v20" tabindex="0" role="button">
+              <td class="word-col" data-label="单词">outright</td>
+              <td class="stars" data-label="难度">★★☆</td>
+              <td class="context-col" data-label="语境">There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.</td>
+              <td data-label="注释">彻底的，完全的；outright rebellion 彻底的反叛。也可表示“直率的”。</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">长难句拆解 <span class="count">7 句</span></h2>
+      
+      <div class="ls-card" data-para="9" data-sid="s1" tabindex="0" role="button">
+        <p class="ls-sentence">AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome.</p>
+        <p class="ls-zh">作为一个在朝鲜战争后长大的男孩，裴五道会冒险进入森林拾柴，用来给家里取暖。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Bae Oh-do would venture out into the forest to gather firewood to heat his family’s home.</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>分词短语（作定语）</b> — growing up in the aftermath of the Korean war<span class="muted">（修饰主语 Bae Oh-do，说明其成长背景）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — AS A BOY<span class="muted">（修饰 整个句子，作时间状语）</span></div><div><b>不定式短语</b> — to gather firewood<span class="muted">（修饰 venture out，表目的）</span></div><div><b>不定式短语</b> — to heat his family’s home<span class="muted">（修饰 gather firewood，表目的）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>开头 AS A BOY 是状语，growing up... 是修饰主语的现在分词短语，两个不定式表目的。注意 venture out 意为“冒险外出”。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans, according to a survey that GlobeScan, a polling firm, conducted for The Economist.</p>
+        <p class="ls-zh">根据民调公司 GlobeScan 为《经济学人》进行的一项调查，几乎三分之二的韩国人与裴先生一样对人工智能持乐观态度。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans.</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>定语从句</b> — that GlobeScan, a polling firm, conducted for The Economist<span class="muted">（修饰 survey，说明调查的执行者）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — according to a survey<span class="muted">（修饰 整个句子，作状语）</span></div><div><b>同位语</b> — a polling firm<span class="muted">（修饰 GlobeScan）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>被动语态 is shared by 后接施动者；that 定语从句中又插入同位语 a polling firm，需先跳过插入语抓主干。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">The notion of losing a secure office job to technology is more of a rich-world problem (though in India, say, information-technology and other back-office workers look vulnerable to disruption).</p>
+        <p class="ls-zh">因技术而失去稳定办公室工作的观念，更像是富裕国家的问题（不过，比如说在印度，信息技术和其他后台工作人员看起来容易受到颠覆的影响）。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>The notion is more of a rich-world problem.</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>让步状语从句</b> — though in India, say, information-technology and other back-office workers look vulnerable to disruption<span class="muted">（补充说明例外情况）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — of losing a secure office job to technology<span class="muted">（修饰 The notion，说明其内容）</span></div><div><b>插入语</b> — say<span class="muted">（修饰 in India，表示“比如说”）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>主干是 The notion is more of a rich-world problem；of losing... 是后置定语；括号内是让步状语从句，say 为插入语。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="56" data-sid="s4" tabindex="0" role="button">
+        <p class="ls-sentence">In countries whereinstitutions and formal education can be lacking, AI helps some people helpthemselves.</p>
+        <p class="ls-zh">在制度和正规教育可能缺失的国家，人工智能帮助一些人自助。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>AI helps some people help themselves.</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>定语从句</b> — whereinstitutions and formal education can be lacking<span class="muted">（修饰 countries，说明这些国家的特征）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — In countries<span class="muted">（修饰 整个句子，作地点状语）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>where 引导的定语从句修饰 countries；help sb help themselves 是“帮助某人自助”的搭配。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="64" data-sid="s5" tabindex="0" role="button">
+        <p class="ls-sentence">Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in.</p>
+        <p class="ls-zh">《技术治理》一书的作者丹尼尔·多布吕戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司经历的影响，而西方政府一直难以约束这些公司。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Daniel Dobrygowski argues that this attitude is coloured by people’s experience.</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>名词性从句（宾语从句）</b> — that this attitude is coloured by people’s experience of social media and Big Tech<span class="muted">（作 argues 的宾语）</span></div><div><b>定语从句</b> — which Western governments have struggled to rein in<span class="muted">（修饰 social media and Big Tech）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>同位语</b> — author of the book “Technology Governance”<span class="muted">（修饰 Daniel Dobrygowski）</span></div><div><b>介词短语</b> — of social media and Big Tech<span class="muted">（修饰 experience）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>主句后接 that 宾语从句，从句中又套 which 定语从句；colour 作动词意为“影响”。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card">
+        <p class="ls-sentence">Kim Jeong-nam of KAIST, a tech-focused university, serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy.</p>
+        <p class="ls-zh">韩国科学技术院（KAIST）的金正南在韩国国家人工智能战略总统委员会任职。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>Kim Jeong-nam serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy.</dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — of KAIST<span class="muted">（修饰 Kim Jeong-nam）</span></div><div><b>同位语</b> — a tech-focused university<span class="muted">（修饰 KAIST）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>主干是 Kim serves on the council；of KAIST 和同位语 a tech-focused university 都是补充说明。serve on 意为“在……任职”。</dd>
+        </dl>
+      </div>
+      
+      <div class="ls-card" data-para="69" data-sid="s7" tabindex="0" role="button">
+        <p class="ls-sentence">There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.</p>
+        <p class="ls-zh">世界其他地区也出现了一些数据中心遭抵制的初期迹象，尽管远不及美国许多地方那种彻底的反叛。</p>
+        <dl class="struct">
+          <dt>主干</dt><dd>There are some nascent signs of data-centre backlash in other parts of the world, too.</dd>
+          
+          <dt>从句</dt>
+          <dd><div><b>条件/让步状语从句</b> — if nothing like the outright rebellion seen in many parts of America<span class="muted">（补充说明程度上的差异）</span></div></dd>
+          
+          
+          <dt>修饰成分</dt>
+          <dd><div><b>介词短语</b> — of data-centre backlash<span class="muted">（修饰 signs）</span></div><div><b>过去分词短语</b> — seen in many parts of America<span class="muted">（修饰 rebellion）</span></div></dd>
+          
+          <dt>理解要点</dt><dd>if nothing like 意为“远不像”，是含蓄的让步；seen in... 是过去分词后置定语。</dd>
+        </dl>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 写作拆解 -->
+  <div class="tab-panel" id="tab-decon" data-label="写作拆解">
+    <section class="card">
+      <h2 class="section">写法总览</h2>
+      <p class="prose">文章以首尔七旬老人对AI的乐观态度开篇，引出全球调查数据，对比富国与穷国对AI态度的巨大差异。随后从经济风险、技术获益、历史经验、政治话语等角度解释差距，并用印度小商户、韩国政策等案例佐证。最后指出乐观可能脆弱，但尚未形成大规模反弹。全文以数据为骨架，穿插人物引语，风格冷静而具象。</p>
+    </section>
+    <section class="card">
+      <h2 class="section">结构拆解 <span class="count">6 部分</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">引入</span>
+          <b>引子：首尔老人的乐观</b>
+          <span class="muted small">§9</span>
+        </div>
+        <p><b>论点</b>　通过一位经历过韩国战后贫困的老人之口，展现对AI的朴素欢迎态度。</p>
+        <p><b>论据</b>　Bae Oh-do回忆手动时代，认为AI“对人类来说没什么好担心的”，并相信技术会继续发展。</p>
+        <p><b>写法</b>　人物特写开篇，用具体故事引出宏观议题。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">提出论点</span>
+          <b>调查数据：全球乐观但西方例外</b>
+          <span class="muted small">§33 · §34</span>
+        </div>
+        <p><b>论点</b>　全球多数国家对AI持乐观态度，但富国西方情绪明显更悲观。</p>
+        <p><b>论据</b>　GlobeScan为《经济学人》做的34国在线调查：尼日利亚和越南近九成认为AI将改善人类；美加法则负面多于正面。Gallup与微软的另一调查结果类似。</p>
+        <p><b>写法</b>　数据对比，用图表和百分比直观呈现差距。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>乐观的理性基础：风险与获益不对称</b>
+          <span class="muted small">§35 · §36 · §54 · §55 · §56 · §57 · §58 · §59</span>
+        </div>
+        <p><b>论点</b>　穷国工人从AI中获益更多、损失更少，因此更乐观。</p>
+        <p><b>论据</b>　穷国工作多为非正式且不稳定，失去稳定办公室工作的担忧是富国问题；AI提供廉价工具，印度小商户用ChatGPT做广告提升销售；肯尼亚仅9%使用AI但85%认为会改善生活。</p>
+        <p><b>写法</b>　因果分析与具体案例结合，用数据支撑逻辑。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>历史经验与人口结构解释亚洲乐观</b>
+          <span class="muted small">§60 · §61 · §62 · §63</span>
+        </div>
+        <p><b>论点</b>　部分亚洲国家因劳动力短缺和快速技术变革的记忆而更欢迎AI。</p>
+        <p><b>论据</b>　东亚老龄化严重，希望AI填补劳动力；新加坡、韩国、台湾靠快速采用外来技术致富；中国和印度技术飞跃带来便利。</p>
+        <p><b>写法</b>　历史对比与人口数据分析。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">论证</span>
+          <b>西方悲观的政治与话语根源</b>
+          <span class="muted small">§64 · §65 · §66</span>
+        </div>
+        <p><b>论点</b>　西方悲观源于对生活改善的怀疑、对社交媒体和大科技公司的负面体验，以及精英的末日论调。</p>
+        <p><b>论据</b>　西方政府难以约束大科技公司；美国实验室老板警告失业和人类灭绝，而亚洲政商界很少这样谈论。</p>
+        <p><b>写法</b>　对比与引用专家观点。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <span class="role-badge">转折/结论</span>
+          <b>乐观的脆弱性与零星反弹</b>
+          <span class="muted small">§67 · §68 · §69</span>
+        </div>
+        <p><b>论点</b>　乐观可能是有条件的，若AI造成可见的失败者，态度可能转变，但目前反弹有限。</p>
+        <p><b>论据</b>　韩国学者认为容忍取决于政策；巴西司机担心无人驾驶；菲律宾和印度有抗议数据中心，但未成气候。</p>
+        <p><b>写法</b>　引语收尾，留下开放性问题。</p>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">可借鉴的写作技巧 <span class="count">5 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>人物特写开篇</b>
+          <span class="muted small">§9</span>
+        </div>
+        <blockquote>AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome.</blockquote>
+        <p class="muted">用具体人物和细节吸引读者，将抽象议题具象化，增强代入感。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>数据对比</b>
+          <span class="muted small">§33</span>
+        </div>
+        <blockquote>nearly nine in ten people in Nigeria and Vietnam, for example, saidthat AI will improve not only their own lives, but the lot of humanity</blockquote>
+        <p class="muted">通过悬殊数字直观呈现全球态度差异，增强说服力。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>引语佐证</b>
+          <span class="muted small">§56</span>
+        </div>
+        <blockquote>“Pessimism is a privilege for those who can afford to despair,”argues Payal Arora</blockquote>
+        <p class="muted">借用专家金句概括核心逻辑，提升文章思想深度和传播力。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>场景化案例</b>
+          <span class="muted small">§58</span>
+        </div>
+        <blockquote>Many shops on it use ChatGPT to generate advertisements.</blockquote>
+        <p class="muted">用孟买街头的具体场景展示AI的实际益处，让论证可感可信。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head">
+          <b>对比反衬</b>
+          <span class="muted small">§65</span>
+        </div>
+        <blockquote>Bosses of American labs warn of job losses and human extinction as they race towards “artificial general intelligence”. Asian politicians and tech bosses rarely talk like that</blockquote>
+        <p class="muted">通过话语对比揭示态度差异的建构性，深化因果分析。</p>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 背景观点 -->
+  <div class="tab-panel" id="tab-background" data-label="背景观点">
+    <section class="card">
+      <h2 class="section">事件背景</h2>
+      <p class="prose">2026年，AI技术快速普及，但西方媒体频繁报道对AI的反弹和担忧。与此同时，全球南方国家正积极采用AI工具改善生活和小生意。各国对AI的监管和态度分化，美国科技巨头追逐通用人工智能并发出末日警告，而亚洲政府更关注实际应用。</p>
+    </section>
+    <section class="card">
+      <h2 class="section">关键事实与数据</h2>
+      
+      <div class="fact-row" data-para="33" tabindex="0" role="button">
+        <div>GlobeScan为《经济学人》在34国进行在线调查，显示尼日利亚和越南近九成受访者认为AI将改善人类。</div>
+        <span class="fact-data">nearly nine in ten</span>
+      </div>
+      
+      <div class="fact-row" data-para="34" tabindex="0" role="button">
+        <div>在美国、加拿大和法国，对AI未来影响持负面看法的人多于正面。</div>
+        
+      </div>
+      
+      <div class="fact-row" data-para="35" tabindex="0" role="button">
+        <div>微软研究显示，2026年第二季度约9%的肯尼亚工作年龄人口使用AI，但85%告诉GlobeScan AI会改善生活。</div>
+        <span class="fact-data">9%; 85%</span>
+      </div>
+      
+      <div class="fact-row" data-para="57" tabindex="0" role="button">
+        <div>微软研究显示，近五分之一印度工作年龄人口使用生成式AI，而美国为三分之一。</div>
+        <span class="fact-data">one in five; a third</span>
+      </div>
+      
+      <div class="fact-row" data-para="54" tabindex="0" role="button">
+        <div>皮尤研究中心调查显示，韩国人与澳大利亚人最可能预期AI导致大规模失业和加剧不平等。</div>
+        
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">作者立场</h2>
+      <p class="prose">作者整体持观察和分析立场，认为全球对AI的乐观情绪真实且有其理性基础，但指出这种乐观可能脆弱，并暗示西方悲观部分源于自身政治和社会问题。作者未明确站队，但通过引语和对比表达了对穷国务实态度的理解。</p>
+      <h2 class="section" style="margin-top:16px">启示</h2>
+      <p class="prose">对政策制定者而言，需关注AI可能造成的可见失败者以维持公众信任；对企业而言，新兴市场是AI应用的重要增长点；对读者而言，理解不同国家态度差异有助于把握全球AI治理和舆论走向。</p>
+    </section>
+  </div>
+
+  <!-- 实际应用 -->
+  <div class="tab-panel" id="tab-apply" data-label="实际应用">
+    <section class="card">
+      <h2 class="section">可操作技能 <span class="count">4 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>用人物故事开篇</b></div>
+        <p>在写分析或报告时，先找一个具体人物或场景，用细节引出宏观议题，再展开数据。</p>
+        <blockquote>写AI应用报告时，先描述一个孟买小商户用ChatGPT做广告的故事，再引出全球调查数据。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>数据对比呈现差异</b></div>
+        <p>选择两个极端群体（如富国与穷国）的关键数据并列，直观展示态度差距。</p>
+        <blockquote>在PPT中并列展示尼日利亚89%乐观与法国负面多于正面的数据，形成视觉冲击。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>引用专家金句概括逻辑</b></div>
+        <p>在论证核心观点时，引用一句精辟的专家话语，既增强权威性又便于记忆。</p>
+        <blockquote>讨论技术悲观主义时引用“Pessimism is a privilege for those who can afford to despair”。</blockquote>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>用场景化案例展示益处</b></div>
+        <p>描述一个具体街道或店铺如何使用产品，让抽象益处变得可感。</p>
+        <blockquote>写AI工具推广文案时，描述干洗店老板用AI生成图片发Instagram，生意变好。</blockquote>
+      </div>
+      
+    </section>
+    <section class="card">
+      <h2 class="section">思维模型 <span class="count">3 个</span></h2>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>风险-获益不对称模型</b></div>
+        <p>人们对新技术的态度取决于他们可能失去什么和获得什么，损失少获益多则更乐观。</p>
+        <p class="muted"><b>怎么用：</b>分析任何技术接受度时，先评估不同群体的风险暴露和获益潜力。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>历史经验塑造态度模型</b></div>
+        <p>个人或社会过去经历的技术变革会影响其对新技术的情感反应。</p>
+        <p class="muted"><b>怎么用：</b>在跨文化沟通或市场调研中，考虑目标群体过去的技术变革记忆。</p>
+      </div>
+      
+      <div class="mini-card">
+        <div class="mini-head"><b>话语建构现实模型</b></div>
+        <p>精英和媒体如何谈论技术会塑造公众的认知和情绪。</p>
+        <p class="muted"><b>怎么用：</b>在公关或政策沟通中，注意话语框架的选择，聚焦实际用途而非末日威胁。</p>
+      </div>
+      
+    </section>
+  </div>
+
+  <!-- 背诵 -->
+  <div class="tab-panel" id="tab-recite" data-label="背诵">
+    <section class="card">
+      <h2 class="section">背诵建议</h2>
+      <p class="prose">全文以“西方焦虑 vs 全球乐观”为主线，背诵时抓住对比词（backlash / sunny disposition / gloomier / gap / pragmatic acceptance）。长句多在引语和调查数据处，按分号或引号换气；用 Bae 先生的故事开头、GlobeScan 数据支撑、印度孟买街景作例证、最后以“有条件容忍”收尾。</p>
+      <div class="meta-chips light" style="margin-top:12px">
+        <span class="chip">30 块</span>
+        <span class="chip">每块 25-70 词</span>
+        <span class="chip">预计 20 分钟背一遍</span>
+        <span class="chip">复习 D+1/2/4/7/15</span>
+        <span class="chip">每天新背 4 块</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">原文分块 <span class="count">30 块</span></h2>
+      <p class="muted small" style="margin-bottom:10px">先通读英文；需要时点「显示翻译」；点「遮住自测」检查记忆。</p>
+      
+      <article class="rc-chunk" id="chunk-1">
+        <div class="rc-head">
+          <span class="rc-no">块 1</span>
+          <span class="rc-size">61 words · §1–§9</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">International | What backlash? The surprising popularity of AI Unlike rich Westerners, many around the world feel hopeful about the technology Turn my scattered nistory flashcards into a story I1I remember ⑤ChatGPTOct 22nd 2026 AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> international what backlash the</div>
+        <div class="rc-zh">国际 | 什么反弹？ AI出人意料的受欢迎程度 与富裕的西方人不同，世界许多地方对这项 技术感到充满希望 把我零散的 历史闪卡变成 一个我能记住的故事 ⑤ChatGPT 2026年10月22日 在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-2">
+        <div class="rc-head">
+          <span class="rc-no">块 2</span>
+          <span class="rc-size">67 words · §9</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">“The manual era is completely ingrained in me,” says the 70-year-oldviolin salesman, sitting under a tree in a park in Seoul’s Jong-no district. Herecalls having to use a foot-operated “treadle pump” to get water, as well ashis delight when the first tractors rolled into the South Korean countryside.In recent decades he has seen things “develop so conveniently”, with theinternet and smartphones.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> the manual era is</div>
+        <div class="rc-zh">在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-3">
+        <div class="rc-head">
+          <span class="rc-no">块 3</span>
+          <span class="rc-size">47 words · §9–§10</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">And what about artificial intelligence? “It’snothing for humans to worry about. This kind of thing is good,” he says.“They should keep developing the technology. Humanity has advanced somuch up to our generation. There’s no telling how the world will change.” Welcoming our new overlords</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> and what about artificial</div>
+        <div class="rc-zh">在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。” 欢迎我们的新霸主</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-4">
+        <div class="rc-head">
+          <span class="rc-no">块 4</span>
+          <span class="rc-size">45 words · §11–§30</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">&#34;Overall, do you think Al will have a positive or negative impact on hu manity as a whole?&#34; September 2026, % responding mVery positiveESomewhat positiveENo impact Somewhat negative Very negative 2040 6080100 Vietnam Nigeria China Indonesia Kenya India Brazil Mexico South Kore Britain Canada United States</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> overall do you think</div>
+        <div class="rc-zh">“总体而言，您认为人工智能对人类整体会产生积极还是 消极的影响？” 2026年9月，受访者回答百分比 非常积极  有些积极  没有影响 有些消极 非常消极 2040年 6080100 越南 尼日利亚 中国 印度尼西亚 肯尼亚 印度 巴西 墨西哥 韩国 英国 加拿大 美国</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-5">
+        <div class="rc-head">
+          <span class="rc-no">块 5</span>
+          <span class="rc-size">59 words · §31–§33</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">France Sources GlobeScan, The Economist &#34;Survey conducted onineRead the headlines in Western media and it may seem as though a backlashto AI is spreading fast everywhere. But so far, it is not. Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans,according to a survey that GlobeScan, a polling firm, conducted for TheEconomist.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> france sources globescan the</div>
+        <div class="rc-zh">法国 来源：GlobeScan、《经济学人》 在网上进行的调查。读一读西方媒体的头条新闻，可能让人觉得对人工智能的抵制正在各地迅速蔓延。但到目前为止，情况并非如此。根据民调公司GlobeScan为《经济学人》进行的一项调查，几乎三分之二的韩国人都和裴先生一样对人工智能持乐观态度。在富裕国家之外，这种好感甚至更为普遍：例如，尼日利亚和越南近九成的人表示，人工智能不仅会改善他们自己的生活，还会改善人类的命运（见图表1）。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-6">
+        <div class="rc-head">
+          <span class="rc-no">块 6</span>
+          <span class="rc-size">53 words · §33–§34</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Outside rich countries this good feeling is even more stronglyshared: nearly nine in ten people in Nigeria and Vietnam, for example, saidthat AI will improve not only their own lives, but the lot of humanity (seechart 1). The polling across 34 countries was carried out online, which could tiltattitudes in favour of AI.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> outside rich countries this</div>
+        <div class="rc-zh">在网上进行的调查。读一读西方媒体的头条新闻，可能让人觉得对人工智能的抵制正在各地迅速蔓延。但到目前为止，情况并非如此。根据民调公司GlobeScan为《经济学人》进行的一项调查，几乎三分之二的韩国人都和裴先生一样对人工智能持乐观态度。在富裕国家之外，这种好感甚至更为普遍：例如，尼日利亚和越南近九成的人表示，人工智能不仅会改善他们自己的生活，还会改善人类的命运（见图表1）。 这项覆盖34个国家的调查是在网上进行的，这可能会使受访态度偏向支持人工智能。然而，在同一项调查中，富裕西方国家民众的情绪要悲观得多。在美国、加拿大和法国，对人工智能未来对人类影响持负面看法的人多于持正面看法的人。在其他西方国家，总体情绪是正面的，但远不如贫穷国家那么积极。盖洛普与微软最近对37个国家进行的另一项调查也得出了类似结果：人工智能广受欢迎，但在富裕西方国家则不那么受欢迎。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-7">
+        <div class="rc-head">
+          <span class="rc-no">块 7</span>
+          <span class="rc-size">68 words · §34</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Yet in the same survey sentiment in rich Westerncountries was much gloomier. In America, Canada and France more peoplefelt negatively than positively about AI’s future impact on humanity. In otherWestern countries sentiment was net-positive, but far less so than in the poorworld. Another recent survey of 37 countries, carried out by Gallup withMicrosoft, returned similar results: AI is broadly popular, but less so in richWestern countries.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> yet in the same</div>
+        <div class="rc-zh">这项覆盖34个国家的调查是在网上进行的，这可能会使受访态度偏向支持人工智能。然而，在同一项调查中，富裕西方国家民众的情绪要悲观得多。在美国、加拿大和法国，对人工智能未来对人类影响持负面看法的人多于持正面看法的人。在其他西方国家，总体情绪是正面的，但远不如贫穷国家那么积极。盖洛普与微软最近对37个国家进行的另一项调查也得出了类似结果：人工智能广受欢迎，但在富裕西方国家则不那么受欢迎。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-8">
+        <div class="rc-head">
+          <span class="rc-no">块 8</span>
+          <span class="rc-size">53 words · §35</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Why the gap between the West and the rest? Some of the optimism may coolas more people in poor countries come into direct contact with AI or datacentres, and see the technology helping or hurting some more than others.Around 9% of working-age Kenyans used AI in the second quarter of 2026,</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> why the gap between</div>
+        <div class="rc-zh">西方与其他地区为何存在这种差距？随着贫穷国家更多人直接接触人工智能或数据中心，并看到这项技术对某些人的帮助或伤害大于其他人，部分乐观情绪可能会降温。根据微软的一项研究，2026年第二季度约有9%的肯尼亚劳动年龄人口使用过人工智能，</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-9">
+        <div class="rc-head">
+          <span class="rc-no">块 9</span>
+          <span class="rc-size">46 words · §36–§43</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">according to a study by Microsoft. Yet 85% told GlobeScan that it wouldchange their lives for the better. Great expectations “Overall, do you think Al will have a positive or negative impact on your life personally?” September 2026, % responding* Very positiveSomewhat positive No impact Somewhat negative</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> according to a study</div>
+        <div class="rc-zh">然而，85%的人告诉GlobeScan，这会让他们的生活变得更好。 高期望 “总体而言，你认为人工智能会对你的个人生活产生积极还是 消极影响？” 2026年9月，回答百分比* 非常积极 有些积极 没有影响 有些消极</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-10">
+        <div class="rc-head">
+          <span class="rc-no">块 10</span>
+          <span class="rc-size">66 words · §44–§54</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Africa and the Middle East Non-OECD countries Asia-Pacific Latin America OECD countries Europe North America Sources: GlobeScan; The Economist *Survey conducted onlineBut plenty of people, poor and rich alike, are already at least vaguelyconscious of AI’s pitfalls. In a survey by Pew Research Centre, SouthKoreans were most likely (along with Australians) to say they expect AI togenerate massive job losses and worsen inequality.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> africa and the middle</div>
+        <div class="rc-zh">非洲和 中东 非经合组织 国家 亚太地区 拉丁美洲 经合组织国家 欧洲 北美 来源：GlobeScan；《经济学人》 *在线调查。但许多人不分贫富，至少已模糊意识到人工智能的隐患。皮尤研究中心的一项调查中，韩国人（与澳大利亚人一样）最可能表示，他们预计人工智能将导致大规模失业并加剧不平等。不过，目前此类担忧似乎被对该技术前景的好奇心所压倒。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-11">
+        <div class="rc-head">
+          <span class="rc-no">块 11</span>
+          <span class="rc-size">56 words · §54–§55</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">For now, though, suchfears appear to be outweighed by intrigue about the technology’s promise. Part of the explanation is that many workers outside the richest countrieshave less to lose from AI than do their counterparts in the West. In much ofthe poor world work is often informal and, compared with jobs in the West,precarious.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> for now though suchfears</div>
+        <div class="rc-zh">*在线调查。但许多人不分贫富，至少已模糊意识到人工智能的隐患。皮尤研究中心的一项调查中，韩国人（与澳大利亚人一样）最可能表示，他们预计人工智能将导致大规模失业并加剧不平等。不过，目前此类担忧似乎被对该技术前景的好奇心所压倒。 部分原因在于，富裕国家以外的许多劳动者比西方同行更少可失去的东西。在许多贫困国家，工作往往是非正规的，与西方的工作相比更不稳定。失去一份稳定的办公室工作给技术，这更多是富裕国家的问题（尽管在印度，信息技术和其他后台办公岗位看起来容易受到冲击）。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-12">
+        <div class="rc-head">
+          <span class="rc-no">块 12</span>
+          <span class="rc-size">54 words · §55–§56</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">The notion of losing a secure office job to technology is more ofa rich-world problem (though in India, say, information-technology andother back-office workers look vulnerable to disruption). The poor world has much to gain from AI, too. In countries whereinstitutions and formal education can be lacking, AI helps some people helpthemselves.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> the notion of losing</div>
+        <div class="rc-zh">部分原因在于，富裕国家以外的许多劳动者比西方同行更少可失去的东西。在许多贫困国家，工作往往是非正规的，与西方的工作相比更不稳定。失去一份稳定的办公室工作给技术，这更多是富裕国家的问题（尽管在印度，信息技术和其他后台办公岗位看起来容易受到冲击）。 贫困国家也能从人工智能中获益良多。在制度和正规教育可能匮乏的国家，人工智能帮助一些人自助。《从悲观到希望》一书的作者帕亚尔·阿罗拉认为，悲观是那些负担得起绝望的人的奢侈品。该书探讨了对技术态度的分歧。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-13">
+        <div class="rc-head">
+          <span class="rc-no">块 13</span>
+          <span class="rc-size">73 words · §56–§57</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">“Pessimism is a privilege for those who can afford to despair,”argues Payal Arora, author of “From Pessimism to Promise”, a book aboutdiverging attitudes to technology. In India users have gained cheap or free access to apps like Gemini from Google or ChatGPT from OpenAI; nearly one in five working-age Indians used generative AI in the second quarter of 2026, compared with a third of Americans, according to a recent Microsoft study.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> pessimism is a privilege</div>
+        <div class="rc-zh">贫困国家也能从人工智能中获益良多。在制度和正规教育可能匮乏的国家，人工智能帮助一些人自助。《从悲观到希望》一书的作者帕亚尔·阿罗拉认为，悲观是那些负担得起绝望的人的奢侈品。该书探讨了对技术态度的分歧。 在印度，用户已经可以免费或廉价地使用谷歌的Gemini或OpenAI的ChatGPT等应用；根据微软最近的一项研究，2026年第二季度，近五分之一的印度劳动年龄人口使用过生成式AI，而美国这一比例为三分之一。免费的中国替代产品DeepSeek在非洲很受欢迎，微软估计，在非洲许多国家，第二季度约有十分之一的劳动年龄人口使用过生成式AI。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-14">
+        <div class="rc-head">
+          <span class="rc-no">块 14</span>
+          <span class="rc-size">51 words · §57–§58</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">DeepSeek, a free Chinese alternative, is popular in Africa, where Microsoft estimates that in many countries about one in ten working-age people used generative AI in the second quarter. A narrow street in a busy suburb of Mumbai illustrates the benefits. Many shops on it use ChatGPT to generate advertisements.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> deepseek a free chinese</div>
+        <div class="rc-zh">在印度，用户已经可以免费或廉价地使用谷歌的Gemini或OpenAI的ChatGPT等应用；根据微软最近的一项研究，2026年第二季度，近五分之一的印度劳动年龄人口使用过生成式AI，而美国这一比例为三分之一。免费的中国替代产品DeepSeek在非洲很受欢迎，微软估计，在非洲许多国家，第二季度约有十分之一的劳动年龄人口使用过生成式AI。 孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-15">
+        <div class="rc-head">
+          <span class="rc-no">块 15</span>
+          <span class="rc-size">83 words · §58</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Dinesh Chandra, an optician, asked the chatbot to produce a “gravity-defying” photo for his brand. It duly created an image, now printed on brochures, of glasses floating above clouds while riding a feather. Next door Omkar Sapre, who sells dried fruit, masalas and pickles, posts “beautiful pictures” from ChatGPT on Instagram and WhatsApp, and has noticed his sales pick up.Ashlesha, who works at a dry cleaner on the same street, says, “We work hard and AI is extra support for us.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> dinesh chandra an optician</div>
+        <div class="rc-zh">孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-16">
+        <div class="rc-head">
+          <span class="rc-no">块 16</span>
+          <span class="rc-size">57 words · §58–§59</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Everyone is on Instagram.” All of them love the convenience of using AI; none worry about safety,privacy or data leaks, much less “AI slop”. The shaming of AI content seems less common outside America and Europe. Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> everyone is on instagram</div>
+        <div class="rc-zh">孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。” 他们都喜欢使用AI的便利；没有人担心安全、隐私或数据泄露，更不用说“AI垃圾内容”了。对AI内容的羞辱似乎在欧美以外不那么常见。约翰斯·霍普金斯大学的洪源远说，西方人“历史上垄断了知识和思想生产，但AI挑战了这一点”。“这仅仅是对那些在颠覆中受损的人来说才是危机吗？”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-17">
+        <div class="rc-head">
+          <span class="rc-no">块 17</span>
+          <span class="rc-size">63 words · §59–§60</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">“Is it a crisis only for those who lose from disruption?” As Mr Bae illustrates, even in some rich and middle-income countries where there seems more to lose from disruption, AI is surprisingly popular.Singaporeans are among the world’s top AI users, says Microsoft; nearly two-thirds told GlobeScan they thought the technology would have a positive effect on their lives.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> is it a crisis</div>
+        <div class="rc-zh">他们都喜欢使用AI的便利；没有人担心安全、隐私或数据泄露，更不用说“AI垃圾内容”了。对AI内容的羞辱似乎在欧美以外不那么常见。约翰斯·霍普金斯大学的洪源远说，西方人“历史上垄断了知识和思想生产，但AI挑战了这一点”。“这仅仅是对那些在颠覆中受损的人来说才是危机吗？” 正如裴先生所说明的，即使在一些似乎更容易因颠覆而受损的富裕和中等收入国家，AI也出人意料地受欢迎。微软表示，新加坡人是全球最大的AI用户群体之一；近三分之二的人告诉GlobeScan，他们认为这项技术会对自己的生活产生积极影响。在正经历大型数据中心热潮的马来西亚，针对这些数据中心的轻微抗议尚未演变成更广泛的抵制。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-18">
+        <div class="rc-head">
+          <span class="rc-no">块 18</span>
+          <span class="rc-size">47 words · §60–§61</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">In Malaysia, which is experiencing a big data-centre boom, minor protests against the sites have not yet turned into a wider backlash. Some countries where AI-optimism runs high share common factors that seem to cut across socioeconomic lines. One is a looming shortage of workers.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> in malaysia which is</div>
+        <div class="rc-zh">正如裴先生所说明的，即使在一些似乎更容易因颠覆而受损的富裕和中等收入国家，AI也出人意料地受欢迎。微软表示，新加坡人是全球最大的AI用户群体之一；近三分之二的人告诉GlobeScan，他们认为这项技术会对自己的生活产生积极影响。在正经历大型数据中心热潮的马来西亚，针对这些数据中心的轻微抗议尚未演变成更广泛的抵制。 一些AI乐观情绪高涨的国家有着似乎跨越社会经济阶层的共同因素。其中之一是迫在眉睫的劳动力短缺。长期生育率低的地区，如东亚，正在迅速老龄化。许多人希望AI（以及AI驱动的机器人）能够填补</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-19">
+        <div class="rc-head">
+          <span class="rc-no">块 19</span>
+          <span class="rc-size">125 words · §61–§63</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Parts of the world that have long had low fertility rates, like East Asia, are ageing rapidly. Many hope that AI (and AI-powered robots) can fill in for workers who do not exist, helping countries to care for greying populations. Another feature of some AI-optimist countries is a living memory of technology radically transforming societies in the span of a lifetime.Singapore, South Korea and Taiwan went from poor to rich partly by rapidly adopting new technologies that originated abroad.In China and India technological leaps, including through digital payment and delivery apps, have brought extraordinary convenience and autonomy.“At our age, we’ve lived through countless changes,” says Ms Meng, who works in advertising in Beijing and who, at 40, feels ancient.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> parts of the world</div>
+        <div class="rc-zh">一些AI乐观情绪高涨的国家有着似乎跨越社会经济阶层的共同因素。其中之一是迫在眉睫的劳动力短缺。长期生育率低的地区，如东亚，正在迅速老龄化。许多人希望AI（以及AI驱动的机器人）能够填补 不存在的工人的空缺，帮助各国照顾日益老龄化的 population。 一些AI乐观主义国家的另一个特征是，人们对技术在一生中彻底改变社会有着鲜活的记忆。新加坡、韩国和台湾地区部分通过迅速采用源自国外的新技术而从贫穷走向富裕。在中国和印度，包括数字支付和外卖应用在内的技术飞跃带来了非凡的便利和自主性。“在我们这个年纪，我们已经经历了无数变化，”在北京从事广告工作的孟女士说，40岁的她觉得自己已经老了。“在中国，事情甚至还没稳定下来，两三年后又会迎来另一场巨大转变。”阿罗拉女士说，在印度，智能手机在短短几年内为数亿人提供了“手中的神”。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-20">
+        <div class="rc-head">
+          <span class="rc-no">块 20</span>
+          <span class="rc-size">82 words · §63–§64</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">“Things haven’t even settled in China before another huge shift comes two or three years later.” In India smartphones have offered hundreds of millions of people a “God in their hand” over the course of just a few years, says Ms Arora. In Western countries, by contrast, pessimism towards AI may reflect people’s perception that their lives are not getting much better, that AI could make their lives worse—and that politicians cannot be relied upon to protect their interests.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> things haven t even</div>
+        <div class="rc-zh">一些AI乐观主义国家的另一个特征是，人们对技术在一生中彻底改变社会有着鲜活的记忆。新加坡、韩国和台湾地区部分通过迅速采用源自国外的新技术而从贫穷走向富裕。在中国和印度，包括数字支付和外卖应用在内的技术飞跃带来了非凡的便利和自主性。“在我们这个年纪，我们已经经历了无数变化，”在北京从事广告工作的孟女士说，40岁的她觉得自己已经老了。“在中国，事情甚至还没稳定下来，两三年后又会迎来另一场巨大转变。”阿罗拉女士说，在印度，智能手机在短短几年内为数亿人提供了“手中的神”。 相比之下，在西方国家，对AI的悲观情绪可能反映了人们的一种看法：他们的生活没有变得更好，AI可能让生活更糟，而且不能指望政客保护他们的利益。《技术治理》一书的作者丹尼尔·多布里克戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司体验的影响，而西方政府一直难以约束这些公司。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-21">
+        <div class="rc-head">
+          <span class="rc-no">块 21</span>
+          <span class="rc-size">47 words · §64–§65</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in. The ways in which politicians and firms talk about AI may also make a difference.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> daniel dobrygowski author of</div>
+        <div class="rc-zh">相比之下，在西方国家，对AI的悲观情绪可能反映了人们的一种看法：他们的生活没有变得更好，AI可能让生活更糟，而且不能指望政客保护他们的利益。《技术治理》一书的作者丹尼尔·多布里克戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司体验的影响，而西方政府一直难以约束这些公司。 政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-22">
+        <div class="rc-head">
+          <span class="rc-no">块 22</span>
+          <span class="rc-size">66 words · §65</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Bosses of American labs warn of job losses and human extinction as they race towards “artificial general intelligence”. Asian politicians and tech bosses rarely talk like that, perhaps in part because they are not developing frontier capabilities of their own. Instead they tend to focus on the practical uses of AI—what they will do with the technology,rather than what it will do to them.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> bosses of american labs</div>
+        <div class="rc-zh">政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-23">
+        <div class="rc-head">
+          <span class="rc-no">块 23</span>
+          <span class="rc-size">45 words · §65–§66</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">You are unlikely to hear the boss of Samsung talking publicly about AI doom. In China, where big advances in AI are being made, officials do worry about risks, from cyber-security threats to economic dislocation. But the general tenor of state media is boosterish.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> you are unlikely to</div>
+        <div class="rc-zh">政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。 在人工智能取得重大进展的中国，官员们确实担心风险，从网络安全威胁到经济失调。但官方媒体的总体基调是乐观的。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-24">
+        <div class="rc-head">
+          <span class="rc-no">块 24</span>
+          <span class="rc-size">45 words · §67</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">It would be wrong to conclude, though, that people in more AI-positive countries have no worries at all. Some are more resigned to the advance of technology as a fate that cannot be avoided. “AI’s impact might be different from every previous shift.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> it would be wrong</div>
+        <div class="rc-zh">不过，如果认为对人工智能更积极的国家的民众就完全没有担忧，那是不对的。有些人更倾向于把技术的进步视为一种无法避免的命运而接受。北京的孟女士说：“人工智能的影响可能不同于以往每一次变革。但地球有自己的节奏。当你不该活下来的时候，你就活不下来。你总不能每天都忧心忡忡吧，对吧？”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-25">
+        <div class="rc-head">
+          <span class="rc-no">块 25</span>
+          <span class="rc-size">63 words · §67–§68</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">But the Earth has its own rhythms,” says Ms Meng in Beijing. “When it’s not meant for you to survive, you won’t. You can’t live every day worrying, right?” Cho Kyu-jin of Seoul National University reckons that South Koreans are embracing AI despite their concerns because the “fear of being left behind is higher than that of losing stability”.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> but the earth has</div>
+        <div class="rc-zh">不过，如果认为对人工智能更积极的国家的民众就完全没有担忧，那是不对的。有些人更倾向于把技术的进步视为一种无法避免的命运而接受。北京的孟女士说：“人工智能的影响可能不同于以往每一次变革。但地球有自己的节奏。当你不该活下来的时候，你就活不下来。你总不能每天都忧心忡忡吧，对吧？” 首尔国立大学的赵圭镇认为，韩国人尽管有担忧，仍在拥抱人工智能，因为“害怕被落下甚于害怕失去稳定”。40岁的劳动法律师金阿兰说：“工业革命带来变革时，有积极影响也有消极影响。我们会找到生存之道。”在首尔郊外的银河机器人公园，她的小儿子站在她身旁，一边模仿一个正在练习泰拳动作的人形机器人，一边紧紧抓着一本讲解如何用人工智能为这类机器人编程的练习册。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-26">
+        <div class="rc-head">
+          <span class="rc-no">块 26</span>
+          <span class="rc-size">68 words · §68</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Kim Ah-ran, a 40-year-old labour lawyer, says, “When changes came in the Industrial Revolution, there were positive and negative effects. We’ll find a way to live.” Her young son,standing next to her at the Galaxy Robot Park outside Seoul, is mimicking a humanoid that is practising Muay Thai moves, while clutching a workbook that explains how to use AI to code such robots.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> kim ah ran a</div>
+        <div class="rc-zh">首尔国立大学的赵圭镇认为，韩国人尽管有担忧，仍在拥抱人工智能，因为“害怕被落下甚于害怕失去稳定”。40岁的劳动法律师金阿兰说：“工业革命带来变革时，有积极影响也有消极影响。我们会找到生存之道。”在首尔郊外的银河机器人公园，她的小儿子站在她身旁，一边模仿一个正在练习泰拳动作的人形机器人，一边紧紧抓着一本讲解如何用人工智能为这类机器人编程的练习册。</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-27">
+        <div class="rc-head">
+          <span class="rc-no">块 27</span>
+          <span class="rc-size">48 words · §69</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">Such pragmatic acceptance suggests that positive attitudes like Mr Bae’s could yet be fragile. Kim Jeong-nam of KAIST, a tech-focused university,serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy. He thinks that South Koreans’ tolerance is conditional on “competently built” policy.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> such pragmatic acceptance suggests</div>
+        <div class="rc-zh">这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-28">
+        <div class="rc-head">
+          <span class="rc-no">块 28</span>
+          <span class="rc-size">88 words · §69</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">If AI starts to “produce visible losers”, such as in exam fairness or jobs, he worries that leeway could vanish. The same could hold true elsewhere. “How are you going to invent an AI that can drive a motorbike?” asks Anderson Santos, a delivery driver in São Paulo,Brazil, who is later dismayed at a mention of driverless cars.There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> if ai starts to</div>
+        <div class="rc-zh">这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-29">
+        <div class="rc-head">
+          <span class="rc-no">块 29</span>
+          <span class="rc-size">48 words · §69</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">In the Philippines people are marching against “Pax Silica”, an American-led initiative to develop AI and semiconductor supply chains. In Thane, a city near Mumbai, hundreds have protested against an Amazon hyperscale data centre that is planned for their neighbourhood. Rage is not yet all-consuming, though.</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> in the philippines people</div>
+        <div class="rc-zh">这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”</div>
+      </article>
+      
+      <article class="rc-chunk" id="chunk-30">
+        <div class="rc-head">
+          <span class="rc-no">块 30</span>
+          <span class="rc-size">14 words · §69</span>
+          <span class="spacer"></span>
+          <button class="rc-btn js-toggle-chunk-zh" type="button">显示翻译</button>
+          <button class="rc-btn js-blank" type="button">遮住自测</button>
+        </div>
+        <p class="rc-text">“It’s just like any other factory,” says one resident. “AI is the future.”■</p>
+        <div class="rc-cover">试着背出这一块，再点「遮住自测」恢复。</div>
+        <div class="rc-hint"><b>提示</b> it s just like</div>
+        <div class="rc-zh">这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”</div>
+      </article>
+      
+    </section>
+
+    <section class="card">
+      <h2 class="section">逐块复习表</h2>
+      <div class="table-scroll">
+        <table class="vocab-table rc-table">
+          <thead>
+            <tr>
+              <th>块</th><th>学习日</th>
+              <th>D+1</th><th>D+2</th><th>D+4</th><th>D+7</th><th>D+15</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+            <tr>
+              <td><b>1</b></td>
+              <td>2026-11-23</td>
+              <td>2026-11-24</td><td>2026-11-25</td><td>2026-11-27</td><td>2026-11-30</td><td>2026-12-08</td>
+            </tr>
+          
+            <tr>
+              <td><b>2</b></td>
+              <td>2026-11-23</td>
+              <td>2026-11-24</td><td>2026-11-25</td><td>2026-11-27</td><td>2026-11-30</td><td>2026-12-08</td>
+            </tr>
+          
+            <tr>
+              <td><b>3</b></td>
+              <td>2026-11-23</td>
+              <td>2026-11-24</td><td>2026-11-25</td><td>2026-11-27</td><td>2026-11-30</td><td>2026-12-08</td>
+            </tr>
+          
+            <tr>
+              <td><b>4</b></td>
+              <td>2026-11-23</td>
+              <td>2026-11-24</td><td>2026-11-25</td><td>2026-11-27</td><td>2026-11-30</td><td>2026-12-08</td>
+            </tr>
+          
+            <tr>
+              <td><b>5</b></td>
+              <td>2026-11-24</td>
+              <td>2026-11-25</td><td>2026-11-26</td><td>2026-11-28</td><td>2026-12-01</td><td>2026-12-09</td>
+            </tr>
+          
+            <tr>
+              <td><b>6</b></td>
+              <td>2026-11-24</td>
+              <td>2026-11-25</td><td>2026-11-26</td><td>2026-11-28</td><td>2026-12-01</td><td>2026-12-09</td>
+            </tr>
+          
+            <tr>
+              <td><b>7</b></td>
+              <td>2026-11-24</td>
+              <td>2026-11-25</td><td>2026-11-26</td><td>2026-11-28</td><td>2026-12-01</td><td>2026-12-09</td>
+            </tr>
+          
+            <tr>
+              <td><b>8</b></td>
+              <td>2026-11-24</td>
+              <td>2026-11-25</td><td>2026-11-26</td><td>2026-11-28</td><td>2026-12-01</td><td>2026-12-09</td>
+            </tr>
+          
+            <tr>
+              <td><b>9</b></td>
+              <td>2026-11-25</td>
+              <td>2026-11-26</td><td>2026-11-27</td><td>2026-11-29</td><td>2026-12-02</td><td>2026-12-10</td>
+            </tr>
+          
+            <tr>
+              <td><b>10</b></td>
+              <td>2026-11-25</td>
+              <td>2026-11-26</td><td>2026-11-27</td><td>2026-11-29</td><td>2026-12-02</td><td>2026-12-10</td>
+            </tr>
+          
+            <tr>
+              <td><b>11</b></td>
+              <td>2026-11-25</td>
+              <td>2026-11-26</td><td>2026-11-27</td><td>2026-11-29</td><td>2026-12-02</td><td>2026-12-10</td>
+            </tr>
+          
+            <tr>
+              <td><b>12</b></td>
+              <td>2026-11-25</td>
+              <td>2026-11-26</td><td>2026-11-27</td><td>2026-11-29</td><td>2026-12-02</td><td>2026-12-10</td>
+            </tr>
+          
+            <tr>
+              <td><b>13</b></td>
+              <td>2026-11-26</td>
+              <td>2026-11-27</td><td>2026-11-28</td><td>2026-11-30</td><td>2026-12-03</td><td>2026-12-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>14</b></td>
+              <td>2026-11-26</td>
+              <td>2026-11-27</td><td>2026-11-28</td><td>2026-11-30</td><td>2026-12-03</td><td>2026-12-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>15</b></td>
+              <td>2026-11-26</td>
+              <td>2026-11-27</td><td>2026-11-28</td><td>2026-11-30</td><td>2026-12-03</td><td>2026-12-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>16</b></td>
+              <td>2026-11-26</td>
+              <td>2026-11-27</td><td>2026-11-28</td><td>2026-11-30</td><td>2026-12-03</td><td>2026-12-11</td>
+            </tr>
+          
+            <tr>
+              <td><b>17</b></td>
+              <td>2026-11-27</td>
+              <td>2026-11-28</td><td>2026-11-29</td><td>2026-12-01</td><td>2026-12-04</td><td>2026-12-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>18</b></td>
+              <td>2026-11-27</td>
+              <td>2026-11-28</td><td>2026-11-29</td><td>2026-12-01</td><td>2026-12-04</td><td>2026-12-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>19</b></td>
+              <td>2026-11-27</td>
+              <td>2026-11-28</td><td>2026-11-29</td><td>2026-12-01</td><td>2026-12-04</td><td>2026-12-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>20</b></td>
+              <td>2026-11-27</td>
+              <td>2026-11-28</td><td>2026-11-29</td><td>2026-12-01</td><td>2026-12-04</td><td>2026-12-12</td>
+            </tr>
+          
+            <tr>
+              <td><b>21</b></td>
+              <td>2026-11-28</td>
+              <td>2026-11-29</td><td>2026-11-30</td><td>2026-12-02</td><td>2026-12-05</td><td>2026-12-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>22</b></td>
+              <td>2026-11-28</td>
+              <td>2026-11-29</td><td>2026-11-30</td><td>2026-12-02</td><td>2026-12-05</td><td>2026-12-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>23</b></td>
+              <td>2026-11-28</td>
+              <td>2026-11-29</td><td>2026-11-30</td><td>2026-12-02</td><td>2026-12-05</td><td>2026-12-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>24</b></td>
+              <td>2026-11-28</td>
+              <td>2026-11-29</td><td>2026-11-30</td><td>2026-12-02</td><td>2026-12-05</td><td>2026-12-13</td>
+            </tr>
+          
+            <tr>
+              <td><b>25</b></td>
+              <td>2026-11-29</td>
+              <td>2026-11-30</td><td>2026-12-01</td><td>2026-12-03</td><td>2026-12-06</td><td>2026-12-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>26</b></td>
+              <td>2026-11-29</td>
+              <td>2026-11-30</td><td>2026-12-01</td><td>2026-12-03</td><td>2026-12-06</td><td>2026-12-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>27</b></td>
+              <td>2026-11-29</td>
+              <td>2026-11-30</td><td>2026-12-01</td><td>2026-12-03</td><td>2026-12-06</td><td>2026-12-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>28</b></td>
+              <td>2026-11-29</td>
+              <td>2026-11-30</td><td>2026-12-01</td><td>2026-12-03</td><td>2026-12-06</td><td>2026-12-14</td>
+            </tr>
+          
+            <tr>
+              <td><b>29</b></td>
+              <td>2026-11-30</td>
+              <td>2026-12-01</td><td>2026-12-02</td><td>2026-12-04</td><td>2026-12-07</td><td>2026-12-15</td>
+            </tr>
+          
+            <tr>
+              <td><b>30</b></td>
+              <td>2026-11-30</td>
+              <td>2026-12-01</td><td>2026-12-02</td><td>2026-12-04</td><td>2026-12-07</td><td>2026-12-15</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="checkin">
+      <h2 class="section">每日打卡</h2>
+      <div class="checkin-controls">
+        <div class="progress">
+          <div class="progress-bar"><i id="progressFill"></i></div>
+          <span class="progress-text" id="progressText">0 / 23 天</span>
+        </div>
+      </div>
+      <div class="day-list" id="dayList">
+        
+        <div class="day-row">
+          <span class="day-label">第 1 天 · 2026-11-23</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 1,2,3,4</span>
+            
+          </span>
+          <button class="rc-btn js-day-check" data-day="1" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 2 天 · 2026-11-24</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 5,6,7,8</span>
+            <span class="tag review">复习 1,2,3,4</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="2" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 3 天 · 2026-11-25</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 9,10,11,12</span>
+            <span class="tag review">复习 1,2,3,4,5,6,7,8</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="3" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 4 天 · 2026-11-26</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 13,14,15,16</span>
+            <span class="tag review">复习 5,6,7,8,9,10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="4" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 5 天 · 2026-11-27</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 17,18,19,20</span>
+            <span class="tag review">复习 1,2,3,4,9,10,11,12,13,14,15,16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="5" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 6 天 · 2026-11-28</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 21,22,23,24</span>
+            <span class="tag review">复习 5,6,7,8,13,14,15,16,17,18,19,20</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="6" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 7 天 · 2026-11-29</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 25,26,27,28</span>
+            <span class="tag review">复习 9,10,11,12,17,18,19,20,21,22,23,24</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="7" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 8 天 · 2026-11-30</span>
+          <span class="day-tags">
+            <span class="tag learn">新背 29,30</span>
+            <span class="tag review">复习 1,2,3,4,13,14,15,16,21,22,23,24,25,26,27,28</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="8" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 9 天 · 2026-12-01</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 5,6,7,8,17,18,19,20,25,26,27,28,29,30</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="9" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 10 天 · 2026-12-02</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 9,10,11,12,21,22,23,24,29,30</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="10" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 11 天 · 2026-12-03</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 13,14,15,16,25,26,27,28</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="11" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 12 天 · 2026-12-04</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 17,18,19,20,29,30</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="12" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 13 天 · 2026-12-05</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 21,22,23,24</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="13" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 14 天 · 2026-12-06</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 25,26,27,28</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="14" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 15 天 · 2026-12-07</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 29,30</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="15" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 16 天 · 2026-12-08</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 1,2,3,4</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="16" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 17 天 · 2026-12-09</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 5,6,7,8</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="17" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 18 天 · 2026-12-10</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 9,10,11,12</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="18" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 19 天 · 2026-12-11</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 13,14,15,16</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="19" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 20 天 · 2026-12-12</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 17,18,19,20</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="20" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 21 天 · 2026-12-13</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 21,22,23,24</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="21" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 22 天 · 2026-12-14</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 25,26,27,28</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="22" type="button">完成</button>
+        </div>
+        
+        <div class="day-row">
+          <span class="day-label">第 23 天 · 2026-12-15</span>
+          <span class="day-tags">
+            
+            <span class="tag review">复习 29,30</span>
+          </span>
+          <button class="rc-btn js-day-check" data-day="23" type="button">完成</button>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+
+  <!-- 统计 -->
+  <div class="tab-panel" id="tab-stats" data-label="统计">
+    <div class="stat-grid">
+      <div class="stat"><b>1788</b><span>英文词数</span></div>
+      <div class="stat"><b>69</b><span>段落</span></div>
+      <div class="stat"><b>20</b><span>生词</span></div>
+      <div class="stat"><b>7</b><span>长难句</span></div>
+      <div class="stat"><b>6</b><span>结构部分</span></div>
+      <div class="stat"><b>30</b><span>背诵块</span></div>
+      <div class="stat"><b>29856</b><span>Tokens</span></div>
+      <div class="stat"><b>¥0.0449</b><span>本次费用</span></div>
+      <div class="stat"><b>42s</b><span>分析耗时</span></div>
+    </div>
+    <section class="card" style="margin-top:14px">
+      <h2 class="section">分阶段用量</h2>
+      <div class="table-scroll">
+        <table class="vocab-table">
+          <thead><tr><th>阶段</th><th>输入</th><th>输出</th><th>费用</th><th>结束原因</th></tr></thead>
+          <tbody>
+          
+            <tr>
+              <td>core</td>
+              <td>3377</td>
+              <td>2654</td>
+              <td>¥0.0087</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:1</td>
+              <td>378</td>
+              <td>172</td>
+              <td>¥0.0007</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:2</td>
+              <td>558</td>
+              <td>329</td>
+              <td>¥0.0012</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:3</td>
+              <td>343</td>
+              <td>138</td>
+              <td>¥0.0006</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:4</td>
+              <td>345</td>
+              <td>138</td>
+              <td>¥0.0006</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:5</td>
+              <td>676</td>
+              <td>426</td>
+              <td>¥0.0015</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:6</td>
+              <td>351</td>
+              <td>89</td>
+              <td>¥0.0005</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:7</td>
+              <td>584</td>
+              <td>321</td>
+              <td>¥0.0012</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:8</td>
+              <td>1043</td>
+              <td>787</td>
+              <td>¥0.0026</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>translation:9</td>
+              <td>922</td>
+              <td>588</td>
+              <td>¥0.0021</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>language</td>
+              <td>3161</td>
+              <td>3755</td>
+              <td>¥0.0107</td>
+              <td>stop</td>
+            </tr>
+          
+            <tr>
+              <td>recitation</td>
+              <td>3042</td>
+              <td>5679</td>
+              <td>¥0.0144</td>
+              <td>stop</td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<div id="tip"></div>
+
+<script>
+(function () {
+  var VOCAB = {"v1": {"word": "backlash", "note": "强烈反对，抵制；常指公众对某种社会变化或政策的激烈反弹。搭配：a backlash against/to sth.", "difficulty": "★★☆", "para": 1}, "v2": {"word": "sunnydisposition", "note": "乐观开朗的性格/态度；此处指对AI的积极看法。sunny disposition 原意为开朗的性情。", "difficulty": "★★☆", "para": 33}, "v3": {"word": "tilt", "note": "使倾向于，使偏向；tilt sth in favour of 使……有利于。也可作名词，如 a tilt towards protectionism。", "difficulty": "★★☆", "para": 34}, "v4": {"word": "gloomy", "note": "悲观的，沮丧的；gloomy sentiment 悲观情绪。反义词：optimistic。", "difficulty": "★☆☆", "para": null}, "v5": {"word": "net-positive", "note": "净正面的；指正面评价多于负面评价。常用于经济、民调语境，如 net-positive effect。", "difficulty": "★★☆", "para": 34}, "v6": {"word": "pitfalls", "note": "隐患，陷阱；常指不易察觉的危险或困难。搭配：avoid the pitfalls of sth.", "difficulty": "★★☆", "para": 54}, "v7": {"word": "outweigh", "note": "超过，比……更重要；outweigh 常用于比较利弊，如 benefits outweigh costs。", "difficulty": "★★☆", "para": 54}, "v8": {"word": "intrigue", "note": "好奇心，兴趣；此处指对技术前景的着迷。动词意为“激起兴趣”。", "difficulty": "★★☆", "para": 54}, "v9": {"word": "precarious", "note": "不稳定的，不安全的；常形容工作、处境。搭配：precarious employment/livelihood。", "difficulty": "★★☆", "para": 55}, "v10": {"word": "vulnerable", "note": "脆弱的，易受伤害的；be vulnerable to 易受……影响/攻击。", "difficulty": "★★☆", "para": 55}, "v11": {"word": "disruption", "note": "颠覆，扰乱；常指技术对行业的冲击。搭配：technological disruption, market disruption。", "difficulty": "★★☆", "para": 55}, "v12": {"word": "monopolised", "note": "垄断，独占；monopolise 动词，名词 monopoly。此处指西方长期垄断知识与思想生产。", "difficulty": "★★☆", "para": 59}, "v13": {"word": "ideational", "note": "观念的，思想上的；ideational production 指思想/观念的生产。较学术用词。", "difficulty": "★★★", "para": 59}, "v14": {"word": "cut across", "note": "超越，跨越（界限）；cut across socioeconomic lines 跨越社会经济阶层。", "difficulty": "★★☆", "para": 61}, "v15": {"word": "looming", "note": "逼近的，即将发生的（通常指不好的事）；looming shortage/crisis。", "difficulty": "★★☆", "para": 61}, "v16": {"word": "rein in", "note": "控制，约束；rein in 原指勒住马，引申为遏制。搭配：rein in spending/abuses。", "difficulty": "★★☆", "para": 64}, "v17": {"word": "boosterish", "note": "鼓吹的，大力支持的；boosterish 指带有宣传鼓动色彩的。名词 booster 支持者。", "difficulty": "★★★", "para": 66}, "v18": {"word": "resigned", "note": "顺从的，无可奈何的；be resigned to sth 听任，接受。", "difficulty": "★★☆", "para": 67}, "v19": {"word": "nascent", "note": "初期的，萌芽的；nascent signs 初现的迹象。常用于正式文体。", "difficulty": "★★★", "para": 69}, "v20": {"word": "outright", "note": "彻底的，完全的；outright rebellion 彻底的反叛。也可表示“直率的”。", "difficulty": "★★☆", "para": 69}};
+  var MATERIAL_ID = "2026-11-23_1113_The-surprising-popularity-of-AI_56edd3";
+  var DAY_TOTAL = 23;
+
+  // ── Tab 切换 ──
+  var tabBar = document.getElementById('tabBar');
+  function activateTab(id) {
+    document.querySelectorAll('.tab-btn').forEach(function (b) {
+      b.classList.toggle('active', b.getAttribute('data-tab') === id);
+    });
+    document.querySelectorAll('.tab-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === id);
+    });
+    try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
+    try { localStorage.setItem('economist-tab', id); } catch (e) {}
+  }
+  tabBar.addEventListener('click', function (e) {
+    var btn = e.target.closest('.tab-btn');
+    if (btn) activateTab(btn.getAttribute('data-tab'));
+  });
+  var initialTab = location.hash.slice(1);
+  if (!initialTab) { try { initialTab = localStorage.getItem('economist-tab'); } catch (e) {} }
+  if (!initialTab || !document.getElementById(initialTab)) initialTab = 'tab-summary';
+  activateTab(initialTab);
+
+  // ── 定位到段落并高亮 ──
+  function locatePara(index, vid) {
+    if (!index) return;
+    activateTab('tab-translation');
+    var card = document.getElementById('para-' + index);
+    if (!card) return;
+    card.classList.remove('zh-off');
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    card.classList.add('flash');
+    var hit = vid ? card.querySelector('[data-vid="' + vid + '"]') : null;
+    if (hit) hit.classList.add('hit');
+    setTimeout(function () {
+      card.classList.remove('flash');
+      if (hit) hit.classList.remove('hit');
+    }, 2000);
+  }
+  document.querySelectorAll('.vocab-row[data-para]').forEach(function (row) {
+    row.addEventListener('click', function () {
+      locatePara(row.getAttribute('data-para'), row.getAttribute('data-vid'));
+    });
+    row.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+    });
+  });
+  document.querySelectorAll('.ls-card[data-para], .fact-row[data-para]').forEach(function (el) {
+    el.addEventListener('click', function () { locatePara(el.getAttribute('data-para'), null); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+    });
+  });
+
+  // ── 译文开关 ──
+  var hideAll = false;
+  var toggleAll = document.getElementById('toggleAllZh');
+  toggleAll.addEventListener('click', function () {
+    hideAll = !hideAll;
+    document.querySelectorAll('.para-card').forEach(function (c) {
+      c.classList.toggle('zh-off', hideAll);
+    });
+    toggleAll.textContent = hideAll ? '显示译文' : '隐藏译文';
+  });
+  document.querySelectorAll('.js-toggle-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.para-card').classList.toggle('zh-off');
+    });
+  });
+
+  // ── 生词 tooltip ──
+  var tip = document.getElementById('tip');
+  function hideTip() { tip.style.display = 'none'; }
+  function showTip(x, y, info) {
+    tip.innerHTML = '<div class="tip-word"></div><div class="tip-stars"></div><div class="tip-note"></div>';
+    tip.querySelector('.tip-word').textContent = info.word || '';
+    tip.querySelector('.tip-stars').textContent = info.difficulty || '';
+    tip.querySelector('.tip-note').textContent = info.note || '';
+    tip.style.display = 'block';
+    var r = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, x - r.width / 2), window.innerWidth - r.width - 8);
+    var top = y + 14;
+    if (top + r.height > window.innerHeight - 8) top = y - r.height - 14;
+    tip.style.left = left + 'px';
+    tip.style.top = Math.max(8, top) + 'px';
+  }
+  document.querySelectorAll('.para-en').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var span = e.target.closest('.w');
+      if (!span) return;
+      var info = VOCAB[span.getAttribute('data-vid')];
+      if (!info) return;
+      e.stopPropagation();
+      showTip(e.clientX, e.clientY, info);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('#tip') && !e.target.closest('.w')) hideTip();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
+  window.addEventListener('scroll', hideTip, { passive: true });
+
+  // ── 背诵：翻译展开 / 遮住自测 ──
+  document.querySelectorAll('.js-toggle-chunk-zh').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = b.closest('.rc-chunk');
+      card.classList.toggle('zh-on');
+      b.textContent = card.classList.contains('zh-on') ? '隐藏翻译' : '显示翻译';
+    });
+  });
+  document.querySelectorAll('.js-blank').forEach(function (b) {
+    b.addEventListener('click', function () {
+      b.closest('.rc-chunk').classList.toggle('blanked');
+    });
+  });
+
+  // ── 每日打卡（localStorage）──
+  var STORE_KEY = 'economist-recite-' + MATERIAL_ID;
+  function loadDone() {
+    try { return JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); } catch (e) { return []; }
+  }
+  function saveDone(arr) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  function renderProgress() {
+    var done = loadDone();
+    var pct = DAY_TOTAL ? Math.round(done.length / DAY_TOTAL * 100) : 0;
+    var fill = document.getElementById('progressFill');
+    var text = document.getElementById('progressText');
+    if (fill) fill.style.width = pct + '%';
+    if (text) text.textContent = done.length + ' / ' + DAY_TOTAL + ' 天';
+    document.querySelectorAll('.js-day-check').forEach(function (b) {
+      var on = done.indexOf(parseInt(b.getAttribute('data-day'), 10)) !== -1;
+      b.classList.toggle('done', on);
+      b.textContent = on ? '已完成' : '完成';
+    });
+  }
+  document.querySelectorAll('.js-day-check').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var day = parseInt(b.getAttribute('data-day'), 10);
+      var done = loadDone();
+      var i = done.indexOf(day);
+      if (i === -1) done.push(day); else done.splice(i, 1);
+      saveDone(done);
+      renderProgress();
+    });
+  });
+  renderProgress();
+})();
+</script>
+</body>
+</html>

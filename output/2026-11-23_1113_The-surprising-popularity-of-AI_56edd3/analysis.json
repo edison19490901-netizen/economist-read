@@ -1,0 +1,2202 @@
+{
+  "meta": {
+    "id": "2026-11-23_1113_The-surprising-popularity-of-AI_56edd3",
+    "title": "The surprising popularity of AI",
+    "source": "file",
+    "url": null,
+    "language": "en",
+    "created": "2026-11-23T11:14:21",
+    "model": "deepseek-chat",
+    "word_count": 1788,
+    "paragraph_count": 69,
+    "truncated": false,
+    "duration_seconds": 42.2
+  },
+  "summary": {
+    "zh_points": [
+      "调查显示，全球多数国家对AI持乐观态度，尤其是尼日利亚、越南等发展中国家，近九成受访者认为AI将改善人类生活。",
+      "西方富国情绪明显更悲观，美国、加拿大、法国负面看法者多于正面，其他西方国家净正面但远低于穷国。",
+      "穷国工人从AI中获益更多，因为非正式工作风险高，AI提供廉价工具帮助小商户提升生意，且人们对隐私等风险担忧较少。",
+      "部分亚洲国家乐观源于劳动力短缺和对技术变革的亲身经历，而西方悲观与社交媒体和大科技公司的负面体验有关。",
+      "这种乐观可能脆弱，若AI造成可见的失业或不公，态度可能转变，但目前数据中心的抗议尚未形成大规模反弹。"
+    ],
+    "en_points": [
+      "Surveys across 34 countries show that nearly nine in ten people in Nigeria and Vietnam believe AI will improve humanity, while rich Western countries are much gloomier.",
+      "In America, Canada and France more people feel negatively than positively about AI's future impact, and even net-positive Western countries are far less optimistic than poor ones.",
+      "Workers in poorer countries have less to lose from AI because informal and precarious jobs are common, and many already use cheap AI tools to boost small businesses.",
+      "Optimism in some Asian countries stems from looming worker shortages and living memory of rapid technological transformation, while Western pessimism reflects distrust of Big Tech and politicians.",
+      "This positive sentiment could be fragile if AI produces visible losers, but so far protests against data centres have not turned into a broad backlash outside America."
+    ]
+  },
+  "paragraphs": [
+    {
+      "index": 1,
+      "en": "International | What backlash?",
+      "zh": "国际 | 什么反弹？"
+    },
+    {
+      "index": 2,
+      "en": "The surprising popularity of AI",
+      "zh": "AI出人意料的受欢迎程度"
+    },
+    {
+      "index": 3,
+      "en": "Unlike rich Westerners, many around the world feel hopeful about the",
+      "zh": "与富裕的西方人不同，世界许多地方对这项"
+    },
+    {
+      "index": 4,
+      "en": "technology",
+      "zh": "技术感到充满希望"
+    },
+    {
+      "index": 5,
+      "en": "Turn my scattered",
+      "zh": "把我零散的"
+    },
+    {
+      "index": 6,
+      "en": "nistory flashcards into",
+      "zh": "历史闪卡变成"
+    },
+    {
+      "index": 7,
+      "en": "a story I1I remember",
+      "zh": "一个我能记住的故事"
+    },
+    {
+      "index": 8,
+      "en": "⑤ChatGPTOct 22nd 2026",
+      "zh": "⑤ChatGPT 2026年10月22日"
+    },
+    {
+      "index": 9,
+      "en": "AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome. “The manual era is completely ingrained in me,” says the 70-year-oldviolin salesman, sitting under a tree in a park in Seoul’s Jong-no district. Herecalls having to use a foot-operated “treadle pump” to get water, as well ashis delight when the first tractors rolled into the South Korean countryside.In recent decades he has seen things “develop so conveniently”, with theinternet and smartphones. And what about artificial intelligence? “It’snothing for humans to worry about. This kind of thing is good,” he says.“They should keep developing the technology. Humanity has advanced somuch up to our generation. There’s no telling how the world will change.”",
+      "zh": "在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。”"
+    },
+    {
+      "index": 10,
+      "en": "Welcoming our new overlords",
+      "zh": "欢迎我们的新霸主"
+    },
+    {
+      "index": 11,
+      "en": "\"Overall, do you think Al will have a positive or",
+      "zh": "“总体而言，您认为人工智能对人类整体会产生积极还是"
+    },
+    {
+      "index": 12,
+      "en": "negative impact on hu manity as a whole?\"",
+      "zh": "消极的影响？”"
+    },
+    {
+      "index": 13,
+      "en": "September 2026, % responding",
+      "zh": "2026年9月，受访者回答百分比"
+    },
+    {
+      "index": 14,
+      "en": "mVery positiveESomewhat positiveENo impact",
+      "zh": "非常积极  有些积极  没有影响"
+    },
+    {
+      "index": 15,
+      "en": "Somewhat negative",
+      "zh": "有些消极"
+    },
+    {
+      "index": 16,
+      "en": "Very negative",
+      "zh": "非常消极"
+    },
+    {
+      "index": 17,
+      "en": "2040",
+      "zh": "2040年"
+    },
+    {
+      "index": 18,
+      "en": "6080100",
+      "zh": "6080100"
+    },
+    {
+      "index": 19,
+      "en": "Vietnam",
+      "zh": "越南"
+    },
+    {
+      "index": 20,
+      "en": "Nigeria",
+      "zh": "尼日利亚"
+    },
+    {
+      "index": 21,
+      "en": "China",
+      "zh": "中国"
+    },
+    {
+      "index": 22,
+      "en": "Indonesia",
+      "zh": "印度尼西亚"
+    },
+    {
+      "index": 23,
+      "en": "Kenya",
+      "zh": "肯尼亚"
+    },
+    {
+      "index": 24,
+      "en": "India",
+      "zh": "印度"
+    },
+    {
+      "index": 25,
+      "en": "Brazil",
+      "zh": "巴西"
+    },
+    {
+      "index": 26,
+      "en": "Mexico",
+      "zh": "墨西哥"
+    },
+    {
+      "index": 27,
+      "en": "South Kore",
+      "zh": "韩国"
+    },
+    {
+      "index": 28,
+      "en": "Britain",
+      "zh": "英国"
+    },
+    {
+      "index": 29,
+      "en": "Canada",
+      "zh": "加拿大"
+    },
+    {
+      "index": 30,
+      "en": "United States",
+      "zh": "美国"
+    },
+    {
+      "index": 31,
+      "en": "France",
+      "zh": "法国"
+    },
+    {
+      "index": 32,
+      "en": "Sources GlobeScan, The Economist",
+      "zh": "来源：GlobeScan、《经济学人》"
+    },
+    {
+      "index": 33,
+      "en": "\"Survey conducted onineRead the headlines in Western media and it may seem as though a backlashto AI is spreading fast everywhere. But so far, it is not. Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans,according to a survey that GlobeScan, a polling firm, conducted for TheEconomist. Outside rich countries this good feeling is even more stronglyshared: nearly nine in ten people in Nigeria and Vietnam, for example, saidthat AI will improve not only their own lives, but the lot of humanity (seechart 1).",
+      "zh": "在网上进行的调查。读一读西方媒体的头条新闻，可能让人觉得对人工智能的抵制正在各地迅速蔓延。但到目前为止，情况并非如此。根据民调公司GlobeScan为《经济学人》进行的一项调查，几乎三分之二的韩国人都和裴先生一样对人工智能持乐观态度。在富裕国家之外，这种好感甚至更为普遍：例如，尼日利亚和越南近九成的人表示，人工智能不仅会改善他们自己的生活，还会改善人类的命运（见图表1）。"
+    },
+    {
+      "index": 34,
+      "en": "The polling across 34 countries was carried out online, which could tiltattitudes in favour of AI. Yet in the same survey sentiment in rich Westerncountries was much gloomier. In America, Canada and France more peoplefelt negatively than positively about AI’s future impact on humanity. In otherWestern countries sentiment was net-positive, but far less so than in the poorworld. Another recent survey of 37 countries, carried out by Gallup withMicrosoft, returned similar results: AI is broadly popular, but less so in richWestern countries.",
+      "zh": "这项覆盖34个国家的调查是在网上进行的，这可能会使受访态度偏向支持人工智能。然而，在同一项调查中，富裕西方国家民众的情绪要悲观得多。在美国、加拿大和法国，对人工智能未来对人类影响持负面看法的人多于持正面看法的人。在其他西方国家，总体情绪是正面的，但远不如贫穷国家那么积极。盖洛普与微软最近对37个国家进行的另一项调查也得出了类似结果：人工智能广受欢迎，但在富裕西方国家则不那么受欢迎。"
+    },
+    {
+      "index": 35,
+      "en": "Why the gap between the West and the rest? Some of the optimism may coolas more people in poor countries come into direct contact with AI or datacentres, and see the technology helping or hurting some more than others.Around 9% of working-age Kenyans used AI in the second quarter of 2026,",
+      "zh": "西方与其他地区为何存在这种差距？随着贫穷国家更多人直接接触人工智能或数据中心，并看到这项技术对某些人的帮助或伤害大于其他人，部分乐观情绪可能会降温。根据微软的一项研究，2026年第二季度约有9%的肯尼亚劳动年龄人口使用过人工智能，"
+    },
+    {
+      "index": 36,
+      "en": "according to a study by Microsoft. Yet 85% told GlobeScan that it wouldchange their lives for the better.",
+      "zh": "然而，85%的人告诉GlobeScan，这会让他们的生活变得更好。"
+    },
+    {
+      "index": 37,
+      "en": "Great expectations",
+      "zh": "高期望"
+    },
+    {
+      "index": 38,
+      "en": "“Overall, do you think Al will have a positive or",
+      "zh": "“总体而言，你认为人工智能会对你的个人生活产生积极还是"
+    },
+    {
+      "index": 39,
+      "en": "negative impact on your life personally?”",
+      "zh": "消极影响？”"
+    },
+    {
+      "index": 40,
+      "en": "September 2026, % responding*",
+      "zh": "2026年9月，回答百分比*"
+    },
+    {
+      "index": 41,
+      "en": "Very positiveSomewhat positive",
+      "zh": "非常积极 有些积极"
+    },
+    {
+      "index": 42,
+      "en": "No impact",
+      "zh": "没有影响"
+    },
+    {
+      "index": 43,
+      "en": "Somewhat negative",
+      "zh": "有些消极"
+    },
+    {
+      "index": 44,
+      "en": "Africa and the",
+      "zh": "非洲和"
+    },
+    {
+      "index": 45,
+      "en": "Middle East",
+      "zh": "中东"
+    },
+    {
+      "index": 46,
+      "en": "Non-OECD",
+      "zh": "非经合组织"
+    },
+    {
+      "index": 47,
+      "en": "countries",
+      "zh": "国家"
+    },
+    {
+      "index": 48,
+      "en": "Asia-Pacific",
+      "zh": "亚太地区"
+    },
+    {
+      "index": 49,
+      "en": "Latin America",
+      "zh": "拉丁美洲"
+    },
+    {
+      "index": 50,
+      "en": "OECD countries",
+      "zh": "经合组织国家"
+    },
+    {
+      "index": 51,
+      "en": "Europe",
+      "zh": "欧洲"
+    },
+    {
+      "index": 52,
+      "en": "North America",
+      "zh": "北美"
+    },
+    {
+      "index": 53,
+      "en": "Sources: GlobeScan; The Economist",
+      "zh": "来源：GlobeScan；《经济学人》"
+    },
+    {
+      "index": 54,
+      "en": "*Survey conducted onlineBut plenty of people, poor and rich alike, are already at least vaguelyconscious of AI’s pitfalls. In a survey by Pew Research Centre, SouthKoreans were most likely (along with Australians) to say they expect AI togenerate massive job losses and worsen inequality. For now, though, suchfears appear to be outweighed by intrigue about the technology’s promise.",
+      "zh": "*在线调查。但许多人不分贫富，至少已模糊意识到人工智能的隐患。皮尤研究中心的一项调查中，韩国人（与澳大利亚人一样）最可能表示，他们预计人工智能将导致大规模失业并加剧不平等。不过，目前此类担忧似乎被对该技术前景的好奇心所压倒。"
+    },
+    {
+      "index": 55,
+      "en": "Part of the explanation is that many workers outside the richest countrieshave less to lose from AI than do their counterparts in the West. In much ofthe poor world work is often informal and, compared with jobs in the West,precarious. The notion of losing a secure office job to technology is more ofa rich-world problem (though in India, say, information-technology andother back-office workers look vulnerable to disruption).",
+      "zh": "部分原因在于，富裕国家以外的许多劳动者比西方同行更少可失去的东西。在许多贫困国家，工作往往是非正规的，与西方的工作相比更不稳定。失去一份稳定的办公室工作给技术，这更多是富裕国家的问题（尽管在印度，信息技术和其他后台办公岗位看起来容易受到冲击）。"
+    },
+    {
+      "index": 56,
+      "en": "The poor world has much to gain from AI, too. In countries whereinstitutions and formal education can be lacking, AI helps some people helpthemselves. “Pessimism is a privilege for those who can afford to despair,”argues Payal Arora, author of “From Pessimism to Promise”, a book aboutdiverging attitudes to technology.",
+      "zh": "贫困国家也能从人工智能中获益良多。在制度和正规教育可能匮乏的国家，人工智能帮助一些人自助。《从悲观到希望》一书的作者帕亚尔·阿罗拉认为，悲观是那些负担得起绝望的人的奢侈品。该书探讨了对技术态度的分歧。"
+    },
+    {
+      "index": 57,
+      "en": "In India users have gained cheap or free access to apps like Gemini from Google or ChatGPT from OpenAI; nearly one in five working-age Indians used generative AI in the second quarter of 2026, compared with a third of Americans, according to a recent Microsoft study. DeepSeek, a free Chinese alternative, is popular in Africa, where Microsoft estimates that in many countries about one in ten working-age people used generative AI in the second quarter.",
+      "zh": "在印度，用户已经可以免费或廉价地使用谷歌的Gemini或OpenAI的ChatGPT等应用；根据微软最近的一项研究，2026年第二季度，近五分之一的印度劳动年龄人口使用过生成式AI，而美国这一比例为三分之一。免费的中国替代产品DeepSeek在非洲很受欢迎，微软估计，在非洲许多国家，第二季度约有十分之一的劳动年龄人口使用过生成式AI。"
+    },
+    {
+      "index": 58,
+      "en": "A narrow street in a busy suburb of Mumbai illustrates the benefits. Many shops on it use ChatGPT to generate advertisements. Dinesh Chandra, an optician, asked the chatbot to produce a “gravity-defying” photo for his brand. It duly created an image, now printed on brochures, of glasses floating above clouds while riding a feather. Next door Omkar Sapre, who sells dried fruit, masalas and pickles, posts “beautiful pictures” from ChatGPT on Instagram and WhatsApp, and has noticed his sales pick up.Ashlesha, who works at a dry cleaner on the same street, says, “We work hard and AI is extra support for us. Everyone is on Instagram.”",
+      "zh": "孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。”"
+    },
+    {
+      "index": 59,
+      "en": "All of them love the convenience of using AI; none worry about safety,privacy or data leaks, much less “AI slop”. The shaming of AI content seems less common outside America and Europe. Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University. “Is it a crisis only for those who lose from disruption?”",
+      "zh": "他们都喜欢使用AI的便利；没有人担心安全、隐私或数据泄露，更不用说“AI垃圾内容”了。对AI内容的羞辱似乎在欧美以外不那么常见。约翰斯·霍普金斯大学的洪源远说，西方人“历史上垄断了知识和思想生产，但AI挑战了这一点”。“这仅仅是对那些在颠覆中受损的人来说才是危机吗？”"
+    },
+    {
+      "index": 60,
+      "en": "As Mr Bae illustrates, even in some rich and middle-income countries where there seems more to lose from disruption, AI is surprisingly popular.Singaporeans are among the world’s top AI users, says Microsoft; nearly two-thirds told GlobeScan they thought the technology would have a positive effect on their lives. In Malaysia, which is experiencing a big data-centre boom, minor protests against the sites have not yet turned into a wider backlash.",
+      "zh": "正如裴先生所说明的，即使在一些似乎更容易因颠覆而受损的富裕和中等收入国家，AI也出人意料地受欢迎。微软表示，新加坡人是全球最大的AI用户群体之一；近三分之二的人告诉GlobeScan，他们认为这项技术会对自己的生活产生积极影响。在正经历大型数据中心热潮的马来西亚，针对这些数据中心的轻微抗议尚未演变成更广泛的抵制。"
+    },
+    {
+      "index": 61,
+      "en": "Some countries where AI-optimism runs high share common factors that seem to cut across socioeconomic lines. One is a looming shortage of workers. Parts of the world that have long had low fertility rates, like East Asia, are ageing rapidly. Many hope that AI (and AI-powered robots) can fill",
+      "zh": "一些AI乐观情绪高涨的国家有着似乎跨越社会经济阶层的共同因素。其中之一是迫在眉睫的劳动力短缺。长期生育率低的地区，如东亚，正在迅速老龄化。许多人希望AI（以及AI驱动的机器人）能够填补"
+    },
+    {
+      "index": 62,
+      "en": "in for workers who do not exist, helping countries to care for greying populations.",
+      "zh": "不存在的工人的空缺，帮助各国照顾日益老龄化的 population。"
+    },
+    {
+      "index": 63,
+      "en": "Another feature of some AI-optimist countries is a living memory of technology radically transforming societies in the span of a lifetime.Singapore, South Korea and Taiwan went from poor to rich partly by rapidly adopting new technologies that originated abroad.In China and India technological leaps, including through digital payment and delivery apps, have brought extraordinary convenience and autonomy.“At our age, we’ve lived through countless changes,” says Ms Meng, who works in advertising in Beijing and who, at 40, feels ancient. “Things haven’t even settled in China before another huge shift comes two or three years later.” In India smartphones have offered hundreds of millions of people a “God in their hand” over the course of just a few years, says Ms Arora.",
+      "zh": "一些AI乐观主义国家的另一个特征是，人们对技术在一生中彻底改变社会有着鲜活的记忆。新加坡、韩国和台湾地区部分通过迅速采用源自国外的新技术而从贫穷走向富裕。在中国和印度，包括数字支付和外卖应用在内的技术飞跃带来了非凡的便利和自主性。“在我们这个年纪，我们已经经历了无数变化，”在北京从事广告工作的孟女士说，40岁的她觉得自己已经老了。“在中国，事情甚至还没稳定下来，两三年后又会迎来另一场巨大转变。”阿罗拉女士说，在印度，智能手机在短短几年内为数亿人提供了“手中的神”。"
+    },
+    {
+      "index": 64,
+      "en": "In Western countries, by contrast, pessimism towards AI may reflect people’s perception that their lives are not getting much better, that AI could make their lives worse—and that politicians cannot be relied upon to protect their interests. Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in.",
+      "zh": "相比之下，在西方国家，对AI的悲观情绪可能反映了人们的一种看法：他们的生活没有变得更好，AI可能让生活更糟，而且不能指望政客保护他们的利益。《技术治理》一书的作者丹尼尔·多布里克戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司体验的影响，而西方政府一直难以约束这些公司。"
+    },
+    {
+      "index": 65,
+      "en": "The ways in which politicians and firms talk about AI may also make a difference. Bosses of American labs warn of job losses and human extinction as they race towards “artificial general intelligence”. Asian politicians and tech bosses rarely talk like that, perhaps in part because they are not developing frontier capabilities of their own. Instead they tend to focus on the practical uses of AI—what they will do with the technology,rather than what it will do to them. You are unlikely to hear the boss of Samsung talking publicly about AI doom.",
+      "zh": "政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。"
+    },
+    {
+      "index": 66,
+      "en": "In China, where big advances in AI are being made, officials do worry about risks, from cyber-security threats to economic dislocation. But the general tenor of state media is boosterish.",
+      "zh": "在人工智能取得重大进展的中国，官员们确实担心风险，从网络安全威胁到经济失调。但官方媒体的总体基调是乐观的。"
+    },
+    {
+      "index": 67,
+      "en": "It would be wrong to conclude, though, that people in more AI-positive countries have no worries at all. Some are more resigned to the advance of technology as a fate that cannot be avoided. “AI’s impact might be different from every previous shift. But the Earth has its own rhythms,” says Ms Meng in Beijing. “When it’s not meant for you to survive, you won’t. You can’t live every day worrying, right?”",
+      "zh": "不过，如果认为对人工智能更积极的国家的民众就完全没有担忧，那是不对的。有些人更倾向于把技术的进步视为一种无法避免的命运而接受。北京的孟女士说：“人工智能的影响可能不同于以往每一次变革。但地球有自己的节奏。当你不该活下来的时候，你就活不下来。你总不能每天都忧心忡忡吧，对吧？”"
+    },
+    {
+      "index": 68,
+      "en": "Cho Kyu-jin of Seoul National University reckons that South Koreans are embracing AI despite their concerns because the “fear of being left behind is higher than that of losing stability”. Kim Ah-ran, a 40-year-old labour lawyer, says, “When changes came in the Industrial Revolution, there were positive and negative effects. We’ll find a way to live.” Her young son,standing next to her at the Galaxy Robot Park outside Seoul, is mimicking a humanoid that is practising Muay Thai moves, while clutching a workbook that explains how to use AI to code such robots.",
+      "zh": "首尔国立大学的赵圭镇认为，韩国人尽管有担忧，仍在拥抱人工智能，因为“害怕被落下甚于害怕失去稳定”。40岁的劳动法律师金阿兰说：“工业革命带来变革时，有积极影响也有消极影响。我们会找到生存之道。”在首尔郊外的银河机器人公园，她的小儿子站在她身旁，一边模仿一个正在练习泰拳动作的人形机器人，一边紧紧抓着一本讲解如何用人工智能为这类机器人编程的练习册。"
+    },
+    {
+      "index": 69,
+      "en": "Such pragmatic acceptance suggests that positive attitudes like Mr Bae’s could yet be fragile. Kim Jeong-nam of KAIST, a tech-focused university,serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy. He thinks that South Koreans’ tolerance is conditional on “competently built” policy. If AI starts to “produce visible losers”, such as in exam fairness or jobs, he worries that leeway could vanish. The same could hold true elsewhere. “How are you going to invent an AI that can drive a motorbike?” asks Anderson Santos, a delivery driver in São Paulo,Brazil, who is later dismayed at a mention of driverless cars.There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America. In the Philippines people are marching against “Pax Silica”, an American-led initiative to develop AI and semiconductor supply chains. In Thane, a city near Mumbai, hundreds have protested against an Amazon hyperscale data centre that is planned for their neighbourhood. Rage is not yet all-consuming, though. “It’s just like any other factory,” says one resident. “AI is the future.”■",
+      "zh": "这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”"
+    }
+  ],
+  "vocabulary": [
+    {
+      "id": "v1",
+      "word": "backlash",
+      "context_sentence": "Read the headlines in Western media and it may seem as though a backlash to AI is spreading fast everywhere.",
+      "paragraph_index": 1,
+      "difficulty": "★★☆",
+      "chinese_note": "强烈反对，抵制；常指公众对某种社会变化或政策的激烈反弹。搭配：a backlash against/to sth."
+    },
+    {
+      "id": "v2",
+      "word": "sunnydisposition",
+      "context_sentence": "Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans, according to a survey that GlobeScan, a polling firm, conducted for The Economist.",
+      "paragraph_index": 33,
+      "difficulty": "★★☆",
+      "chinese_note": "乐观开朗的性格/态度；此处指对AI的积极看法。sunny disposition 原意为开朗的性情。"
+    },
+    {
+      "id": "v3",
+      "word": "tilt",
+      "context_sentence": "The polling across 34 countries was carried out online, which could tilt attitudes in favour of AI.",
+      "paragraph_index": 34,
+      "difficulty": "★★☆",
+      "chinese_note": "使倾向于，使偏向；tilt sth in favour of 使……有利于。也可作名词，如 a tilt towards protectionism。"
+    },
+    {
+      "id": "v4",
+      "word": "gloomy",
+      "context_sentence": "Yet in the same survey sentiment in rich Western countries was much gloomier.",
+      "paragraph_index": null,
+      "difficulty": "★☆☆",
+      "chinese_note": "悲观的，沮丧的；gloomy sentiment 悲观情绪。反义词：optimistic。"
+    },
+    {
+      "id": "v5",
+      "word": "net-positive",
+      "context_sentence": "In other Western countries sentiment was net-positive, but far less so than in the poor world.",
+      "paragraph_index": 34,
+      "difficulty": "★★☆",
+      "chinese_note": "净正面的；指正面评价多于负面评价。常用于经济、民调语境，如 net-positive effect。"
+    },
+    {
+      "id": "v6",
+      "word": "pitfalls",
+      "context_sentence": "But plenty of people, poor and rich alike, are already at least vaguely conscious of AI’s pitfalls.",
+      "paragraph_index": 54,
+      "difficulty": "★★☆",
+      "chinese_note": "隐患，陷阱；常指不易察觉的危险或困难。搭配：avoid the pitfalls of sth."
+    },
+    {
+      "id": "v7",
+      "word": "outweigh",
+      "context_sentence": "For now, though, such fears appear to be outweighed by intrigue about the technology’s promise.",
+      "paragraph_index": 54,
+      "difficulty": "★★☆",
+      "chinese_note": "超过，比……更重要；outweigh 常用于比较利弊，如 benefits outweigh costs。"
+    },
+    {
+      "id": "v8",
+      "word": "intrigue",
+      "context_sentence": "For now, though, such fears appear to be outweighed by intrigue about the technology’s promise.",
+      "paragraph_index": 54,
+      "difficulty": "★★☆",
+      "chinese_note": "好奇心，兴趣；此处指对技术前景的着迷。动词意为“激起兴趣”。"
+    },
+    {
+      "id": "v9",
+      "word": "precarious",
+      "context_sentence": "In much of the poor world work is often informal and, compared with jobs in the West, precarious.",
+      "paragraph_index": 55,
+      "difficulty": "★★☆",
+      "chinese_note": "不稳定的，不安全的；常形容工作、处境。搭配：precarious employment/livelihood。"
+    },
+    {
+      "id": "v10",
+      "word": "vulnerable",
+      "context_sentence": "The notion of losing a secure office job to technology is more of a rich-world problem (though in India, say, information-technology and other back-office workers look vulnerable to disruption).",
+      "paragraph_index": 55,
+      "difficulty": "★★☆",
+      "chinese_note": "脆弱的，易受伤害的；be vulnerable to 易受……影响/攻击。"
+    },
+    {
+      "id": "v11",
+      "word": "disruption",
+      "context_sentence": "The notion of losing a secure office job to technology is more of a rich-world problem (though in India, say, information-technology and other back-office workers look vulnerable to disruption).",
+      "paragraph_index": 55,
+      "difficulty": "★★☆",
+      "chinese_note": "颠覆，扰乱；常指技术对行业的冲击。搭配：technological disruption, market disruption。"
+    },
+    {
+      "id": "v12",
+      "word": "monopolised",
+      "context_sentence": "Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University.",
+      "paragraph_index": 59,
+      "difficulty": "★★☆",
+      "chinese_note": "垄断，独占；monopolise 动词，名词 monopoly。此处指西方长期垄断知识与思想生产。"
+    },
+    {
+      "id": "v13",
+      "word": "ideational",
+      "context_sentence": "Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University.",
+      "paragraph_index": 59,
+      "difficulty": "★★★",
+      "chinese_note": "观念的，思想上的；ideational production 指思想/观念的生产。较学术用词。"
+    },
+    {
+      "id": "v14",
+      "word": "cut across",
+      "context_sentence": "Some countries where AI-optimism runs high share common factors that seem to cut across socioeconomic lines.",
+      "paragraph_index": 61,
+      "difficulty": "★★☆",
+      "chinese_note": "超越，跨越（界限）；cut across socioeconomic lines 跨越社会经济阶层。"
+    },
+    {
+      "id": "v15",
+      "word": "looming",
+      "context_sentence": "One is a looming shortage of workers.",
+      "paragraph_index": 61,
+      "difficulty": "★★☆",
+      "chinese_note": "逼近的，即将发生的（通常指不好的事）；looming shortage/crisis。"
+    },
+    {
+      "id": "v16",
+      "word": "rein in",
+      "context_sentence": "Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in.",
+      "paragraph_index": 64,
+      "difficulty": "★★☆",
+      "chinese_note": "控制，约束；rein in 原指勒住马，引申为遏制。搭配：rein in spending/abuses。"
+    },
+    {
+      "id": "v17",
+      "word": "boosterish",
+      "context_sentence": "But the general tenor of state media is boosterish.",
+      "paragraph_index": 66,
+      "difficulty": "★★★",
+      "chinese_note": "鼓吹的，大力支持的；boosterish 指带有宣传鼓动色彩的。名词 booster 支持者。"
+    },
+    {
+      "id": "v18",
+      "word": "resigned",
+      "context_sentence": "Some are more resigned to the advance of technology as a fate that cannot be avoided.",
+      "paragraph_index": 67,
+      "difficulty": "★★☆",
+      "chinese_note": "顺从的，无可奈何的；be resigned to sth 听任，接受。"
+    },
+    {
+      "id": "v19",
+      "word": "nascent",
+      "context_sentence": "There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.",
+      "paragraph_index": 69,
+      "difficulty": "★★★",
+      "chinese_note": "初期的，萌芽的；nascent signs 初现的迹象。常用于正式文体。"
+    },
+    {
+      "id": "v20",
+      "word": "outright",
+      "context_sentence": "There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.",
+      "paragraph_index": 69,
+      "difficulty": "★★☆",
+      "chinese_note": "彻底的，完全的；outright rebellion 彻底的反叛。也可表示“直率的”。"
+    }
+  ],
+  "long_sentences": [
+    {
+      "id": "s1",
+      "sentence": "AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome.",
+      "paragraph_index": 9,
+      "main_clause": "Bae Oh-do would venture out into the forest to gather firewood to heat his family’s home.",
+      "subordinate_clauses": [
+        {
+          "text": "growing up in the aftermath of the Korean war",
+          "type": "分词短语（作定语）",
+          "function": "修饰主语 Bae Oh-do，说明其成长背景"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "AS A BOY",
+          "type": "介词短语",
+          "modifies": "整个句子，作时间状语"
+        },
+        {
+          "text": "to gather firewood",
+          "type": "不定式短语",
+          "modifies": "venture out，表目的"
+        },
+        {
+          "text": "to heat his family’s home",
+          "type": "不定式短语",
+          "modifies": "gather firewood，表目的"
+        }
+      ],
+      "translation": "作为一个在朝鲜战争后长大的男孩，裴五道会冒险进入森林拾柴，用来给家里取暖。",
+      "note": "开头 AS A BOY 是状语，growing up... 是修饰主语的现在分词短语，两个不定式表目的。注意 venture out 意为“冒险外出”。"
+    },
+    {
+      "id": "s2",
+      "sentence": "Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans, according to a survey that GlobeScan, a polling firm, conducted for The Economist.",
+      "paragraph_index": null,
+      "main_clause": "Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans.",
+      "subordinate_clauses": [
+        {
+          "text": "that GlobeScan, a polling firm, conducted for The Economist",
+          "type": "定语从句",
+          "function": "修饰 survey，说明调查的执行者"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "according to a survey",
+          "type": "介词短语",
+          "modifies": "整个句子，作状语"
+        },
+        {
+          "text": "a polling firm",
+          "type": "同位语",
+          "modifies": "GlobeScan"
+        }
+      ],
+      "translation": "根据民调公司 GlobeScan 为《经济学人》进行的一项调查，几乎三分之二的韩国人与裴先生一样对人工智能持乐观态度。",
+      "note": "被动语态 is shared by 后接施动者；that 定语从句中又插入同位语 a polling firm，需先跳过插入语抓主干。"
+    },
+    {
+      "id": "s3",
+      "sentence": "The notion of losing a secure office job to technology is more of a rich-world problem (though in India, say, information-technology and other back-office workers look vulnerable to disruption).",
+      "paragraph_index": null,
+      "main_clause": "The notion is more of a rich-world problem.",
+      "subordinate_clauses": [
+        {
+          "text": "though in India, say, information-technology and other back-office workers look vulnerable to disruption",
+          "type": "让步状语从句",
+          "function": "补充说明例外情况"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "of losing a secure office job to technology",
+          "type": "介词短语",
+          "modifies": "The notion，说明其内容"
+        },
+        {
+          "text": "say",
+          "type": "插入语",
+          "modifies": "in India，表示“比如说”"
+        }
+      ],
+      "translation": "因技术而失去稳定办公室工作的观念，更像是富裕国家的问题（不过，比如说在印度，信息技术和其他后台工作人员看起来容易受到颠覆的影响）。",
+      "note": "主干是 The notion is more of a rich-world problem；of losing... 是后置定语；括号内是让步状语从句，say 为插入语。"
+    },
+    {
+      "id": "s4",
+      "sentence": "In countries whereinstitutions and formal education can be lacking, AI helps some people helpthemselves.",
+      "paragraph_index": 56,
+      "main_clause": "AI helps some people help themselves.",
+      "subordinate_clauses": [
+        {
+          "text": "whereinstitutions and formal education can be lacking",
+          "type": "定语从句",
+          "function": "修饰 countries，说明这些国家的特征"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "In countries",
+          "type": "介词短语",
+          "modifies": "整个句子，作地点状语"
+        }
+      ],
+      "translation": "在制度和正规教育可能缺失的国家，人工智能帮助一些人自助。",
+      "note": "where 引导的定语从句修饰 countries；help sb help themselves 是“帮助某人自助”的搭配。"
+    },
+    {
+      "id": "s5",
+      "sentence": "Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in.",
+      "paragraph_index": 64,
+      "main_clause": "Daniel Dobrygowski argues that this attitude is coloured by people’s experience.",
+      "subordinate_clauses": [
+        {
+          "text": "that this attitude is coloured by people’s experience of social media and Big Tech",
+          "type": "名词性从句（宾语从句）",
+          "function": "作 argues 的宾语"
+        },
+        {
+          "text": "which Western governments have struggled to rein in",
+          "type": "定语从句",
+          "function": "修饰 social media and Big Tech"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "author of the book “Technology Governance”",
+          "type": "同位语",
+          "modifies": "Daniel Dobrygowski"
+        },
+        {
+          "text": "of social media and Big Tech",
+          "type": "介词短语",
+          "modifies": "experience"
+        }
+      ],
+      "translation": "《技术治理》一书的作者丹尼尔·多布吕戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司经历的影响，而西方政府一直难以约束这些公司。",
+      "note": "主句后接 that 宾语从句，从句中又套 which 定语从句；colour 作动词意为“影响”。"
+    },
+    {
+      "id": "s6",
+      "sentence": "Kim Jeong-nam of KAIST, a tech-focused university, serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy.",
+      "paragraph_index": null,
+      "main_clause": "Kim Jeong-nam serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy.",
+      "subordinate_clauses": [],
+      "modifiers": [
+        {
+          "text": "of KAIST",
+          "type": "介词短语",
+          "modifies": "Kim Jeong-nam"
+        },
+        {
+          "text": "a tech-focused university",
+          "type": "同位语",
+          "modifies": "KAIST"
+        }
+      ],
+      "translation": "韩国科学技术院（KAIST）的金正南在韩国国家人工智能战略总统委员会任职。",
+      "note": "主干是 Kim serves on the council；of KAIST 和同位语 a tech-focused university 都是补充说明。serve on 意为“在……任职”。"
+    },
+    {
+      "id": "s7",
+      "sentence": "There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.",
+      "paragraph_index": 69,
+      "main_clause": "There are some nascent signs of data-centre backlash in other parts of the world, too.",
+      "subordinate_clauses": [
+        {
+          "text": "if nothing like the outright rebellion seen in many parts of America",
+          "type": "条件/让步状语从句",
+          "function": "补充说明程度上的差异"
+        }
+      ],
+      "modifiers": [
+        {
+          "text": "of data-centre backlash",
+          "type": "介词短语",
+          "modifies": "signs"
+        },
+        {
+          "text": "seen in many parts of America",
+          "type": "过去分词短语",
+          "modifies": "rebellion"
+        }
+      ],
+      "translation": "世界其他地区也出现了一些数据中心遭抵制的初期迹象，尽管远不及美国许多地方那种彻底的反叛。",
+      "note": "if nothing like 意为“远不像”，是含蓄的让步；seen in... 是过去分词后置定语。"
+    }
+  ],
+  "deconstruction": {
+    "overview": "文章以首尔七旬老人对AI的乐观态度开篇，引出全球调查数据，对比富国与穷国对AI态度的巨大差异。随后从经济风险、技术获益、历史经验、政治话语等角度解释差距，并用印度小商户、韩国政策等案例佐证。最后指出乐观可能脆弱，但尚未形成大规模反弹。全文以数据为骨架，穿插人物引语，风格冷静而具象。",
+    "sections": [
+      {
+        "title": "引子：首尔老人的乐观",
+        "role": "引入",
+        "argument": "通过一位经历过韩国战后贫困的老人之口，展现对AI的朴素欢迎态度。",
+        "evidence": "Bae Oh-do回忆手动时代，认为AI“对人类来说没什么好担心的”，并相信技术会继续发展。",
+        "technique": "人物特写开篇，用具体故事引出宏观议题。",
+        "paragraph_indices": [
+          9
+        ]
+      },
+      {
+        "title": "调查数据：全球乐观但西方例外",
+        "role": "提出论点",
+        "argument": "全球多数国家对AI持乐观态度，但富国西方情绪明显更悲观。",
+        "evidence": "GlobeScan为《经济学人》做的34国在线调查：尼日利亚和越南近九成认为AI将改善人类；美加法则负面多于正面。Gallup与微软的另一调查结果类似。",
+        "technique": "数据对比，用图表和百分比直观呈现差距。",
+        "paragraph_indices": [
+          33,
+          34
+        ]
+      },
+      {
+        "title": "乐观的理性基础：风险与获益不对称",
+        "role": "论证",
+        "argument": "穷国工人从AI中获益更多、损失更少，因此更乐观。",
+        "evidence": "穷国工作多为非正式且不稳定，失去稳定办公室工作的担忧是富国问题；AI提供廉价工具，印度小商户用ChatGPT做广告提升销售；肯尼亚仅9%使用AI但85%认为会改善生活。",
+        "technique": "因果分析与具体案例结合，用数据支撑逻辑。",
+        "paragraph_indices": [
+          35,
+          36,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59
+        ]
+      },
+      {
+        "title": "历史经验与人口结构解释亚洲乐观",
+        "role": "论证",
+        "argument": "部分亚洲国家因劳动力短缺和快速技术变革的记忆而更欢迎AI。",
+        "evidence": "东亚老龄化严重，希望AI填补劳动力；新加坡、韩国、台湾靠快速采用外来技术致富；中国和印度技术飞跃带来便利。",
+        "technique": "历史对比与人口数据分析。",
+        "paragraph_indices": [
+          60,
+          61,
+          62,
+          63
+        ]
+      },
+      {
+        "title": "西方悲观的政治与话语根源",
+        "role": "论证",
+        "argument": "西方悲观源于对生活改善的怀疑、对社交媒体和大科技公司的负面体验，以及精英的末日论调。",
+        "evidence": "西方政府难以约束大科技公司；美国实验室老板警告失业和人类灭绝，而亚洲政商界很少这样谈论。",
+        "technique": "对比与引用专家观点。",
+        "paragraph_indices": [
+          64,
+          65,
+          66
+        ]
+      },
+      {
+        "title": "乐观的脆弱性与零星反弹",
+        "role": "转折/结论",
+        "argument": "乐观可能是有条件的，若AI造成可见的失败者，态度可能转变，但目前反弹有限。",
+        "evidence": "韩国学者认为容忍取决于政策；巴西司机担心无人驾驶；菲律宾和印度有抗议数据中心，但未成气候。",
+        "technique": "引语收尾，留下开放性问题。",
+        "paragraph_indices": [
+          67,
+          68,
+          69
+        ]
+      }
+    ],
+    "writing_techniques": [
+      {
+        "name": "人物特写开篇",
+        "example": "AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome.",
+        "effect": "用具体人物和细节吸引读者，将抽象议题具象化，增强代入感。",
+        "paragraph_index": 9
+      },
+      {
+        "name": "数据对比",
+        "example": "nearly nine in ten people in Nigeria and Vietnam, for example, saidthat AI will improve not only their own lives, but the lot of humanity",
+        "effect": "通过悬殊数字直观呈现全球态度差异，增强说服力。",
+        "paragraph_index": 33
+      },
+      {
+        "name": "引语佐证",
+        "example": "“Pessimism is a privilege for those who can afford to despair,”argues Payal Arora",
+        "effect": "借用专家金句概括核心逻辑，提升文章思想深度和传播力。",
+        "paragraph_index": 56
+      },
+      {
+        "name": "场景化案例",
+        "example": "Many shops on it use ChatGPT to generate advertisements.",
+        "effect": "用孟买街头的具体场景展示AI的实际益处，让论证可感可信。",
+        "paragraph_index": 58
+      },
+      {
+        "name": "对比反衬",
+        "example": "Bosses of American labs warn of job losses and human extinction as they race towards “artificial general intelligence”. Asian politicians and tech bosses rarely talk like that",
+        "effect": "通过话语对比揭示态度差异的建构性，深化因果分析。",
+        "paragraph_index": 65
+      }
+    ]
+  },
+  "background": {
+    "event_context": "2026年，AI技术快速普及，但西方媒体频繁报道对AI的反弹和担忧。与此同时，全球南方国家正积极采用AI工具改善生活和小生意。各国对AI的监管和态度分化，美国科技巨头追逐通用人工智能并发出末日警告，而亚洲政府更关注实际应用。",
+    "key_facts": [
+      {
+        "fact": "GlobeScan为《经济学人》在34国进行在线调查，显示尼日利亚和越南近九成受访者认为AI将改善人类。",
+        "data": "nearly nine in ten",
+        "paragraph_index": 33
+      },
+      {
+        "fact": "在美国、加拿大和法国，对AI未来影响持负面看法的人多于正面。",
+        "data": "",
+        "paragraph_index": 34
+      },
+      {
+        "fact": "微软研究显示，2026年第二季度约9%的肯尼亚工作年龄人口使用AI，但85%告诉GlobeScan AI会改善生活。",
+        "data": "9%; 85%",
+        "paragraph_index": 35
+      },
+      {
+        "fact": "微软研究显示，近五分之一印度工作年龄人口使用生成式AI，而美国为三分之一。",
+        "data": "one in five; a third",
+        "paragraph_index": 57
+      },
+      {
+        "fact": "皮尤研究中心调查显示，韩国人与澳大利亚人最可能预期AI导致大规模失业和加剧不平等。",
+        "data": "",
+        "paragraph_index": 54
+      }
+    ],
+    "author_stance": "作者整体持观察和分析立场，认为全球对AI的乐观情绪真实且有其理性基础，但指出这种乐观可能脆弱，并暗示西方悲观部分源于自身政治和社会问题。作者未明确站队，但通过引语和对比表达了对穷国务实态度的理解。",
+    "implications": "对政策制定者而言，需关注AI可能造成的可见失败者以维持公众信任；对企业而言，新兴市场是AI应用的重要增长点；对读者而言，理解不同国家态度差异有助于把握全球AI治理和舆论走向。"
+  },
+  "practical_application": {
+    "actionable_skills": [
+      {
+        "skill": "用人物故事开篇",
+        "how_to_apply": "在写分析或报告时，先找一个具体人物或场景，用细节引出宏观议题，再展开数据。",
+        "example": "写AI应用报告时，先描述一个孟买小商户用ChatGPT做广告的故事，再引出全球调查数据。"
+      },
+      {
+        "skill": "数据对比呈现差异",
+        "how_to_apply": "选择两个极端群体（如富国与穷国）的关键数据并列，直观展示态度差距。",
+        "example": "在PPT中并列展示尼日利亚89%乐观与法国负面多于正面的数据，形成视觉冲击。"
+      },
+      {
+        "skill": "引用专家金句概括逻辑",
+        "how_to_apply": "在论证核心观点时，引用一句精辟的专家话语，既增强权威性又便于记忆。",
+        "example": "讨论技术悲观主义时引用“Pessimism is a privilege for those who can afford to despair”。"
+      },
+      {
+        "skill": "用场景化案例展示益处",
+        "how_to_apply": "描述一个具体街道或店铺如何使用产品，让抽象益处变得可感。",
+        "example": "写AI工具推广文案时，描述干洗店老板用AI生成图片发Instagram，生意变好。"
+      }
+    ],
+    "thinking_models": [
+      {
+        "model": "风险-获益不对称模型",
+        "explanation": "人们对新技术的态度取决于他们可能失去什么和获得什么，损失少获益多则更乐观。",
+        "how_to_use": "分析任何技术接受度时，先评估不同群体的风险暴露和获益潜力。"
+      },
+      {
+        "model": "历史经验塑造态度模型",
+        "explanation": "个人或社会过去经历的技术变革会影响其对新技术的情感反应。",
+        "how_to_use": "在跨文化沟通或市场调研中，考虑目标群体过去的技术变革记忆。"
+      },
+      {
+        "model": "话语建构现实模型",
+        "explanation": "精英和媒体如何谈论技术会塑造公众的认知和情绪。",
+        "how_to_use": "在公关或政策沟通中，注意话语框架的选择，聚焦实际用途而非末日威胁。"
+      }
+    ]
+  },
+  "recitation": {
+    "title_suggested": "AI 的意外人气：为何穷国比富国更乐观",
+    "advice": "全文以“西方焦虑 vs 全球乐观”为主线，背诵时抓住对比词（backlash / sunny disposition / gloomier / gap / pragmatic acceptance）。长句多在引语和调查数据处，按分号或引号换气；用 Bae 先生的故事开头、GlobeScan 数据支撑、印度孟买街景作例证、最后以“有条件容忍”收尾。",
+    "start_date": "2026-11-23",
+    "intervals": [
+      1,
+      2,
+      4,
+      7,
+      15
+    ],
+    "chunks_per_day": 4,
+    "chunks": [
+      {
+        "index": 1,
+        "text": "International | What backlash? The surprising popularity of AI Unlike rich Westerners, many around the world feel hopeful about the technology Turn my scattered nistory flashcards into a story I1I remember ⑤ChatGPTOct 22nd 2026 AS A BOY growing up in the aftermath of the Korean war, Bae Oh-dowould venture out into the forest to gather firewood to heat his family’shome.",
+        "hint": "international what backlash the",
+        "translation": "国际 | 什么反弹？ AI出人意料的受欢迎程度 与富裕的西方人不同，世界许多地方对这项 技术感到充满希望 把我零散的 历史闪卡变成 一个我能记住的故事 ⑤ChatGPT 2026年10月22日 在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。”",
+        "paragraph_start": 1,
+        "paragraph_end": 9
+      },
+      {
+        "index": 2,
+        "text": "“The manual era is completely ingrained in me,” says the 70-year-oldviolin salesman, sitting under a tree in a park in Seoul’s Jong-no district. Herecalls having to use a foot-operated “treadle pump” to get water, as well ashis delight when the first tractors rolled into the South Korean countryside.In recent decades he has seen things “develop so conveniently”, with theinternet and smartphones.",
+        "hint": "the manual era is",
+        "translation": "在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。”",
+        "paragraph_start": 9,
+        "paragraph_end": 9
+      },
+      {
+        "index": 3,
+        "text": "And what about artificial intelligence? “It’snothing for humans to worry about. This kind of thing is good,” he says.“They should keep developing the technology. Humanity has advanced somuch up to our generation. There’s no telling how the world will change.” Welcoming our new overlords",
+        "hint": "and what about artificial",
+        "translation": "在朝鲜战争后的岁月里，裴五道还是个孩子，他会冒险进入森林捡拾柴火，给家里取暖。“手工时代在我身上留下了深深的烙印，”这位70岁的小提琴销售员说道，他正坐在首尔钟路区一个公园的树下。他回忆起过去不得不使用脚踏式“踏板泵”取水，以及当第一台拖拉机驶入韩国乡村时他的喜悦。近几十年来，随着互联网和智能手机的出现，他目睹了事物“发展得如此便利”。那么人工智能呢？“人类没什么好担心的。这种事是好事，”他说。“他们应该继续发展这项技术。人类发展到我们这一代已经进步了这么多。谁也不知道世界会如何变化。” 欢迎我们的新霸主",
+        "paragraph_start": 9,
+        "paragraph_end": 10
+      },
+      {
+        "index": 4,
+        "text": "\"Overall, do you think Al will have a positive or negative impact on hu manity as a whole?\" September 2026, % responding mVery positiveESomewhat positiveENo impact Somewhat negative Very negative 2040 6080100 Vietnam Nigeria China Indonesia Kenya India Brazil Mexico South Kore Britain Canada United States",
+        "hint": "overall do you think",
+        "translation": "“总体而言，您认为人工智能对人类整体会产生积极还是 消极的影响？” 2026年9月，受访者回答百分比 非常积极  有些积极  没有影响 有些消极 非常消极 2040年 6080100 越南 尼日利亚 中国 印度尼西亚 肯尼亚 印度 巴西 墨西哥 韩国 英国 加拿大 美国",
+        "paragraph_start": 11,
+        "paragraph_end": 30
+      },
+      {
+        "index": 5,
+        "text": "France Sources GlobeScan, The Economist \"Survey conducted onineRead the headlines in Western media and it may seem as though a backlashto AI is spreading fast everywhere. But so far, it is not. Mr Bae’s sunnydisposition about AI is shared by almost two-thirds of South Koreans,according to a survey that GlobeScan, a polling firm, conducted for TheEconomist.",
+        "hint": "france sources globescan the",
+        "translation": "法国 来源：GlobeScan、《经济学人》 在网上进行的调查。读一读西方媒体的头条新闻，可能让人觉得对人工智能的抵制正在各地迅速蔓延。但到目前为止，情况并非如此。根据民调公司GlobeScan为《经济学人》进行的一项调查，几乎三分之二的韩国人都和裴先生一样对人工智能持乐观态度。在富裕国家之外，这种好感甚至更为普遍：例如，尼日利亚和越南近九成的人表示，人工智能不仅会改善他们自己的生活，还会改善人类的命运（见图表1）。",
+        "paragraph_start": 31,
+        "paragraph_end": 33
+      },
+      {
+        "index": 6,
+        "text": "Outside rich countries this good feeling is even more stronglyshared: nearly nine in ten people in Nigeria and Vietnam, for example, saidthat AI will improve not only their own lives, but the lot of humanity (seechart 1). The polling across 34 countries was carried out online, which could tiltattitudes in favour of AI.",
+        "hint": "outside rich countries this",
+        "translation": "在网上进行的调查。读一读西方媒体的头条新闻，可能让人觉得对人工智能的抵制正在各地迅速蔓延。但到目前为止，情况并非如此。根据民调公司GlobeScan为《经济学人》进行的一项调查，几乎三分之二的韩国人都和裴先生一样对人工智能持乐观态度。在富裕国家之外，这种好感甚至更为普遍：例如，尼日利亚和越南近九成的人表示，人工智能不仅会改善他们自己的生活，还会改善人类的命运（见图表1）。 这项覆盖34个国家的调查是在网上进行的，这可能会使受访态度偏向支持人工智能。然而，在同一项调查中，富裕西方国家民众的情绪要悲观得多。在美国、加拿大和法国，对人工智能未来对人类影响持负面看法的人多于持正面看法的人。在其他西方国家，总体情绪是正面的，但远不如贫穷国家那么积极。盖洛普与微软最近对37个国家进行的另一项调查也得出了类似结果：人工智能广受欢迎，但在富裕西方国家则不那么受欢迎。",
+        "paragraph_start": 33,
+        "paragraph_end": 34
+      },
+      {
+        "index": 7,
+        "text": "Yet in the same survey sentiment in rich Westerncountries was much gloomier. In America, Canada and France more peoplefelt negatively than positively about AI’s future impact on humanity. In otherWestern countries sentiment was net-positive, but far less so than in the poorworld. Another recent survey of 37 countries, carried out by Gallup withMicrosoft, returned similar results: AI is broadly popular, but less so in richWestern countries.",
+        "hint": "yet in the same",
+        "translation": "这项覆盖34个国家的调查是在网上进行的，这可能会使受访态度偏向支持人工智能。然而，在同一项调查中，富裕西方国家民众的情绪要悲观得多。在美国、加拿大和法国，对人工智能未来对人类影响持负面看法的人多于持正面看法的人。在其他西方国家，总体情绪是正面的，但远不如贫穷国家那么积极。盖洛普与微软最近对37个国家进行的另一项调查也得出了类似结果：人工智能广受欢迎，但在富裕西方国家则不那么受欢迎。",
+        "paragraph_start": 34,
+        "paragraph_end": 34
+      },
+      {
+        "index": 8,
+        "text": "Why the gap between the West and the rest? Some of the optimism may coolas more people in poor countries come into direct contact with AI or datacentres, and see the technology helping or hurting some more than others.Around 9% of working-age Kenyans used AI in the second quarter of 2026,",
+        "hint": "why the gap between",
+        "translation": "西方与其他地区为何存在这种差距？随着贫穷国家更多人直接接触人工智能或数据中心，并看到这项技术对某些人的帮助或伤害大于其他人，部分乐观情绪可能会降温。根据微软的一项研究，2026年第二季度约有9%的肯尼亚劳动年龄人口使用过人工智能，",
+        "paragraph_start": 35,
+        "paragraph_end": 35
+      },
+      {
+        "index": 9,
+        "text": "according to a study by Microsoft. Yet 85% told GlobeScan that it wouldchange their lives for the better. Great expectations “Overall, do you think Al will have a positive or negative impact on your life personally?” September 2026, % responding* Very positiveSomewhat positive No impact Somewhat negative",
+        "hint": "according to a study",
+        "translation": "然而，85%的人告诉GlobeScan，这会让他们的生活变得更好。 高期望 “总体而言，你认为人工智能会对你的个人生活产生积极还是 消极影响？” 2026年9月，回答百分比* 非常积极 有些积极 没有影响 有些消极",
+        "paragraph_start": 36,
+        "paragraph_end": 43
+      },
+      {
+        "index": 10,
+        "text": "Africa and the Middle East Non-OECD countries Asia-Pacific Latin America OECD countries Europe North America Sources: GlobeScan; The Economist *Survey conducted onlineBut plenty of people, poor and rich alike, are already at least vaguelyconscious of AI’s pitfalls. In a survey by Pew Research Centre, SouthKoreans were most likely (along with Australians) to say they expect AI togenerate massive job losses and worsen inequality.",
+        "hint": "africa and the middle",
+        "translation": "非洲和 中东 非经合组织 国家 亚太地区 拉丁美洲 经合组织国家 欧洲 北美 来源：GlobeScan；《经济学人》 *在线调查。但许多人不分贫富，至少已模糊意识到人工智能的隐患。皮尤研究中心的一项调查中，韩国人（与澳大利亚人一样）最可能表示，他们预计人工智能将导致大规模失业并加剧不平等。不过，目前此类担忧似乎被对该技术前景的好奇心所压倒。",
+        "paragraph_start": 44,
+        "paragraph_end": 54
+      },
+      {
+        "index": 11,
+        "text": "For now, though, suchfears appear to be outweighed by intrigue about the technology’s promise. Part of the explanation is that many workers outside the richest countrieshave less to lose from AI than do their counterparts in the West. In much ofthe poor world work is often informal and, compared with jobs in the West,precarious.",
+        "hint": "for now though suchfears",
+        "translation": "*在线调查。但许多人不分贫富，至少已模糊意识到人工智能的隐患。皮尤研究中心的一项调查中，韩国人（与澳大利亚人一样）最可能表示，他们预计人工智能将导致大规模失业并加剧不平等。不过，目前此类担忧似乎被对该技术前景的好奇心所压倒。 部分原因在于，富裕国家以外的许多劳动者比西方同行更少可失去的东西。在许多贫困国家，工作往往是非正规的，与西方的工作相比更不稳定。失去一份稳定的办公室工作给技术，这更多是富裕国家的问题（尽管在印度，信息技术和其他后台办公岗位看起来容易受到冲击）。",
+        "paragraph_start": 54,
+        "paragraph_end": 55
+      },
+      {
+        "index": 12,
+        "text": "The notion of losing a secure office job to technology is more ofa rich-world problem (though in India, say, information-technology andother back-office workers look vulnerable to disruption). The poor world has much to gain from AI, too. In countries whereinstitutions and formal education can be lacking, AI helps some people helpthemselves.",
+        "hint": "the notion of losing",
+        "translation": "部分原因在于，富裕国家以外的许多劳动者比西方同行更少可失去的东西。在许多贫困国家，工作往往是非正规的，与西方的工作相比更不稳定。失去一份稳定的办公室工作给技术，这更多是富裕国家的问题（尽管在印度，信息技术和其他后台办公岗位看起来容易受到冲击）。 贫困国家也能从人工智能中获益良多。在制度和正规教育可能匮乏的国家，人工智能帮助一些人自助。《从悲观到希望》一书的作者帕亚尔·阿罗拉认为，悲观是那些负担得起绝望的人的奢侈品。该书探讨了对技术态度的分歧。",
+        "paragraph_start": 55,
+        "paragraph_end": 56
+      },
+      {
+        "index": 13,
+        "text": "“Pessimism is a privilege for those who can afford to despair,”argues Payal Arora, author of “From Pessimism to Promise”, a book aboutdiverging attitudes to technology. In India users have gained cheap or free access to apps like Gemini from Google or ChatGPT from OpenAI; nearly one in five working-age Indians used generative AI in the second quarter of 2026, compared with a third of Americans, according to a recent Microsoft study.",
+        "hint": "pessimism is a privilege",
+        "translation": "贫困国家也能从人工智能中获益良多。在制度和正规教育可能匮乏的国家，人工智能帮助一些人自助。《从悲观到希望》一书的作者帕亚尔·阿罗拉认为，悲观是那些负担得起绝望的人的奢侈品。该书探讨了对技术态度的分歧。 在印度，用户已经可以免费或廉价地使用谷歌的Gemini或OpenAI的ChatGPT等应用；根据微软最近的一项研究，2026年第二季度，近五分之一的印度劳动年龄人口使用过生成式AI，而美国这一比例为三分之一。免费的中国替代产品DeepSeek在非洲很受欢迎，微软估计，在非洲许多国家，第二季度约有十分之一的劳动年龄人口使用过生成式AI。",
+        "paragraph_start": 56,
+        "paragraph_end": 57
+      },
+      {
+        "index": 14,
+        "text": "DeepSeek, a free Chinese alternative, is popular in Africa, where Microsoft estimates that in many countries about one in ten working-age people used generative AI in the second quarter. A narrow street in a busy suburb of Mumbai illustrates the benefits. Many shops on it use ChatGPT to generate advertisements.",
+        "hint": "deepseek a free chinese",
+        "translation": "在印度，用户已经可以免费或廉价地使用谷歌的Gemini或OpenAI的ChatGPT等应用；根据微软最近的一项研究，2026年第二季度，近五分之一的印度劳动年龄人口使用过生成式AI，而美国这一比例为三分之一。免费的中国替代产品DeepSeek在非洲很受欢迎，微软估计，在非洲许多国家，第二季度约有十分之一的劳动年龄人口使用过生成式AI。 孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。”",
+        "paragraph_start": 57,
+        "paragraph_end": 58
+      },
+      {
+        "index": 15,
+        "text": "Dinesh Chandra, an optician, asked the chatbot to produce a “gravity-defying” photo for his brand. It duly created an image, now printed on brochures, of glasses floating above clouds while riding a feather. Next door Omkar Sapre, who sells dried fruit, masalas and pickles, posts “beautiful pictures” from ChatGPT on Instagram and WhatsApp, and has noticed his sales pick up.Ashlesha, who works at a dry cleaner on the same street, says, “We work hard and AI is extra support for us.",
+        "hint": "dinesh chandra an optician",
+        "translation": "孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。”",
+        "paragraph_start": 58,
+        "paragraph_end": 58
+      },
+      {
+        "index": 16,
+        "text": "Everyone is on Instagram.” All of them love the convenience of using AI; none worry about safety,privacy or data leaks, much less “AI slop”. The shaming of AI content seems less common outside America and Europe. Westerners “have historically monopolised knowledge and ideational production, but AI challenges that,” says Yuen Yuen Ang of Johns Hopkins University.",
+        "hint": "everyone is on instagram",
+        "translation": "孟买一个繁忙郊区的一条狭窄街道体现了这些好处。街上的许多商店使用ChatGPT生成广告。眼镜商迪内什·钱德拉让这款聊天机器人他的品牌制作一张“反重力”照片。它果然生成了一张眼镜骑着羽毛漂浮在云端的图片，现在印在宣传册上。隔壁卖干果、马萨拉香料和泡菜的奥姆卡尔·萨普雷在Instagram和WhatsApp上发布来自ChatGPT的“漂亮图片”，并注意到自己的销售额有所上升。同一条街上干洗店的员工阿什莱莎说：“我们努力工作，AI对我们来说是额外的支持。每个人都在用Instagram。” 他们都喜欢使用AI的便利；没有人担心安全、隐私或数据泄露，更不用说“AI垃圾内容”了。对AI内容的羞辱似乎在欧美以外不那么常见。约翰斯·霍普金斯大学的洪源远说，西方人“历史上垄断了知识和思想生产，但AI挑战了这一点”。“这仅仅是对那些在颠覆中受损的人来说才是危机吗？”",
+        "paragraph_start": 58,
+        "paragraph_end": 59
+      },
+      {
+        "index": 17,
+        "text": "“Is it a crisis only for those who lose from disruption?” As Mr Bae illustrates, even in some rich and middle-income countries where there seems more to lose from disruption, AI is surprisingly popular.Singaporeans are among the world’s top AI users, says Microsoft; nearly two-thirds told GlobeScan they thought the technology would have a positive effect on their lives.",
+        "hint": "is it a crisis",
+        "translation": "他们都喜欢使用AI的便利；没有人担心安全、隐私或数据泄露，更不用说“AI垃圾内容”了。对AI内容的羞辱似乎在欧美以外不那么常见。约翰斯·霍普金斯大学的洪源远说，西方人“历史上垄断了知识和思想生产，但AI挑战了这一点”。“这仅仅是对那些在颠覆中受损的人来说才是危机吗？” 正如裴先生所说明的，即使在一些似乎更容易因颠覆而受损的富裕和中等收入国家，AI也出人意料地受欢迎。微软表示，新加坡人是全球最大的AI用户群体之一；近三分之二的人告诉GlobeScan，他们认为这项技术会对自己的生活产生积极影响。在正经历大型数据中心热潮的马来西亚，针对这些数据中心的轻微抗议尚未演变成更广泛的抵制。",
+        "paragraph_start": 59,
+        "paragraph_end": 60
+      },
+      {
+        "index": 18,
+        "text": "In Malaysia, which is experiencing a big data-centre boom, minor protests against the sites have not yet turned into a wider backlash. Some countries where AI-optimism runs high share common factors that seem to cut across socioeconomic lines. One is a looming shortage of workers.",
+        "hint": "in malaysia which is",
+        "translation": "正如裴先生所说明的，即使在一些似乎更容易因颠覆而受损的富裕和中等收入国家，AI也出人意料地受欢迎。微软表示，新加坡人是全球最大的AI用户群体之一；近三分之二的人告诉GlobeScan，他们认为这项技术会对自己的生活产生积极影响。在正经历大型数据中心热潮的马来西亚，针对这些数据中心的轻微抗议尚未演变成更广泛的抵制。 一些AI乐观情绪高涨的国家有着似乎跨越社会经济阶层的共同因素。其中之一是迫在眉睫的劳动力短缺。长期生育率低的地区，如东亚，正在迅速老龄化。许多人希望AI（以及AI驱动的机器人）能够填补",
+        "paragraph_start": 60,
+        "paragraph_end": 61
+      },
+      {
+        "index": 19,
+        "text": "Parts of the world that have long had low fertility rates, like East Asia, are ageing rapidly. Many hope that AI (and AI-powered robots) can fill in for workers who do not exist, helping countries to care for greying populations. Another feature of some AI-optimist countries is a living memory of technology radically transforming societies in the span of a lifetime.Singapore, South Korea and Taiwan went from poor to rich partly by rapidly adopting new technologies that originated abroad.In China and India technological leaps, including through digital payment and delivery apps, have brought extraordinary convenience and autonomy.“At our age, we’ve lived through countless changes,” says Ms Meng, who works in advertising in Beijing and who, at 40, feels ancient.",
+        "hint": "parts of the world",
+        "translation": "一些AI乐观情绪高涨的国家有着似乎跨越社会经济阶层的共同因素。其中之一是迫在眉睫的劳动力短缺。长期生育率低的地区，如东亚，正在迅速老龄化。许多人希望AI（以及AI驱动的机器人）能够填补 不存在的工人的空缺，帮助各国照顾日益老龄化的 population。 一些AI乐观主义国家的另一个特征是，人们对技术在一生中彻底改变社会有着鲜活的记忆。新加坡、韩国和台湾地区部分通过迅速采用源自国外的新技术而从贫穷走向富裕。在中国和印度，包括数字支付和外卖应用在内的技术飞跃带来了非凡的便利和自主性。“在我们这个年纪，我们已经经历了无数变化，”在北京从事广告工作的孟女士说，40岁的她觉得自己已经老了。“在中国，事情甚至还没稳定下来，两三年后又会迎来另一场巨大转变。”阿罗拉女士说，在印度，智能手机在短短几年内为数亿人提供了“手中的神”。",
+        "paragraph_start": 61,
+        "paragraph_end": 63
+      },
+      {
+        "index": 20,
+        "text": "“Things haven’t even settled in China before another huge shift comes two or three years later.” In India smartphones have offered hundreds of millions of people a “God in their hand” over the course of just a few years, says Ms Arora. In Western countries, by contrast, pessimism towards AI may reflect people’s perception that their lives are not getting much better, that AI could make their lives worse—and that politicians cannot be relied upon to protect their interests.",
+        "hint": "things haven t even",
+        "translation": "一些AI乐观主义国家的另一个特征是，人们对技术在一生中彻底改变社会有着鲜活的记忆。新加坡、韩国和台湾地区部分通过迅速采用源自国外的新技术而从贫穷走向富裕。在中国和印度，包括数字支付和外卖应用在内的技术飞跃带来了非凡的便利和自主性。“在我们这个年纪，我们已经经历了无数变化，”在北京从事广告工作的孟女士说，40岁的她觉得自己已经老了。“在中国，事情甚至还没稳定下来，两三年后又会迎来另一场巨大转变。”阿罗拉女士说，在印度，智能手机在短短几年内为数亿人提供了“手中的神”。 相比之下，在西方国家，对AI的悲观情绪可能反映了人们的一种看法：他们的生活没有变得更好，AI可能让生活更糟，而且不能指望政客保护他们的利益。《技术治理》一书的作者丹尼尔·多布里克戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司体验的影响，而西方政府一直难以约束这些公司。",
+        "paragraph_start": 63,
+        "paragraph_end": 64
+      },
+      {
+        "index": 21,
+        "text": "Daniel Dobrygowski, author of the book “Technology Governance”, argues that this attitude is coloured by people’s experience of social media and Big Tech, which Western governments have struggled to rein in. The ways in which politicians and firms talk about AI may also make a difference.",
+        "hint": "daniel dobrygowski author of",
+        "translation": "相比之下，在西方国家，对AI的悲观情绪可能反映了人们的一种看法：他们的生活没有变得更好，AI可能让生活更糟，而且不能指望政客保护他们的利益。《技术治理》一书的作者丹尼尔·多布里克戈夫斯基认为，这种态度受到人们对社交媒体和大型科技公司体验的影响，而西方政府一直难以约束这些公司。 政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。",
+        "paragraph_start": 64,
+        "paragraph_end": 65
+      },
+      {
+        "index": 22,
+        "text": "Bosses of American labs warn of job losses and human extinction as they race towards “artificial general intelligence”. Asian politicians and tech bosses rarely talk like that, perhaps in part because they are not developing frontier capabilities of their own. Instead they tend to focus on the practical uses of AI—what they will do with the technology,rather than what it will do to them.",
+        "hint": "bosses of american labs",
+        "translation": "政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。",
+        "paragraph_start": 65,
+        "paragraph_end": 65
+      },
+      {
+        "index": 23,
+        "text": "You are unlikely to hear the boss of Samsung talking publicly about AI doom. In China, where big advances in AI are being made, officials do worry about risks, from cyber-security threats to economic dislocation. But the general tenor of state media is boosterish.",
+        "hint": "you are unlikely to",
+        "translation": "政客和公司谈论人工智能的方式也可能产生影响。美国实验室的老板们在竞相迈向“通用人工智能”时，警告人们会失业、人类会灭绝。亚洲的政客和科技老板很少这样说话，部分原因或许在于他们没有在开发自己的前沿能力。相反，他们往往关注人工智能的实际用途——他们将用这项技术做什么，而不是这项技术会对他们做什么。你不太可能听到三星的老板公开谈论人工智能末日。 在人工智能取得重大进展的中国，官员们确实担心风险，从网络安全威胁到经济失调。但官方媒体的总体基调是乐观的。",
+        "paragraph_start": 65,
+        "paragraph_end": 66
+      },
+      {
+        "index": 24,
+        "text": "It would be wrong to conclude, though, that people in more AI-positive countries have no worries at all. Some are more resigned to the advance of technology as a fate that cannot be avoided. “AI’s impact might be different from every previous shift.",
+        "hint": "it would be wrong",
+        "translation": "不过，如果认为对人工智能更积极的国家的民众就完全没有担忧，那是不对的。有些人更倾向于把技术的进步视为一种无法避免的命运而接受。北京的孟女士说：“人工智能的影响可能不同于以往每一次变革。但地球有自己的节奏。当你不该活下来的时候，你就活不下来。你总不能每天都忧心忡忡吧，对吧？”",
+        "paragraph_start": 67,
+        "paragraph_end": 67
+      },
+      {
+        "index": 25,
+        "text": "But the Earth has its own rhythms,” says Ms Meng in Beijing. “When it’s not meant for you to survive, you won’t. You can’t live every day worrying, right?” Cho Kyu-jin of Seoul National University reckons that South Koreans are embracing AI despite their concerns because the “fear of being left behind is higher than that of losing stability”.",
+        "hint": "but the earth has",
+        "translation": "不过，如果认为对人工智能更积极的国家的民众就完全没有担忧，那是不对的。有些人更倾向于把技术的进步视为一种无法避免的命运而接受。北京的孟女士说：“人工智能的影响可能不同于以往每一次变革。但地球有自己的节奏。当你不该活下来的时候，你就活不下来。你总不能每天都忧心忡忡吧，对吧？” 首尔国立大学的赵圭镇认为，韩国人尽管有担忧，仍在拥抱人工智能，因为“害怕被落下甚于害怕失去稳定”。40岁的劳动法律师金阿兰说：“工业革命带来变革时，有积极影响也有消极影响。我们会找到生存之道。”在首尔郊外的银河机器人公园，她的小儿子站在她身旁，一边模仿一个正在练习泰拳动作的人形机器人，一边紧紧抓着一本讲解如何用人工智能为这类机器人编程的练习册。",
+        "paragraph_start": 67,
+        "paragraph_end": 68
+      },
+      {
+        "index": 26,
+        "text": "Kim Ah-ran, a 40-year-old labour lawyer, says, “When changes came in the Industrial Revolution, there were positive and negative effects. We’ll find a way to live.” Her young son,standing next to her at the Galaxy Robot Park outside Seoul, is mimicking a humanoid that is practising Muay Thai moves, while clutching a workbook that explains how to use AI to code such robots.",
+        "hint": "kim ah ran a",
+        "translation": "首尔国立大学的赵圭镇认为，韩国人尽管有担忧，仍在拥抱人工智能，因为“害怕被落下甚于害怕失去稳定”。40岁的劳动法律师金阿兰说：“工业革命带来变革时，有积极影响也有消极影响。我们会找到生存之道。”在首尔郊外的银河机器人公园，她的小儿子站在她身旁，一边模仿一个正在练习泰拳动作的人形机器人，一边紧紧抓着一本讲解如何用人工智能为这类机器人编程的练习册。",
+        "paragraph_start": 68,
+        "paragraph_end": 68
+      },
+      {
+        "index": 27,
+        "text": "Such pragmatic acceptance suggests that positive attitudes like Mr Bae’s could yet be fragile. Kim Jeong-nam of KAIST, a tech-focused university,serves on South Korea’s Presidential Council on National Artificial Intelligence Strategy. He thinks that South Koreans’ tolerance is conditional on “competently built” policy.",
+        "hint": "such pragmatic acceptance suggests",
+        "translation": "这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”",
+        "paragraph_start": 69,
+        "paragraph_end": 69
+      },
+      {
+        "index": 28,
+        "text": "If AI starts to “produce visible losers”, such as in exam fairness or jobs, he worries that leeway could vanish. The same could hold true elsewhere. “How are you going to invent an AI that can drive a motorbike?” asks Anderson Santos, a delivery driver in São Paulo,Brazil, who is later dismayed at a mention of driverless cars.There are some nascent signs of data-centre backlash in other parts of the world, too, if nothing like the outright rebellion seen in many parts of America.",
+        "hint": "if ai starts to",
+        "translation": "这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”",
+        "paragraph_start": 69,
+        "paragraph_end": 69
+      },
+      {
+        "index": 29,
+        "text": "In the Philippines people are marching against “Pax Silica”, an American-led initiative to develop AI and semiconductor supply chains. In Thane, a city near Mumbai, hundreds have protested against an Amazon hyperscale data centre that is planned for their neighbourhood. Rage is not yet all-consuming, though.",
+        "hint": "in the philippines people",
+        "translation": "这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”",
+        "paragraph_start": 69,
+        "paragraph_end": 69
+      },
+      {
+        "index": 30,
+        "text": "“It’s just like any other factory,” says one resident. “AI is the future.”■",
+        "hint": "it s just like",
+        "translation": "这种务实的接受态度表明，像裴先生那样的积极态度可能仍然脆弱。以科技为重点的韩国科学技术院的金正南在韩国总统国家人工智能战略委员会任职。他认为，韩国人的容忍是以“得力构建”的政策为条件的。如果人工智能开始“产生明显的输家”，比如在考试公平或就业方面，他担心这种宽容可能会消失。其他地方也可能如此。巴西圣保罗的送货司机安德森·桑托斯问道：“你怎么发明一辆能骑摩托车的人工智能？”他随后听到无人驾驶汽车时感到沮丧。世界其他地区也出现了一些数据中心遭抵制的早期迹象，尽管远不及美国许多地方那种彻底的反对。在菲律宾，人们游行反对“硅基和平”，这是美国主导的一项开发人工智能和半导体供应链的倡议。在孟买附近的塔那市，数百人抗议计划在他们社区建设的一个亚马逊超大规模数据中心。不过，愤怒尚未吞噬一切。一位居民说：“这就像任何其他工厂一样。人工智能就是未来。”",
+        "paragraph_start": 69,
+        "paragraph_end": 69
+      }
+    ],
+    "schedule": {
+      "total_days": 23,
+      "per_chunk": [
+        {
+          "index": 1,
+          "learn_day": 1,
+          "learn_date": "2026-11-23",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-27",
+            "2026-11-30",
+            "2026-12-08"
+          ]
+        },
+        {
+          "index": 2,
+          "learn_day": 1,
+          "learn_date": "2026-11-23",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-27",
+            "2026-11-30",
+            "2026-12-08"
+          ]
+        },
+        {
+          "index": 3,
+          "learn_day": 1,
+          "learn_date": "2026-11-23",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-27",
+            "2026-11-30",
+            "2026-12-08"
+          ]
+        },
+        {
+          "index": 4,
+          "learn_day": 1,
+          "learn_date": "2026-11-23",
+          "review_days": [
+            2,
+            3,
+            5,
+            8,
+            16
+          ],
+          "review_dates": [
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-27",
+            "2026-11-30",
+            "2026-12-08"
+          ]
+        },
+        {
+          "index": 5,
+          "learn_day": 2,
+          "learn_date": "2026-11-24",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-28",
+            "2026-12-01",
+            "2026-12-09"
+          ]
+        },
+        {
+          "index": 6,
+          "learn_day": 2,
+          "learn_date": "2026-11-24",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-28",
+            "2026-12-01",
+            "2026-12-09"
+          ]
+        },
+        {
+          "index": 7,
+          "learn_day": 2,
+          "learn_date": "2026-11-24",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-28",
+            "2026-12-01",
+            "2026-12-09"
+          ]
+        },
+        {
+          "index": 8,
+          "learn_day": 2,
+          "learn_date": "2026-11-24",
+          "review_days": [
+            3,
+            4,
+            6,
+            9,
+            17
+          ],
+          "review_dates": [
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-28",
+            "2026-12-01",
+            "2026-12-09"
+          ]
+        },
+        {
+          "index": 9,
+          "learn_day": 3,
+          "learn_date": "2026-11-25",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-26",
+            "2026-11-27",
+            "2026-11-29",
+            "2026-12-02",
+            "2026-12-10"
+          ]
+        },
+        {
+          "index": 10,
+          "learn_day": 3,
+          "learn_date": "2026-11-25",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-26",
+            "2026-11-27",
+            "2026-11-29",
+            "2026-12-02",
+            "2026-12-10"
+          ]
+        },
+        {
+          "index": 11,
+          "learn_day": 3,
+          "learn_date": "2026-11-25",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-26",
+            "2026-11-27",
+            "2026-11-29",
+            "2026-12-02",
+            "2026-12-10"
+          ]
+        },
+        {
+          "index": 12,
+          "learn_day": 3,
+          "learn_date": "2026-11-25",
+          "review_days": [
+            4,
+            5,
+            7,
+            10,
+            18
+          ],
+          "review_dates": [
+            "2026-11-26",
+            "2026-11-27",
+            "2026-11-29",
+            "2026-12-02",
+            "2026-12-10"
+          ]
+        },
+        {
+          "index": 13,
+          "learn_day": 4,
+          "learn_date": "2026-11-26",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-27",
+            "2026-11-28",
+            "2026-11-30",
+            "2026-12-03",
+            "2026-12-11"
+          ]
+        },
+        {
+          "index": 14,
+          "learn_day": 4,
+          "learn_date": "2026-11-26",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-27",
+            "2026-11-28",
+            "2026-11-30",
+            "2026-12-03",
+            "2026-12-11"
+          ]
+        },
+        {
+          "index": 15,
+          "learn_day": 4,
+          "learn_date": "2026-11-26",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-27",
+            "2026-11-28",
+            "2026-11-30",
+            "2026-12-03",
+            "2026-12-11"
+          ]
+        },
+        {
+          "index": 16,
+          "learn_day": 4,
+          "learn_date": "2026-11-26",
+          "review_days": [
+            5,
+            6,
+            8,
+            11,
+            19
+          ],
+          "review_dates": [
+            "2026-11-27",
+            "2026-11-28",
+            "2026-11-30",
+            "2026-12-03",
+            "2026-12-11"
+          ]
+        },
+        {
+          "index": 17,
+          "learn_day": 5,
+          "learn_date": "2026-11-27",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-28",
+            "2026-11-29",
+            "2026-12-01",
+            "2026-12-04",
+            "2026-12-12"
+          ]
+        },
+        {
+          "index": 18,
+          "learn_day": 5,
+          "learn_date": "2026-11-27",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-28",
+            "2026-11-29",
+            "2026-12-01",
+            "2026-12-04",
+            "2026-12-12"
+          ]
+        },
+        {
+          "index": 19,
+          "learn_day": 5,
+          "learn_date": "2026-11-27",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-28",
+            "2026-11-29",
+            "2026-12-01",
+            "2026-12-04",
+            "2026-12-12"
+          ]
+        },
+        {
+          "index": 20,
+          "learn_day": 5,
+          "learn_date": "2026-11-27",
+          "review_days": [
+            6,
+            7,
+            9,
+            12,
+            20
+          ],
+          "review_dates": [
+            "2026-11-28",
+            "2026-11-29",
+            "2026-12-01",
+            "2026-12-04",
+            "2026-12-12"
+          ]
+        },
+        {
+          "index": 21,
+          "learn_day": 6,
+          "learn_date": "2026-11-28",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-29",
+            "2026-11-30",
+            "2026-12-02",
+            "2026-12-05",
+            "2026-12-13"
+          ]
+        },
+        {
+          "index": 22,
+          "learn_day": 6,
+          "learn_date": "2026-11-28",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-29",
+            "2026-11-30",
+            "2026-12-02",
+            "2026-12-05",
+            "2026-12-13"
+          ]
+        },
+        {
+          "index": 23,
+          "learn_day": 6,
+          "learn_date": "2026-11-28",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-29",
+            "2026-11-30",
+            "2026-12-02",
+            "2026-12-05",
+            "2026-12-13"
+          ]
+        },
+        {
+          "index": 24,
+          "learn_day": 6,
+          "learn_date": "2026-11-28",
+          "review_days": [
+            7,
+            8,
+            10,
+            13,
+            21
+          ],
+          "review_dates": [
+            "2026-11-29",
+            "2026-11-30",
+            "2026-12-02",
+            "2026-12-05",
+            "2026-12-13"
+          ]
+        },
+        {
+          "index": 25,
+          "learn_day": 7,
+          "learn_date": "2026-11-29",
+          "review_days": [
+            8,
+            9,
+            11,
+            14,
+            22
+          ],
+          "review_dates": [
+            "2026-11-30",
+            "2026-12-01",
+            "2026-12-03",
+            "2026-12-06",
+            "2026-12-14"
+          ]
+        },
+        {
+          "index": 26,
+          "learn_day": 7,
+          "learn_date": "2026-11-29",
+          "review_days": [
+            8,
+            9,
+            11,
+            14,
+            22
+          ],
+          "review_dates": [
+            "2026-11-30",
+            "2026-12-01",
+            "2026-12-03",
+            "2026-12-06",
+            "2026-12-14"
+          ]
+        },
+        {
+          "index": 27,
+          "learn_day": 7,
+          "learn_date": "2026-11-29",
+          "review_days": [
+            8,
+            9,
+            11,
+            14,
+            22
+          ],
+          "review_dates": [
+            "2026-11-30",
+            "2026-12-01",
+            "2026-12-03",
+            "2026-12-06",
+            "2026-12-14"
+          ]
+        },
+        {
+          "index": 28,
+          "learn_day": 7,
+          "learn_date": "2026-11-29",
+          "review_days": [
+            8,
+            9,
+            11,
+            14,
+            22
+          ],
+          "review_dates": [
+            "2026-11-30",
+            "2026-12-01",
+            "2026-12-03",
+            "2026-12-06",
+            "2026-12-14"
+          ]
+        },
+        {
+          "index": 29,
+          "learn_day": 8,
+          "learn_date": "2026-11-30",
+          "review_days": [
+            9,
+            10,
+            12,
+            15,
+            23
+          ],
+          "review_dates": [
+            "2026-12-01",
+            "2026-12-02",
+            "2026-12-04",
+            "2026-12-07",
+            "2026-12-15"
+          ]
+        },
+        {
+          "index": 30,
+          "learn_day": 8,
+          "learn_date": "2026-11-30",
+          "review_days": [
+            9,
+            10,
+            12,
+            15,
+            23
+          ],
+          "review_dates": [
+            "2026-12-01",
+            "2026-12-02",
+            "2026-12-04",
+            "2026-12-07",
+            "2026-12-15"
+          ]
+        }
+      ],
+      "daily": [
+        {
+          "day": 1,
+          "date": "2026-11-23",
+          "learn": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "review": []
+        },
+        {
+          "day": 2,
+          "date": "2026-11-24",
+          "learn": [
+            5,
+            6,
+            7,
+            8
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-11-25",
+          "learn": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-11-26",
+          "learn": [
+            13,
+            14,
+            15,
+            16
+          ],
+          "review": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-11-27",
+          "learn": [
+            17,
+            18,
+            19,
+            20
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-11-28",
+          "learn": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "review": [
+            5,
+            6,
+            7,
+            8,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-11-29",
+          "learn": [
+            25,
+            26,
+            27,
+            28
+          ],
+          "review": [
+            9,
+            10,
+            11,
+            12,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-11-30",
+          "learn": [
+            29,
+            30
+          ],
+          "review": [
+            1,
+            2,
+            3,
+            4,
+            13,
+            14,
+            15,
+            16,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-12-01",
+          "learn": [],
+          "review": [
+            5,
+            6,
+            7,
+            8,
+            17,
+            18,
+            19,
+            20,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-12-02",
+          "learn": [],
+          "review": [
+            9,
+            10,
+            11,
+            12,
+            21,
+            22,
+            23,
+            24,
+            29,
+            30
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-12-03",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15,
+            16,
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-12-04",
+          "learn": [],
+          "review": [
+            17,
+            18,
+            19,
+            20,
+            29,
+            30
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-12-05",
+          "learn": [],
+          "review": [
+            21,
+            22,
+            23,
+            24
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-12-06",
+          "learn": [],
+          "review": [
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-12-07",
+          "learn": [],
+          "review": [
+            29,
+            30
+          ]
+        },
+        {
+          "day": 16,
+          "date": "2026-12-08",
+          "learn": [],
+          "review": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "day": 17,
+          "date": "2026-12-09",
+          "learn": [],
+          "review": [
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "day": 18,
+          "date": "2026-12-10",
+          "learn": [],
+          "review": [
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        {
+          "day": 19,
+          "date": "2026-12-11",
+          "learn": [],
+          "review": [
+            13,
+            14,
+            15,
+            16
+          ]
+        },
+        {
+          "day": 20,
+          "date": "2026-12-12",
+          "learn": [],
+          "review": [
+            17,
+            18,
+            19,
+            20
+          ]
+        },
+        {
+          "day": 21,
+          "date": "2026-12-13",
+          "learn": [],
+          "review": [
+            21,
+            22,
+            23,
+            24
+          ]
+        },
+        {
+          "day": 22,
+          "date": "2026-12-14",
+          "learn": [],
+          "review": [
+            25,
+            26,
+            27,
+            28
+          ]
+        },
+        {
+          "day": 23,
+          "date": "2026-12-15",
+          "learn": [],
+          "review": [
+            29,
+            30
+          ]
+        }
+      ]
+    }
+  },
+  "usage": {
+    "calls": [
+      {
+        "stage": "core",
+        "prompt_tokens": 3377,
+        "completion_tokens": 2654,
+        "total_tokens": 6031,
+        "cost_cny": 0.008685,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:1",
+        "prompt_tokens": 378,
+        "completion_tokens": 172,
+        "total_tokens": 550,
+        "cost_cny": 0.000722,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:2",
+        "prompt_tokens": 558,
+        "completion_tokens": 329,
+        "total_tokens": 887,
+        "cost_cny": 0.001216,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:3",
+        "prompt_tokens": 343,
+        "completion_tokens": 138,
+        "total_tokens": 481,
+        "cost_cny": 0.000619,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:4",
+        "prompt_tokens": 345,
+        "completion_tokens": 138,
+        "total_tokens": 483,
+        "cost_cny": 0.000621,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:5",
+        "prompt_tokens": 676,
+        "completion_tokens": 426,
+        "total_tokens": 1102,
+        "cost_cny": 0.001528,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:6",
+        "prompt_tokens": 351,
+        "completion_tokens": 89,
+        "total_tokens": 440,
+        "cost_cny": 0.000529,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:7",
+        "prompt_tokens": 584,
+        "completion_tokens": 321,
+        "total_tokens": 905,
+        "cost_cny": 0.001226,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:8",
+        "prompt_tokens": 1043,
+        "completion_tokens": 787,
+        "total_tokens": 1830,
+        "cost_cny": 0.002617,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "translation:9",
+        "prompt_tokens": 922,
+        "completion_tokens": 588,
+        "total_tokens": 1510,
+        "cost_cny": 0.002098,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "language",
+        "prompt_tokens": 3161,
+        "completion_tokens": 3755,
+        "total_tokens": 6916,
+        "cost_cny": 0.010671,
+        "finish_reason": "stop"
+      },
+      {
+        "stage": "recitation",
+        "prompt_tokens": 3042,
+        "completion_tokens": 5679,
+        "total_tokens": 8721,
+        "cost_cny": 0.0144,
+        "finish_reason": "stop"
+      }
+    ],
+    "prompt_tokens": 14780,
+    "completion_tokens": 15076,
+    "total_tokens": 29856,
+    "cost_cny": 0.044932
+  },
+  "warnings": [
+    "背诵分块与原文覆盖不一致，已按段落重建。"
+  ]
+}
